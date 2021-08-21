@@ -1,0 +1,14 @@
+[book]
+authors = ["肖佳权"]
+language = "en"
+multilingual = false
+src = "src"
+title = "note"
+
+[output.html.fold]
+enable = true
+level = 0
+
+
+[build]
+create-missing=false
