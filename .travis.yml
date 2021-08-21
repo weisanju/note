@@ -14,8 +14,7 @@ before_script:
   - cargo install-update -a
 
 script:
-  - mdbook build && mdbook test # In case of custom book path: mdbook build path/to/mybook && mdbook test path/to/mybook
-
+  - mdbook build # In case of custom book path: mdbook build path/to/mybook && mdbook test path/to/mybook
 
 
 deploy:
