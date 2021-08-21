@@ -15,7 +15,9 @@ before_script:
 
 script:
   - mdbook build && mdbook test # In case of custom book path: mdbook build path/to/mybook && mdbook test path/to/mybook
-  
+
+
+
 deploy:
   provider: pages
   strategy: git
