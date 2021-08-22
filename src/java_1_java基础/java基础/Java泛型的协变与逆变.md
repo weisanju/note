@@ -34,12 +34,6 @@ Animal animal = animal[0];
 
 
 
-
-
-
-
-
-
 # 泛型的不变性
 
 **Java中的泛型是不变（invariance）**
@@ -118,9 +112,22 @@ List<? super Cat> cats = new LinkedList<Animal>();
 
 
 
+# Java泛型中的协变
+
+```
+(? extend Animal) 是 Animal的子类类型，但是不确定是哪种
+//泛型协变原则：子类类型				父类类型
+Collection<? extend Animal>  <= Collection<Animal>
+//面向对象：子类类型可以转换成父类类型
 
 
+? super Animal 是 Animal的 父类类型：
+//逆变原则：如何匹配具体的类型
 
+? super Animal <= Animal
+
+//面向对象：子类类型可以转换成父类类型
+```
 
 
 

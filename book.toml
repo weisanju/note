@@ -1,6 +1,6 @@
 [book]
 authors = ["肖佳权"]
-language = "en"
+language = "zh_CN"
 multilingual = false
 src = "src"
 title = "note"
@@ -8,6 +8,10 @@ title = "note"
 [output.html.fold]
 enable = true
 level = 0
+
+[output.html]
+mathjax-support = true
+
 
 
 [build]

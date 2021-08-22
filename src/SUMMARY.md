@@ -1,7 +1,4 @@
 [我的笔记库](README.md)
-
-
-
 # spring
   * [spring](./spring_1_spring/README.md)
     * [0.spring容器启动总览](./spring_1_spring/0.spring容器启动总览.md)
@@ -12,6 +9,8 @@
     * [6.SpringMVC启动过程](./spring_1_spring/6.SpringMVC启动过程.md)
     * [BeanPostProcessor-Aop解析](./spring_1_spring/BeanPostProcessor-Aop解析.md)
     * [shiro导致AOP失效原理解析](./spring_1_spring/shiro导致AOP失效原理解析.md)
+    * [springBeanScope](./spring_1_spring/springBeanScope/README.md)
+      * [spring自定义可刷新的上下文](./spring_1_spring/springBeanScope/spring自定义可刷新的上下文.md)
     * [SpringBean的生命周期](./spring_1_spring/SpringBean的生命周期.md)
     * [springframework]()
       * [MessageSource](./spring_1_spring/springframework/MessageSource.md)
