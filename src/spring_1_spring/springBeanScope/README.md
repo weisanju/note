@@ -124,7 +124,72 @@ String getConversationId();
 
 ## Scope是如何生效的
 
+> org.springframework.beans.factory.support.AbstractBeanFactory#doGetBean 核心方法
 
+```java
+//单例
+// Create bean instance
+if (mbd.isSingleton()) {
+    //直接获取单例。具体实例化的方法没有实现
+   sharedInstance = getSingleton(beanName, () -> {
+      try {
+         return createBean(beanName, mbd, args);
+      }
+      catch (BeansException ex) {
+         // Explicitly remove instance from singleton cache: It might have been put there
+         // eagerly by the creation process, to allow for circular reference resolution.
+         // Also remove any beans that received a temporary reference to the bean.
+         destroySingleton(beanName);
+         throw ex;
+      }
+   });
+    //处理BeanFactory的情况
+   beanInstance = getObjectForBeanInstance(sharedInstance, name, beanName, mbd);
+}
+//原型
+else if (mbd.isPrototype()) {
+   // It's a prototype -> create a new instance.
+   Object prototypeInstance = null;
+   try {
+      beforePrototypeCreation(beanName);
+      prototypeInstance = createBean(beanName, mbd, args);
+   }
+   finally {
+      afterPrototypeCreation(beanName);
+   }
+   beanInstance = getObjectForBeanInstance(prototypeInstance, name, beanName, mbd);
+}
+//其他scope作用域
+else {
+   String scopeName = mbd.getScope();
+   if (!StringUtils.hasLength(scopeName)) {
+      throw new IllegalStateException("No scope name defined for bean ´" + beanName + "'");
+   }
+//获取Scope
+   Scope scope = this.scopes.get(scopeName);
+   if (scope == null) {
+      throw new IllegalStateException("No Scope registered for scope name '" + scopeName + "'");
+   }
+   try {//得到beean实例
+      Object scopedInstance = scope.get(beanName, () -> {
+         beforePrototypeCreation(beanName);
+         try {
+            return createBean(beanName, mbd, args);
+         }
+         finally {
+            afterPrototypeCreation(beanName);
+         }
+      });
+       //处理BeanFactory实例
+      beanInstance = getObjectForBeanInstance(scopedInstance, name, beanName, mbd);
+   }
+   catch (IllegalStateException ex) {
+      throw new ScopeNotActiveException(beanName, scopeName, ex);
+   }
+}
+```
+
+## 预定义的Scope是在哪里注册的
 
 
 
