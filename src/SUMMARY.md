@@ -456,6 +456,7 @@
     * [maven](./编程相关_6_项目构建/maven/README.md)
       * [maven-archiver](./编程相关_6_项目构建/maven/maven-archiver.md)
       * [maven-assembly-plugin](./编程相关_6_项目构建/maven/maven-assembly-plugin.md)
+      * [maven-bom](./编程相关_6_项目构建/maven/maven-bom.md)
       * [maven-Maven_Resources_Plugin](./编程相关_6_项目构建/maven/maven-Maven_Resources_Plugin.md)
       * [maven-profile](./编程相关_6_项目构建/maven/maven-profile.md)
       * [maven-依赖管理](./编程相关_6_项目构建/maven/maven-依赖管理.md)
