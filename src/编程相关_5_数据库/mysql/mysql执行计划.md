@@ -1,7 +1,3 @@
-# 
-
-
-
 # 优化策略
 
 - 出现了 Using temporary；
