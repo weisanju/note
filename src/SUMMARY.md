@@ -43,6 +43,7 @@
     * [springboot-HiKariCP连接池动态数据源配置](./spring_3_springboot/springboot-HiKariCP连接池动态数据源配置.md)
     * [springboot-元数据](./spring_3_springboot/springboot-元数据.md)
     * [springboot-多模块](./spring_3_springboot/springboot-多模块.md)
+    * [springboot-日志](./spring_3_springboot/springboot-日志.md)
     * [springboot-自动配置原理](./spring_3_springboot/springboot-自动配置原理.md)
     * [springboot-过滤器](./spring_3_springboot/springboot-过滤器.md)
     * [springboot-配置文件与jar分离](./spring_3_springboot/springboot-配置文件与jar分离.md)
