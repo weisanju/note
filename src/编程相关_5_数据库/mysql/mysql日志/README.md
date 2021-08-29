@@ -9,7 +9,7 @@ MySQL 也不例外，它有不同类型的日志文件，各自存储了不同�
 
 
 
-[MySQL日志及分类](MySQL日志及分类.md)
+[MySQL日志及分类](mysql日志及分类.md)
 
 [MySQL错误日志（Error Log）详解](错误日志.md)
 
