@@ -321,7 +321,7 @@ Java Util Logging 存在已知的类加载问题，这些问题会导致从“�
 			<AppenderRef ref="Console" />
 		</Root>
 	</Loggers>
-</Configuration
+</Configuration>
 ```
 
 
@@ -444,7 +444,7 @@ public void beforeInitialize() {
 1. 转换 日志配置到 系统环境变量中
 2. 将 日志位置的配置 加载到环境变量 中
 3. 日志组的获取与处理
-4. c设置初始化日志级别
+4. 设置初始化日志级别
 5. 注册jvm关闭回调
 
 ```java
@@ -474,15 +474,11 @@ protected void initialize(ConfigurableEnvironment environment, ClassLoader class
 
 
 
+## 初始化特定日志系统的抽象实现
 
+> org.springframework.boot.logging.AbstractLoggingSystem#initialize
 
-
-
-## 初始化 实际日志系统实现
-
-> 以log4j为例
-
-**配置Or约定**
+### **按配置Or约定查找配置**
 
 ```java
 public void initialize(LoggingInitializationContext initializationContext, String configLocation, LogFile logFile) {
@@ -532,6 +528,99 @@ private String findConfig(String[] locations) {
       }
    }
    return null;
+}
+```
+
+### 按照惯例初始化流程
+
+主要实现了 以下几点
+
+1. 如果使用**标准的日志文件**名，则说名日志内部已初始化 则**重新初始化**一遍 以防 属性改变
+2. 如果使用的spring的日志文件名，则使用spring的方式**初始化日志配置**
+3. 如果都不存在则 **载入默认配置**
+
+**其中 加黑的方法都需要之类实现**
+
+```java
+//org.springframework.boot.logging.AbstractLoggingSystem#initializeWithConventions
+private void initializeWithConventions(LoggingInitializationContext initializationContext, LogFile logFile) {
+    //获取标准配置文件
+   String config = getSelfInitializationConfig();
+    //配置文件存在，且没有指定专门日志文件：则重新初始化以防属性变化
+   if (config != null && logFile == null) {
+      // self initialization has occurred, reinitialize in case of property changes
+      reinitialize(initializationContext);
+      return;
+   }
+    //如果标准的不存在，则获取-spring后缀的
+   if (config == null) {
+      config = getSpringInitializationConfig();
+   }
+    //载入配置文件
+   if (config != null) {
+      loadConfiguration(initializationContext, config, logFile);
+      return;
+   }
+    //如果配置文件不存在则 载入默认配置文件
+   loadDefaults(initializationContext, logFile);
+}
+```
+
+### 指定日志配置文件初始化
+
+1. 对配置文件名进行 占位符替换
+2. 载入对应配置
+
+```java
+private void initializeWithSpecificConfig(LoggingInitializationContext initializationContext, String configLocation,
+      LogFile logFile) {
+   configLocation = SystemPropertyUtils.resolvePlaceholders(configLocation);
+   loadConfiguration(initializationContext, configLocation, logFile);
+}
+```
+
+## log4j2的具体实现
+
+### 获取标准配置文件
+
+先后顺序决定了加载优先级
+
+```
+log4j2.properties log4j2.yaml log4j2.yml log4j2.json log4j2.jsn log4j2.xml
+```
+
+### 重新初始化
+
+无
+
+### 初始化日志配置
+
+```java
+protected void loadConfiguration(String location, LogFile logFile) {
+   Assert.notNull(location, "Location must not be null");
+   try {
+      LoggerContext ctx = getLoggerContext();
+      URL url = ResourceUtils.getURL(location);
+      ConfigurationSource source = getConfigurationSource(url);
+      ctx.start(ConfigurationFactory.getInstance().getConfiguration(ctx, source));
+   }
+   catch (Exception ex) {
+      throw new IllegalStateException("Could not initialize Log4J2 logging from " + location, ex);
+   }
+}
+```
+
+### 载入默认配置
+
+```java
+@Override
+protected void loadDefaults(LoggingInitializationContext initializationContext, LogFile logFile) {
+   if (logFile != null) {
+      loadConfiguration(getPackagedConfigFile("log4j2-file.xml"), logFile);
+   }
+   else {
+      loadConfiguration(getPackagedConfigFile("log4j2.xml"), logFile);
+   }
 }
 ```
 
