@@ -186,6 +186,7 @@
       * [Log4j2API](./java_4_日志/log4j2/Log4j2API.md)
       * [log4j2配置](./java_4_日志/log4j2/log4j2配置/README.md)
         * [高级配置](./java_4_日志/log4j2/log4j2配置/高级配置.md)
+      * [lookups](./java_4_日志/log4j2/lookups.md)
       * [依赖管理](./java_4_日志/log4j2/依赖管理.md)
     * [SL4j](./java_4_日志/SL4j.md)
     * [日志处理进化史](./java_4_日志/日志处理进化史.md)
