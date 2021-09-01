@@ -372,7 +372,6 @@ mvn -Drevision=1.0.0-SNAPSHOT clean package
     <properties>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
-
 ```
 
 **指定发布的包**
