@@ -74,6 +74,13 @@
       * [4配置缓存库](./spring_7_springIntegration/springCache/4配置缓存库.md)
     * [springdata-redis](./spring_7_springIntegration/springdata-redis/readme.md)
 
+# 分布式与微服务
+  * [分布式文件系统]()
+    * [aws-s3](./分布式与微服务_1_分布式文件系统/aws-s3/README.md)
+      * [S3-API](./分布式与微服务_1_分布式文件系统/aws-s3/S3-API.md)
+    * [CEPH]()
+      * [bucket命名规范](./分布式与微服务_1_分布式文件系统/CEPH/bucket命名规范.md)
+
 # java
   * [java基础](./java_1_java基础/README.md)
     * [apacheUtils类](./java_1_java基础/apacheUtils类.md)
@@ -186,6 +193,15 @@
         * [AsyncAppender](./java_4_日志/log4j2/appenders/AsyncAppender.md)
         * [CassandraAppender](./java_4_日志/log4j2/appenders/CassandraAppender.md)
         * [ConsoleAppender](./java_4_日志/log4j2/appenders/ConsoleAppender.md)
+        * [FailoverAppender](./java_4_日志/log4j2/appenders/FailoverAppender.md)
+        * [FileAppender](./java_4_日志/log4j2/appenders/FileAppender.md)
+        * [JDBCAppender](./java_4_日志/log4j2/appenders/JDBCAppender.md)
+        * [OutputStreamAppender](./java_4_日志/log4j2/appenders/OutputStreamAppender.md)
+        * [RandomAccessFileAppender](./java_4_日志/log4j2/appenders/RandomAccessFileAppender.md)
+        * [RewriteAppender](./java_4_日志/log4j2/appenders/RewriteAppender.md)
+        * [RollingFileAppender](./java_4_日志/log4j2/appenders/RollingFileAppender.md)
+        * [RollingRandomAccessFileAppender](./java_4_日志/log4j2/appenders/RollingRandomAccessFileAppender.md)
+        * [RoutingAppender](./java_4_日志/log4j2/appenders/RoutingAppender.md)
       * [log4j2-web](./java_4_日志/log4j2/log4j2-web.md)
       * [Log4j2API](./java_4_日志/log4j2/Log4j2API.md)
       * [log4j2配置](./java_4_日志/log4j2/log4j2配置/README.md)
@@ -473,6 +489,7 @@
       * [maven-Maven_Resources_Plugin](./编程相关_6_项目构建/maven/maven-Maven_Resources_Plugin.md)
       * [maven-profile](./编程相关_6_项目构建/maven/maven-profile.md)
       * [maven-依赖管理](./编程相关_6_项目构建/maven/maven-依赖管理.md)
+      * [maven-编译源码](./编程相关_6_项目构建/maven/maven-编译源码.md)
       * [maven](./编程相关_6_项目构建/maven/maven.md)
       * [maven中的生命周期、插件、目标](./编程相关_6_项目构建/maven/maven中的生命周期、插件、目标.md)
       * [maven打包方式](./编程相关_6_项目构建/maven/maven打包方式.md)
