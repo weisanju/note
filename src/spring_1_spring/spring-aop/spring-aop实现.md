@@ -1,7 +1,5 @@
 *AnnotationAwareAspectJAutoProxyCreator*
 
-
-
 # 启用
 
 > ```
@@ -151,6 +149,24 @@ AbstractBeanFactory#doGetBean
 						AbstractAutoProxyCreator#createProxy //创建代理
 ```
 
+
+
+
+
+```java
+	public Object postProcessAfterInitialization(@Nullable Object bean, String beanName) {
+		if (bean != null) {
+			Object cacheKey = getCacheKey(bean.getClass(), beanName);
+			if (this.earlyProxyReferences.remove(cacheKey) != bean) {
+				return wrapIfNecessary(bean, beanName, cacheKey);
+			}
+		}
+		return bean;
+	}
+```
+
+
+
 ## 核心代理方法
 
 ```java
@@ -181,15 +197,34 @@ protected Object wrapIfNecessary(Object bean, String beanName, Object cacheKey) 
 }
 ```
 
+## 创建AopProxyFactory
+
+> 使用该工厂 创建代理类
+
+如果目标类是接口 或者 是代理类
+
+则启用Jdk动态代理
+
+否则启动ObjenesisCglib代理
+
+```java
+public AopProxy createAopProxy(AdvisedSupport config) throws AopConfigException {
+   if (config.isOptimize() || config.isProxyTargetClass() || hasNoUserSuppliedProxyInterfaces(config)) {
+      Class<?> targetClass = config.getTargetClass();
+      if (targetClass == null) {
+         throw new AopConfigException("TargetSource cannot determine target class: " +
+               "Either an interface or a target is required for proxy creation.");
+      }
+      if (targetClass.isInterface() || Proxy.isProxyClass(targetClass)) {
+         return new JdkDynamicAopProxy(config);
+      }
+      return new ObjenesisCglibAopProxy(config);
+   }
+   else {
+      return new JdkDynamicAopProxy(config);
+   }
+}
+```
 
 
-
-
-# 代理调用
-
-责任链模式
-
-
-
-# 代理创建
 

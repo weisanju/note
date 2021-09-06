@@ -6,7 +6,7 @@
 
 | 项            | 描述                                                         |
 | ------------- | ------------------------------------------------------------ |
-| Aspect        | 以业务逻辑  划分各个切点的 逻辑实体类,例如事务控制是一个切面, 日志打印也是一个切面 |
+| Aspect        | 给切点分类（以业务逻辑  划分各个切点的 逻辑实体类,例如事务控制是一个切面, 日志打印也是一个切面） |
 | Join point    | 被拦截的方法                                                 |
 | Advice        | 告诉AOP 在什么时候调用 切入的方法                            |
 | Pointcut      | 被拦截的方法 以一个表达式定义                                |
@@ -24,8 +24,6 @@
 | 抛出异常后通知 | 在一个方法执行之后，只有在方法退出抛出异常时，才能执行通知。 |
 | 环绕通知       | 在建议方法调用之前和之后，执行通知。                         |
 
-
-
 # spring AOP的目标
 
 springAOP的目的不是与AspectJ竞争，提供最全面的AOP实现,而是提供与SpringIOC的无缝集成
@@ -36,8 +34,6 @@ springAOP的目的不是与AspectJ竞争，提供最全面的AOP实现,而是提
 * JDK动态代理 是基于接口的 代理
 * CGLIB 基于 继承的代理
 
-
-
 # 基于注解的AOP的步骤
 
 ## 启用AOP代理功能
@@ -46,9 +42,10 @@ springAOP的目的不是与AspectJ竞争，提供最全面的AOP实现,而是提
 @Configuration
 @EnableAspectJAutoProxy
 public class AppConfig {
-
 }
 ```
+
+
 
 ```xml
 <aop:aspectj-autoproxy/>
@@ -65,6 +62,8 @@ public class NotVeryUsefulAspect {
 
 }
 ```
+
+
 
 ```xml
 <bean id="myAspect" class="org.xyz.NotVeryUsefulAspect">
