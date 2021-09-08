@@ -233,17 +233,23 @@ public interface AopProxy {
 
 对Advised的构建提供支持，Advised的实现类以及ProxyConfig的子类。
 
+1. 提供Advisor的 增删改查
+
+2. 提供 *AdvisorChainFactory* 从 Advisor中获取所有 *Advice*
+
+   
+
 
 
 ## ProxyCreatorSupport
 
-AdvisedSupport的子类，创建代理对象的支持类，内部包含AopProxyFactory工厂成员，可直接使用工厂成员创建Proxy。
+AdvisedSupport的子类，创建代理对象的支持类，内部包含**AopProxyFactory**工厂成员，可直接使用工厂成员创建Proxy。
 
 ## ProxyFactory类
 
-ProxyCreatorSupport的子类，用于生成代理对象实例的工厂类
+ProxyCreatorSupport的子类，**用于生成代理对象实例的工厂类**
 
-
+相比 ProxyCreatorSupport 提供了 *getProxy* 的方法
 
 ## Advisor接口
 
@@ -540,8 +546,6 @@ public Object invoke(Object proxy, Method method, Object[] args) throws Throwabl
 
 
 
-## Advised对象中的 Advisor如何来的
-
 ## Advised对象中的 targetSource如何来的
 
 
@@ -552,11 +556,10 @@ public Object invoke(Object proxy, Method method, Object[] args) throws Throwabl
 
 ### *提供targetSource*
 
-### 查找需要代理的接口
+### 提供Advisor的憎删改查
 
 ### 代理对象的配置
 
 #### 透明与不透明
 
 #### 暴露代理
-

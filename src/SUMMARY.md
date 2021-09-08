@@ -8,6 +8,7 @@
     * [4.SpringBean的生命周期](./spring_1_spring/4.SpringBean的生命周期.md)
     * [applicationContext与BeanFactory的区别](./spring_1_spring/applicationContext与BeanFactory的区别.md)
     * [spring-aop](./spring_1_spring/spring-aop/README.md)
+      * [aop包解析](./spring_1_spring/spring-aop/aop包解析.md)
       * [spring-aop实现](./spring_1_spring/spring-aop/spring-aop实现.md)
       * [spring-aop实现定义](./spring_1_spring/spring-aop/spring-aop实现定义.md)
     * [springBeanScope](./spring_1_spring/springBeanScope/README.md)
