@@ -1,4 +1,6 @@
-# 核心源代码
+# 创建代理
+
+## 核心源代码
 
 ```java
 public Object getProxy(@Nullable ClassLoader classLoader) {
@@ -65,7 +67,7 @@ public Object getProxy(@Nullable ClassLoader classLoader) {
 }
 ```
 
-# 获取回调
+## 获取回调
 
 ```java
 private Callback[] getCallbacks(Class<?> rootClass) throws Exception {
@@ -146,7 +148,7 @@ private Callback[] getCallbacks(Class<?> rootClass) throws Exception {
 
 
 
-# 确定每个方法的拦截器
+## 确定每个方法的拦截器
 
 ```java
 //org.springframework.aop.framework.CglibAopProxy.ProxyCallbackFilter#accept
@@ -243,5 +245,162 @@ private Callback[] getCallbacks(Class<?> rootClass) throws Exception {
 				}
 			}
 		}
+```
+
+# 运行逻辑
+
+## final不覆盖
+
+如果是final方法则 NO_OVERRIDE，对应于 *NoOp* 即：不覆盖方法
+
+## 如果是Advised接口的方法
+
+则直接转发到 this.advised对象上
+
+
+
+## Equals HashCode 调用代理类的方法
+
+## 如果没有Advice且 不需要暴露代理且是静态 而且不需要返回this
+
+直接转发到 *target*的 方法上
+
+
+
+## 如果没有Advice且 需要暴露代理或者非静态或者返回值为this
+
+则调用 *INVOKE_TARGET*
+
+## 存在 Advice,且（静态的、冻结配置了的、且存在拦截方法）
+
+使用静态拦截器：在代理的时刻：已经确定好哪些拦截器
+
+## 存在 Advice,且（需要暴露代理、或者非静态或者没有冻结配置、或者还不存在拦截方法）
+
+使用动态拦截器：在调用时匹配拦截方法
+
+**动态拦截逻辑**
+
+```java
+//DynamicAdvisedInterceptor#intercept
+public Object intercept(Object proxy, Method method, Object[] args, MethodProxy methodProxy) throws Throwable {
+   Object oldProxy = null;
+   boolean setProxyContext = false;
+   Object target = null;
+    //获取目标类
+   TargetSource targetSource = this.advised.getTargetSource();
+   try {
+       //暴露代理类
+      if (this.advised.exposeProxy) {
+         // Make invocation available if necessary.
+         oldProxy = AopContext.setCurrentProxy(proxy);
+         setProxyContext = true;
+      }
+      // Get as late as possible to minimize the time we "own" the target, in case it comes from a pool...
+       //获取目标
+      target = targetSource.getTarget();
+       //获取目标class
+      Class<?> targetClass = (target != null ? target.getClass() : null);
+       //获取动态拦截器：从spring容器中获取所有Advisor对象并对 method,class一一匹配
+      List<Object> chain = this.advised.getInterceptorsAndDynamicInterceptionAdvice(method, targetClass);
+      Object retVal;
+      // Check whether we only have one InvokerInterceptor: that is,
+      // no real advice, but just reflective invocation of the target.
+       //没有代理类，直接调用目标方法
+      if (chain.isEmpty() && Modifier.isPublic(method.getModifiers())) {
+         // We can skip creating a MethodInvocation: just invoke the target directly.
+         // Note that the final invoker must be an InvokerInterceptor, so we know
+         // it does nothing but a reflective operation on the target, and no hot
+         // swapping or fancy proxying.
+         Object[] argsToUse = AopProxyUtils.adaptArgumentsIfNecessary(method, args);
+         retVal = methodProxy.invoke(target, argsToUse);
+      }
+      else {
+          //生成责任链调用类，进行链式调用
+         // We need to create a method invocation...
+         retVal = new CglibMethodInvocation(proxy, target, method, args, targetClass, chain, methodProxy).proceed();
+      }
+       //处理返回值
+      retVal = processReturnType(proxy, target, method, retVal);
+      return retVal;
+   }
+   finally {
+       //释放target
+      if (target != null && !targetSource.isStatic()) {
+         targetSource.releaseTarget(target);
+      }
+       //还原代理对象
+      if (setProxyContext) {
+         // Restore old proxy.
+         AopContext.setCurrentProxy(oldProxy);
+      }
+   }
+}
+```
+
+**链式调用**
+
+```java
+private static class CglibMethodInvocation extends ReflectiveMethodInvocation {
+
+   @Nullable
+   private final MethodProxy methodProxy;
+
+   public CglibMethodInvocation(Object proxy, @Nullable Object target, Method method,
+         Object[] arguments, @Nullable Class<?> targetClass,
+         List<Object> interceptorsAndDynamicMethodMatchers, MethodProxy methodProxy) {
+
+      super(proxy, target, method, arguments, targetClass, interceptorsAndDynamicMethodMatchers);
+
+      // Only use method proxy for public methods not derived from java.lang.Object
+      this.methodProxy = (Modifier.isPublic(method.getModifiers()) &&
+            method.getDeclaringClass() != Object.class && !AopUtils.isEqualsMethod(method) &&
+            !AopUtils.isHashCodeMethod(method) && !AopUtils.isToStringMethod(method) ?
+            methodProxy : null);
+   }
+
+   @Override
+   @Nullable
+   public Object proceed() throws Throwable {
+      try {
+         return super.proceed();
+      }
+      catch (RuntimeException ex) {
+         throw ex;
+      }
+      catch (Exception ex) {
+         if (ReflectionUtils.declaresException(getMethod(), ex.getClass()) ||
+               KotlinDetector.isKotlinType(getMethod().getDeclaringClass())) {
+            // Propagate original exception if declared on the target method
+            // (with callers expecting it). Always propagate it for Kotlin code
+            // since checked exceptions do not have to be explicitly declared there.
+            throw ex;
+         }
+         else {
+            // Checked exception thrown in the interceptor but not declared on the
+            // target method signature -> apply an UndeclaredThrowableException,
+            // aligned with standard JDK dynamic proxy behavior.
+            throw new UndeclaredThrowableException(ex);
+         }
+      }
+   }
+
+   /**
+    * 直接目标方法调用：通过 方法名称确定调用哪个方法：有略微的性能提升
+    * Gives a marginal performance improvement versus using reflection to
+    * invoke the target when invoking public methods.
+    */
+   @Override
+   protected Object invokeJoinpoint() throws Throwable {
+       //跳过Object的方法
+      if (this.methodProxy != null) {
+         return this.methodProxy.invoke(this.target, this.arguments);
+      }
+      else {
+		//object方法使用反射调用
+         return super.invokeJoinpoint();
+      }
+   }
+}
 ```
 

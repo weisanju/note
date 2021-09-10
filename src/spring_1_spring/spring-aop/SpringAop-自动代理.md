@@ -1,5 +1,18 @@
 
 
+# 总结
+
+1. 自动代理只需要 往容器中 注入*Advisor*
+2. 并且在Bean中 标注 *@Role(BeanDefinition.ROLE_INFRASTRUCTURE)* 即可自动代理
+3. 对于JDK 加入接口即可
+4. 对于CGLIB，会将之前生成的对象替换掉
+
+
+
+
+
+
+
 # 自动代理
 
 ## AbstractAutoProxyCreator
@@ -214,6 +227,86 @@ public static boolean canApply(Pointcut pc, Class<?> targetClass, boolean hasInt
    return false;
 }
 ```
+
+
+
+## 从Advisor组织调用链
+
+```java
+//org.springframework.aop.framework.DefaultAdvisorChainFactory#getInterceptorsAndDynamicInterceptionAdvice
+	public List<Object> getInterceptorsAndDynamicInterceptionAdvice(
+			Advised config, Method method, @Nullable Class<?> targetClass) {
+
+		// This is somewhat tricky... We have to process introductions first,
+		// but we need to preserve order in the ultimate list.
+		AdvisorAdapterRegistry registry = GlobalAdvisorAdapterRegistry.getInstance();
+		Advisor[] advisors = config.getAdvisors();
+		List<Object> interceptorList = new ArrayList<>(advisors.length);
+		Class<?> actualClass = (targetClass != null ? targetClass : method.getDeclaringClass());
+		Boolean hasIntroductions = null;
+
+		for (Advisor advisor : advisors) {
+			if (advisor instanceof PointcutAdvisor) {
+				// Add it conditionally.
+				PointcutAdvisor pointcutAdvisor = (PointcutAdvisor) advisor;
+				if (config.isPreFiltered() || pointcutAdvisor.getPointcut().getClassFilter().matches(actualClass)) {
+					MethodMatcher mm = pointcutAdvisor.getPointcut().getMethodMatcher();
+					boolean match;
+					if (mm instanceof IntroductionAwareMethodMatcher) {
+						if (hasIntroductions == null) {
+							hasIntroductions = hasMatchingIntroductions(advisors, actualClass);
+						}
+						match = ((IntroductionAwareMethodMatcher) mm).matches(method, actualClass, hasIntroductions);
+					}
+					else {
+						match = mm.matches(method, actualClass);
+					}
+					if (match) {
+						MethodInterceptor[] interceptors = registry.getInterceptors(advisor);
+						if (mm.isRuntime()) {
+							// Creating a new object instance in the getInterceptors() method
+							// isn't a problem as we normally cache created chains.
+							for (MethodInterceptor interceptor : interceptors) {
+								interceptorList.add(new InterceptorAndDynamicMethodMatcher(interceptor, mm));
+							}
+						}
+						else {
+							interceptorList.addAll(Arrays.asList(interceptors));
+						}
+					}
+				}
+			}
+			else if (advisor instanceof IntroductionAdvisor) {
+				IntroductionAdvisor ia = (IntroductionAdvisor) advisor;
+				if (config.isPreFiltered() || ia.getClassFilter().matches(actualClass)) {
+					Interceptor[] interceptors = registry.getInterceptors(advisor);
+					interceptorList.addAll(Arrays.asList(interceptors));
+				}
+			}
+			else {
+				Interceptor[] interceptors = registry.getInterceptors(advisor);
+				interceptorList.addAll(Arrays.asList(interceptors));
+			}
+		}
+
+		return interceptorList;
+	}
+
+
+	private static boolean hasMatchingIntroductions(Advisor[] advisors, Class<?> actualClass) {
+		for (Advisor advisor : advisors) {
+			if (advisor instanceof IntroductionAdvisor) {
+				IntroductionAdvisor ia = (IntroductionAdvisor) advisor;
+				if (ia.getClassFilter().matches(actualClass)) {
+					return true;
+				}
+			}
+		}
+		return false;
+	}
+```
+
+
 
 
 
