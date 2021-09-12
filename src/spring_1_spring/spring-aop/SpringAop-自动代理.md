@@ -4,12 +4,8 @@
 
 1. 自动代理只需要 往容器中 注入*Advisor*
 2. 并且在Bean中 标注 *@Role(BeanDefinition.ROLE_INFRASTRUCTURE)* 即可自动代理
-3. 对于JDK 加入接口即可
-4. 对于CGLIB，会将之前生成的对象替换掉
-
-
-
-
+   3. 对于JDK 加入接口即可
+   2. 对于CGLIB，会将之前生成的对象替换掉
 
 
 
@@ -304,48 +300,4 @@ public static boolean canApply(Pointcut pc, Class<?> targetClass, boolean hasInt
 		}
 		return false;
 	}
-```
-
-
-
-
-
-# 缓存与AOP
-
-1. *注入BeanFactoryCacheOperationSourceAdvisor*
-2. *CacheInterceptor*  缓存拦截器
-
-```java
-@Configuration
-@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
-public class ProxyCachingConfiguration extends AbstractCachingConfiguration {
-
-   @Bean(name = CacheManagementConfigUtils.CACHE_ADVISOR_BEAN_NAME)
-   @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
-   public BeanFactoryCacheOperationSourceAdvisor cacheAdvisor() {
-      BeanFactoryCacheOperationSourceAdvisor advisor = new BeanFactoryCacheOperationSourceAdvisor();
-      advisor.setCacheOperationSource(cacheOperationSource());
-      advisor.setAdvice(cacheInterceptor());
-      if (this.enableCaching != null) {
-         advisor.setOrder(this.enableCaching.<Integer>getNumber("order"));
-      }
-      return advisor;
-   }
-
-   @Bean
-   @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
-   public CacheOperationSource cacheOperationSource() {
-      return new AnnotationCacheOperationSource();
-   }
-
-   @Bean
-   @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
-   public CacheInterceptor cacheInterceptor() {
-      CacheInterceptor interceptor = new CacheInterceptor();
-      interceptor.configure(this.errorHandler, this.keyGenerator, this.cacheResolver, this.cacheManager);
-      interceptor.setCacheOperationSource(cacheOperationSource());
-      return interceptor;
-   }
-
-}
 ```

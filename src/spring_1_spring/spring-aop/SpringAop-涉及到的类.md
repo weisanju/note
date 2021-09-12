@@ -199,3 +199,56 @@ ProxyCreatorSupport的子类，**用于生成代理对象实例的工厂类**
 2. 基于方法的注解 Class：用于方法匹配
 3. 是由启用继承
 
+
+
+
+
+# AbstractBeanFactoryPointcutAdvisor
+
+基于*Beanfactory* 的 *PointcutAdvisor*,从 Beanfactory获取Advice
+
+成员变量
+
+*adviceBeanName*
+
+*beanFactory*
+
+*advice*
+
+```java
+public Advice getAdvice() {
+   Advice advice = this.advice;
+   if (advice != null) {
+      return advice;
+   }
+
+   Assert.state(this.adviceBeanName != null, "'adviceBeanName' must be specified");
+   Assert.state(this.beanFactory != null, "BeanFactory must be set to resolve 'adviceBeanName'");
+	//单例的化从 Bean工厂获取后 缓存
+   if (this.beanFactory.isSingleton(this.adviceBeanName)) {
+      // Rely on singleton semantics provided by the factory.
+      advice = this.beanFactory.getBean(this.adviceBeanName, Advice.class);
+      this.advice = advice;
+      return advice;
+   }
+   else {
+      // No singleton guarantees from the factory -> let's lock locally but
+      // reuse the factory's singleton lock, just in case a lazy dependency
+      // of our advice bean happens to trigger the singleton lock implicitly...
+       //懒加载、加锁
+      synchronized (this.adviceMonitor) {
+         advice = this.advice;
+         if (advice == null) {
+            advice = this.beanFactory.getBean(this.adviceBeanName, Advice.class);
+            this.advice = advice;
+         }
+         return advice;
+      }
+   }
+}
+```
+
+
+
+
+
