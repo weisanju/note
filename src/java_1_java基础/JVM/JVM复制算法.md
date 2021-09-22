@@ -6,13 +6,17 @@
 
 ### **复制前**
 
-![20201024093037](\images\jvm_gc_algorithm_copy.png)
+![20201024093037](../../images/jvm_gc_algorithm_copy.png)
+
+
 
 
 
 ### **复制后**
 
-![20201024093052](\images\jvm_gc_algorithm_copy_after.png)
+![20201024093052](../../images/jvm_gc_algorithm_copy_after.png)
+
+
 
 ### **代码段**
 
@@ -141,3 +145,4 @@ returnobj.forwarding;
 - 相互引用的对象并不是相邻的，就没办法充分利用缓存
 
 [参考](https://www.toutiao.com/i6885208625674093059/)
+

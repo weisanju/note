@@ -63,3 +63,39 @@ bean名称
 
 
 
+# SmartInstantiationAwareBeanPostProcessor
+
+1. Extension of the InstantiationAwareBeanPostProcessor interface
+2.  预测 处理bean的 实际类型 回调
+
+
+
+
+
+## predictBeanType
+
+预测bean类型，这个类型最终从 *postProcessBeforeInstantiation* 返回
+
+**Params:**
+beanClass – the raw class of the bean
+beanName – the name of the bean
+
+**Returns:**
+the type of the bean, or null if not predictable
+**Throws:**
+BeansException – in case of errors
+
+
+
+## determineCandidateConstructors
+
+Determine the candidate constructors to use for the given bean.
+The default implementation returns null.
+Params:
+beanClass – the raw class of the bean (never null)
+beanName – the name of the bean
+Returns:
+the candidate constructors, or null if none specified
+
+
+

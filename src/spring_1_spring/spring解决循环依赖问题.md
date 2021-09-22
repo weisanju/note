@@ -72,4 +72,3 @@ protected Object getSingleton(String beanName, boolean allowEarlyReference) {
 用于提前初始化，所以在 循环依赖过程中，如果提早暴露 引用给 其他人，则 需要对 先将 未 调用过*InstantiationAwareBeanPostProcessor*  的 bean放入 三缓
 
 调用过 *InstantiationAwareBeanPostProcessor*  的 bean 但正在创建中的 放入 二缓，创建完成的放入一缓
-

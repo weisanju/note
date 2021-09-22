@@ -1,7 +1,9 @@
 # 内存泄漏（memory leak ）
 
 **占着茅坑不拉 shi**
-![20201018102506](\images\memory_leak_object_life.png)
+![20201018102506](../../images/memory_leak_object_life.png)
+
+
 
 ```
 如上图，对象X引用对象Y，X的生命周期为60，Y的生命周期为20，当Y生命周期结束的时候，X依然引用着B，这时候，垃圾回收期是不会回收对象Y的；如果对象X还引用着生命周期比较短的A、B、C...对象A又引用着对象a、b、c...
@@ -319,4 +321,3 @@ Execution failed for task ':MetaspaceOutOfMemoryDemo.main()'.
 * Try:
 Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output. Run with --scan to get full insights
 ```
-

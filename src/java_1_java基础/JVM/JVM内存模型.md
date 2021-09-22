@@ -157,7 +157,9 @@ Java虚拟机规范中定义方法区是堆的一个逻辑部分。
 
 # 示意图
 
-![image-20210331101338292](C:\Users\weisanju\Desktop\gitrepo\osconcept\images\jvm_runtime_memory.png)
+![image-20210331101338292](../../images/jvm_runtime_memory.png)
+
+
 
 
 

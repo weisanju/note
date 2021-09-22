@@ -2,7 +2,9 @@
 
 # Java 对象内存模型
 
-![20201017102417](\images\java_object_model.png)
+![20201017102417](../../images/java_object_model.png)
+
+
 
 # Object obj=new Object()占用字节
 
@@ -23,9 +25,9 @@
 
   ```java
   package com.zwx.jvm;
-
+  
   import org.openjdk.jol.info.ClassLayout;
-
+  
   public class HeapMemory {
       public static void main(String[] args) {
           Object obj = new Object();
@@ -66,7 +68,7 @@
 
 **执行 init 方法**
 
-这时候需要执行<init>方法(构造方法)把对象按照程序员的意愿进行初始化。类变量的初始化操作在类加载的初始化阶段<clinit>方法完成
+这时候需要执行`<init>`方法(构造方法)把对象按照程序员的意愿进行初始化。类变量的初始化操作在类加载的初始化阶段<clinit>方法完成
 
 # **创建对象指令重排序问题**
 
@@ -203,3 +205,4 @@ Metaspace 增长时的最小幅度。在本机上该参数的默认值为 340784
 ![20201022224155](https://i.loli.net/2020/10/22/1H6lcd5rZeWTNX7.png)
 
 [额外参考链接](https://www.toutiao.com/i6811393828289774094/)
+

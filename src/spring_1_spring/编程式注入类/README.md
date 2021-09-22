@@ -1,3 +1,9 @@
+# 前言
+
+Enable注解原理 是通过 *@Import* 或者  *ImportSelector* 实现的自动注入相关类
+
+
+
 # `@Import`注解
 
 * `@Import` 是`Spring`基于 Java 注解配置的主要组成部分
@@ -66,7 +72,7 @@ package com.test;
 @interface EnableService {
     String name();
 }
-
+//返回类的全限定类名
 class ServiceImportSelector implements ImportSelector {
     @Override
     public String[] selectImports(AnnotationMetadata importingClassMetadata) {
@@ -95,11 +101,9 @@ class ConfigA {
 
 *DeferredImportSelector*  与selector的区别就是 是否延迟于当前注解类加载
 
-
-
-
-
 ## 个性化定制bean
+
+> 手动构建bean定义
 
 ```java
 package com.test;
@@ -251,4 +255,15 @@ public void processConfigBeanDefinitions(BeanDefinitionRegistry registry) {
    }
 }
 ```
+
+
+
+
+
+# @ImportAware
+
+1. 通过 *Import* 接口 注入的类 都可以接收到 注解的信息 *AnnotationMetadata*
+2. Import注入 的*Configuration* 后产生的类无法 注入ImportAware，只能是 一手类
+
+
 
