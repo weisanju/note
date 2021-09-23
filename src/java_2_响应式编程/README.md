@@ -524,27 +524,167 @@ Request Param
 
 
 
+### Subscription.Cancel停止发出信号
+
+当订阅未被取消时，`Subscription.cancel()`  必须  请求 *Publisher* 最终停止向 订阅者 发出信号
+
+操作不需要 立即 影响 *Subscription*
+
+此规则的目的是 确定： 取消一个 *Subscription* 最终会 影响到  *Publisher* 并且 众所周知 可能会 花费一定时间 才能收到 信号
 
 
 
 
-While the `Subscription` is not cancelled, `Subscription.request(long n)` MAY synchronously call `onComplete` or `onError` on this (or other) subscriber(s)
+
+### cancel后放弃对Subscriber的引用
+
+当 *Subscription* 未被 取消，但 *Subscription.cancel()*  必须  请求 *Publisher* 最终放弃 对相应 *subscriber* 的任何引用
+
+此规则的目的是确保订阅者在订阅不再有效后可以正确收集垃圾
+
+不鼓励使用同一订阅对象重新订阅，但此规范并不要求它被禁止，因为这意味着必须无限期地存储以前取消的订阅
 
 
 
-| ID                                                           | Rule                                                         |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 11                                                           | While the `Subscription` is not cancelled, `Subscription.request(long n)` MAY synchronously call `onComplete` or `onError` on this (or other) subscriber(s). |
-| [💡](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#3.11) | *The intent of this rule is to establish that it is allowed to create synchronous Publishers, i.e. Publishers who execute their logic on the calling thread.* |
-| 12                                                           | While the `Subscription` is not cancelled, `Subscription.cancel()` MUST request the `Publisher` to eventually stop signaling its `Subscriber`. The operation is NOT REQUIRED to affect the `Subscription` immediately. |
-| [💡](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#3.12) | *The intent of this rule is to establish that the desire to cancel a Subscription is eventually respected by the Publisher, acknowledging that it may take some time before the signal is received.* |
-| 13                                                           | While the `Subscription` is not cancelled, `Subscription.cancel()` MUST request the `Publisher` to eventually drop any references to the corresponding subscriber. |
-| [💡](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#3.13) | *The intent of this rule is to make sure that Subscribers can be properly garbage-collected after their subscription no longer being valid. Re-subscribing with the same Subscriber object is discouraged [see [2.12](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#2.12)], but this specification does not mandate that it is disallowed since that would mean having to store previously cancelled subscriptions indefinitely.* |
-| 14                                                           | While the `Subscription` is not cancelled, calling `Subscription.cancel` MAY cause the `Publisher`, if stateful, to transition into the `shut-down` state if no other `Subscription` exists at this point [see [1.9](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#1.9)]. |
-| [💡](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#3.14) | *The intent of this rule is to allow for Publishers to signal `onComplete` or `onError` following `onSubscribe` for new Subscribers in response to a cancellation signal from an existing Subscriber.* |
-| 15                                                           | Calling `Subscription.cancel` MUST [return normally](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#term_return_normally). |
-| [💡](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#3.15) | *The intent of this rule is to disallow implementations to throw exceptions in response to `cancel` being called.* |
-| 16                                                           | Calling `Subscription.request` MUST [return normally](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#term_return_normally). |
-| [💡](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#3.16) | *The intent of this rule is to disallow implementations to throw exceptions in response to `request` being called.* |
-| 17                                                           | A `Subscription` MUST support an unbounded number of calls to `request` and MUST support a demand up to 2^63-1 (`java.lang.Long.MAX_VALUE`). A demand equal or greater than 2^63-1 (`java.lang.Long.MAX_VALUE`) MAY be considered by the `Publisher` as “effectively unbounded”. |
-| [💡](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#3.17) | *The intent of this rule is to establish that the Subscriber can request an unbounded number of elements, in any increment above 0 [see [3.9](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#3.9)], in any number of invocations of `request`. As it is not feasibly reachable with current or foreseen hardware within a reasonable amount of time (1 element per nanosecond would take 292 years) to fulfill a demand of 2^63-1, it is allowed for a Publisher to stop tracking demand beyond this point.* |
+### *cancel* 可能会导致 Publisher进入 shut-down
+
+当*Subscription* 未被取消，调用  `Subscription.cancel` 可能会导致 *Publisher*（如果是有状态）在此点不存在其他"订阅"时过渡到"关闭"状态
+
+此规则的目的是允许发布者在"订阅"后对新订阅者发出  *onComplete* 或  `onError` 上发出信号，以响应现有订阅者的取消信号。
+
+
+
+### `Subscription.cancel` MUST [return normally](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#term_return_normally)
+
+此规则的目的是不允许实现 针对所谓的"取消"而抛出例外情况。
+
+
+
+### `Subscription.request` MUST [return normally](https://github.com/reactive-streams/reactive-streams-jvm/tree/v1.0.3#term_return_normally)
+
+此规则的目的是不允许实施针对被调用的"请求"抛出例外情况。
+
+
+
+### Subscription必须支持无边界的request
+
+"订阅" 必须支持无限制的"request" 调用数量 并且必须支持高达  2^63-1 需求 , greater than 2^63-1 的需求可能被"发布者"视为"有效无限制"。
+
+此规则的目的是确定订阅者可以请求无限数量的元素，在任何增量超过 0，在任意数量的"请求"中。
+
+因为它不能在合理的时间内使用当前或预见到的硬件（每纳秒 1 个元素需要 292 年）以达到  2×63-1 的需求，允许 *Publisher* 在此点之后停止跟踪需求
+
+## Processor 
+
+```java
+public interface Processor<T, R> extends Subscriber<T>, Publisher<R> {
+}
+```
+
+### Processor处理阶段
+
+*Processor* 代表 一个处理阶段，既是订阅者又是 发布者，并且遵循两者的  规则
+
+此规则的目的是确定处理器的行为，并受发布者和订阅者规范的约束
+
+
+
+### onError恢复与传播
+
+"处理器"可以选择恢复 onError信号，如果它选择这样做，它必须考虑取消的"订阅"，否则，它必须立即向订阅者传播"OnError"信号。
+
+此规则的目的是告知实现 可能不仅仅是简单的转换
+
+# Asynchronous vs Synchronous Processing
+
+The Reactive Streams API 规定 所有元素的调用 *onNext* 最终信号的调用 *onError* *onCompelete* 必须不阻塞 *Publisher* 但是 on* Hander的调用可以是 同步或者异步
+
+以此示例为例：
+
+```
+nioSelectorThreadOrigin map(f) filter(p) consumeTo(toNioSelectorOutput)
+```
+
+
+
+它有一个 异步的 起源 和异步的 目的地  让我们假设原点和目的地都是选择器事件循环  `Subscription.request(n)` 必须 从 目的地链接到原点
+
+，每个实现可以选择如何执行
+
+下面使用管道|表示不一样边界（队列和计划）和 R#表示资源（可能为线程）的字符。
+
+```
+nioSelectorThreadOrigin | map(f) | filter(p) | consumeTo(toNioSelectorOutput)
+-------------- R1 ----  | - R2 - | -- R3 --- | ---------- R4 ----------------
+```
+
+在此示例中，3 个消费者中的每一个，map、filter 和 consumer 都异步地安排工作。它可以在同一事件循环（trampoline），单独的线程，无论什么。
+
+
+
+```
+nioSelectorThreadOrigin map(f) filter(p) | consumeTo(toNioSelectorOutput)
+------------------- R1 ----------------- | ---------- R2 ----------------
+```
+
+只有最后一步 是使用 异步调度，通过将 任务 加入到  *NioSelectorOutput event loop*
+
+The `map` and `filter` steps 在原始线程中 同步执行
+
+
+
+实现也可以 融合其他操作 到最终消费者
+
+```
+nioSelectorThreadOrigin | map(f) filter(p) consumeTo(toNioSelectorOutput)
+--------- R1 ---------- | ------------------ R2 -------------------------
+```
+
+所有这些变种都是"异步流"。它们都有自己的位置，每个都有不同的权衡，包括性能和实现复杂性。
+
+The Reactive Streams 允许实现管理资源和调度的灵活性，并在非阻塞、异步、动态推拉流范围内混合异步和同步处理。
+
+以便完全异步实现所有参与的 API 元素 `Publisher`/`Subscription`/`Subscriber`/`Processor` 上的所有方法均返回void
+
+
+
+
+
+# Subscriber controlled queue bounds
+
+一个基本设计原则是：所有 bufferSize是 有界的，这些界限必须由Subscribe 已知  和 控制
+
+这些界限以 元素计数 表示（这又导致转化为下一个的调用计数）
+
+旨在支持无限流的任何实现（特别是高输出率流），需要一直控制（*enforce*） 边界，限制资源使用 以避免内存溢出错误
+
+
+
+由于背压是强制性的，可以避免使用无限制的缓冲器,
+
+一般来说，队列增长 没有边界的 唯一时刻 是 当 *Publisher* 维持 高速率 生产 比 订阅者的消费速度要快，但是这种场景 使用背压 处理
+
+
+
+Queue bounds can be controlled by a subscriber signaling demand for the appropriate number of elements. 
+
+队列边界可由用户对适当数量的元素发出信号需求来控制：
+
+在任何时刻，subscriber都知道
+
+- 请求的总元素数量: `P`
+- 已处理的元素数量 `N`
+
+然后，可能到达的最大元素数量是  `P - N`，直到更多的需求向 Publisher 发出信号 
+
+如果订阅者也知道其输入缓冲器中的元素 B 数，则此边界重新定义为：P-B-N
+
+这些边界 必须影响 到 *publisher* 独立于 它所代表的来源是否可以回压，
+
+如果生产率不能受到影响的来源:例如时钟滴答声或鼠标运动,*Publisher*必须选择缓冲或丢弃元素以遵守  imposed bounds 。
+
+
+
+1. *Subscribers* 在接收到一个元素后，发布对一个元素需求的信号。从而有效的执行了： Stop-and-Wait 协议 ：需要信号等同于 确认信号
+2. 通过提供 多个元素的 *request* 确认的成本 被 分摊
+3. 值得注意的是： Subscriber 被允许 随时 发起需求信号 ，允许它避免 *Publiser* 和  *Subscriber* 之间不必要的延迟（例如：保持输入缓冲填满，无需等待完整的往返）

@@ -1,4 +1,89 @@
+# 介绍
 
+*Reactor* 是一个 JVM上 完全 非阻塞的 响应式 编程框架，它有着高效的 需求管理（以管理"背压"的形式），它直接与 Java 8 功能 API 集成，特别是 *CompletableFuture* *Stream* *Duration* ，它提供可组合的异步序列 API `Flux` (for [N] elements)   `Mono` (for [0|1] elements) 
+
+广泛实现了  [Reactive Streams](https://www.reactive-streams.org/)  规范
+
+
+
+Reactor-netty 还支持 非阻塞的 跨进程 通信，适合微服务架构，Reactor Netty 为 HTTP 包括 *websockets* TCP, and UDP  提供   backpressure-ready engines  完全支持反应编码和解码。
+
+
+
+
+
+## Prerequisites
+
+### 传递依赖引用org.reactivestreams
+
+It has a transitive dependency on `org.reactivestreams:reactive-streams:1.0.3`.
+
+### 依赖Java1.8
+
+## Understanding the BOM and versioning scheme
+
+Reactor 3 采用 BOM 模型  （since `reactor-core 3.0.4`, with the `Aluminium` release train）
+
+此精心策划的列表将旨在很好地协同工作的器件组。
+
+Note the versioning scheme has changed between 3.3.x and 3.4.x (Dysprosium and Europium).
+
+
+
+构件采用 `MAJOR.MINOR.PATCH-QUALIFIER`  命名版本
+
+BOM  is versioned using a CalVer inspired scheme of `YYYY.MINOR.PATCH-QUALIFIER`, 
+
+- `MAJOR` Reactor的 generation, 每一代都能给项目结构带来根本性的变化 (这可能意外着 更重大的迁移工作)
+- `YYYY` is the year of the first GA release in a given release cycle (like 3.4.0 for 3.4.x)
+- `.MINOR` is a 0-based number incrementing with each new release cycle(是每个新发布版本周期的基于 0 的数字增量)
+  - 就构建而言，它通常反映了更广泛的变化，可以表明只需要 适度的迁移工作
+  - 在 BOM 的情况下，它允许辨别 同一年的两个 首次发布周期
+- `.PATCH` 是每个服务版本的基于 0 的数字增量
+- `-QUALIFIER` 是文本限定符，在 GA 版本的情况下省略（见下文）
+
+
+
+The scheme uses the following qualifiers (note the use of dash separator), in order:
+
+遵循该约定的第一个发布周期是 `2020.0.x` 研发代码 `Europium` 该计划使用以下限定符（注意使用破折号分割），顺序如下：
+
+- `-M1`..`-M9`: 里程碑（我们预计每次服务发布不超过 9 个）
+- `-RC1`..`-RC9`: 发布候选项（我们预计每个服务版本不会超过 9 个）
+- `-SNAPSHOT`: snapshots
+- *no qualifier* for GA releases
+
+snapshots appear higher in the order above because, conceptually, they’re always "the freshest pre-release" of any given PATCH. 
+
+快照在上面的顺序中显示得更高，因为从概念上讲，它们总是任何给定的 PATCH 的"最新鲜的预发布"。
+
+Even though the first deployed artifact of a PATCH cycle will always be a -SNAPSHOT
+
+即使补丁周期中的第一个部署的工件永远是 - 快照
+
+类似命名但更新的快照也将在例如之后发布。例如：里程碑或 发布候选者之间。
+
+
+
+每个版本周期也给出一个代号，与以前的基于代号的方案保持连续性
+
+可用于更非正式地引用它（比如在讨论、博客文章等。）
+
+代号代表传统上 *MAJOR.MINOR*
+
+它们（大部分）来自 [Periodic Table of Elements](https://en.wikipedia.org/wiki/Periodic_table#Overview),以增加字母顺序。
+
+
+
+Up until Dysprosium the BOM 使用  release train 模式： codename跟着 qualifier,qualifier略有不同
+
+For example: 
+
+Aluminium-RELEASE (first GA release, would now be something like YYYY.0.0), 
+
+Bismuth-M1, Californium-SR1 (service release would now be something like YYYY.0.1), 
+
+Dysprosium-RC1, Dysprosium-BUILD-SNAPSHOT (after each patch, we’d go back to the same snapshot version. would now be something like YYYY.0.X-SNAPSHOT so we get 1 snapshot per PATCH)
 
 
 
