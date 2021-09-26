@@ -1062,6 +1062,37 @@ java.lang.RuntimeException: boom
 
 新的 interval 开始了，tick从0开始，在恢复的时候，需要额外等 250ms
 
+`retry(1)`  只是 仅仅 重订阅上游  *interval* ,第二轮仍会 发生异常，再次发生异常会 将错误 传播给 下游
+
+
+
+### RetryWhen
+
+**Retry.from**
+
+接收 `Flux<Retry.RetrySignal>` 返回 `Publisher<?>`
+
+重试周期如下：
+
+1. 当 error 发生时，会给 `Flux<RetrySignal>` 发送 信号，可以纵览所有 重试，RetrySignal 提供对 错误的访问和 相关的辕信息
+2. 如果 `Flux<RetrySignal>`  产生一个 值，则重试发生
+3. 如果 `Flux<RetrySignal>`   complete 完成了，则错误会被吞并，重试周期会 停止，结果序列 也会完成
+4. 如果 `Flux<RetrySignal>`    产生错误，重试周期 停止，使得序列 产生错误
+
+使用 retryWhen 模拟 retry(3)
+
+```java
+//这不断产生错误，要求重试尝试。
+Flux<String> flux = Flux
+    .<String>error(new IllegalArgumentException()) 
+//doOnError before the retry lets us log and see all failures.
+    .doOnError(System.out::println) 
+//The Retry is adapted from a very simple Function lambda
+    .retryWhen(Retry.from(companion -> 
+//我们认为前三个错误是可重复尝试的（takle(3)，然后放弃
+        companion.take(3))); 
+```
+
 
 
 
