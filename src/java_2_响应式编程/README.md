@@ -597,7 +597,7 @@ public interface Processor<T, R> extends Subscriber<T>, Publisher<R> {
 
 # Asynchronous vs Synchronous Processing
 
-The Reactive Streams API 规定 所有元素的调用 *onNext* 最终信号的调用 *onError* *onCompelete* 必须不阻塞 *Publisher* 但是 on* Hander的调用可以是 同步或者异步
+The Reactive Streams API 规定 所有元素的调用 *onNext* 最终信号的调用 *onError* *onCompelete* 必须不阻塞 *Publisher* 但是 onHander的调用可以是 同步或者异步
 
 以此示例为例：
 
