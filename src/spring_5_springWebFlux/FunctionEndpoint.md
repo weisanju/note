@@ -305,26 +305,18 @@ RouterFunction<ServerResponse> route = route()
 
 ## Running a Server
 
-How do you run a router function in an HTTP server? A simple option is to convert a router function to an `HttpHandler` by using one of the following:
-
-如何使用 router function 运行HTTP服务器，一个简单的 方法是
+如何使用 router function 运行HTTP服务器，一个简单的 方法是 将 一个 router function 转换成 http handler
 
 - `RouterFunctions.toHttpHandler(RouterFunction)`
 - `RouterFunctions.toHttpHandler(RouterFunction, HandlerStrategies)`
 
-You can then use the returned `HttpHandler` with a number of server adapters by following [HttpHandler](https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-httphandler) for server-specific instructions.
+将 返回的   `HttpHandler` 与 一系列 server adapters 配合使用，在SpringBooter中 使用 [`DispatcherHandler`](https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-dispatcher-handler) ，它使用spring 配置化 声明 需要的组件
 
-A more typical option, also used by Spring Boot, is to run with a [`DispatcherHandler`](https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-dispatcher-handler)-based setup through the [WebFlux Config](https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-config), which uses Spring configuration to declare the components required to process requests. The WebFlux Java configuration declares the following infrastructure components to support functional endpoints:
+WebFlux Java configuration 声明了 以下基础设施组件
 
-- `RouterFunctionMapping`: Detects one or more `RouterFunction<?>` beans in the Spring configuration, [orders them](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-ordered), combines them through `RouterFunction.andOther`, and routes requests to the resulting composed `RouterFunction`.
-- `HandlerFunctionAdapter`: Simple adapter that lets `DispatcherHandler` invoke a `HandlerFunction` that was mapped to a request.
-- `ServerResponseResultHandler`: Handles the result from the invocation of a `HandlerFunction` by invoking the `writeTo` method of the `ServerResponse`.
-
-The preceding components let functional endpoints fit within the `DispatcherHandler` request processing lifecycle and also (potentially) run side by side with annotated controllers, if any are declared. It is also how functional endpoints are enabled by the Spring Boot WebFlux starter.
-
-The following example shows a WebFlux Java configuration (see [DispatcherHandler](https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-dispatcher-handler) for how to run it):
-
-
+- `RouterFunctionMapping`: 检测 `RouterFunction<?>`  bean对象， [orders them](https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#beans-factory-ordered), 通过`RouterFunction.andOther` 组合
+- `HandlerFunctionAdapter`:  让  `DispatcherHandler`  执行 `HandlerFunction`  的简单适配器 
+- `ServerResponseResultHandler`: 处理返回结果
 
 ```java
 @Configuration
@@ -359,3 +351,60 @@ public class WebConfig implements WebFluxConfigurer {
     }
 }
 ```
+
+# Filtering Handler Functions
+
+
+
+可以在 builder 上使用  `before`, `after`, or `filter` 创建过滤器
+
+也可以使用注解`@ControllerAdvice`、 `ServletFilter` 这些过滤器会 应用于所有 路由
+
+```java
+RouterFunction<ServerResponse> route = route()
+    .path("/person", b1 -> b1
+        .nest(accept(APPLICATION_JSON), b2 -> b2
+            .GET("/{id}", handler::getPerson)
+            .GET(handler::listPeople)
+            .before(request -> ServerRequest.from(request) 
+                .header("X-RequestHeader", "Value")
+                .build()))
+        .POST("/person", handler::createPerson))
+    .after((request, response) -> logResponse(response)) 
+    .build();
+```
+
+`before`过滤器 只应用于 两个 GET routes
+
+ `after` 过滤器 应用于所有 路由
+
+
+
+```java
+SecurityManager securityManager = ...
+
+RouterFunction<ServerResponse> route = route()
+    .path("/person", b1 -> b1
+        .nest(accept(APPLICATION_JSON), b2 -> b2
+            .GET("/{id}", handler::getPerson)
+            .GET(handler::listPeople))
+        .POST("/person", handler::createPerson))
+    .filter((request, next) -> {
+        if (securityManager.allowAccessTo(request.path())) {
+            return next.handle(request);
+        }
+        else {
+            return ServerResponse.status(UNAUTHORIZED).build();
+        }
+    })
+    .build();
+```
+
+
+
+Besides using the `filter` method on the router function builder, it is possible to apply a filter to an existing router function via `RouterFunction.filter(HandlerFilterFunction)`.
+
+除了 在 builder上 时使用 过滤器方法，可以在已存在的  router function上应用 过滤器 通过 `RouterFunction.filter(HandlerFilterFunction)`
+
+通过  [`CorsWebFilter`](https://docs.spring.io/spring-framework/docs/current/reference/html/webflux-cors.html#webflux-cors-webfilter) 支持 CORS
+
