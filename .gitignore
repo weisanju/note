@@ -2,3 +2,4 @@ book
 .vscode/
 _book/
 .idea/
+.DS_Store
