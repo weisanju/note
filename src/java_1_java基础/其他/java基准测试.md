@@ -247,6 +247,8 @@ public class StringInternBenchMark {
 | Mode.SingleShotTime | 测量单次操作的时间               |
 | Mode.All            | 所有模式依次运行                 |
 
+**每个维度 默认运行 十轮**
+
 # **@OutputTimeUnit**
 
 @OutputTimeUnit代表测量的单位，比如秒级别，毫秒级别，微妙级别等等。一般都使用微妙和毫秒级别的稍微多一点。该注解可以用在方法级别和类级别，当用在类级别的时候会被更加精确的方法级别的注解覆盖，原则就是离目标更近的注解更容易生效。
