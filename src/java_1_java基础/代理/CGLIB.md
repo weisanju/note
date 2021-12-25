@@ -4,7 +4,7 @@
 
 Cglib是一个强大的、高性能的**代码生成包**，它广泛被许多AOP框架使用，为他们**提供方法的拦截**。下图是我网上找到的一张Cglib与一些框架和语言的关系：
 
-![cglib-structure](/images/cglib-structure.gif)
+![cglib-structure](../images/cglib-structure.gif)
 
 - 最底层的是字节码Bytecode，字节码是Java为了保证“一次编译、到处运行”而产生的一种虚拟指令格式，例如iload_0、iconst_1、if_icmpne、dup等
 - 位于字节码之上的是ASM，这是一种直接操作字节码的框架，应用ASM需要对Java字节码、Class结构比较熟悉
@@ -12,11 +12,7 @@ Cglib是一个强大的、高性能的**代码生成包**，它广泛被许多AO
 - 位于CGLIB、Groovy、BeanShell之上的就是Hibernate、Spring AOP这些框架了，这一层大家都比较熟悉
 - 最上层的是Applications，即具体应用，一般都是一个Web项目或者本地跑一个程序
 
-
-
 # CGLIB类库结构
-
-
 
 ## **使用Cglib代码对类做代理**
 
@@ -26,11 +22,11 @@ Cglib是一个强大的、高性能的**代码生成包**，它广泛被许多AO
 
 ```java
 public class Dao {
-    
+  
     public void update() {
         System.out.println("PeopleDao.update()");
     }
-    
+  
     public void select() {
         System.out.println("PeopleDao.select()");
     }
@@ -47,10 +43,10 @@ public class DaoProxy implements MethodInterceptor {
         System.out.println("Before Method Invoke");
         proxy.invokeSuper(object, objects);
         System.out.println("After Method Invoke");
-        
+      
         return object;
     }
-    
+  
 }
 ```
 
@@ -60,8 +56,6 @@ intercept方法的参数的含义为：
 - Method表示拦截的方法
 - Object[]数组表示参数列表，基本数据类型需要传入其包装类型
 - MethodProxy 表示对方法的代理，invokeSuper方法表示对被代理对象方法的调用
-
-
 
 **返回值**
 
@@ -75,7 +69,7 @@ public class CglibTest {
     @Test
     public void testCglib() {
         DaoProxy daoProxy = new DaoProxy();
-        
+      
         Enhancer enhancer = new Enhancer();
         //设置要代理的类
         enhancer.setSuperclass(Dao.class);
@@ -86,7 +80,6 @@ public class CglibTest {
         dao.update();
         dao.select();
     }
-    
+  
 }
 ```
-
