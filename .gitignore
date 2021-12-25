@@ -3,3 +3,4 @@ book
 _book/
 .idea/
 .DS_Store
+**/.obsidian
