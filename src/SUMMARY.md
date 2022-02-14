@@ -683,10 +683,10 @@
 
 # 其他编程语言
   * [typescript](./其他编程语言_6_typescript/README.md)
-    * [3-接口](./其他编程语言_6_typescript/3-接口.md)
-    * [1-基础类型](./其他编程语言_6_typescript/1-基础类型.md)
-    * [模块](./其他编程语言_6_typescript/模块.md)
-    * [2-变量声明](./其他编程语言_6_typescript/2-变量声明.md)
+    * [1.基础类型](./其他编程语言_6_typescript/1.基础类型.md)
+    * [2.变量声明](./其他编程语言_6_typescript/2.变量声明.md)
+    * [3.接口](./其他编程语言_6_typescript/3.接口.md)
+    * [4.模块](./其他编程语言_6_typescript/4.模块.md)
   * [nodejs](./其他编程语言_5_nodejs/README.md)
     * [异步编程](./其他编程语言_5_nodejs/异步编程.md)
     * [包管理](./其他编程语言_5_nodejs/包管理.md)
