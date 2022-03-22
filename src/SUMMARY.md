@@ -102,10 +102,6 @@
     * [spring-mvc](./spring_2_springMVC/spring-mvc.md)
     * [基于注解的控制器](./spring_2_springMVC/基于注解的控制器.md)
 
-# Java
-  * [设计模式]()
-    * [PipeLine](./Java_7_设计模式/PipeLine.md)
-
 # 分布式与微服务
   * [解决方案]()
     * [一致性Hash](./分布式与微服务_1_解决方案/一致性Hash.md)
@@ -301,6 +297,8 @@
   * [编程规范]()
     * [java编码规范](./java_3_编程规范/java编码规范.md)
     * [代码异味](./java_3_编程规范/代码异味.md)
+  * [设计模式]()
+    * [PipeLine](./java_7_设计模式/PipeLine.md)
   * [响应式编程](./java_2_响应式编程/README.md)
     * [ProjectReactor](./java_2_响应式编程/ProjectReactor/README.md)
       * [core-features](./java_2_响应式编程/ProjectReactor/core-features/README.md)
