@@ -123,6 +123,8 @@
     * [Zookeeper](./分布式与微服务_2_中间件/Zookeeper.md)
 
 # java
+  * [设计模式]()
+    * [PipeLine](./java_8_设计模式/PipeLine.md)
   * [日志](./java_4_日志/README.md)
     * [log4j2](./java_4_日志/log4j2/README.md)
       * [appenders](./java_4_日志/log4j2/appenders/README.md)
@@ -297,8 +299,6 @@
   * [编程规范]()
     * [java编码规范](./java_3_编程规范/java编码规范.md)
     * [代码异味](./java_3_编程规范/代码异味.md)
-  * [设计模式]()
-    * [PipeLine](./java_7_设计模式/PipeLine.md)
   * [响应式编程](./java_2_响应式编程/README.md)
     * [ProjectReactor](./java_2_响应式编程/ProjectReactor/README.md)
       * [core-features](./java_2_响应式编程/ProjectReactor/core-features/README.md)
