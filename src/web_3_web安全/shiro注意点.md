@@ -1,1 +1,0 @@
-在shiro的 relam中如果引用了 其他service . 则所有对该service的 ,切面代理  就会引用不到
