@@ -410,6 +410,7 @@
       * [AOP代理相关](./spring_1_spring/编程式注入类/AOP代理相关.md)
     * [spring杂项](./spring_1_spring/spring杂项.md)
     * [spring组合注解](./spring_1_spring/spring组合注解.md)
+    * [ClassPathScanningCandidateComponentProvider](./spring_1_spring/ClassPathScanningCandidateComponentProvider.md)
     * [PropertySource](./spring_1_spring/PropertySource.md)
     * [Spring总结](./spring_1_spring/Spring总结.md)
     * [applicationContext与BeanFactory的区别](./spring_1_spring/applicationContext与BeanFactory的区别.md)
