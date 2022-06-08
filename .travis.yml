@@ -16,11 +16,10 @@ before_script:
 script:
   - mdbook build # In case of custom book path: mdbook build path/to/mybook && mdbook test path/to/mybook
 
-
 deploy:
   provider: pages
   strategy: git
-  edge: true
+  edge: false
   cleanup: false
   github-token: $GITHUB_TOKEN
   local-dir: book # In case of custom book path: path/to/mybook/book
