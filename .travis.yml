@@ -19,9 +19,8 @@ script:
 deploy:
   provider: pages
   strategy: git
-  edge: false
-  cleanup: false
   github-token: $GITHUB_TOKEN
+  edge: true
   local-dir: book # In case of custom book path: path/to/mybook/book
   keep-history: false
   verbose: true
