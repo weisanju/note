@@ -14,17 +14,17 @@ before_script:
   - cargo install-update -a
 
 script:
-  - mdbook build # In case of custom book path: mdbook build path/to/mybook && mdbook test path/to/mybook
+  - source setDirectoryTarget.sh
 
 deploy:
   provider: pages
   strategy: git
   github-token: $GITHUB_TOKEN
   edge: true
-  local-dir: book # In case of custom book path: path/to/mybook/book
+  local-dir: $effectedBranch/book # In case of custom book path: path/to/mybook/book
   keep-history: false
   verbose: true
   on:
     branch: main
-    condition: git diff head  --name-only |grep src/java/SUMMARY.md
-  target_branch: note-pages
+    condition: $effectedBranch != ''
+  target_branch: note-pages-${effectedBranch}
