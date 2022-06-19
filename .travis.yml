@@ -45,3 +45,17 @@ deploy:
       branch: main
       condition: $python != ''
     target_branch: main
+
+  - provider: pages
+    strategy: git
+    github-token: $GITHUB_TOKEN
+    edge: true
+    local-dir: src/db/book # In case of custom book path: path/to/mybook/book
+    keep-history: false
+    verbose: true
+    repo: weisanju/note-db
+    deployment_file: true
+    on:
+      branch: main
+      condition: $db != ''
+    target_branch: main
