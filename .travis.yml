@@ -71,5 +71,5 @@ deploy:
     deployment_file: true
     on:
       branch: main
-      condition: $front != ''
+      condition: $frontend != ''
     target_branch: main
