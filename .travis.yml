@@ -14,9 +14,8 @@ before_script:
   - cargo install-update -a
 
 script:
-  - python setEnv.py
+  - python setEnvAndBuild.py
   - source setEnv.sh
-  - sh setDirectoryTarget.sh
 
 deploy:
   - provider: pages
@@ -26,10 +25,23 @@ deploy:
     local-dir: src/java/book # In case of custom book path: path/to/mybook/book
     keep-history: false
     verbose: true
-    repo: weisanju/note_java
+    repo: weisanju/note-java
     deployment_file: true
     on:
       branch: main
       condition: $java != ''
     target_branch: main
-  
+
+  - provider: pages
+    strategy: git
+    github-token: $GITHUB_TOKEN
+    edge: true
+    local-dir: src/python/book # In case of custom book path: path/to/mybook/book
+    keep-history: false
+    verbose: true
+    repo: weisanju/note-python
+    deployment_file: true
+    on:
+      branch: main
+      condition: $java != ''
+    target_branch: main
