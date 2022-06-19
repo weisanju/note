@@ -1,4 +1,4 @@
 set -ex
-if [ $effectedBranch ];then 
+if [[ $effectedBranch ]];then 
     mdbook build src/$effectedBranch
 fi
