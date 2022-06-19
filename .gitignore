@@ -4,3 +4,4 @@ _book/
 .idea/
 .DS_Store
 **/.obsidian
+setEnv.sh
