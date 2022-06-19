@@ -14,7 +14,8 @@ before_script:
   - cargo install-update -a
 
 script:
-  - source setDirectoryTarget.sh
+  - source setEnv.sh
+  - sh setDirectoryTarget.sh
 
 deploy:
   provider: pages
