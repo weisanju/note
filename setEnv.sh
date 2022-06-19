@@ -1,5 +1,9 @@
 export effectedBranch=java
-if git diff head~1..head --   --name-only | grep src/java/src/SUMMARY.md;then
+git status 
+git branch
+git log -1
+
+if git diff head^..head --   --name-only | grep src/java/src/SUMMARY.md;then
     echo effectedBranch yes
     export effectedBranch=java
 fi
