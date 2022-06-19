@@ -26,6 +26,7 @@ deploy:
   keep-history: false
   verbose: true
   repo: weisanju/note_java
+  deployment_file: true
   on:
     branch: main
     condition: $effectedBranch != ''
