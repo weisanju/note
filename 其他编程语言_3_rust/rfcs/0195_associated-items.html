@@ -1,0 +1,1522 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>0195_associated-items - note</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../index.html">我的笔记库</a></li><li class="chapter-item affix "><li class="part-title">spring</li><li class="chapter-item "><div><strong aria-hidden="true">1.</strong> spring</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/0.spring容器启动总览.html"><strong aria-hidden="true">1.1.</strong> spring容器启动总览</a></li><li class="chapter-item "><a href="../../spring_1_spring/1.spring容器启动-bean实例化流程.html"><strong aria-hidden="true">1.2.</strong> spring容器启动-bean实例化流程</a></li><li class="chapter-item "><a href="../../spring_1_spring/2.SpringBean实例化过程.html"><strong aria-hidden="true">1.3.</strong> SpringBean实例化过程</a></li><li class="chapter-item "><a href="../../spring_1_spring/3.Spring依赖注入与初始化.html"><strong aria-hidden="true">1.4.</strong> Spring依赖注入与初始化</a></li><li class="chapter-item "><a href="../../spring_1_spring/4.SpringBean的生命周期.html"><strong aria-hidden="true">1.5.</strong> SpringBean的生命周期</a></li><li class="chapter-item "><a href="../../spring_1_spring/5.SpringSchedule.html"><strong aria-hidden="true">1.6.</strong> SpringSchedule</a></li><li class="chapter-item "><a href="../../spring_1_spring/ClassPathScanningCandidateComponentProvider.html"><strong aria-hidden="true">1.7.</strong> ClassPathScanningCandidateComponentProvider</a></li><li class="chapter-item "><a href="../../spring_1_spring/PropertySource.html"><strong aria-hidden="true">1.8.</strong> PropertySource</a></li><li class="chapter-item "><a href="../../spring_1_spring/Spring总结.html"><strong aria-hidden="true">1.9.</strong> Spring总结</a></li><li class="chapter-item "><a href="../../spring_1_spring/applicationContext与BeanFactory的区别.html"><strong aria-hidden="true">1.10.</strong> applicationContext与BeanFactory的区别</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring杂项.html"><strong aria-hidden="true">1.11.</strong> spring杂项</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring组合注解.html"><strong aria-hidden="true">1.12.</strong> spring组合注解</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring解决循环依赖问题.html"><strong aria-hidden="true">1.13.</strong> spring解决循环依赖问题</a></li><li class="chapter-item "><a href="../../spring_1_spring/postprocessor/index.html"><strong aria-hidden="true">1.14.</strong> postprocessor</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/index.html"><strong aria-hidden="true">1.15.</strong> spring-aop</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-cglib动态代理.html"><strong aria-hidden="true">1.15.1.</strong> SpringAop-cglib动态代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-jdk动态代理.html"><strong aria-hidden="true">1.15.2.</strong> SpringAop-jdk动态代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-涉及到的类.html"><strong aria-hidden="true">1.15.3.</strong> SpringAop-涉及到的类</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-编程式代理.html"><strong aria-hidden="true">1.15.4.</strong> SpringAop-编程式代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-自动代理.html"><strong aria-hidden="true">1.15.5.</strong> SpringAop-自动代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop总结.html"><strong aria-hidden="true">1.15.6.</strong> SpringAop总结</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/aop包解析.html"><strong aria-hidden="true">1.15.7.</strong> aop包解析</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/taskList.html"><strong aria-hidden="true">1.15.8.</strong> taskList</a></li><li class="chapter-item "><div><strong aria-hidden="true">1.15.9.</strong> AOP应用解析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/AOP应用解析/Async异步.html"><strong aria-hidden="true">1.15.9.1.</strong> Async异步</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/AOP应用解析/依赖懒加载.html"><strong aria-hidden="true">1.15.9.2.</strong> 依赖懒加载</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/AOP应用解析/缓存.html"><strong aria-hidden="true">1.15.9.3.</strong> 缓存</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_1_spring/spring-bean定义/index.html"><strong aria-hidden="true">1.16.</strong> spring-bean定义</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/spring-bean定义/Bean定义.html"><strong aria-hidden="true">1.16.1.</strong> Bean定义</a></li></ol></li><li class="chapter-item "><a href="../../spring_1_spring/springBeanScope/index.html"><strong aria-hidden="true">1.17.</strong> springBeanScope</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/springBeanScope/spring自定义可刷新的上下文.html"><strong aria-hidden="true">1.17.1.</strong> spring自定义可刷新的上下文</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">1.18.</strong> springframework</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/springframework/MessageSource.html"><strong aria-hidden="true">1.18.1.</strong> MessageSource</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/spring-ioc.html"><strong aria-hidden="true">1.18.2.</strong> spring-ioc</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/springEL.html"><strong aria-hidden="true">1.18.3.</strong> springEL</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/spring代理.html"><strong aria-hidden="true">1.18.4.</strong> spring代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/基于Ant的路径匹配.html"><strong aria-hidden="true">1.18.5.</strong> 基于Ant的路径匹配</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/字段格式化.html"><strong aria-hidden="true">1.18.6.</strong> 字段格式化</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/属性源抽象.html"><strong aria-hidden="true">1.18.7.</strong> 属性源抽象</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/类型转换.html"><strong aria-hidden="true">1.18.8.</strong> 类型转换</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/资源抽象.html"><strong aria-hidden="true">1.18.9.</strong> 资源抽象</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/配置全局日期格式化.html"><strong aria-hidden="true">1.18.10.</strong> 配置全局日期格式化</a></li></ol></li><li class="chapter-item "><a href="../../spring_1_spring/编程式注入类/index.html"><strong aria-hidden="true">1.19.</strong> 编程式注入类</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/编程式注入类/AOP代理相关.html"><strong aria-hidden="true">1.19.1.</strong> AOP代理相关</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_2_springMVC/index.html"><strong aria-hidden="true">2.</strong> springMVC</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_2_springMVC/URI_Links.html"><strong aria-hidden="true">2.1.</strong> URI_Links</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/functional_endpoints.html"><strong aria-hidden="true">2.2.</strong> functional_endpoints</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/mvcannotation-driven注解的作用.html"><strong aria-hidden="true">2.3.</strong> mvcannotation-driven注解的作用</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/spring-mvc.html"><strong aria-hidden="true">2.4.</strong> spring-mvc</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMVC自定义参数解析注解.html"><strong aria-hidden="true">2.5.</strong> springMVC自定义参数解析注解</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMVC路径映射.html"><strong aria-hidden="true">2.6.</strong> springMVC路径映射</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMVC返回后.html"><strong aria-hidden="true">2.7.</strong> springMVC返回后</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMvcController配置.html"><strong aria-hidden="true">2.8.</strong> springMvcController配置</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/内置四种filters.html"><strong aria-hidden="true">2.9.</strong> 内置四种filters</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/基于注解的控制器.html"><strong aria-hidden="true">2.10.</strong> 基于注解的控制器</a></li><li class="chapter-item "><div><strong aria-hidden="true">2.11.</strong> spring_1_spring</div></li></ol></li><li class="chapter-item "><a href="../../spring_3_springboot/index.html"><strong aria-hidden="true">3.</strong> springboot</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_3_springboot/springBoot资源处理.html"><strong aria-hidden="true">3.1.</strong> springBoot资源处理</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-HiKariCP连接池动态数据源配置.html"><strong aria-hidden="true">3.2.</strong> springboot-HiKariCP连接池动态数据源配置</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-devtools.html"><strong aria-hidden="true">3.3.</strong> springboot-devtools</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-元数据.html"><strong aria-hidden="true">3.4.</strong> springboot-元数据</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-多模块.html"><strong aria-hidden="true">3.5.</strong> springboot-多模块</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-日志.html"><strong aria-hidden="true">3.6.</strong> springboot-日志</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-自动配置原理.html"><strong aria-hidden="true">3.7.</strong> springboot-自动配置原理</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-过滤器.html"><strong aria-hidden="true">3.8.</strong> springboot-过滤器</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-配置文件与jar分离.html"><strong aria-hidden="true">3.9.</strong> springboot-配置文件与jar分离</a></li><li class="chapter-item "><a href="../../spring_3_springboot/快速入门.html"><strong aria-hidden="true">3.10.</strong> 快速入门</a></li><li class="chapter-item "><a href="../../spring_3_springboot/自定义springBootStarter.html"><strong aria-hidden="true">3.11.</strong> 自定义springBootStarter</a></li><li class="chapter-item "><div><strong aria-hidden="true">3.12.</strong> springboot配置文件加载</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_3_springboot/springboot配置文件加载/propertySource原理.html"><strong aria-hidden="true">3.12.1.</strong> propertySource原理</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot配置文件加载/默认加载原则.html"><strong aria-hidden="true">3.12.2.</strong> 默认加载原则</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.13.</strong> 官方文档</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_3_springboot/官方文档/SpringApplication.html"><strong aria-hidden="true">3.13.1.</strong> SpringApplication</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_4_springSecurity/index.html"><strong aria-hidden="true">4.</strong> springSecurity</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_4_springSecurity/spring核心逻辑.html"><strong aria-hidden="true">4.1.</strong> spring核心逻辑</a></li></ol></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/index.html"><strong aria-hidden="true">5.</strong> springWebFlux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_5_springWebFlux/CoreFeatures.html"><strong aria-hidden="true">5.1.</strong> CoreFeatures</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/DispatcherHandler.html"><strong aria-hidden="true">5.2.</strong> DispatcherHandler</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/FunctionEndpoint.html"><strong aria-hidden="true">5.3.</strong> FunctionEndpoint</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/URILinks.html"><strong aria-hidden="true">5.4.</strong> URILinks</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/WebFluxConfig.html"><strong aria-hidden="true">5.5.</strong> WebFluxConfig</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/taskList.html"><strong aria-hidden="true">5.6.</strong> taskList</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/基于注解的控制器/index.html"><strong aria-hidden="true">5.7.</strong> 基于注解的控制器</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_5_springWebFlux/基于注解的控制器/HandlerMethod.html"><strong aria-hidden="true">5.7.1.</strong> HandlerMethod</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/基于注解的控制器/RequestMapping.html"><strong aria-hidden="true">5.7.2.</strong> RequestMapping</a></li></ol></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/源码分析/index.html"><strong aria-hidden="true">5.8.</strong> 源码分析</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_5_springWebFlux/源码分析/springBoot创建WebFlux分析.html"><strong aria-hidden="true">5.8.1.</strong> springBoot创建WebFlux分析</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_6_springCloud/index.html"><strong aria-hidden="true">6.</strong> springCloud</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">6.1.</strong> 服务注册与发现</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/服务注册与发现/nacos/index.html"><strong aria-hidden="true">6.1.1.</strong> nacos</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/服务注册与发现/nacos/nacos-with-spring.html"><strong aria-hidden="true">6.1.1.1.</strong> nacos-with-spring</a></li><li class="chapter-item "><a href="../../spring_6_springCloud/服务注册与发现/nacos/nacos-with-spring-clound.html"><strong aria-hidden="true">6.1.1.2.</strong> nacos-with-spring-clound</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.2.</strong> 服务消费</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/服务消费/Ribbon与Feign/index.html"><strong aria-hidden="true">6.2.1.</strong> Ribbon与Feign</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.3.</strong> 网关</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/网关/springCloudGateway/index.html"><strong aria-hidden="true">6.3.1.</strong> springCloudGateway</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/网关/springCloudGateway/springCloud中的构造者模式.html"><strong aria-hidden="true">6.3.1.1.</strong> springCloud中的构造者模式</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.</strong> springIntegration</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/index.html"><strong aria-hidden="true">7.1.</strong> springCache</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/1.基于申明式缓存.html"><strong aria-hidden="true">7.1.1.</strong> 基于申明式缓存</a></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/2.JCacheAnnotations.html"><strong aria-hidden="true">7.1.2.</strong> JCacheAnnotations</a></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/3.XML的申明式缓存.html"><strong aria-hidden="true">7.1.3.</strong> XML的申明式缓存</a></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/4.配置缓存库.html"><strong aria-hidden="true">7.1.4.</strong> 配置缓存库</a></li></ol></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springdata-redis/index.html"><strong aria-hidden="true">7.2.</strong> springdata-redis</a></li></ol></li><li class="chapter-item "><li class="part-title"></li><li class="chapter-item "><div><strong aria-hidden="true">8.</strong> 分布式与微服务</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../分布式与微服务/JWT无状态Session.html"><strong aria-hidden="true">8.1.</strong> JWT无状态Session</a></li><li class="chapter-item "><a href="../../分布式与微服务/一致性Hash.html"><strong aria-hidden="true">8.2.</strong> 一致性Hash</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式ID.html"><strong aria-hidden="true">8.3.</strong> 分布式ID</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式Session案.html"><strong aria-hidden="true">8.4.</strong> 分布式Session案</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式事务.html"><strong aria-hidden="true">8.5.</strong> 分布式事务</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式协调器-Zookeeper.html"><strong aria-hidden="true">8.6.</strong> 分布式协调器-Zookeeper</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式锁.html"><strong aria-hidden="true">8.7.</strong> 分布式锁</a></li><li class="chapter-item "><a href="../../分布式与微服务/接口幂等性.html"><strong aria-hidden="true">8.8.</strong> 接口幂等性</a></li><li class="chapter-item "><a href="../../分布式与微服务/负载均衡.html"><strong aria-hidden="true">8.9.</strong> 负载均衡</a></li></ol></li><li class="chapter-item "><a href="../../数据库/index.html"><strong aria-hidden="true">9.</strong> 数据库</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/sql通用优化.html"><strong aria-hidden="true">9.1.</strong> sql通用优化</a></li><li class="chapter-item "><a href="../../数据库/MongoDB/index.html"><strong aria-hidden="true">9.2.</strong> MongoDB</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/MongoDB/mongodb基本操作.html"><strong aria-hidden="true">9.2.1.</strong> mongodb基本操作</a></li><li class="chapter-item "><a href="../../数据库/MongoDB/mongodb高级语法.html"><strong aria-hidden="true">9.2.2.</strong> mongodb高级语法</a></li><li class="chapter-item "><a href="../../数据库/MongoDB/权限管理.html"><strong aria-hidden="true">9.2.3.</strong> 权限管理</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/index.html"><strong aria-hidden="true">9.3.</strong> elasticSearch</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/BackUpACluster.html"><strong aria-hidden="true">9.3.1.</strong> BackUpACluster</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/KQL.html"><strong aria-hidden="true">9.3.2.</strong> KQL</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/dataStream.html"><strong aria-hidden="true">9.3.3.</strong> dataStream</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/es堆内存如何分配.html"><strong aria-hidden="true">9.3.4.</strong> es堆内存如何分配</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/scroll查询.html"><strong aria-hidden="true">9.3.5.</strong> scroll查询</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/乐观并发控制.html"><strong aria-hidden="true">9.3.6.</strong> 乐观并发控制</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/分布式检索.html"><strong aria-hidden="true">9.3.7.</strong> 分布式检索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/分片内部原理.html"><strong aria-hidden="true">9.3.8.</strong> 分片内部原理</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/分词.html"><strong aria-hidden="true">9.3.9.</strong> 分词</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/前缀搜索与模糊搜索.html"><strong aria-hidden="true">9.3.10.</strong> 前缀搜索与模糊搜索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/数据分片.html"><strong aria-hidden="true">9.3.11.</strong> 数据分片</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/映射.html"><strong aria-hidden="true">9.3.12.</strong> 映射</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/杂项学习.html"><strong aria-hidden="true">9.3.13.</strong> 杂项学习</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引和分片.html"><strong aria-hidden="true">9.3.14.</strong> 索引和分片</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引管理.html"><strong aria-hidden="true">9.3.15.</strong> 索引管理</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/评分标准与相关性.html"><strong aria-hidden="true">9.3.16.</strong> 评分标准与相关性</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/集群内原理.html"><strong aria-hidden="true">9.3.17.</strong> 集群内原理</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/Datamanagement/index.html"><strong aria-hidden="true">9.3.18.</strong> Datamanagement</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/Datamanagement/DataTier.html"><strong aria-hidden="true">9.3.18.1.</strong> DataTier</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/index.html"><strong aria-hidden="true">9.3.19.</strong> ILM</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/1.AutomateRolloverWithILM.html"><strong aria-hidden="true">9.3.19.1.</strong> AutomateRolloverWithILM</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/FrozenIndices.html"><strong aria-hidden="true">9.3.19.2.</strong> FrozenIndices</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILM.html"><strong aria-hidden="true">9.3.19.3.</strong> ILM</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/RolloverAPI.html"><strong aria-hidden="true">9.3.19.4.</strong> RolloverAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ShrinkIndexAPI.html"><strong aria-hidden="true">9.3.19.5.</strong> ShrinkIndexAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILMConcepts/index.html"><strong aria-hidden="true">9.3.19.6.</strong> ILMConcepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILMConcepts/1.Rollover.html"><strong aria-hidden="true">9.3.19.6.1.</strong> Rollover</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILMConcepts/2.LifeCycleUpdates.html"><strong aria-hidden="true">9.3.19.6.2.</strong> LifeCycleUpdates</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/index.html"><strong aria-hidden="true">9.3.20.</strong> IndexModules</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/1.Analysis.html"><strong aria-hidden="true">9.3.20.1.</strong> Analysis</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/2.IndexShardAllocation.html"><strong aria-hidden="true">9.3.20.2.</strong> IndexShardAllocation</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/3.Indexblocks.html"><strong aria-hidden="true">9.3.20.3.</strong> Indexblocks</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/4.Mapper.html"><strong aria-hidden="true">9.3.20.4.</strong> Mapper</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/5.Merge.html"><strong aria-hidden="true">9.3.20.5.</strong> Merge</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/6.SimilarityModule.html"><strong aria-hidden="true">9.3.20.6.</strong> SimilarityModule</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/7.Slowlog.html"><strong aria-hidden="true">9.3.20.7.</strong> Slowlog</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/8.Store.html"><strong aria-hidden="true">9.3.20.8.</strong> Store</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/9.Translog.html"><strong aria-hidden="true">9.3.20.9.</strong> Translog</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/10.HistoryRetention.html"><strong aria-hidden="true">9.3.20.10.</strong> HistoryRetention</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/11.IndexSorting.html"><strong aria-hidden="true">9.3.20.11.</strong> IndexSorting</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/12.IndexPressure.html"><strong aria-hidden="true">9.3.20.12.</strong> IndexPressure</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.21.</strong> IngestPipeline</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/1.IngestPipelines.html"><strong aria-hidden="true">9.3.21.1.</strong> IngestPipelines</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/2.pipeLineExample.html"><strong aria-hidden="true">9.3.21.2.</strong> pipeLineExample</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/3.EnrichYourData.html"><strong aria-hidden="true">9.3.21.3.</strong> EnrichYourData</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/4.ExampleEnrichYourDataBasedOnGeolocation.html"><strong aria-hidden="true">9.3.21.4.</strong> ExampleEnrichYourDataBasedOnGeolocation</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/5.IngestProcessorReference.html"><strong aria-hidden="true">9.3.21.5.</strong> IngestProcessorReference</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/index.html"><strong aria-hidden="true">9.3.22.</strong> queryDSL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/1.QueryAndFilterContext.html"><strong aria-hidden="true">9.3.22.1.</strong> QueryAndFilterContext</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/2.CompoundQueries.html"><strong aria-hidden="true">9.3.22.2.</strong> CompoundQueries</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/SearchAfter.html"><strong aria-hidden="true">9.3.22.3.</strong> SearchAfter</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/FullTextQueries/index.html"><strong aria-hidden="true">9.3.22.4.</strong> FullTextQueries</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/FullTextQueries/1.IntervalsQuery.html"><strong aria-hidden="true">9.3.22.4.1.</strong> IntervalsQuery</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/FullTextQueries/2.MatchQuery.html"><strong aria-hidden="true">9.3.22.4.2.</strong> MatchQuery</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/index.html"><strong aria-hidden="true">9.3.23.</strong> snapshotAndRestore</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CleanUpSnapshotRepo.html"><strong aria-hidden="true">9.3.23.1.</strong> CleanUpSnapshotRepo</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CloneSnapshot.html"><strong aria-hidden="true">9.3.23.2.</strong> CloneSnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CreateOrUpdateSnapshotAPI.html"><strong aria-hidden="true">9.3.23.3.</strong> CreateOrUpdateSnapshotAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CreateSnapshot.html"><strong aria-hidden="true">9.3.23.4.</strong> CreateSnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/DeleteSnapShot.html"><strong aria-hidden="true">9.3.23.5.</strong> DeleteSnapShot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/DeleteSnapshotRepository.html"><strong aria-hidden="true">9.3.23.6.</strong> DeleteSnapshotRepository</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/GetSnapshotAPI.html"><strong aria-hidden="true">9.3.23.7.</strong> GetSnapshotAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/RegisterASnapshot.html"><strong aria-hidden="true">9.3.23.8.</strong> RegisterASnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/RestoreSnapshot.html"><strong aria-hidden="true">9.3.23.9.</strong> RestoreSnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/SLM.html"><strong aria-hidden="true">9.3.23.10.</strong> SLM</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/SearchableSnapshots.html"><strong aria-hidden="true">9.3.23.11.</strong> SearchableSnapshots</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/SearchableSnapshotsMountAPI.html"><strong aria-hidden="true">9.3.23.12.</strong> SearchableSnapshotsMountAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/repository-s3.html"><strong aria-hidden="true">9.3.23.13.</strong> repository-s3</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/使用OSS备份恢复集群实战.html"><strong aria-hidden="true">9.3.23.14.</strong> 使用OSS备份恢复集群实战</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/安装/index.html"><strong aria-hidden="true">9.3.24.</strong> 安装</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/安装/1.InstallingFromRpm.html"><strong aria-hidden="true">9.3.24.1.</strong> InstallingFromRpm</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/安装/2.InstallFromDeb.html"><strong aria-hidden="true">9.3.24.2.</strong> InstallFromDeb</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.25.</strong> 深入搜索</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/深入搜索/全文搜索.html"><strong aria-hidden="true">9.3.25.1.</strong> 全文搜索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/深入搜索/多字段搜索.html"><strong aria-hidden="true">9.3.25.2.</strong> 多字段搜索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/深入搜索/结构化搜索.html"><strong aria-hidden="true">9.3.25.3.</strong> 结构化搜索</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/index.html"><strong aria-hidden="true">9.3.26.</strong> 索引分片分配</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/1.索引级别的分片分配控制.html"><strong aria-hidden="true">9.3.26.1.</strong> 索引级别的分片分配控制</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/2.节点离开延迟分配.html"><strong aria-hidden="true">9.3.26.2.</strong> 节点离开延迟分配</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/3.索引恢复优先级.html"><strong aria-hidden="true">9.3.26.3.</strong> 索引恢复优先级</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/4.每个节点的总分片.html"><strong aria-hidden="true">9.3.26.4.</strong> 每个节点的总分片</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/5.索引级别数据层分配过滤.html"><strong aria-hidden="true">9.3.26.5.</strong> 索引级别数据层分配过滤</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/6.手动分配分片clusterRerouteAPI.html"><strong aria-hidden="true">9.3.26.6.</strong> 手动分配分片clusterRerouteAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/7.cluster-allocation-explain.html"><strong aria-hidden="true">9.3.26.7.</strong> cluster-allocation-explain</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/考纲解读/index.html"><strong aria-hidden="true">9.3.27.</strong> 考纲解读</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/考纲解读/1.ClusterManagement.html"><strong aria-hidden="true">9.3.27.1.</strong> ClusterManagement</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/考纲解读/2.DataManagement.html"><strong aria-hidden="true">9.3.27.2.</strong> DataManagement</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.28.</strong> 聚合</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/聚合/RareTermsAggregation.html"><strong aria-hidden="true">9.3.28.1.</strong> RareTermsAggregation</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/聚合/Term.html"><strong aria-hidden="true">9.3.28.2.</strong> Term</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/index.html"><strong aria-hidden="true">9.3.29.</strong> 配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/1.重要配置.html"><strong aria-hidden="true">9.3.29.1.</strong> 重要配置</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/2.elasticsearch.yml核心配置.html"><strong aria-hidden="true">9.3.29.2.</strong> elasticsearch.yml核心配置</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/3.es系统参数修改.html"><strong aria-hidden="true">9.3.29.3.</strong> es系统参数修改</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.30.</strong> 集群</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/集群/Health.html"><strong aria-hidden="true">9.3.30.1.</strong> Health</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.31.</strong> 高可用专题</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/高可用专题/弹性设计.html"><strong aria-hidden="true">9.3.31.1.</strong> 弹性设计</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/高可用专题/跨集群复制.html"><strong aria-hidden="true">9.3.31.2.</strong> 跨集群复制</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/高可用专题/集群备份.html"><strong aria-hidden="true">9.3.31.3.</strong> 集群备份</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.4.</strong> mysql</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysqlfunction.html"><strong aria-hidden="true">9.4.1.</strong> mysqlfunction</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysqlpdump.html"><strong aria-hidden="true">9.4.2.</strong> mysqlpdump</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysqlzip安装.html"><strong aria-hidden="true">9.4.3.</strong> mysqlzip安装</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql公用表达式.html"><strong aria-hidden="true">9.4.4.</strong> mysql公用表达式</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql学习.html"><strong aria-hidden="true">9.4.5.</strong> mysql学习</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql执行计划.html"><strong aria-hidden="true">9.4.6.</strong> mysql执行计划</a></li><li class="chapter-item "><a href="../../数据库/mysql/空值处理函数.html"><strong aria-hidden="true">9.4.7.</strong> 空值处理函数</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.4.8.</strong> mysql官方文档</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/mysql程序.html"><strong aria-hidden="true">9.4.8.1.</strong> mysql程序</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/客户端.html"><strong aria-hidden="true">9.4.8.2.</strong> 客户端</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/mysql程序/index.html"><strong aria-hidden="true">9.4.8.3.</strong> mysql程序</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/mysql程序/使用mysql相关程序.html"><strong aria-hidden="true">9.4.8.3.1.</strong> 使用mysql相关程序</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/index.html"><strong aria-hidden="true">9.4.9.</strong> mysql日志</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/mysql日志及分类.html"><strong aria-hidden="true">9.4.9.1.</strong> mysql日志及分类</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/二进制日志.html"><strong aria-hidden="true">9.4.9.2.</strong> 二进制日志</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/慢sql日志.html"><strong aria-hidden="true">9.4.9.3.</strong> 慢sql日志</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/通用日志.html"><strong aria-hidden="true">9.4.9.4.</strong> 通用日志</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/错误日志.html"><strong aria-hidden="true">9.4.9.5.</strong> 错误日志</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.5.</strong> oracle</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/oracle/Oracle小知识点.html"><strong aria-hidden="true">9.5.1.</strong> Oracle小知识点</a></li><li class="chapter-item "><a href="../../数据库/oracle/oracledocker快速搭建.html"><strong aria-hidden="true">9.5.2.</strong> oracledocker快速搭建</a></li><li class="chapter-item "><a href="../../数据库/oracle/oracle多表更新方法.html"><strong aria-hidden="true">9.5.3.</strong> oracle多表更新方法</a></li></ol></li><li class="chapter-item "><a href="../../数据库/redis/index.html"><strong aria-hidden="true">9.6.</strong> redis</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/redis/Redis应用-位图.html"><strong aria-hidden="true">9.6.1.</strong> Redis应用-位图</a></li><li class="chapter-item "><a href="../../数据库/redis/Redis应用-分布式锁.html"><strong aria-hidden="true">9.6.2.</strong> Redis应用-分布式锁</a></li><li class="chapter-item "><a href="../../数据库/redis/redis-keys与scan.html"><strong aria-hidden="true">9.6.3.</strong> redis-keys与scan</a></li><li class="chapter-item "><a href="../../数据库/redis/redis-serverAndRedis-cli.html"><strong aria-hidden="true">9.6.4.</strong> redis-serverAndRedis-cli</a></li><li class="chapter-item "><a href="../../数据库/redis/redis主从与哨兵.html"><strong aria-hidden="true">9.6.5.</strong> redis主从与哨兵</a></li><li class="chapter-item "><a href="../../数据库/redis/redis发布与订阅.html"><strong aria-hidden="true">9.6.6.</strong> redis发布与订阅</a></li><li class="chapter-item "><a href="../../数据库/redis/redis集群.html"><strong aria-hidden="true">9.6.7.</strong> redis集群</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.6.8.</strong> redis数据结构</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/redis/redis数据结构/Redis有序集合(sortedSet).html"><strong aria-hidden="true">9.6.8.1.</strong> Redis有序集合(sortedSet)</a></li><li class="chapter-item "><a href="../../数据库/redis/redis数据结构/基本数据结构.html"><strong aria-hidden="true">9.6.8.2.</strong> 基本数据结构</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">10.</strong> 日志收集</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../日志收集/filebeat/index.html"><strong aria-hidden="true">10.1.</strong> filebeat</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../日志收集/filebeat/1.HowFilebeatWorks.html"><strong aria-hidden="true">10.1.1.</strong> HowFilebeatWorks</a></li><li class="chapter-item "><a href="../../日志收集/filebeat/ConfigureFilebeat/index.html"><strong aria-hidden="true">10.1.2.</strong> ConfigureFilebeat</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../日志收集/filebeat/ConfigureFilebeat/1.Input.html"><strong aria-hidden="true">10.1.2.1.</strong> Input</a></li><li class="chapter-item "><a href="../../日志收集/filebeat/ConfigureFilebeat/2.InputFileStream.html"><strong aria-hidden="true">10.1.2.2.</strong> InputFileStream</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">11.</strong> CICD</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/ansible/index.html"><strong aria-hidden="true">11.1.</strong> ansible</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/ansible/1.入门.html"><strong aria-hidden="true">11.1.1.</strong> 入门</a></li><li class="chapter-item "><a href="../../CICD/ansible/Ansible.html"><strong aria-hidden="true">11.1.2.</strong> Ansible</a></li><li class="chapter-item "><a href="../../CICD/ansible/Loops.html"><strong aria-hidden="true">11.1.3.</strong> Loops</a></li><li class="chapter-item "><a href="../../CICD/ansible/ansible中的变量.html"><strong aria-hidden="true">11.1.4.</strong> ansible中的变量</a></li><li class="chapter-item "><a href="../../CICD/ansible/ansible示例.html"><strong aria-hidden="true">11.1.5.</strong> ansible示例</a></li><li class="chapter-item "><a href="../../CICD/ansible/inventor文件.html"><strong aria-hidden="true">11.1.6.</strong> inventor文件</a></li><li class="chapter-item "><a href="../../CICD/ansible/playbooks.html"><strong aria-hidden="true">11.1.7.</strong> playbooks</a></li><li class="chapter-item "><a href="../../CICD/ansible/临时命令行模式.html"><strong aria-hidden="true">11.1.8.</strong> 临时命令行模式</a></li><li class="chapter-item "><a href="../../CICD/ansible/2.AnsibleConcepts/index.html"><strong aria-hidden="true">11.1.9.</strong> 2.AnsibleConcepts</a></li><li class="chapter-item "><a href="../../CICD/ansible/3.内置模块/index.html"><strong aria-hidden="true">11.1.10.</strong> 3.内置模块</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/ansible/3.内置模块/1.Command.html"><strong aria-hidden="true">11.1.10.1.</strong> Command</a></li><li class="chapter-item "><a href="../../CICD/ansible/3.内置模块/2.Shell.html"><strong aria-hidden="true">11.1.10.2.</strong> Shell</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../CICD/docker/index.html"><strong aria-hidden="true">11.2.</strong> docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/docker/DockerFile简介.html"><strong aria-hidden="true">11.2.1.</strong> DockerFile简介</a></li><li class="chapter-item "><a href="../../CICD/docker/dockcer-swarm.html"><strong aria-hidden="true">11.2.2.</strong> dockcer-swarm</a></li><li class="chapter-item "><a href="../../CICD/docker/docker-compose.html"><strong aria-hidden="true">11.2.3.</strong> docker-compose</a></li><li class="chapter-item "><a href="../../CICD/docker/docker-swarm集群搭建实例.html"><strong aria-hidden="true">11.2.4.</strong> docker-swarm集群搭建实例</a></li><li class="chapter-item "><a href="../../CICD/docker/docker-volume管理.html"><strong aria-hidden="true">11.2.5.</strong> docker-volume管理</a></li><li class="chapter-item "><a href="../../CICD/docker/docker容器连接.html"><strong aria-hidden="true">11.2.6.</strong> docker容器连接</a></li><li class="chapter-item "><a href="../../CICD/docker/docker搭建registry仓库.html"><strong aria-hidden="true">11.2.7.</strong> docker搭建registry仓库</a></li><li class="chapter-item "><a href="../../CICD/docker/docker搭建私有镜像库.html"><strong aria-hidden="true">11.2.8.</strong> docker搭建私有镜像库</a></li><li class="chapter-item "><a href="../../CICD/docker/docker离线安装.html"><strong aria-hidden="true">11.2.9.</strong> docker离线安装</a></li><li class="chapter-item "><a href="../../CICD/docker/docker网络管理.html"><strong aria-hidden="true">11.2.10.</strong> docker网络管理</a></li><li class="chapter-item "><a href="../../CICD/docker/docker远程连接配置.html"><strong aria-hidden="true">11.2.11.</strong> docker远程连接配置</a></li><li class="chapter-item "><a href="../../CICD/docker/redis主从与哨兵.html"><strong aria-hidden="true">11.2.12.</strong> redis主从与哨兵</a></li><li class="chapter-item "><a href="../../CICD/docker/使用实例.html"><strong aria-hidden="true">11.2.13.</strong> 使用实例</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">11.3.</strong> jenkins</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/jenkins/Jenkins.html"><strong aria-hidden="true">11.3.1.</strong> Jenkins</a></li><li class="chapter-item "><a href="../../CICD/jenkins/jenkins_pipeline.html"><strong aria-hidden="true">11.3.2.</strong> jenkins_pipeline</a></li></ol></li><li class="chapter-item "><a href="../../CICD/k8s/index.html"><strong aria-hidden="true">11.4.</strong> k8s</a></li><li class="chapter-item "><a href="../../CICD/maven/index.html"><strong aria-hidden="true">11.5.</strong> maven</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/maven/AutoConfig插件.html"><strong aria-hidden="true">11.5.1.</strong> AutoConfig插件</a></li><li class="chapter-item "><a href="../../CICD/maven/MavenArcheType.html"><strong aria-hidden="true">11.5.2.</strong> MavenArcheType</a></li><li class="chapter-item "><a href="../../CICD/maven/maven.html"><strong aria-hidden="true">11.5.3.</strong> maven</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-Maven_Resources_Plugin.html"><strong aria-hidden="true">11.5.4.</strong> maven-Maven_Resources_Plugin</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-archiver.html"><strong aria-hidden="true">11.5.5.</strong> maven-archiver</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-assembly-plugin.html"><strong aria-hidden="true">11.5.6.</strong> maven-assembly-plugin</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-bom.html"><strong aria-hidden="true">11.5.7.</strong> maven-bom</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-profile.html"><strong aria-hidden="true">11.5.8.</strong> maven-profile</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-依赖管理.html"><strong aria-hidden="true">11.5.9.</strong> maven-依赖管理</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-编译源码.html"><strong aria-hidden="true">11.5.10.</strong> maven-编译源码</a></li><li class="chapter-item "><a href="../../CICD/maven/maven中的生命周期、插件、目标.html"><strong aria-hidden="true">11.5.11.</strong> maven中的生命周期、插件、目标</a></li><li class="chapter-item "><a href="../../CICD/maven/maven打包方式.html"><strong aria-hidden="true">11.5.12.</strong> maven打包方式</a></li><li class="chapter-item "><a href="../../CICD/maven/maven聚合项目版本管理实践.html"><strong aria-hidden="true">11.5.13.</strong> maven聚合项目版本管理实践</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../模板引擎/index.html"><strong aria-hidden="true">12.</strong> 模板引擎</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../模板引擎/mustache/index.html"><strong aria-hidden="true">12.1.</strong> mustache</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">13.</strong> Linux</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Linux/CFSBandwidthControl.html"><strong aria-hidden="true">13.1.</strong> CFSBandwidthControl</a></li><li class="chapter-item "><a href="../../Linux/LinuxFor.html"><strong aria-hidden="true">13.2.</strong> LinuxFor</a></li><li class="chapter-item "><a href="../../Linux/LinuxWOL设置.html"><strong aria-hidden="true">13.3.</strong> LinuxWOL设置</a></li><li class="chapter-item "><a href="../../Linux/Linux条件测试.html"><strong aria-hidden="true">13.4.</strong> Linux条件测试</a></li><li class="chapter-item "><a href="../../Linux/Seed.html"><strong aria-hidden="true">13.5.</strong> Seed</a></li><li class="chapter-item "><a href="../../Linux/VIM.html"><strong aria-hidden="true">13.6.</strong> VIM</a></li><li class="chapter-item "><a href="../../Linux/caseIn.html"><strong aria-hidden="true">13.7.</strong> caseIn</a></li><li class="chapter-item "><a href="../../Linux/cgroup.html"><strong aria-hidden="true">13.8.</strong> cgroup</a></li><li class="chapter-item "><a href="../../Linux/curl.html"><strong aria-hidden="true">13.9.</strong> curl</a></li><li class="chapter-item "><a href="../../Linux/dd.html"><strong aria-hidden="true">13.10.</strong> dd</a></li><li class="chapter-item "><a href="../../Linux/diffPatch.html"><strong aria-hidden="true">13.11.</strong> diffPatch</a></li><li class="chapter-item "><a href="../../Linux/find.html"><strong aria-hidden="true">13.12.</strong> find</a></li><li class="chapter-item "><a href="../../Linux/iptables.html"><strong aria-hidden="true">13.13.</strong> iptables</a></li><li class="chapter-item "><a href="../../Linux/jq.html"><strong aria-hidden="true">13.14.</strong> jq</a></li><li class="chapter-item "><a href="../../Linux/lsof.html"><strong aria-hidden="true">13.15.</strong> lsof</a></li><li class="chapter-item "><a href="../../Linux/ps.html"><strong aria-hidden="true">13.16.</strong> ps</a></li><li class="chapter-item "><a href="../../Linux/read.html"><strong aria-hidden="true">13.17.</strong> read</a></li><li class="chapter-item "><a href="../../Linux/scp.html"><strong aria-hidden="true">13.18.</strong> scp</a></li><li class="chapter-item "><a href="../../Linux/select.html"><strong aria-hidden="true">13.19.</strong> select</a></li><li class="chapter-item "><a href="../../Linux/service脚本.html"><strong aria-hidden="true">13.20.</strong> service脚本</a></li><li class="chapter-item "><a href="../../Linux/set.html"><strong aria-hidden="true">13.21.</strong> set</a></li><li class="chapter-item "><a href="../../Linux/shell字符串.html"><strong aria-hidden="true">13.22.</strong> shell字符串</a></li><li class="chapter-item "><a href="../../Linux/shell脚本参数.html"><strong aria-hidden="true">13.23.</strong> shell脚本参数</a></li><li class="chapter-item "><a href="../../Linux/stat.html"><strong aria-hidden="true">13.24.</strong> stat</a></li><li class="chapter-item "><a href="../../Linux/tar.html"><strong aria-hidden="true">13.25.</strong> tar</a></li><li class="chapter-item "><a href="../../Linux/top命令.html"><strong aria-hidden="true">13.26.</strong> top命令</a></li><li class="chapter-item "><a href="../../Linux/uidGidSetUidSetGid.html"><strong aria-hidden="true">13.27.</strong> uidGidSetUidSetGid</a></li><li class="chapter-item "><a href="../../Linux/wsl关闭提示音.html"><strong aria-hidden="true">13.28.</strong> wsl关闭提示音</a></li><li class="chapter-item "><a href="../../Linux/yum本地包依赖.html"><strong aria-hidden="true">13.29.</strong> yum本地包依赖</a></li><li class="chapter-item "><a href="../../Linux/确定Linux发行版本.html"><strong aria-hidden="true">13.30.</strong> 确定Linux发行版本</a></li><li class="chapter-item "><a href="../../Linux/零拷贝.html"><strong aria-hidden="true">13.31.</strong> 零拷贝</a></li><li class="chapter-item "><a href="../../Linux/默认值语法糖.html"><strong aria-hidden="true">13.32.</strong> 默认值语法糖</a></li></ol></li><li class="chapter-item "><a href="../../数据结构与算法/index.html"><strong aria-hidden="true">14.</strong> 数据结构与算法</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据结构与算法/Base64编码.html"><strong aria-hidden="true">14.1.</strong> Base64编码</a></li><li class="chapter-item "><a href="../../数据结构与算法/Huffman编码.html"><strong aria-hidden="true">14.2.</strong> Huffman编码</a></li><li class="chapter-item "><a href="../../数据结构与算法/base64.html"><strong aria-hidden="true">14.3.</strong> base64</a></li><li class="chapter-item "><a href="../../数据结构与算法/fnv-hash算法.html"><strong aria-hidden="true">14.4.</strong> fnv-hash算法</a></li><li class="chapter-item "><a href="../../数据结构与算法/位运算.html"><strong aria-hidden="true">14.5.</strong> 位运算</a></li><li class="chapter-item "><a href="../../数据结构与算法/动态规划.html"><strong aria-hidden="true">14.6.</strong> 动态规划</a></li><li class="chapter-item "><a href="../../数据结构与算法/动态规划-新.html"><strong aria-hidden="true">14.7.</strong> 动态规划-新</a></li><li class="chapter-item "><a href="../../数据结构与算法/字符编码.html"><strong aria-hidden="true">14.8.</strong> 字符编码</a></li><li class="chapter-item "><a href="../../数据结构与算法/布隆过滤器.html"><strong aria-hidden="true">14.9.</strong> 布隆过滤器</a></li><li class="chapter-item "><a href="../../数据结构与算法/浮点数.html"><strong aria-hidden="true">14.10.</strong> 浮点数</a></li><li class="chapter-item "><a href="../../数据结构与算法/贪心算法.html"><strong aria-hidden="true">14.11.</strong> 贪心算法</a></li><li class="chapter-item "><a href="../../数据结构与算法/逆波兰表达式.html"><strong aria-hidden="true">14.12.</strong> 逆波兰表达式</a></li><li class="chapter-item "><div><strong aria-hidden="true">14.13.</strong> 树</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据结构与算法/树/二叉搜索平衡树.html"><strong aria-hidden="true">14.13.1.</strong> 二叉搜索平衡树</a></li><li class="chapter-item "><a href="../../数据结构与算法/树/红黑树.html"><strong aria-hidden="true">14.13.2.</strong> 红黑树</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">15.</strong> 数据格式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据格式/XML.html"><strong aria-hidden="true">15.1.</strong> XML</a></li><li class="chapter-item "><a href="../../数据格式/yaml.html"><strong aria-hidden="true">15.2.</strong> yaml</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">16.</strong> tmp</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tmp/大端与小端.html"><strong aria-hidden="true">16.1.</strong> 大端与小端</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">17.</strong> 消息队列</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../消息队列/RocketMQ/index.html"><strong aria-hidden="true">17.1.</strong> RocketMQ</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../消息队列/RocketMQ/MQ消息的投递机制.html"><strong aria-hidden="true">17.1.1.</strong> MQ消息的投递机制</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/MQ的一致性算法实现原理.html"><strong aria-hidden="true">17.1.2.</strong> MQ的一致性算法实现原理</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/架构和设计.html"><strong aria-hidden="true">17.1.3.</strong> 架构和设计</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/案例.html"><strong aria-hidden="true">17.1.4.</strong> 案例</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/概念和特性.html"><strong aria-hidden="true">17.1.5.</strong> 概念和特性</a></li></ol></li><li class="chapter-item "><a href="../../消息队列/kafaKa/index.html"><strong aria-hidden="true">17.2.</strong> kafaKa</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.</strong> 前端</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">18.1.</strong> ECMAScript</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/ECMAScript/ECMAScript6简介.html"><strong aria-hidden="true">18.1.1.</strong> ECMAScript6简介</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/Set-Map数据结构.html"><strong aria-hidden="true">18.1.2.</strong> Set-Map数据结构</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/async函数.html"><strong aria-hidden="true">18.1.3.</strong> async函数</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/generate函数.html"><strong aria-hidden="true">18.1.4.</strong> generate函数</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/let与const命令.html"><strong aria-hidden="true">18.1.5.</strong> let与const命令</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/proxy.html"><strong aria-hidden="true">18.1.6.</strong> proxy</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/symbol.html"><strong aria-hidden="true">18.1.7.</strong> symbol</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/函数.html"><strong aria-hidden="true">18.1.8.</strong> 函数</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/字符串-正则-数值.html"><strong aria-hidden="true">18.1.9.</strong> 字符串-正则-数值</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/对象.html"><strong aria-hidden="true">18.1.10.</strong> 对象</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/数组.html"><strong aria-hidden="true">18.1.11.</strong> 数组</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.2.</strong> Element-UI</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/Element-UI/Switch开关.html"><strong aria-hidden="true">18.2.1.</strong> Switch开关</a></li><li class="chapter-item "><a href="../../前端/Element-UI/Tree树形控件.html"><strong aria-hidden="true">18.2.2.</strong> Tree树形控件</a></li><li class="chapter-item "><a href="../../前端/Element-UI/backtop.html"><strong aria-hidden="true">18.2.3.</strong> backtop</a></li><li class="chapter-item "><a href="../../前端/Element-UI/card卡片.html"><strong aria-hidden="true">18.2.4.</strong> card卡片</a></li><li class="chapter-item "><a href="../../前端/Element-UI/form表单.html"><strong aria-hidden="true">18.2.5.</strong> form表单</a></li><li class="chapter-item "><a href="../../前端/Element-UI/image图片.html"><strong aria-hidden="true">18.2.6.</strong> image图片</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-Breadcrumb面包屑.html"><strong aria-hidden="true">18.2.7.</strong> navigation-Breadcrumb面包屑</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-dropdown.html"><strong aria-hidden="true">18.2.8.</strong> navigation-dropdown</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-navmenu.html"><strong aria-hidden="true">18.2.9.</strong> navigation-navmenu</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-steps.html"><strong aria-hidden="true">18.2.10.</strong> navigation-steps</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-标签页.html"><strong aria-hidden="true">18.2.11.</strong> navigation-标签页</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-页头.html"><strong aria-hidden="true">18.2.12.</strong> navigation-页头</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-Notification.html"><strong aria-hidden="true">18.2.13.</strong> notice-Notification</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-alert.html"><strong aria-hidden="true">18.2.14.</strong> notice-alert</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-loading.html"><strong aria-hidden="true">18.2.15.</strong> notice-loading</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-message-box.html"><strong aria-hidden="true">18.2.16.</strong> notice-message-box</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-message提示.html"><strong aria-hidden="true">18.2.17.</strong> notice-message提示</a></li><li class="chapter-item "><a href="../../前端/Element-UI/popConfirm.html"><strong aria-hidden="true">18.2.18.</strong> popConfirm</a></li><li class="chapter-item "><a href="../../前端/Element-UI/popOver弹出框.html"><strong aria-hidden="true">18.2.19.</strong> popOver弹出框</a></li><li class="chapter-item "><a href="../../前端/Element-UI/slider滑块.html"><strong aria-hidden="true">18.2.20.</strong> slider滑块</a></li><li class="chapter-item "><a href="../../前端/Element-UI/timeline.html"><strong aria-hidden="true">18.2.21.</strong> timeline</a></li><li class="chapter-item "><a href="../../前端/Element-UI/tooltip.html"><strong aria-hidden="true">18.2.22.</strong> tooltip</a></li><li class="chapter-item "><a href="../../前端/Element-UI/transfer穿梭框.html"><strong aria-hidden="true">18.2.23.</strong> transfer穿梭框</a></li><li class="chapter-item "><a href="../../前端/Element-UI/上传.html"><strong aria-hidden="true">18.2.24.</strong> 上传</a></li><li class="chapter-item "><a href="../../前端/Element-UI/入门.html"><strong aria-hidden="true">18.2.25.</strong> 入门</a></li><li class="chapter-item "><a href="../../前端/Element-UI/分割线.html"><strong aria-hidden="true">18.2.26.</strong> 分割线</a></li><li class="chapter-item "><a href="../../前端/Element-UI/分页.html"><strong aria-hidden="true">18.2.27.</strong> 分页</a></li><li class="chapter-item "><a href="../../前端/Element-UI/基础组件.html"><strong aria-hidden="true">18.2.28.</strong> 基础组件</a></li><li class="chapter-item "><a href="../../前端/Element-UI/头像.html"><strong aria-hidden="true">18.2.29.</strong> 头像</a></li><li class="chapter-item "><a href="../../前端/Element-UI/对话框.html"><strong aria-hidden="true">18.2.30.</strong> 对话框</a></li><li class="chapter-item "><a href="../../前端/Element-UI/常见input输入.html"><strong aria-hidden="true">18.2.31.</strong> 常见input输入</a></li><li class="chapter-item "><a href="../../前端/Element-UI/折叠面板.html"><strong aria-hidden="true">18.2.32.</strong> 折叠面板</a></li><li class="chapter-item "><a href="../../前端/Element-UI/抽屉.html"><strong aria-hidden="true">18.2.33.</strong> 抽屉</a></li><li class="chapter-item "><a href="../../前端/Element-UI/无限滚动.html"><strong aria-hidden="true">18.2.34.</strong> 无限滚动</a></li><li class="chapter-item "><a href="../../前端/Element-UI/日历.html"><strong aria-hidden="true">18.2.35.</strong> 日历</a></li><li class="chapter-item "><a href="../../前端/Element-UI/时间日期选择.html"><strong aria-hidden="true">18.2.36.</strong> 时间日期选择</a></li><li class="chapter-item "><a href="../../前端/Element-UI/标签.html"><strong aria-hidden="true">18.2.37.</strong> 标签</a></li><li class="chapter-item "><a href="../../前端/Element-UI/标记与提示.html"><strong aria-hidden="true">18.2.38.</strong> 标记与提示</a></li><li class="chapter-item "><a href="../../前端/Element-UI/级联选择器.html"><strong aria-hidden="true">18.2.39.</strong> 级联选择器</a></li><li class="chapter-item "><a href="../../前端/Element-UI/表格.html"><strong aria-hidden="true">18.2.40.</strong> 表格</a></li><li class="chapter-item "><a href="../../前端/Element-UI/评分.html"><strong aria-hidden="true">18.2.41.</strong> 评分</a></li><li class="chapter-item "><a href="../../前端/Element-UI/走马灯.html"><strong aria-hidden="true">18.2.42.</strong> 走马灯</a></li><li class="chapter-item "><a href="../../前端/Element-UI/进度条.html"><strong aria-hidden="true">18.2.43.</strong> 进度条</a></li><li class="chapter-item "><a href="../../前端/Element-UI/颜色选择器.html"><strong aria-hidden="true">18.2.44.</strong> 颜色选择器</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.3.</strong> HTTP</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/HTTP/Content-Disposition.html"><strong aria-hidden="true">18.3.1.</strong> Content-Disposition</a></li><li class="chapter-item "><a href="../../前端/HTTP/Cookie.html"><strong aria-hidden="true">18.3.2.</strong> Cookie</a></li><li class="chapter-item "><a href="../../前端/HTTP/HTTP缓存.html"><strong aria-hidden="true">18.3.3.</strong> HTTP缓存</a></li><li class="chapter-item "><a href="../../前端/HTTP/HTTP访问控制.html"><strong aria-hidden="true">18.3.4.</strong> HTTP访问控制</a></li><li class="chapter-item "><a href="../../前端/HTTP/Http响应码.html"><strong aria-hidden="true">18.3.5.</strong> Http响应码</a></li><li class="chapter-item "><a href="../../前端/HTTP/MIME.html"><strong aria-hidden="true">18.3.6.</strong> MIME</a></li><li class="chapter-item "><a href="../../前端/HTTP/http头.html"><strong aria-hidden="true">18.3.7.</strong> http头</a></li></ol></li><li class="chapter-item "><a href="../../前端/Html5/index.html"><strong aria-hidden="true">18.4.</strong> Html5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/Html5/CSS3.html"><strong aria-hidden="true">18.4.1.</strong> CSS3</a></li><li class="chapter-item "><a href="../../前端/Html5/H5canvas图形绘制.html"><strong aria-hidden="true">18.4.2.</strong> H5canvas图形绘制</a></li><li class="chapter-item "><a href="../../前端/Html5/HTML5.html"><strong aria-hidden="true">18.4.3.</strong> HTML5</a></li><li class="chapter-item "><a href="../../前端/Html5/HTML5的结构.html"><strong aria-hidden="true">18.4.4.</strong> HTML5的结构</a></li><li class="chapter-item "><a href="../../前端/Html5/HTML5表单.html"><strong aria-hidden="true">18.4.5.</strong> HTML5表单</a></li><li class="chapter-item "><a href="../../前端/Html5/WebWorkers.html"><strong aria-hidden="true">18.4.6.</strong> WebWorkers</a></li><li class="chapter-item "><a href="../../前端/Html5/多媒体播放.html"><strong aria-hidden="true">18.4.7.</strong> 多媒体播放</a></li><li class="chapter-item "><a href="../../前端/Html5/本地存储.html"><strong aria-hidden="true">18.4.8.</strong> 本地存储</a></li><li class="chapter-item "><a href="../../前端/Html5/离线应用程序.html"><strong aria-hidden="true">18.4.9.</strong> 离线应用程序</a></li><li class="chapter-item "><a href="../../前端/Html5/获取地址位置信息.html"><strong aria-hidden="true">18.4.10.</strong> 获取地址位置信息</a></li><li class="chapter-item "><a href="../../前端/Html5/通信API.html"><strong aria-hidden="true">18.4.11.</strong> 通信API</a></li></ol></li><li class="chapter-item "><a href="../../前端/css/index.html"><strong aria-hidden="true">18.5.</strong> css</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/css/BFC.html"><strong aria-hidden="true">18.5.1.</strong> BFC</a></li><li class="chapter-item "><a href="../../前端/css/CSS选择器.html"><strong aria-hidden="true">18.5.2.</strong> CSS选择器</a></li><li class="chapter-item "><a href="../../前端/css/内联元素垂直居中的方式.html"><strong aria-hidden="true">18.5.3.</strong> 内联元素垂直居中的方式</a></li><li class="chapter-item "><a href="../../前端/css/基本视觉格式化.html"><strong aria-hidden="true">18.5.4.</strong> 基本视觉格式化</a></li><li class="chapter-item "><a href="../../前端/css/基本视觉格式化-1.html"><strong aria-hidden="true">18.5.5.</strong> 基本视觉格式化-1</a></li><li class="chapter-item "><a href="../../前端/css/弹性布局.html"><strong aria-hidden="true">18.5.6.</strong> 弹性布局</a></li><li class="chapter-item "><a href="../../前端/css/结构与层叠.html"><strong aria-hidden="true">18.5.7.</strong> 结构与层叠</a></li><li class="chapter-item "><div><strong aria-hidden="true">18.5.8.</strong> CSS布局方式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/css/CSS布局方式/flex布局.html"><strong aria-hidden="true">18.5.8.1.</strong> flex布局</a></li><li class="chapter-item "><a href="../../前端/css/CSS布局方式/两栏布局.html"><strong aria-hidden="true">18.5.8.2.</strong> 两栏布局</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.5.9.</strong> CSS样式详解</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/css/CSS样式详解/Grid布局.html"><strong aria-hidden="true">18.5.9.1.</strong> Grid布局</a></li><li class="chapter-item "><a href="../../前端/css/CSS样式详解/flex布局.html"><strong aria-hidden="true">18.5.9.2.</strong> flex布局</a></li><li class="chapter-item "><a href="../../前端/css/CSS样式详解/定位.html"><strong aria-hidden="true">18.5.9.3.</strong> 定位</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../前端/quasar/index.html"><strong aria-hidden="true">18.6.</strong> quasar</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/quasar/quasarCli.html"><strong aria-hidden="true">18.6.1.</strong> quasarCli</a></li><li class="chapter-item "><a href="../../前端/quasar/quasar选项和辅助.html"><strong aria-hidden="true">18.6.2.</strong> quasar选项和辅助</a></li><li class="chapter-item "><a href="../../前端/quasar/vue组件.html"><strong aria-hidden="true">18.6.3.</strong> vue组件</a></li><li class="chapter-item "><a href="../../前端/quasar/布局.html"><strong aria-hidden="true">18.6.4.</strong> 布局</a></li><li class="chapter-item "><a href="../../前端/quasar/网格布局.html"><strong aria-hidden="true">18.6.5.</strong> 网格布局</a></li><li class="chapter-item "><a href="../../前端/quasar/风格和特性.html"><strong aria-hidden="true">18.6.6.</strong> 风格和特性</a></li><li class="chapter-item "><div><strong aria-hidden="true">18.6.7.</strong> 组件</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/quasar/组件/q-dialog.html"><strong aria-hidden="true">18.6.7.1.</strong> q-dialog</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-expansion-item.html"><strong aria-hidden="true">18.6.7.2.</strong> q-expansion-item</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-page-sticky.html"><strong aria-hidden="true">18.6.7.3.</strong> q-page-sticky</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-tabs.html"><strong aria-hidden="true">18.6.7.4.</strong> q-tabs</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-toolbar.html"><strong aria-hidden="true">18.6.7.5.</strong> q-toolbar</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../前端/reactor/index.html"><strong aria-hidden="true">18.7.</strong> reactor</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/reactor/1.搭建TS-Reactor环境.html"><strong aria-hidden="true">18.7.1.</strong> 搭建TS-Reactor环境</a></li><li class="chapter-item "><a href="../../前端/reactor/2.jsx.html"><strong aria-hidden="true">18.7.2.</strong> jsx</a></li><li class="chapter-item "><a href="../../前端/reactor/3.元素渲染.html"><strong aria-hidden="true">18.7.3.</strong> 元素渲染</a></li><li class="chapter-item "><a href="../../前端/reactor/4.组件与模块&Props.html"><strong aria-hidden="true">18.7.4.</strong> 组件与模块&Props</a></li><li class="chapter-item "><a href="../../前端/reactor/5.State生命周期.html"><strong aria-hidden="true">18.7.5.</strong> State生命周期</a></li><li class="chapter-item "><a href="../../前端/reactor/6.事件处理.html"><strong aria-hidden="true">18.7.6.</strong> 事件处理</a></li><li class="chapter-item "><a href="../../前端/reactor/7.条件渲染.html"><strong aria-hidden="true">18.7.7.</strong> 条件渲染</a></li><li class="chapter-item "><a href="../../前端/reactor/8.列表.html"><strong aria-hidden="true">18.7.8.</strong> 列表</a></li><li class="chapter-item "><a href="../../前端/reactor/9.表单.html"><strong aria-hidden="true">18.7.9.</strong> 表单</a></li><li class="chapter-item "><a href="../../前端/reactor/10.组合与继承.html"><strong aria-hidden="true">18.7.10.</strong> 组合与继承</a></li><li class="chapter-item "><a href="../../前端/reactor/11.React最佳实践.html"><strong aria-hidden="true">18.7.11.</strong> React最佳实践</a></li><li class="chapter-item "><a href="../../前端/reactor/高级特性/index.html"><strong aria-hidden="true">18.7.12.</strong> 高级特性</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/reactor/高级特性/Refs转发.html"><strong aria-hidden="true">18.7.12.1.</strong> Refs转发</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../前端/vue/index.html"><strong aria-hidden="true">18.8.</strong> vue</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/vue/class与style的绑定.html"><strong aria-hidden="true">18.8.1.</strong> class与style的绑定</a></li><li class="chapter-item "><a href="../../前端/vue/事件处理.html"><strong aria-hidden="true">18.8.2.</strong> 事件处理</a></li><li class="chapter-item "><a href="../../前端/vue/列表渲染.html"><strong aria-hidden="true">18.8.3.</strong> 列表渲染</a></li><li class="chapter-item "><a href="../../前端/vue/条件渲染.html"><strong aria-hidden="true">18.8.4.</strong> 条件渲染</a></li><li class="chapter-item "><a href="../../前端/vue/模板语法.html"><strong aria-hidden="true">18.8.5.</strong> 模板语法</a></li><li class="chapter-item "><a href="../../前端/vue/组件.html"><strong aria-hidden="true">18.8.6.</strong> 组件</a></li><li class="chapter-item "><a href="../../前端/vue/表单输入绑定.html"><strong aria-hidden="true">18.8.7.</strong> 表单输入绑定</a></li><li class="chapter-item "><a href="../../前端/vue/计算属性和侦听器.html"><strong aria-hidden="true">18.8.8.</strong> 计算属性和侦听器</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">java</li><li class="chapter-item "><a href="../../java_1_java基础/index.html"><strong aria-hidden="true">19.</strong> java基础</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/EasyRules.html"><strong aria-hidden="true">19.1.</strong> EasyRules</a></li><li class="chapter-item "><a href="../../java_1_java基础/PO、VO、BO.html"><strong aria-hidden="true">19.2.</strong> PO、VO、BO</a></li><li class="chapter-item "><a href="../../java_1_java基础/WeakCache.html"><strong aria-hidden="true">19.3.</strong> WeakCache</a></li><li class="chapter-item "><a href="../../java_1_java基础/apacheUtils类.html"><strong aria-hidden="true">19.4.</strong> apacheUtils类</a></li><li class="chapter-item "><a href="../../java_1_java基础/javaUnsafe工具类与CAS.html"><strong aria-hidden="true">19.5.</strong> javaUnsafe工具类与CAS</a></li><li class="chapter-item "><a href="../../java_1_java基础/java优化指南.html"><strong aria-hidden="true">19.6.</strong> java优化指南</a></li><li class="chapter-item "><a href="../../java_1_java基础/java各版本新特性.html"><strong aria-hidden="true">19.7.</strong> java各版本新特性</a></li><li class="chapter-item "><a href="../../java_1_java基础/java模块化.html"><strong aria-hidden="true">19.8.</strong> java模块化</a></li><li class="chapter-item "><a href="../../java_1_java基础/代码异味.html"><strong aria-hidden="true">19.9.</strong> 代码异味</a></li><li class="chapter-item "><a href="../../java_1_java基础/类的关系.html"><strong aria-hidden="true">19.10.</strong> 类的关系</a></li><li class="chapter-item "><a href="../../java_1_java基础/JSR/index.html"><strong aria-hidden="true">19.11.</strong> JSR</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JSR/jar包规范.html"><strong aria-hidden="true">19.11.1.</strong> jar包规范</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.12.</strong> JVM</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JVM/GC后对象地址变化了HashCode如何保持不变.html"><strong aria-hidden="true">19.12.1.</strong> GC后对象地址变化了HashCode如何保持不变</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JMM与volatile关键字.html"><strong aria-hidden="true">19.12.2.</strong> JMM与volatile关键字</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVMGC.html"><strong aria-hidden="true">19.12.3.</strong> JVMGC</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVM内存模型.html"><strong aria-hidden="true">19.12.4.</strong> JVM内存模型</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVM参数.html"><strong aria-hidden="true">19.12.5.</strong> JVM参数</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVM复制算法.html"><strong aria-hidden="true">19.12.6.</strong> JVM复制算法</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/java内存泄露与OOM.html"><strong aria-hidden="true">19.12.7.</strong> java内存泄露与OOM</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/java对象分析.html"><strong aria-hidden="true">19.12.8.</strong> java对象分析</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/java引用类型.html"><strong aria-hidden="true">19.12.9.</strong> java引用类型</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/index.html"><strong aria-hidden="true">19.12.10.</strong> 类加载</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/类加载器.html"><strong aria-hidden="true">19.12.10.1.</strong> 类加载器</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/类加载过程.html"><strong aria-hidden="true">19.12.10.2.</strong> 类加载过程</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/线程上下文加载器.html"><strong aria-hidden="true">19.12.10.3.</strong> 线程上下文加载器</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.13.</strong> JVM问题诊断与性能分析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/MAT.html"><strong aria-hidden="true">19.13.1.</strong> MAT</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/arthas.html"><strong aria-hidden="true">19.13.2.</strong> arthas</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/javaCPU占用高的问题.html"><strong aria-hidden="true">19.13.3.</strong> javaCPU占用高的问题</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/java远程调试.html"><strong aria-hidden="true">19.13.4.</strong> java远程调试</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/优雅停服.html"><strong aria-hidden="true">19.13.5.</strong> 优雅停服</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/排查内存溢出.html"><strong aria-hidden="true">19.13.6.</strong> 排查内存溢出</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.14.</strong> arthas</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/arthas/1.安装.html"><strong aria-hidden="true">19.14.1.</strong> 安装</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/2.快速入门.html"><strong aria-hidden="true">19.14.2.</strong> 快速入门</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/3.命令.html"><strong aria-hidden="true">19.14.3.</strong> 命令</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/4.ArthasTunnel.html"><strong aria-hidden="true">19.14.4.</strong> ArthasTunnel</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/5.Idea插件.html"><strong aria-hidden="true">19.14.5.</strong> Idea插件</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/6.JavaAgent启动.html"><strong aria-hidden="true">19.14.6.</strong> JavaAgent启动</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/7.火焰图.html"><strong aria-hidden="true">19.14.7.</strong> 火焰图</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/8.thread命令.html"><strong aria-hidden="true">19.14.8.</strong> thread命令</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/9.trace.html"><strong aria-hidden="true">19.14.9.</strong> trace</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.15.</strong> bean校验</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/bean校验/javaValidated.html"><strong aria-hidden="true">19.15.1.</strong> javaValidated</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/java.security框架/index.html"><strong aria-hidden="true">19.16.</strong> java.security框架</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.17.</strong> java基础</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java基础/JavaSPI.html"><strong aria-hidden="true">19.17.1.</strong> JavaSPI</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/Java异常.html"><strong aria-hidden="true">19.17.2.</strong> Java异常</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/Java泛型的协变与逆变.html"><strong aria-hidden="true">19.17.3.</strong> Java泛型的协变与逆变</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/java中常见的语法糖.html"><strong aria-hidden="true">19.17.4.</strong> java中常见的语法糖</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/java序列化接口.html"><strong aria-hidden="true">19.17.5.</strong> java序列化接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/jdk1.8新特性.html"><strong aria-hidden="true">19.17.6.</strong> jdk1.8新特性</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/jdk与jre.html"><strong aria-hidden="true">19.17.7.</strong> jdk与jre</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/枚举.html"><strong aria-hidden="true">19.17.8.</strong> 枚举</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/注解.html"><strong aria-hidden="true">19.17.9.</strong> 注解</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/index.html"><strong aria-hidden="true">19.18.</strong> java多线程与锁</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/JUC线程同步工具.html"><strong aria-hidden="true">19.18.1.</strong> JUC线程同步工具</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/LockSupport.html"><strong aria-hidden="true">19.18.2.</strong> LockSupport</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/java内存模型.html"><strong aria-hidden="true">19.18.3.</strong> java内存模型</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/java线程状态.html"><strong aria-hidden="true">19.18.4.</strong> java线程状态</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/java锁.html"><strong aria-hidden="true">19.18.5.</strong> java锁</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/jvm线程模型.html"><strong aria-hidden="true">19.18.6.</strong> jvm线程模型</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/关于多线程与并发编码的心得.html"><strong aria-hidden="true">19.18.7.</strong> 关于多线程与并发编码的心得</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/线程操作.html"><strong aria-hidden="true">19.18.8.</strong> 线程操作</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/线程池.html"><strong aria-hidden="true">19.18.9.</strong> 线程池</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.18.10.</strong> 基于AQS的同步工具</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/AQS.html"><strong aria-hidden="true">19.18.10.1.</strong> AQS</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/Condition条件等待.html"><strong aria-hidden="true">19.18.10.2.</strong> Condition条件等待</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/CountDownLatch.html"><strong aria-hidden="true">19.18.10.3.</strong> CountDownLatch</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/CyclicBarrier.html"><strong aria-hidden="true">19.18.10.4.</strong> CyclicBarrier</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/Lock锁接口.html"><strong aria-hidden="true">19.18.10.5.</strong> Lock锁接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/ReentrantLock.html"><strong aria-hidden="true">19.18.10.6.</strong> ReentrantLock</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/ReentrantReadWriteLock.html"><strong aria-hidden="true">19.18.10.7.</strong> ReentrantReadWriteLock</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/Semaphore.html"><strong aria-hidden="true">19.18.10.8.</strong> Semaphore</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/StampedLock.html"><strong aria-hidden="true">19.18.10.9.</strong> StampedLock</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.19.</strong> java源码分析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/1.java面试.html"><strong aria-hidden="true">19.19.1.</strong> java面试</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/JavaLocalDate.html"><strong aria-hidden="true">19.19.2.</strong> JavaLocalDate</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/JavaUnsafe类.html"><strong aria-hidden="true">19.19.3.</strong> JavaUnsafe类</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/foreach语法糖.html"><strong aria-hidden="true">19.19.4.</strong> foreach语法糖</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/formatter.html"><strong aria-hidden="true">19.19.5.</strong> formatter</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/integer的比较问题.html"><strong aria-hidden="true">19.19.6.</strong> integer的比较问题</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/java序列化接口.html"><strong aria-hidden="true">19.19.7.</strong> java序列化接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/string常量池.html"><strong aria-hidden="true">19.19.8.</strong> string常量池</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/threadLocal.html"><strong aria-hidden="true">19.19.9.</strong> threadLocal</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/基于jdk1.8的Arrays.sort.html"><strong aria-hidden="true">19.19.10.</strong> 基于jdk1.8的Arrays.sort</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/index.html"><strong aria-hidden="true">19.20.</strong> java集合框架</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/ArrayBlockingQueue.html"><strong aria-hidden="true">19.20.1.</strong> ArrayBlockingQueue</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/ArrayList.html"><strong aria-hidden="true">19.20.2.</strong> ArrayList</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/ConcurrentHashMap.html"><strong aria-hidden="true">19.20.3.</strong> ConcurrentHashMap</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/LinkedList与双向队列.html"><strong aria-hidden="true">19.20.4.</strong> LinkedList与双向队列</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/List.html"><strong aria-hidden="true">19.20.5.</strong> List</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/Map接口.html"><strong aria-hidden="true">19.20.6.</strong> Map接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/Queue与Deque.html"><strong aria-hidden="true">19.20.7.</strong> Queue与Deque</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/Set与LinkedHashMap.html"><strong aria-hidden="true">19.20.8.</strong> Set与LinkedHashMap</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/SynchronousQueue.html"><strong aria-hidden="true">19.20.9.</strong> SynchronousQueue</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/arraylist和linkedlist.html"><strong aria-hidden="true">19.20.10.</strong> arraylist和linkedlist</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/hashMap.html"><strong aria-hidden="true">19.20.11.</strong> hashMap</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/redission-java/index.html"><strong aria-hidden="true">19.21.</strong> redission-java</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.22.</strong> shiro</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/shiro/shiro频繁访问redis.html"><strong aria-hidden="true">19.22.1.</strong> shiro频繁访问redis</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/代理/index.html"><strong aria-hidden="true">19.23.</strong> 代理</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/代理/CGLIB.html"><strong aria-hidden="true">19.23.1.</strong> CGLIB</a></li><li class="chapter-item "><a href="../../java_1_java基础/代理/cglib的几种Callback.html"><strong aria-hidden="true">19.23.2.</strong> cglib的几种Callback</a></li><li class="chapter-item "><a href="../../java_1_java基础/代理/jdk动态代理.html"><strong aria-hidden="true">19.23.3.</strong> jdk动态代理</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.24.</strong> 其他</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/其他/Collections工具类.html"><strong aria-hidden="true">19.24.1.</strong> Collections工具类</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/JAVA命令行工具.html"><strong aria-hidden="true">19.24.2.</strong> JAVA命令行工具</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/Objects工具类.html"><strong aria-hidden="true">19.24.3.</strong> Objects工具类</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/javaIdea调试.html"><strong aria-hidden="true">19.24.4.</strong> javaIdea调试</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/javaPererences工具.html"><strong aria-hidden="true">19.24.5.</strong> javaPererences工具</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/java基准测试.html"><strong aria-hidden="true">19.24.6.</strong> java基准测试</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.25.</strong> 函数式编程</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/anyMatchAllMatch.html"><strong aria-hidden="true">19.25.1.</strong> anyMatchAllMatch</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/java函数式编程.html"><strong aria-hidden="true">19.25.2.</strong> java函数式编程</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/lamba表达式原理.html"><strong aria-hidden="true">19.25.3.</strong> lamba表达式原理</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/方法引用.html"><strong aria-hidden="true">19.25.4.</strong> 方法引用</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/流操作.html"><strong aria-hidden="true">19.25.5.</strong> 流操作</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.26.</strong> 对象拷贝</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/对象拷贝/mapstruct.html"><strong aria-hidden="true">19.26.1.</strong> mapstruct</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../java_2_响应式编程/index.html"><strong aria-hidden="true">20.</strong> 响应式编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/index.html"><strong aria-hidden="true">20.1.</strong> ProjectReactor</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/创建发布者.html"><strong aria-hidden="true">20.1.1.</strong> 创建发布者</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/创建订阅.html"><strong aria-hidden="true">20.1.2.</strong> 创建订阅</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/响应式流的动作.html"><strong aria-hidden="true">20.1.3.</strong> 响应式流的动作</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/选择合适的操作符.html"><strong aria-hidden="true">20.1.4.</strong> 选择合适的操作符</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/index.html"><strong aria-hidden="true">20.1.5.</strong> core-features</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/FluxAndMono.html"><strong aria-hidden="true">20.1.5.1.</strong> FluxAndMono</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/ProcessorOrSinks.html"><strong aria-hidden="true">20.1.5.2.</strong> ProcessorOrSinks</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/线程和调度.html"><strong aria-hidden="true">20.1.5.3.</strong> 线程和调度</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/编程式创建序列.html"><strong aria-hidden="true">20.1.5.4.</strong> 编程式创建序列</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/错误处理.html"><strong aria-hidden="true">20.1.5.5.</strong> 错误处理</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../../java_4_日志/index.html"><strong aria-hidden="true">21.</strong> 日志</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/JUL.html"><strong aria-hidden="true">21.1.</strong> JUL</a></li><li class="chapter-item "><a href="../../java_4_日志/SL4j.html"><strong aria-hidden="true">21.2.</strong> SL4j</a></li><li class="chapter-item "><a href="../../java_4_日志/日志处理进化史.html"><strong aria-hidden="true">21.3.</strong> 日志处理进化史</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/index.html"><strong aria-hidden="true">21.4.</strong> log4j2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/Log4j2API.html"><strong aria-hidden="true">21.4.1.</strong> Log4j2API</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/log4j2-web.html"><strong aria-hidden="true">21.4.2.</strong> log4j2-web</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/lookups.html"><strong aria-hidden="true">21.4.3.</strong> lookups</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/依赖管理.html"><strong aria-hidden="true">21.4.4.</strong> 依赖管理</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/index.html"><strong aria-hidden="true">21.4.5.</strong> appenders</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/AsyncAppender.html"><strong aria-hidden="true">21.4.5.1.</strong> AsyncAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/CassandraAppender.html"><strong aria-hidden="true">21.4.5.2.</strong> CassandraAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/ConsoleAppender.html"><strong aria-hidden="true">21.4.5.3.</strong> ConsoleAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/FailoverAppender.html"><strong aria-hidden="true">21.4.5.4.</strong> FailoverAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/FileAppender.html"><strong aria-hidden="true">21.4.5.5.</strong> FileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/JDBCAppender.html"><strong aria-hidden="true">21.4.5.6.</strong> JDBCAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/OutputStreamAppender.html"><strong aria-hidden="true">21.4.5.7.</strong> OutputStreamAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RandomAccessFileAppender.html"><strong aria-hidden="true">21.4.5.8.</strong> RandomAccessFileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RewriteAppender.html"><strong aria-hidden="true">21.4.5.9.</strong> RewriteAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RollingFileAppender.html"><strong aria-hidden="true">21.4.5.10.</strong> RollingFileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RollingRandomAccessFileAppender.html"><strong aria-hidden="true">21.4.5.11.</strong> RollingRandomAccessFileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RoutingAppender.html"><strong aria-hidden="true">21.4.5.12.</strong> RoutingAppender</a></li></ol></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/index.html"><strong aria-hidden="true">21.4.6.</strong> layouts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/CSVLayouts.html"><strong aria-hidden="true">21.4.6.1.</strong> CSVLayouts</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/HTMLayouts.html"><strong aria-hidden="true">21.4.6.2.</strong> HTMLayouts</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/JSONLayout.html"><strong aria-hidden="true">21.4.6.3.</strong> JSONLayout</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/JSONTemplateLayouts.html"><strong aria-hidden="true">21.4.6.4.</strong> JSONTemplateLayouts</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/PatternLayout.html"><strong aria-hidden="true">21.4.6.5.</strong> PatternLayout</a></li></ol></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/log4j2配置/index.html"><strong aria-hidden="true">21.4.7.</strong> log4j2配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/log4j2配置/高级配置.html"><strong aria-hidden="true">21.4.7.1.</strong> 高级配置</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">22.</strong> ORM</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">22.1.</strong> Mybatis</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/mybatis.html"><strong aria-hidden="true">22.1.1.</strong> mybatis</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/mybatis-插件开发.html"><strong aria-hidden="true">22.1.2.</strong> mybatis-插件开发</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/mybatis标签.html"><strong aria-hidden="true">22.1.3.</strong> mybatis标签</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/resultHandler.html"><strong aria-hidden="true">22.1.4.</strong> resultHandler</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/多结果集分页.html"><strong aria-hidden="true">22.1.5.</strong> 多结果集分页</a></li></ol></li><li class="chapter-item "><a href="../../java_5_ORM/jpa/index.html"><strong aria-hidden="true">22.2.</strong> jpa</a></li></ol></li><li class="chapter-item "><a href="../../java_6_IO/index.html"><strong aria-hidden="true">23.</strong> IO</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_6_IO/Buffer.html"><strong aria-hidden="true">23.1.</strong> Buffer</a></li><li class="chapter-item "><a href="../../java_6_IO/Channel.html"><strong aria-hidden="true">23.2.</strong> Channel</a></li><li class="chapter-item "><a href="../../java_6_IO/LinuxIO模型演变.html"><strong aria-hidden="true">23.3.</strong> LinuxIO模型演变</a></li><li class="chapter-item "><a href="../../java_6_IO/Selector（选择器）.html"><strong aria-hidden="true">23.4.</strong> Selector（选择器）</a></li><li class="chapter-item "><a href="../../java_6_IO/主流IO模型.html"><strong aria-hidden="true">23.5.</strong> 主流IO模型</a></li><li class="chapter-item "><a href="../../java_6_IO/从IO到NIO个人理解.html"><strong aria-hidden="true">23.6.</strong> 从IO到NIO个人理解</a></li><li class="chapter-item "><a href="../../java_6_IO/字符集.html"><strong aria-hidden="true">23.7.</strong> 字符集</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/index.html"><strong aria-hidden="true">23.8.</strong> FileIO(NIO-2.0)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/LinksSymbolicOtherwise.html"><strong aria-hidden="true">23.8.1.</strong> LinksSymbolicOtherwise</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/RandomAccessFiles.html"><strong aria-hidden="true">23.8.2.</strong> RandomAccessFiles</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/传统IO与NIO的API迁移.html"><strong aria-hidden="true">23.8.3.</strong> 传统IO与NIO的API迁移</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/元数据管理.html"><strong aria-hidden="true">23.8.4.</strong> 元数据管理</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/其他有用方法.html"><strong aria-hidden="true">23.8.5.</strong> 其他有用方法</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/开发自定义文件系统.html"><strong aria-hidden="true">23.8.6.</strong> 开发自定义文件系统</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/文件查找.html"><strong aria-hidden="true">23.8.7.</strong> 文件查找</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/文件管理.html"><strong aria-hidden="true">23.8.8.</strong> 文件管理</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/文件读写.html"><strong aria-hidden="true">23.8.9.</strong> 文件读写</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/监控目录变化.html"><strong aria-hidden="true">23.8.10.</strong> 监控目录变化</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/目录管理.html"><strong aria-hidden="true">23.8.11.</strong> 目录管理</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/路径操作.html"><strong aria-hidden="true">23.8.12.</strong> 路径操作</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/遍历目录树.html"><strong aria-hidden="true">23.8.13.</strong> 遍历目录树</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../java_7_servlet规范/index.html"><strong aria-hidden="true">24.</strong> servlet规范</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_7_servlet规范/fitler.html"><strong aria-hidden="true">24.1.</strong> fitler</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/httpServlet接口.html"><strong aria-hidden="true">24.2.</strong> httpServlet接口</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/request.html"><strong aria-hidden="true">24.3.</strong> request</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/response.html"><strong aria-hidden="true">24.4.</strong> response</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/servletContext.html"><strong aria-hidden="true">24.5.</strong> servletContext</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/servlet初始化.html"><strong aria-hidden="true">24.6.</strong> servlet初始化</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/session.html"><strong aria-hidden="true">24.7.</strong> session</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/入门.html"><strong aria-hidden="true">24.8.</strong> 入门</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/注解与可插拔.html"><strong aria-hidden="true">24.9.</strong> 注解与可插拔</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">25.</strong> 设计模式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_8_设计模式/PipeLine.html"><strong aria-hidden="true">25.1.</strong> PipeLine</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">26.</strong> 单元测试</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_9_单元测试/junit5/index.html"><strong aria-hidden="true">26.1.</strong> junit5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_9_单元测试/junit5/ConsoleLaunch.html"><strong aria-hidden="true">26.1.1.</strong> ConsoleLaunch</a></li><li class="chapter-item "><a href="../../java_9_单元测试/junit5/DependencyMetadata.html"><strong aria-hidden="true">26.1.2.</strong> DependencyMetadata</a></li><li class="chapter-item "><div><strong aria-hidden="true">26.1.3.</strong> writtingTest</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_9_单元测试/junit5/writtingTest/Annotations.html"><strong aria-hidden="true">26.1.3.1.</strong> Annotations</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">工具</li><li class="chapter-item "><a href="../../工具_3_git/index.html"><strong aria-hidden="true">27.</strong> git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_3_git/Git库管理.html"><strong aria-hidden="true">27.1.</strong> Git库管理</a></li><li class="chapter-item "><a href="../../工具_3_git/gitDiff原理.html"><strong aria-hidden="true">27.2.</strong> gitDiff原理</a></li><li class="chapter-item "><a href="../../工具_3_git/gitLog命令.html"><strong aria-hidden="true">27.3.</strong> gitLog命令</a></li><li class="chapter-item "><a href="../../工具_3_git/gitflow.html"><strong aria-hidden="true">27.4.</strong> gitflow</a></li><li class="chapter-item "><a href="../../工具_3_git/gitmerge.html"><strong aria-hidden="true">27.5.</strong> gitmerge</a></li><li class="chapter-item "><a href="../../工具_3_git/gitrebase.html"><strong aria-hidden="true">27.6.</strong> gitrebase</a></li><li class="chapter-item "><a href="../../工具_3_git/git使用案例.html"><strong aria-hidden="true">27.7.</strong> git使用案例</a></li><li class="chapter-item "><a href="../../工具_3_git/git分支.html"><strong aria-hidden="true">27.8.</strong> git分支</a></li><li class="chapter-item "><a href="../../工具_3_git/git命令杂项.html"><strong aria-hidden="true">27.9.</strong> git命令杂项</a></li><li class="chapter-item "><a href="../../工具_3_git/git基础.html"><strong aria-hidden="true">27.10.</strong> git基础</a></li><li class="chapter-item "><a href="../../工具_3_git/git错误提交后场景.html"><strong aria-hidden="true">27.11.</strong> git错误提交后场景</a></li><li class="chapter-item "><a href="../../工具_3_git/tag管理.html"><strong aria-hidden="true">27.12.</strong> tag管理</a></li><li class="chapter-item "><a href="../../工具_3_git/使用远程分支强制覆盖本地工作区暂存区版本库.html"><strong aria-hidden="true">27.13.</strong> 使用远程分支强制覆盖本地工作区暂存区版本库</a></li><li class="chapter-item "><a href="../../工具_3_git/克隆.html"><strong aria-hidden="true">27.14.</strong> 克隆</a></li><li class="chapter-item "><a href="../../工具_3_git/历史提交.html"><strong aria-hidden="true">27.15.</strong> 历史提交</a></li><li class="chapter-item "><a href="../../工具_3_git/回退合并提交.html"><strong aria-hidden="true">27.16.</strong> 回退合并提交</a></li><li class="chapter-item "><a href="../../工具_3_git/基本操作.html"><strong aria-hidden="true">27.17.</strong> 基本操作</a></li><li class="chapter-item "><a href="../../工具_3_git/杂项.html"><strong aria-hidden="true">27.18.</strong> 杂项</a></li><li class="chapter-item "><div><strong aria-hidden="true">27.19.</strong> GIT协作</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_3_git/GIT协作/Git支持的协议.html"><strong aria-hidden="true">27.19.1.</strong> Git支持的协议</a></li><li class="chapter-item "><a href="../../工具_3_git/GIT协作/冲突解决.html"><strong aria-hidden="true">27.19.2.</strong> 冲突解决</a></li><li class="chapter-item "><a href="../../工具_3_git/GIT协作/补丁文件交互.html"><strong aria-hidden="true">27.19.3.</strong> 补丁文件交互</a></li><li class="chapter-item "><a href="../../工具_3_git/GIT协作/远程版本库.html"><strong aria-hidden="true">27.19.4.</strong> 远程版本库</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">28.</strong> 绘图建模</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_4_绘图建模/UML.html"><strong aria-hidden="true">28.1.</strong> UML</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/flowchart_fun.html"><strong aria-hidden="true">28.2.</strong> flowchart_fun</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid;README.html"><strong aria-hidden="true">28.3.</strong> mermaid;README</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/plantUML语法.html"><strong aria-hidden="true">28.4.</strong> plantUML语法</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/index.html"><strong aria-hidden="true">28.5.</strong> mermaid</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/时序图.html"><strong aria-hidden="true">28.5.1.</strong> 时序图</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/流程图.html"><strong aria-hidden="true">28.5.2.</strong> 流程图</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/类图.html"><strong aria-hidden="true">28.5.3.</strong> 类图</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/语法总览.html"><strong aria-hidden="true">28.5.4.</strong> 语法总览</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">其他</li><li class="chapter-item "><a href="../../其他_2_其他/index.html"><strong aria-hidden="true">29.</strong> 其他</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_2_其他/Multipass.html"><strong aria-hidden="true">29.1.</strong> Multipass</a></li><li class="chapter-item "><a href="../../其他_2_其他/Wallabag.html"><strong aria-hidden="true">29.2.</strong> Wallabag</a></li><li class="chapter-item "><a href="../../其他_2_其他/v2rayN代理.html"><strong aria-hidden="true">29.3.</strong> v2rayN代理</a></li><li class="chapter-item "><a href="../../其他_2_其他/个人清算汇缴.html"><strong aria-hidden="true">29.4.</strong> 个人清算汇缴</a></li><li class="chapter-item "><a href="../../其他_2_其他/概率论与数理统计.html"><strong aria-hidden="true">29.5.</strong> 概率论与数理统计</a></li><li class="chapter-item "><a href="../../其他_2_其他/虚拟机操作.html"><strong aria-hidden="true">29.6.</strong> 虚拟机操作</a></li><li class="chapter-item "><div><strong aria-hidden="true">29.7.</strong> intellj</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_2_其他/intellj/Http请求发送.html"><strong aria-hidden="true">29.7.1.</strong> Http请求发送</a></li><li class="chapter-item "><a href="../../其他_2_其他/intellj/ideaSettings.html"><strong aria-hidden="true">29.7.2.</strong> ideaSettings</a></li></ol></li><li class="chapter-item "><a href="../../其他_2_其他/osascript/index.html"><strong aria-hidden="true">29.8.</strong> osascript</a></li><li class="chapter-item "><a href="../../其他_2_其他/taskList/index.html"><strong aria-hidden="true">29.9.</strong> taskList</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">29.9.1.</strong> java</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_2_其他/taskList/java/AnnotationProcessing.html"><strong aria-hidden="true">29.9.1.1.</strong> AnnotationProcessing</a></li><li class="chapter-item "><a href="../../其他_2_其他/taskList/java/ruoyi项目开发.html"><strong aria-hidden="true">29.9.1.2.</strong> ruoyi项目开发</a></li><li class="chapter-item "><a href="../../其他_2_其他/taskList/java/可继承的ThreadLocal.html"><strong aria-hidden="true">29.9.1.3.</strong> 可继承的ThreadLocal</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../../其他_4_思考/index.html"><strong aria-hidden="true">30.</strong> 思考</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_4_思考/学习总结.html"><strong aria-hidden="true">30.1.</strong> 学习总结</a></li><li class="chapter-item "><a href="../../其他_4_思考/杂项.html"><strong aria-hidden="true">30.2.</strong> 杂项</a></li><li class="chapter-item "><a href="../../其他_4_思考/编程技巧.html"><strong aria-hidden="true">30.3.</strong> 编程技巧</a></li></ol></li><li class="chapter-item "><li class="part-title">其他编程语言</li><li class="chapter-item "><div><strong aria-hidden="true">31.</strong> C++</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_1_C++/C++与C的区别.html"><strong aria-hidden="true">31.1.</strong> C++与C的区别</a></li><li class="chapter-item "><a href="../../其他编程语言_1_C++/C++面向对象.html"><strong aria-hidden="true">31.2.</strong> C++面向对象</a></li><li class="chapter-item "><a href="../../其他编程语言_1_C++/泛型编程.html"><strong aria-hidden="true">31.3.</strong> 泛型编程</a></li><li class="chapter-item "><a href="../../其他编程语言_1_C++/cmake/index.html"><strong aria-hidden="true">31.4.</strong> cmake</a></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_2_LUA/index.html"><strong aria-hidden="true">32.</strong> LUA</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_2_LUA/基本语法.html"><strong aria-hidden="true">32.1.</strong> 基本语法</a></li><li class="chapter-item "><a href="../../其他编程语言_2_LUA/高级语法.html"><strong aria-hidden="true">32.2.</strong> 高级语法</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">33.</strong> rust</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_3_rust/1常见编程概念.html"><strong aria-hidden="true">33.1.</strong> 1常见编程概念</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/2所有权.html"><strong aria-hidden="true">33.2.</strong> 2所有权</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/ConstantsAndVariables.html"><strong aria-hidden="true">33.3.</strong> ConstantsAndVariables</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/Rust中的Sizedness.html"><strong aria-hidden="true">33.4.</strong> Rust中的Sizedness</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/Rust库API设计文档规范.html"><strong aria-hidden="true">33.5.</strong> Rust库API设计文档规范</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/const类型与函数.html"><strong aria-hidden="true">33.6.</strong> const类型与函数</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/newType模式.html"><strong aria-hidden="true">33.7.</strong> newType模式</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rust执行shell命令.html"><strong aria-hidden="true">33.8.</strong> rust执行shell命令</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rust指针.html"><strong aria-hidden="true">33.9.</strong> rust指针</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rust面向对象特性.html"><strong aria-hidden="true">33.10.</strong> rust面向对象特性</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/依赖管理.html"><strong aria-hidden="true">33.11.</strong> 依赖管理</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/函数式编程.html"><strong aria-hidden="true">33.12.</strong> 函数式编程</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/宏.html"><strong aria-hidden="true">33.13.</strong> 宏</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/常见集合.html"><strong aria-hidden="true">33.14.</strong> 常见集合</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/模式匹配.html"><strong aria-hidden="true">33.15.</strong> 模式匹配</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/泛型与trait.html"><strong aria-hidden="true">33.16.</strong> 泛型与trait</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/结构体.html"><strong aria-hidden="true">33.17.</strong> 结构体</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/迭代与闭包.html"><strong aria-hidden="true">33.18.</strong> 迭代与闭包</a></li><li class="chapter-item expanded "><div><strong aria-hidden="true">33.19.</strong> rfcs</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../其他编程语言_3_rust/rfcs/0195_associated-items.html" class="active"><strong aria-hidden="true">33.19.1.</strong> 0195_associated-items</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rfcs/0911-const-fn.html"><strong aria-hidden="true">33.19.2.</strong> 0911-const-fn</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">34.</strong> groovy</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_4_groovy/RuntimeAndCompile-timeMetaprogramming.html"><strong aria-hidden="true">34.1.</strong> RuntimeAndCompile-timeMetaprogramming</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/基础语法.html"><strong aria-hidden="true">34.2.</strong> 基础语法</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/开发工具类.html"><strong aria-hidden="true">34.3.</strong> 开发工具类</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/操作符.html"><strong aria-hidden="true">34.4.</strong> 操作符</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/编程结构.html"><strong aria-hidden="true">34.5.</strong> 编程结构</a></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/index.html"><strong aria-hidden="true">35.</strong> nodejs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/fakeJS.html"><strong aria-hidden="true">35.1.</strong> fakeJS</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/nodejs事件循环.html"><strong aria-hidden="true">35.2.</strong> nodejs事件循环</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/入门.html"><strong aria-hidden="true">35.3.</strong> 入门</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/包管理.html"><strong aria-hidden="true">35.4.</strong> 包管理</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/定时器.html"><strong aria-hidden="true">35.5.</strong> 定时器</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/异步编程.html"><strong aria-hidden="true">35.6.</strong> 异步编程</a></li><li class="chapter-item "><div><strong aria-hidden="true">35.7.</strong> packageInfo参数解析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/packageInfo参数解析/1.scripts.html"><strong aria-hidden="true">35.7.1.</strong> scripts</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/index.html"><strong aria-hidden="true">36.</strong> typescript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_6_typescript/1.基础类型.html"><strong aria-hidden="true">36.1.</strong> 基础类型</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/2.变量声明.html"><strong aria-hidden="true">36.2.</strong> 变量声明</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/3.接口.html"><strong aria-hidden="true">36.3.</strong> 接口</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/4.模块.html"><strong aria-hidden="true">36.4.</strong> 模块</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/index.html"><strong aria-hidden="true">36.5.</strong> jtest测试框架</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/Except.html"><strong aria-hidden="true">36.5.1.</strong> Except</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/Globals.html"><strong aria-hidden="true">36.5.2.</strong> Globals</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/Hook顺序.html"><strong aria-hidden="true">36.5.3.</strong> Hook顺序</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_7_python/index.html"><strong aria-hidden="true">37.</strong> python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_7_python/1.python3基础语法.html"><strong aria-hidden="true">37.1.</strong> python3基础语法</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/2.基本数据类型.html"><strong aria-hidden="true">37.2.</strong> 基本数据类型</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/3.Python3数据类型转换.html"><strong aria-hidden="true">37.3.</strong> Python3数据类型转换</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/4.Python推导式.html"><strong aria-hidden="true">37.4.</strong> Python推导式</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/5.Python3运算符.html"><strong aria-hidden="true">37.5.</strong> Python3运算符</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/6.Python3字符串.html"><strong aria-hidden="true">37.6.</strong> Python3字符串</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/7.python3列表.html"><strong aria-hidden="true">37.7.</strong> python3列表</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/8.元祖.html"><strong aria-hidden="true">37.8.</strong> 元祖</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/9.Python3字典.html"><strong aria-hidden="true">37.9.</strong> Python3字典</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/10.Python3集合.html"><strong aria-hidden="true">37.10.</strong> Python3集合</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/11.Number类型.html"><strong aria-hidden="true">37.11.</strong> Number类型</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/12.python3流程控制.html"><strong aria-hidden="true">37.12.</strong> python3流程控制</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/13.Python3迭代器与生成器.html"><strong aria-hidden="true">37.13.</strong> Python3迭代器与生成器</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/14.函数.html"><strong aria-hidden="true">37.14.</strong> 函数</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/15.Python3JSON数据解析.html"><strong aria-hidden="true">37.15.</strong> Python3JSON数据解析</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/16.Python3面向对象.html"><strong aria-hidden="true">37.16.</strong> Python3面向对象</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/17.模块与包.html"><strong aria-hidden="true">37.17.</strong> 模块与包</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/With关键字.html"><strong aria-hidden="true">37.18.</strong> With关键字</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/杂项.html"><strong aria-hidden="true">37.19.</strong> 杂项</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/fabric/index.html"><strong aria-hidden="true">37.20.</strong> fabric</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_7_python/fabric/Configuration.html"><strong aria-hidden="true">37.20.1.</strong> Configuration</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/fabric/README_1.x.html"><strong aria-hidden="true">37.20.2.</strong> README_1.x</a></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/index.html"><strong aria-hidden="true">37.21.</strong> invoke</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/1.DefiningAndRunningTask.html"><strong aria-hidden="true">37.21.1.</strong> DefiningAndRunningTask</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/2.InvokeCoreUsage.html"><strong aria-hidden="true">37.21.2.</strong> InvokeCoreUsage</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/3.Configuration.html"><strong aria-hidden="true">37.21.3.</strong> Configuration</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/4.loadingCollections.html"><strong aria-hidden="true">37.21.4.</strong> loadingCollections</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/5.UsingInvokeAslibrary.html"><strong aria-hidden="true">37.21.5.</strong> UsingInvokeAslibrary</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">note</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <ul>
+<li>Start Date: 2014-08-04</li>
+<li>RFC PR #: <a href="https://github.com/rust-lang/rfcs/pull/195">rust-lang/rfcs#195</a></li>
+<li>Rust Issue #: <a href="https://github.com/rust-lang/rust/issues/17307">rust-lang/rust#17307</a></li>
+</ul>
+<h1 id="summary"><a class="header" href="#summary">Summary</a></h1>
+<p>该RFC使用<em>关联项</em>扩展特性，从而实现泛型编程 更方便、可扩展和强大，特别的，traits将包含一系列方法</p>
+<ul>
+<li>Associated functions (already present as &quot;static&quot; functions)</li>
+<li>Associated consts</li>
+<li>Associated types</li>
+<li>Associated lifetimes</li>
+</ul>
+<p>这个RFC还为 <em>multidispatch</em> traits 提供了一种机制，其中根据不同类型选择不同的 trait实现。</p>
+<p>注意:在 RFC 246引入const和静态项之间的区别之前，这个RFC已经被接受了。该文本已经被 更新，以 澄清：关联常量而不是静态，并提供了对关联常量初始实现的限制 的摘要，除了这个修改之外，没有其他的新语法 影响这个提案的修改</p>
+<h1 id="motivation"><a class="header" href="#motivation">Motivation</a></h1>
+<blockquote>
+<p>动机</p>
+</blockquote>
+<p>关联项发挥作用的一个典型例子是数据结构，比如 图，至少包含三种类型:节点、边和图本身。</p>
+<p>在今天的《Rust》中，为了将 <em>graph</em> 设计为 通用的trait，你必须采用 与图关联的其他类型作为 参数</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Graph&lt;N, E&gt; {
+    fn has_edge(&amp;self, &amp;N, &amp;N) -&gt; bool;
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>把节点和边类型当做参数这令人困惑，因为任何 具体的图类型他们的边跟节点的类型都是确定的、唯一的</p>
+<p>同时，这也带来了不遍，因为使用 泛型的 图的代码 也同样被迫 参数化，即使不是所有的类型都是相关的</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>//使用N、E参数化了,所以G必须也是参数化的
+fn distance&lt;N, E, G: Graph&lt;N, E&gt;&gt;(graph: &amp;G, start: &amp;N, end: &amp;N) -&gt; uint { ... }
+<span class="boring">}
+</span></code></pre></pre>
+<p>使用关联的类型，图trait 可以明确表明  节点和 边类型由impl决定:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Graph {
+    type N;
+    type E;
+    fn has_edge(&amp;self, &amp;N, &amp;N) -&gt; bool;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>客户端可以 直接使用关联类型 表示 图类型</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn distance&lt;G: Graph&gt;(graph: &amp;G, start: &amp;G::N, end: &amp;G::N) -&gt; uint { ... }
+<span class="boring">}
+</span></code></pre></pre>
+<p>下面的小节扩展了 关联类型 的上述好处</p>
+<h2 id="associated-types-engineering-benefits-for-generics"><a class="header" href="#associated-types-engineering-benefits-for-generics">Associated types: engineering benefits for generics</a></h2>
+<blockquote>
+<p>泛型的工程好处</p>
+</blockquote>
+<p>关联类型提供了几个工程上的好处</p>
+<ul>
+<li>
+<p><strong>Readability and scalability</strong>:可读性和可伸缩性</p>
+<p>关联类型可以一次性抽象整个类型族，而不需要分别命名它们</p>
+<p>这提高了 泛型代码的可读性 (就像上面的 <code>distance</code> 函数). </p>
+<p>它还 使泛型更具“可伸缩性”:traits可以合并其他相关的特性 类型不会给不关心这些的客户带来额外的负担</p>
+<p>相比之下，在今天的Rust中，将额外的通用参数添加到 Trait经常感觉像是一个非常“重量级”的举动。</p>
+</li>
+<li>
+<p><strong>Ease of refactor ing/evolution</strong>：易于重构</p>
+<p>因为trait的用户不必单独参数化它 相关的类型，可以添加新的关联类型而不破坏所有 现有的客户端代码。</p>
+<p>相反，在今天的Rust中，关联类型只能通过给 一个trait 添加更多的类型参数，这会破坏所有使用到这个trait的代码。</p>
+</li>
+</ul>
+<h2 id="clearer-trait-matching"><a class="header" href="#clearer-trait-matching">Clearer trait matching</a></h2>
+<blockquote>
+<p>清晰的trait匹配</p>
+</blockquote>
+<p>traits的类型参数 要么是 输入、输出</p>
+<ul>
+<li>
+<p><strong>Inputs</strong>. “input”类型参数用于确定使用哪个类型的实现</p>
+</li>
+<li>
+<p><strong>Outputs</strong>. &quot;output&quot; 类型参数 在选择实现时没有作用。</p>
+</li>
+</ul>
+<p>输入和输出类型在类型推理和   trait 一致性规则 中起着重要作用，这后面会有更详细的描述</p>
+<p>在目前绝大多数的库中，唯一的输入类型是' Self ' 类型实现trait，所有其他特征类型参数都是输出</p>
+<p>例如，<code>trait  Iterator&lt;A&gt;</code> 接受元素的类型形参' A ' 但这种类型总是由具体的“Self”决定的 类型(e.g. <code>Items&lt;u8&gt;</code>) ，A类型通常是输出类型</p>
+<p>Additional input type parameters are useful for cases like binary operators,
+where you may want the <code>impl</code> to depend on the types of <em>both</em>
+arguments. For example, you might want a trait</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Add&lt;Rhs, Sum&gt; {
+    fn add(&amp;self, rhs: &amp;Rhs) -&gt; Sum;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>将' Self '和' Rhs '类型视为输入，将' Sum '类型视为输出 (因为它是由参数类型唯一决定的)。这将允许 ' impl ' s取决于' Rhs '类型，即使' Self '类型是相同的:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>impl Add&lt;int, int&gt; for int { ... }
+impl Add&lt;Complex, Complex&gt; for int { ... }
+<span class="boring">}
+</span></code></pre></pre>
+<p>今天的Rust没有明确区分输入类型和输出类型 参数特征。如果你试图提供上面的两个impl，你 会收到如下错误</p>
+<pre><code>error: conflicting implementations for trait `Add`
+</code></pre>
+<p>这个RFC通过</p>
+<ul>
+<li>将所有trait类型参数视为输入类型，并且</li>
+<li>提供关联类型，即输出类型</li>
+</ul>
+<p>在这个设计中，“Add”trait将会像下面这样写和实现:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Self and Rhs are *inputs*
+trait Add&lt;Rhs&gt; {
+    type Sum; // Sum is an *output*
+    fn add(&amp;self, &amp;Rhs) -&gt; Sum;
+}
+
+impl Add&lt;int&gt; for int {
+    type Sum = int;
+    fn add(&amp;self, rhs: &amp;int) -&gt; int { ... }
+}
+
+impl Add&lt;Complex&gt; for int {
+    type Sum = Complex;
+    fn add(&amp;self, rhs: &amp;Complex) -&gt; Complex { ... }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>通过这种方法，一个trait声明像<code>trait Add&lt;Rhs&gt;{…}</code> 定义了一个“家族”特征，每个“Rhs”选择一类家族</p>
+<h2 id="expressiveness"><a class="header" href="#expressiveness">Expressiveness</a></h2>
+<blockquote>
+<p>善于表现；表情丰富</p>
+</blockquote>
+<p>今天的rust  已经可以表达 Associated types、lifetimes、functions，尽管这样做很笨拙(如上所述)。</p>
+<p>但associated _consts_不能表达。</p>
+<p>例如，今天的Rust包含了各种数字traits，包括 ' Float '，当前必须将常量公开为静态函数:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Float {
+    fn nan() -&gt; Self;
+    fn infinity() -&gt; Self;
+    fn neg_infinity() -&gt; Self;
+    fn neg_zero() -&gt; Self;
+    fn pi() -&gt; Self;
+    fn two_pi() -&gt; Self;
+    ...
+} 
+<span class="boring">}
+</span></code></pre></pre>
+<p>因为这些函数不能用在常量表达式中，</p>
+<p>float类型的模块 同样导出了一组单独的常量作为 const,而没有使用 traits</p>
+<p>相关的常量将允许常量直接存在于特征上:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Float {
+    const NAN: Self;
+    const INFINITY: Self;
+    const NEG_INFINITY: Self;
+    const NEG_ZERO: Self;
+    const PI: Self;
+    const TWO_PI: Self;
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="why-now"><a class="header" href="#why-now">Why now?</a></h2>
+<p>撇开上述动机不谈，添加 associated types 的原因可能并不明显, <em>现在</em>(即1.0之前)很重要。主要有两个原因。</p>
+<p>首先，这里展示的设计是“不”向后兼容的，因为它 为了trait实现匹配的目的，将trait类型参数重新解释为输入 匹配</p>
+<p>输入/输出的区别对一致性规则、类型推断和解析都有区别，这些都将在后面的 RFC。</p>
+<p>当然，也有可能给出一个不太理想的设计 关联类型可以稍后添加，而不需要更改 已有的特征类型参数解析</p>
+<p>例如，类型参数可以是显式的 标记为输入，否则假定为输出。这将是 不幸的是，因为关联的类型<em>也</em>是输出</p>
+<p>这会使语言 具有两种指定traits的输出类型的方法</p>
+<p>但第二个原因是库的稳定过程:</p>
+<ul>
+<li>
+<p>由于trait类型参数的大多数现有用途都是作为输出，它们实际上应该是关联类型。对这些api做出承诺：他们目前面临的风险是，将库置于一个这样的设计中：关联类型 添加后 即原有代码就会被抛弃。这种风险可能会 可以通过不同的向后兼容的 相关项设计来缓解，但是 以牺牲语言本身为代价。</p>
+</li>
+<li>
+<p>二元运算符的特征(例如。' Add ')应该是multidispatch</p>
+</li>
+<li>
+<p>It does not seem possible to stabilize them <em>now</em> in a way that will support moving to multidispatch later.</p>
+</li>
+<li>
+<p>当前的库中还存在一些棘手的问题,</p>
+<ul>
+<li>such as the <code>_equiv</code>methods accumulating in <code>HashMap</code>, 这可以通过关联类型来解决</li>
+<li>(请参阅下面的“Defaults”以获得关于这个特定示例的更多信息。) 额外的 示例包括：错误传播的 trait、类型转换的 trait</li>
+</ul>
+</li>
+</ul>
+<h1 id="detailed-design"><a class="header" href="#detailed-design">Detailed design</a></h1>
+<blockquote>
+<p>详细设计</p>
+</blockquote>
+<h2 id="trait-headers"><a class="header" href="#trait-headers">Trait headers</a></h2>
+<p>Trait头是根据以下语法写的</p>
+<pre><code>TRAIT_HEADER =
+  'trait' IDENT [ '&lt;' INPUT_PARAMS '&gt;' ] [ ':' BOUNDS ] [ WHERE_CLAUSE ]
+
+INPUT_PARAMS = INPUT_TY { ',' INPUT_TY }* [ ',' ]
+INPUT_PARAM  = IDENT [ ':' BOUNDS ]
+
+BOUNDS = BOUND { '+' BOUND }* [ '+' ]
+BOUND  = IDENT [ '&lt;' ARGS '&gt;' ]
+
+ARGS   = INPUT_ARGS
+       | OUTPUT_CONSTRAINTS
+       | INPUT_ARGS ',' OUTPUT_CONSTRAINTS
+
+INPUT_ARGS = TYPE { ',' TYPE }*
+
+OUTPUT_CONSTRAINTS = OUTPUT_CONSTRAINT { ',' OUTPUT_CONSTRAINT }*
+OUTPUT_CONSTRAINT  = IDENT '=' TYPE
+</code></pre>
+<p>注意：<code>WHERE_CLAUSE</code> and <code>BOUND</code> 的语法 在下面的 &quot;Constraining associated types&quot; 节中详细解释</p>
+<p>一个trait的所有类型参数都被认为是输入，可以用来选择 一个“impl”;</p>
+<p>从概念上讲，每个不同实例的类型 都会产生一个 截然不同的trait。更多细节在&quot;The input/output type
+distinction&quot;一节中给出 区别”。</p>
+<h2 id="trait-bodies-defining-associated-items"><a class="header" href="#trait-bodies-defining-associated-items">Trait bodies: defining associated items</a></h2>
+<p>Trait bodies扩展成包含 三种新事物：</p>
+<p>consts, types and lifetimes:</p>
+<pre><code>TRAIT = TRAIT_HEADER '{' TRAIT_ITEM* '}'
+TRAIT_ITEM =
+  ... &lt;existing productions&gt;
+  | 'const' IDENT ':' TYPE [ '=' CONST_EXP ] ';'
+  | 'type' IDENT [ ':' BOUNDS ] [ WHERE_CLAUSE ] [ '=' TYPE ] ';'
+  | 'lifetime' LIFETIME_IDENT ';'
+</code></pre>
+<p>Traits已经支持 关联函数，就是之前 称作：“static”的函数</p>
+<p>关联类型上的 <code>BOUNDS</code> and <code>WHERE_CLAUSE</code>  是对 trait的挑选、假设</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Graph {
+    type N: Show + Hash;
+    type E: Show + Hash;
+    ...
+}
+
+impl Graph for MyGraph {
+    // Both MyNode and MyEdge must implement Show and Hash
+    type N = MyNode;
+    type E = MyEdge;
+    ...
+}
+
+fn print_nodes&lt;G: Graph&gt;(g: &amp;G) {
+    // here, can assume G::N implements Show
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="namespacingshadowing-for-associated-types"><a class="header" href="#namespacingshadowing-for-associated-types">Namespacing/shadowing for associated types</a></h3>
+<blockquote>
+<p>关联类型的命名空间/遮蔽</p>
+</blockquote>
+<p>关联类型可以与作用域中现有类型具有相同的名称，除trait的类型参数之外:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>struct Foo { ... }
+
+trait Bar&lt;Input&gt; {
+    type Foo; // this is allowed
+    fn into_foo(self) -&gt; Foo; // this refers to the trait's Foo
+
+    type Input; // this is NOT allowed
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>By not allowing name clashes between input and output types,
+keep open the possibility of later allowing syntax like:</p>
+<p>通过不允许输入和输出类型之间的名称冲突， 保留以后允许 如下语法的可能性</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>Bar&lt;Input=u8, Foo=uint&gt;
+<span class="boring">}
+</span></code></pre></pre>
+<p>where both input and output parameters are constrained by name. And anyway,
+there is no use for clashing input/output names.</p>
+<p>其中输入和输出参数都由名称约束。无论如何, 输入/输出名称冲突是没有用的。</p>
+<p>在名字冲突的情况下，如上面的' Foo '，由于某种原因 如果trait需要引用 外部 Foo，它总是可以通过使用' type 别名来做到这一点 在 trait 之外。</p>
+<h3 id="defaults"><a class="header" href="#defaults">Defaults</a></h3>
+<p>注意，关联的常量和类型都允许默认值，就像trait一样 方法和函数可以提供默认值。</p>
+<p>作为一种代码重用机制和一种扩展方法，默认值都是有用的 </p>
+<p>然而，关联类型的默认值提出了一个有趣的问题：默认方法可以采用默认类型吗</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait ContainerKey : Clone + Hash + Eq {
+    type Query: Hash = Self;
+    fn compare(&amp;self, other: &amp;Query) -&gt; bool { self == other }
+    fn query_to_key(q: &amp;Query) -&gt; Self { q.clone() };
+}
+
+impl ContainerKey for String {
+    type Query = str;
+    fn compare(&amp;self, other: &amp;str) -&gt; bool {
+        self.as_slice() == other
+    }
+    fn query_to_key(q: &amp;str) -&gt; String {
+        q.into_string()
+    }
+}
+
+impl&lt;K,V&gt; HashMap&lt;K,V&gt; where K: ContainerKey {
+    fn find(&amp;self, q: &amp;K::Query) -&gt; &amp;V { ... }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>在这个例子中，' ContainerKey ' trait被用来关联一个' Query ' '类型 (用于查找)具有拥有的键类型</p>
+<p>这解决了 <code>HashMap</code>中棘手的问题:使用 &amp;str索引，而不是 &amp;String索引</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// H: HashMap&lt;String, SomeType&gt;
+H.find(&quot;some literal&quot;)
+<span class="boring">}
+</span></code></pre></pre>
+<p>而不是写作：</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>H.find(&amp;&quot;some literal&quot;.to_string())`
+<span class="boring">}
+</span></code></pre></pre>
+<p>当前的解决方案包括使用' _equiv '方法复制API表面 使用了一些微妙的“Equiv”特征，但也使用了关联类型方法 使得提供一个覆盖相同用例的简单、单一的API变得容易。</p>
+<p>' ContainerKey '的默认值只是假设拥有键和查找键 类型是相同的</p>
+<p>但是默认方法必须假定默认值 关联类型，才能正常工作。</p>
+<p>不可用 覆盖 Query类型、而保留默认方法。</p>
+<p>我们用一种非常简单的方法来处理这个问题:</p>
+<ul>
+<li>如果一个trait 覆盖了任何默认的关联类型，它们也必须覆盖 覆盖<em>所有</em>默认函数和方法。</li>
+<li>否则，trait实现者可以有选择地覆盖单个默认值 方法/函数，就像今天一样。</li>
+</ul>
+<h2 id="trait-implementations"><a class="header" href="#trait-implementations">Trait implementations</a></h2>
+<p><strong>triat实现语法</strong></p>
+<pre><code>IMPL_ITEM =
+  ... &lt;existing productions&gt;
+  | 'const' IDENT ':' TYPE '=' CONST_EXP ';'
+  | 'type' IDENT' '=' 'TYPE' ';'
+  | 'lifetime' LIFETIME_IDENT '=' LIFETIME_REFERENCE ';'
+</code></pre>
+<p>类中的任何“type”实现必须满足所有边界和where子句</p>
+<h2 id="referencing-associated-items"><a class="header" href="#referencing-associated-items">Referencing associated items</a></h2>
+<blockquote>
+<p>引用关联项</p>
+</blockquote>
+<p>关联项是通过路径引用的</p>
+<p>表达式路径语法为 作为[UFCS]的一部分更新(https://github.com/rust-lang/rfcs/pull/132)，</p>
+<p>但 容纳相关的类型和生命周期，我们需要更新类型路径 语法。</p>
+<p>完整的语法如下:</p>
+<pre><code>EXP_PATH
+  = EXP_ID_SEGMENT { '::' EXP_ID_SEGMENT }*
+  | TYPE_SEGMENT { '::' EXP_ID_SEGMENT }+
+  | IMPL_SEGMENT { '::' EXP_ID_SEGMENT }+
+EXP_ID_SEGMENT   = ID [ '::' '&lt;' TYPE { ',' TYPE }* '&gt;' ]
+
+TY_PATH
+  = TY_ID_SEGMENT { '::' TY_ID_SEGMENT }*
+  | TYPE_SEGMENT { '::' TY_ID_SEGMENT }*
+  | IMPL_SEGMENT { '::' TY_ID_SEGMENT }+
+
+TYPE_SEGMENT = '&lt;' TYPE '&gt;'
+IMPL_SEGMENT = '&lt;' TYPE 'as' TRAIT_REFERENCE '&gt;'
+TRAIT_REFERENCE = ID [ '&lt;' TYPE { ',' TYPE * '&gt;' ]
+</code></pre>
+<p>下面是一些示例路径，以及它们可能引用的内容</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Expression paths ///////////////////////////////////////////////////////////////
+
+a::b::c         // reference to a function `c` in module `a::b`
+a::&lt;T1, T2&gt;     // the function `a` instantiated with type arguments `T1`, `T2`
+Vec::&lt;T&gt;::new   // reference to the function `new` associated with `Vec&lt;T&gt;`
+&lt;Vec&lt;T&gt; as SomeTrait&gt;::some_fn
+                // reference to the function `some_fn` associated with `SomeTrait`,
+                //   as implemented by `Vec&lt;T&gt;`
+T::size_of      // the function `size_of` associated with the type or trait `T`
+&lt;T&gt;::size_of    // the function `size_of` associated with `T` _viewed as a type_
+&lt;T as SizeOf&gt;::size_of
+                // the function `size_of` associated with `T`'s impl of `SizeOf`
+
+// Type paths /////////////////////////////////////////////////////////////////////
+
+a::b::C         // reference to a type `C` in module `a::b`
+A&lt;T1, T2&gt;       // type A instantiated with type arguments `T1`, `T2`
+Vec&lt;T&gt;::Iter    // reference to the type `Iter` associated with `Vec&lt;T&gt;
+&lt;Vec&lt;T&gt; as SomeTrait&gt;::SomeType
+                // reference to the type `SomeType` associated with `SomeTrait`,
+                //   as implemented by `Vec&lt;T&gt;`
+<span class="boring">}
+</span></code></pre></pre>
+<h3 id="ways-to-reference-items"><a class="header" href="#ways-to-reference-items">Ways to reference items</a></h3>
+<p>接下来，我们将详细介绍每种路径的含义。  为了便于讨论，我们假设已经定义了一个trait类似于</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Container {
+    type E;
+    fn empty() -&gt; Self;
+    fn insert(&amp;mut self, E);
+    fn contains(&amp;self, &amp;E) -&gt; bool where E: PartialEq;
+    ...
+}
+
+impl&lt;T&gt; Container for Vec&lt;T&gt; {
+    type E = T;
+    fn empty() -&gt; Vec&lt;T&gt; { Vec::new() }
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h4 id="via-an-id_segment-prefix"><a class="header" href="#via-an-id_segment-prefix">Via an <code>ID_SEGMENT</code> prefix</a></h4>
+<blockquote>
+<p>通过ID_SEGEMENT 前缀 访问</p>
+</blockquote>
+<h5 id="当前缀解析为类型时"><a class="header" href="#当前缀解析为类型时">当前缀解析为类型时</a></h5>
+<p>获取关联项的最常见方法是通过  带有特征限制类型参数 :</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn pick&lt;C: Container&gt;(c: &amp;C) -&gt; Option&lt;&amp;C::E&gt; { ... }
+
+fn mk_with_two&lt;C&gt;() -&gt; C where C: Container, C::E = uint {
+    let mut cont = C::empty();  // reference to associated function
+    cont.insert(0);
+    cont.insert(1);
+    cont
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>要使这些引用有效，必须知道类型参数才能实现 相关的特征:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Knowledge via bounds
+fn pick&lt;C: Container&gt;(c: &amp;C) -&gt; Option&lt;&amp;C::E&gt; { ... }
+
+// ... or equivalently,  where clause
+fn pick&lt;C&gt;(c: &amp;C) -&gt; Option&lt;&amp;C::E&gt; where C: Container { ... }
+
+// Knowledge via ambient constraints
+struct TwoContainers&lt;C1: Container, C2: Container&gt;(C1, C2);
+impl&lt;C1: Container, C2: Container&gt; TwoContainers&lt;C1, C2&gt; {
+    fn pick_one(&amp;self) -&gt; Option&lt;&amp;C1::E&gt; { ... }
+    fn pick_other(&amp;self) -&gt; Option&lt;&amp;C2::E&gt; { ... }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>请注意<code>' Vec&lt;T&gt;::E '和' Vec::&lt;T&gt;::empty '</code>也是有效的类型和函数</p>
+<p>对于像<code>' C::E '或' Vec&lt;T&gt;::E '</code>这样的情况，路径以' ID_SEGMENT '开头，前缀本身解析为_type: <code>' C '和' Vec&lt;T&gt; '</code>都是类型。在 一般情况下，路径<code>PREFIX::REST_OF_PATH</code>，其中<code>PREFIX</code>解析为类型是 等价于使用' TYPE_SEGMENT 前缀 <code>&lt;PREFIX&gt;::REST_OF_PATH</code> 。因此,对于 下面的例子都是等价的:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn pick&lt;C: Container&gt;(c: &amp;C) -&gt; Option&lt;&amp;C::E&gt; { ... }
+fn pick&lt;C: Container&gt;(c: &amp;C) -&gt; Option&lt;&amp;&lt;C&gt;::E&gt; { ... }
+fn pick&lt;C: Container&gt;(c: &amp;C) -&gt; Option&lt;&amp;&lt;&lt;C&gt;::E&gt;&gt; { ... }
+<span class="boring">}
+</span></code></pre></pre>
+<p><code>TYPE_SEGMENT</code>前缀的行为将在下一小节中描述。</p>
+<h5 id="当前缀解析为trait时"><a class="header" href="#当前缀解析为trait时">当前缀解析为trait时</a></h5>
+<p><code>ID_SEGMENT</code> 前缀可以解析为<em>trait</em>' 其行为不同于 ' TYPE_SEGMENT '的类型</p>
+<p>如下:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// a reference Container::insert is roughly equivalent to:
+fn trait_insert&lt;C: Container&gt;(c: &amp;C, e: C::E);
+
+// a reference &lt;Container&gt;::insert is roughly equivalent to:
+fn object_insert&lt;E&gt;(c: &amp;Container&lt;E=E&gt;, e: E);
+<span class="boring">}
+</span></code></pre></pre>
+<p>trait前缀</p>
+<ul>
+<li>
+<p>A path <code>PREFIX::REST</code> resolves to the item/path <code>REST</code> defined within
+<code>Trait</code>, while treating the type implementing the trait as a type parameter.</p>
+</li>
+<li>
+<p>A path <code>&lt;PREFIX&gt;::REST</code> treats <code>PREFIX</code> as a (DST-style) <em>type</em>, and is
+hence usable only with trait objects. See the
+<a href="https://github.com/rust-lang/rfcs/pull/132">UFCS RFC</a> for more detail.</p>
+</li>
+</ul>
+<p>请注意，像' Container::E '这样的路径虽然在语法上是有效的，但将失败 ，因为没有办法告诉使用哪个“impl”。 Container::empty '的函数大致相当于:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn trait_empty&lt;C: Container&gt;() -&gt; C;
+<span class="boring">}
+</span></code></pre></pre>
+<h4 id="via-a-type_segment-prefix"><a class="header" href="#via-a-type_segment-prefix">Via a <code>TYPE_SEGMENT</code> prefix</a></h4>
+<blockquote>
+<p>The following text is <em>slightly changed</em> from the
+<a href="https://github.com/rust-lang/rfcs/pull/132">UFCS RFC</a>.</p>
+</blockquote>
+<p>当路径以<code>' TYPE_SEGMENT '</code>开头时，它是一个类型相对路径</p>
+<p>如果这已经是一个全部路径，则解析到指定的 类型。如果路径继续(例如，<code>' &lt;int&gt;::size_of '</code>)，那么下一个段是 使用以下过程进行解析。</p>
+<p>该过程旨在模拟 方法查找，因此对方法查找的任何更改也可能会更改 此查找算法。</p>
+<p>Given a path <code>&lt;T&gt;::m::...</code>:</p>
+<ol>
+<li>Search for members of inherent impls defined on <code>T</code> (if any) with
+the name <code>m</code>. If any are found, the path resolves to that item.</li>
+<li>Otherwise, let <code>IN_SCOPE_TRAITS</code> be the set of traits that are in
+scope and which contain a member named <code>m</code>:
+<ul>
+<li>Let <code>IMPLEMENTED_TRAITS</code> be those traits from <code>IN_SCOPE_TRAITS</code>
+for which an implementation exists that (may) apply to <code>T</code>.
+<ul>
+<li>There can be ambiguity in the case that <code>T</code> contains type inference
+variables.</li>
+</ul>
+</li>
+<li>If <code>IMPLEMENTED_TRAITS</code> is not a singleton set, report an ambiguity
+error. Otherwise, let <code>TRAIT</code> be the member of <code>IMPLEMENTED_TRAITS</code>.</li>
+<li>If <code>TRAIT</code> is ambiguously implemented for <code>T</code>, report an
+ambiguity error and request further type information.</li>
+<li>Otherwise, rewrite the path to <code>&lt;T as Trait&gt;::m::...</code> and
+continue.</li>
+</ul>
+</li>
+</ol>
+<h4 id="via-a-impl_segment-prefix"><a class="header" href="#via-a-impl_segment-prefix">Via a <code>IMPL_SEGMENT</code> prefix</a></h4>
+<blockquote>
+<p>The following text is <em>somewhat different</em> from the
+<a href="https://github.com/rust-lang/rfcs/pull/132">UFCS RFC</a>.</p>
+</blockquote>
+<p>When a path begins with an <code>IMPL_SEGMENT</code>, it is a reference to an item defined
+from a trait. Note that such paths must always have a follow-on member <code>m</code> (that
+is, <code>&lt;T as Trait&gt;</code> is not a complete path, but <code>&lt;T as Trait&gt;::m</code> is).</p>
+<p>To resolve the path, first search for an applicable implementation of <code>Trait</code>
+for <code>T</code>. If no implementation can be found -- or the result is ambiguous -- then
+report an error.  Note that when <code>T</code> is a type parameter, a bound <code>T: Trait</code>
+guarantees that there is such an implementation, but does not count for
+ambiguity purposes.</p>
+<p>Otherwise, resolve the path to the member of the trait with the substitution
+<code>Self =&gt; T</code> and continue.</p>
+<p>This apparently straightforward algorithm has some subtle consequences, as
+illustrated by the following example:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Foo {
+    type T;
+    fn as_T(&amp;self) -&gt; &amp;T;
+}
+
+// A blanket impl for any Show type T
+impl&lt;T: Show&gt; Foo for T {
+    type T = T;
+    fn as_T(&amp;self) -&gt; &amp;T { self }
+}
+
+fn bounded&lt;U: Foo&gt;(u: U) where U::T: Show {
+    // Here, we just constrain the associated type directly
+    println!(&quot;{}&quot;, u.as_T())
+}
+
+fn blanket&lt;U: Show&gt;(u: U) {
+    // the blanket impl applies to U, so we know that `U: Foo` and
+    // &lt;U as Foo&gt;::T = U (and, of course, U: Show)
+    println!(&quot;{}&quot;, u.as_T())
+}
+
+fn not_allowed&lt;U: Foo&gt;(u: U) {
+    // this will not compile, since &lt;U as Trait&gt;::T is not known to
+    // implement Show
+    println!(&quot;{}&quot;, u.as_T())
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>This example includes three generic functions that make use of an associated
+type; the first two will typecheck, while the third will not.</p>
+<ul>
+<li>
+<p>The first case, <code>bounded</code>, places a <code>Show</code> constraint directly on the
+otherwise-abstract associated type <code>U::T</code>. Hence, it is allowed to assume that
+<code>U::T: Show</code>, even though it does not know the concrete implementation of
+<code>Foo</code> for <code>U</code>.</p>
+</li>
+<li>
+<p>The second case, <code>blanket</code>, places a <code>Show</code> constraint on the type <code>U</code>, which
+means that the blanket <code>impl</code> of <code>Foo</code> applies even though we do not know the
+<em>concrete</em> type that <code>U</code> will be. That fact means, moreover, that we can
+compute exactly what the associated type <code>U::T</code> will be, and know that it will
+satisfy <code>Show</code>. Coherence guarantees that that the blanket <code>impl</code> is the only
+one that could apply to <code>U</code>. (See the section &quot;Impl specialization&quot; under
+&quot;Unresolved questions&quot; for a deeper discussion of this point.)</p>
+</li>
+<li>
+<p>The third case assumes only that <code>U: Foo</code>, and therefore nothing is known
+about the associated type <code>U::T</code>. In particular, the function cannot assume
+that <code>U::T: Show</code>.</p>
+</li>
+</ul>
+<p>The resolution rules also interact with instantiation of type parameters in an
+intuitive way. For example:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Graph {
+    type N;
+    type E;
+    ...
+}
+
+impl Graph for MyGraph {
+    type N = MyNode;
+    type E = MyEdge;
+    ...
+}
+
+fn pick_node&lt;G: Graph&gt;(t: &amp;G) -&gt; &amp;G::N {
+    // the type G::N is abstract here
+    ...
+}
+
+let G = MyGraph::new();
+...
+pick_node(G) // has type: &lt;MyGraph as Graph&gt;::N = MyNode
+<span class="boring">}
+</span></code></pre></pre>
+<p>Assuming there are no blanket implementations of <code>Graph</code>, the <code>pick_node</code>
+function knows nothing about the associated type <code>G::N</code>. However, a <em>client</em> of
+<code>pick_node</code> that instantiates it with a particular concrete graph type will also
+know the concrete type of the value returned from the function -- here, <code>MyNode</code>.</p>
+<h2 id="scoping-of-trait-and-impl-items"><a class="header" href="#scoping-of-trait-and-impl-items">Scoping of <code>trait</code> and <code>impl</code> items</a></h2>
+<p>Associated types are frequently referred to in the signatures of a trait's
+methods and associated functions, and it is natural and convenient to refer to
+them directly.</p>
+<p>In other words, writing this:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Graph {
+    type N;
+    type E;
+    fn has_edge(&amp;self, &amp;N, &amp;N) -&gt; bool;
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>is more appealing than writing this:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Graph {
+    type N;
+    type E;
+    fn has_edge(&amp;self, &amp;Self::N, &amp;Self::N) -&gt; bool;
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>This RFC proposes to treat both <code>trait</code> and <code>impl</code> bodies (both
+inherent and for traits) the same way we treat <code>mod</code> bodies: <em>all</em>
+items being defined are in scope. In particular, methods are in scope
+as UFCS-style functions:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Foo {
+    type AssocType;
+    lifetime 'assoc_lifetime;
+    const ASSOC_CONST: uint;
+    fn assoc_fn() -&gt; Self;
+
+    // Note: 'assoc_lifetime and AssocType in scope:
+    fn method(&amp;self, Self) -&gt; &amp;'assoc_lifetime AssocType;
+
+    fn default_method(&amp;self) -&gt; uint {
+        // method in scope UFCS-style, assoc_fn in scope
+        let _ = method(self, assoc_fn());
+        ASSOC_CONST // in scope
+    }
+}
+
+// Same scoping rules for impls, including inherent impls:
+struct Bar;
+impl Bar {
+    fn foo(&amp;self) { ... }
+    fn bar(&amp;self) {
+        foo(self); // foo in scope UFCS-style
+        ...
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>Items from super traits are <em>not</em> in scope, however. See
+<a href="#super-traits">the discussion on super traits below</a> for more detail.</p>
+<p>These scope rules provide good ergonomics for associated types in
+particular, and a consistent scope model for language constructs that
+can contain items (like traits, impls, and modules). In the long run,
+we should also explore imports for trait items, i.e. <code>use Trait::some_method</code>, but that is out of scope for this RFC.</p>
+<p>Note that, according to this proposal, associated types/lifetimes are <em>not</em> in
+scope for the optional <code>where</code> clause on the trait header. For example:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Foo&lt;Input&gt;
+    // type parameters in scope, but associated types are not:
+    where Bar&lt;Input, Self::Output&gt;: Encodable {
+
+    type Output;
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>This setup seems more intuitive than allowing the trait header to refer directly
+to items defined within the trait body.</p>
+<p>It's also worth noting that <em>trait-level</em> <code>where</code> clauses are never needed for
+constraining associated types anyway, because associated types also have <code>where</code>
+clauses. Thus, the above example could (and should) instead be written as
+follows:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Foo&lt;Input&gt; {
+    type Output where Bar&lt;Input, Output&gt;: Encodable;
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="constraining-associated-types"><a class="header" href="#constraining-associated-types">Constraining associated types</a></h2>
+<p>Associated types are not treated as parameters to a trait, but in some cases a
+function will want to constrain associated types in some way. For example, as
+explained in the Motivation section, the <code>Iterator</code> trait should treat the
+element type as an output:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Iterator {
+    type A;
+    fn next(&amp;mut self) -&gt; Option&lt;A&gt;;
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>For code that works with iterators generically, there is no need to constrain
+this type:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn collect_into_vec&lt;I: Iterator&gt;(iter: I) -&gt; Vec&lt;I::A&gt; { ... }
+<span class="boring">}
+</span></code></pre></pre>
+<p>But other code may have requirements for the element type:</p>
+<ul>
+<li>That it implements some traits (bounds).</li>
+<li>That it unifies with a particular type.</li>
+</ul>
+<p>These requirements can be imposed via <code>where</code> clauses:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn print_iter&lt;I&gt;(iter: I) where I: Iterator, I::A: Show { ... }
+fn sum_uints&lt;I&gt;(iter: I) where I: Iterator, I::A = uint { ... }
+<span class="boring">}
+</span></code></pre></pre>
+<p>In addition, there is a shorthand for equality constraints:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn sum_uints&lt;I: Iterator&lt;A = uint&gt;&gt;(iter: I) { ... }
+<span class="boring">}
+</span></code></pre></pre>
+<p>In general, a trait like:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Foo&lt;Input1, Input2&gt; {
+    type Output1;
+    type Output2;
+    lifetime 'a;
+    const C: bool;
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>can be written in a bound like:</p>
+<pre><code>T: Foo&lt;I1, I2&gt;
+T: Foo&lt;I1, I2, Output1 = O1&gt;
+T: Foo&lt;I1, I2, Output2 = O2&gt;
+T: Foo&lt;I1, I2, Output1 = O1, Output2 = O2&gt;
+T: Foo&lt;I1, I2, Output1 = O1, 'a = 'b, Output2 = O2&gt;
+T: Foo&lt;I1, I2, Output1 = O1, 'a = 'b, C = true, Output2 = O2&gt;
+</code></pre>
+<p>The output constraints must come after all input arguments, but can appear in
+any order.</p>
+<p>Note that output constraints are allowed when referencing a trait in a <em>type</em> or
+a <em>bound</em>, but not in an <code>IMPL_SEGMENT</code> path:</p>
+<ul>
+<li>As a type: <code>fn foo(obj: Box&lt;Iterator&lt;A = uint&gt;&gt;</code> is allowed.</li>
+<li>In a bound: <code>fn foo&lt;I: Iterator&lt;A = uint&gt;&gt;(iter: I)</code> is allowed.</li>
+<li>In an <code>IMPL_SEGMENT</code>: <code>&lt;I as Iterator&lt;A = uint&gt;&gt;::next</code> is <em>not</em> allowed.</li>
+</ul>
+<p>The reason not to allow output constraints in <code>IMPL_SEGMENT</code> is that such paths
+are references to a trait implementation that has already been determined -- it
+does not make sense to apply additional constraints to the implementation when
+referencing it.</p>
+<p>Output constraints are a handy shorthand when using trait bounds, but they are a
+<em>necessity</em> for trait objects, which we discuss next.</p>
+<h2 id="trait-objects"><a class="header" href="#trait-objects">Trait objects</a></h2>
+<p>When using trait objects, the <code>Self</code> type is &quot;erased&quot;, so different types
+implementing the trait can be used under the same trait object type:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>impl Show for Foo { ... }
+impl Show for Bar { ... }
+
+fn make_vec() -&gt; Vec&lt;Box&lt;Show&gt;&gt; {
+    let f = Foo { ... };
+    let b = Bar { ... };
+    let mut v = Vec::new();
+    v.push(box f as Box&lt;Show&gt;);
+    v.push(box b as Box&lt;Show&gt;);
+    v
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>One consequence of erasing <code>Self</code> is that methods using the <code>Self</code> type as
+arguments or return values cannot be used on trait objects, since their types
+would differ for different choices of <code>Self</code>.</p>
+<p>In the model presented in this RFC, traits have additional input parameters
+beyond <code>Self</code>, as well as associated types that may vary depending on all of the
+input parameters. This raises the question: which of these types, if any, are
+erased in trait objects?</p>
+<p>The approach we take here is the simplest and most conservative: when using a
+trait as a <em>type</em> (i.e., as a trait object), <em>all</em> input and output types must
+be provided as part of the type. In other words, <em>only</em> the <code>Self</code> type is
+erased, and all other types are specified statically in the trait object type.</p>
+<p>Consider again the following example:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Foo&lt;Input1, Input2&gt; {
+    type Output1;
+    type Output2;
+    lifetime 'a;
+    const C: bool;
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>Unlike the case for static trait bounds, which do not have to specify any of the
+associated types, lifetimes, or consts, (but do have to specify the input types),
+trait object types must specify all of the types:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn consume_foo&lt;T: Foo&lt;I1, I2&gt;&gt;(t: T) // this is valid
+fn consume_obj(t: Box&lt;Foo&lt;I1, I2&gt;&gt;)  // this is NOT valid
+
+// but this IS valid:
+fn consume_obj(t: Box&lt;Foo&lt;I1, I2, Output1 = O2, Output2 = O2, 'a = 'static, C = true&gt;&gt;)
+<span class="boring">}
+</span></code></pre></pre>
+<p>With this design, it is clear that none of the non-<code>Self</code> types are erased as
+part of trait objects. But it leaves wiggle room to relax this restriction
+later on: trait object types that are not allowed under this design can be given
+meaning in some later design.</p>
+<h2 id="inherent-associated-items"><a class="header" href="#inherent-associated-items">Inherent associated items</a></h2>
+<p>All associated items are also allowed in inherent <code>impl</code>s, so a definition like
+the following is allowed:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>struct MyGraph { ... }
+struct MyNode { ... }
+struct MyEdge { ... }
+
+impl MyGraph {
+    type N = MyNode;
+    type E = MyEdge;
+
+    // Note: associated types in scope, just as with trait bodies
+    fn has_edge(&amp;self, &amp;N, &amp;N) -&gt; bool {
+        ...
+    }
+
+    ...
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>Inherent associated items are referenced similarly to trait associated items:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn distance(g: &amp;MyGraph, from: &amp;MyGraph::N, to: &amp;MyGraph::N) -&gt; uint { ... }
+<span class="boring">}
+</span></code></pre></pre>
+<p>Note, however, that output constraints do not make sense for inherent outputs:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// This is *not* a legal type:
+MyGraph&lt;N = SomeNodeType&gt;
+<span class="boring">}
+</span></code></pre></pre>
+<h2 id="the-inputoutput-type-distinction"><a class="header" href="#the-inputoutput-type-distinction">The input/output type distinction</a></h2>
+<p>When designing a trait that references some unknown type, you now have the
+option of taking that type as an input parameter, or specifying it as an output
+associated type. What are the ramifications of this decision?</p>
+<h3 id="coherence-implications"><a class="header" href="#coherence-implications">Coherence implications</a></h3>
+<p>Input types are used when determining which <code>impl</code> matches, even for the same
+<code>Self</code> type:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Iterable1&lt;A&gt; {
+    type I: Iterator&lt;A&gt;;
+    fn iter(self) -&gt; I;
+}
+
+// These impls have distinct input types, so are allowed
+impl Iterable1&lt;u8&gt; for Foo { ... }
+impl Iterable1&lt;char&gt; for Foo { ... }
+
+trait Iterable2 {
+    type A;
+    type I: Iterator&lt;A&gt;;
+    fn iter(self) -&gt; I;
+}
+
+// These impls apply to a common input (Foo), so are NOT allowed
+impl Iterable2 for Foo { ... }
+impl Iterable2 for Foo { ... }
+<span class="boring">}
+</span></code></pre></pre>
+<p>More formally, the <em>coherence</em> property is revised as follows:</p>
+<ul>
+<li>Given a trait and values for all its type parameters (inputs, including
+<code>Self</code>), there is at most one applicable <code>impl</code>.</li>
+</ul>
+<p>In the <a href="https://github.com/rust-lang/rfcs/pull/48">trait reform RFC</a>, coherence
+is guaranteed by maintaining two other key properties, which are revised as
+follows:</p>
+<p><em>Orphan check</em>: Every implementation must meet one of
+the following conditions:</p>
+<ol>
+<li>
+<p>The trait being implemented (if any) must be defined in the current crate.</p>
+</li>
+<li>
+<p>At least one of the input type parameters (including but not
+necessarily <code>Self</code>) must meet the following grammar, where <code>C</code>
+is a struct or enum defined within the current crate:</p>
+<pre><code>T = C
+  | [T]
+  | [T, ..n]
+  | &amp;T
+  | &amp;mut T
+  | ~T
+  | (..., T, ...)
+  | X&lt;..., T, ...&gt; where X is not bivariant with respect to T
+</code></pre>
+</li>
+</ol>
+<p><em>Overlapping instances</em>: No two implementations can be instantiable
+with the same set of types for the input type parameters.</p>
+<p>See the <a href="https://github.com/rust-lang/rfcs/pull/48">trait reform RFC</a> for more
+discussion of these properties.</p>
+<h3 id="type-inference-implications"><a class="header" href="#type-inference-implications">Type inference implications</a></h3>
+<p>Finally, <em>output</em> type parameters can be inferred/resolved as soon as there is
+a matching <code>impl</code> based on the input type parameters. Because of the
+coherence property above, there can be at most one.</p>
+<p>On the other hand, even if there is only one applicable <code>impl</code>, type inference
+is <em>not</em> allowed to infer the input type parameters from it. This restriction
+makes it possible to ensure <em>crate concatenation</em>: adding another crate may add
+<code>impl</code>s for a given trait, and if type inference depended on the absence of such
+<code>impl</code>s, importing a crate could break existing code.</p>
+<p>In practice, these inference benefits can be quite valuable. For example, in the
+<code>Add</code> trait given at the beginning of this RFC, the <code>Sum</code> output type is
+immediately known once the input types are known, which can avoid the need for
+type annotations.</p>
+<h2 id="limitations"><a class="header" href="#limitations">Limitations</a></h2>
+<p>The main limitation of associated items as presented here is about associated
+<em>types</em> in particular. You might be tempted to write a trait like the following:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Iterable {
+    type A;
+    type I: Iterator&lt;&amp;'a A&gt;; // what is the lifetime here?
+    fn iter&lt;'a&gt;(&amp;'a self) -&gt; I;  // and how to connect it to self?
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>The problem is that, when implementing this trait, the return type <code>I</code> of <code>iter</code>
+must generally depend on the <em>lifetime</em> of self. For example, the corresponding
+method in <code>Vec</code> looks like the following:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>impl&lt;T&gt; Vec&lt;T&gt; {
+    fn iter(&amp;'a self) -&gt; Items&lt;'a, T&gt; { ... }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>This means that, given a <code>Vec&lt;T&gt;</code>, there isn't a <em>single</em> type <code>Items&lt;T&gt;</code> for
+iteration -- rather, there is a <em>family</em> of types, one for each input lifetime.
+In other words, the associated type <code>I</code> in the <code>Iterable</code> needs to be
+&quot;higher-kinded&quot;: not just a single type, but rather a family:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Iterable {
+    type A;
+    type I&lt;'a&gt;: Iterator&lt;&amp;'a A&gt;;
+    fn iter&lt;'a&gt;(&amp;self) -&gt; I&lt;'a&gt;;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>In this case, <code>I</code> is parameterized by a lifetime, but in other cases (like
+<code>map</code>) an associated type needs to be parameterized by a type.</p>
+<p>In general, such higher-kinded types (HKTs) are a much-requested feature for
+Rust, and they would extend the reach of associated types. But the design and
+implementation of higher-kinded types is, by itself, a significant investment.
+The point of view of this RFC is that associated items bring the most important
+changes needed to stabilize our existing traits (and add a few key others),
+while HKTs will allow us to define important traits in the future but are not
+necessary for 1.0.</p>
+<h3 id="encoding-higher-kinded-types"><a class="header" href="#encoding-higher-kinded-types">Encoding higher-kinded types</a></h3>
+<p>That said, it's worth pointing out that variants of higher-kinded types can be
+encoded in the system being proposed here.</p>
+<p>For example, the <code>Iterable</code> example above can be written in the following
+somewhat contorted style:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait IterableOwned {
+    type A;
+    type I: Iterator&lt;A&gt;;
+    fn iter_owned(self) -&gt; I;
+}
+
+trait Iterable {
+    fn iter&lt;'a&gt;(&amp;'a self) -&gt; &lt;&amp;'a Self&gt;::I where &amp;'a Self: IterableOwned {
+        IterableOwned::iter_owned(self)
+    }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>The idea here is to define a trait that takes, as input type/lifetimes
+parameters, the parameters to any HKTs. In this case, the trait is implemented
+on the type <code>&amp;'a Self</code>, which includes the lifetime parameter.</p>
+<p>We can in fact generalize this technique to encode arbitrary HKTs:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// The kind * -&gt; *
+trait TypeToType&lt;Input&gt; {
+    type Output;
+}
+type Apply&lt;Name, Elt&gt; where Name: TypeToType&lt;Elt&gt; = Name::Output;
+
+struct Vec_;
+struct DList_;
+
+impl&lt;T&gt; TypeToType&lt;T&gt; for Vec_ {
+    type Output = Vec&lt;T&gt;;
+}
+
+impl&lt;T&gt; TypeToType&lt;T&gt; for DList_ {
+    type Output = DList&lt;T&gt;;
+}
+
+trait Mappable
+{
+    type E;
+    type HKT where Apply&lt;HKT, E&gt; = Self;
+
+    fn map&lt;F&gt;(self, f: E -&gt; F) -&gt; Apply&lt;HKT, F&gt;;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>While the above demonstrates the versatility of associated types and <code>where</code>
+clauses, it is probably too much of a hack to be viable for use in <code>libstd</code>.</p>
+<h3 id="associated-consts-in-generic-code"><a class="header" href="#associated-consts-in-generic-code">Associated consts in generic code</a></h3>
+<p>If the value of an associated const depends on a type parameter (including
+<code>Self</code>), it cannot be used in a constant expression. This restriction will
+almost certainly be lifted in the future, but this raises questions outside the
+scope of this RFC.</p>
+<h1 id="staging"><a class="header" href="#staging">Staging</a></h1>
+<p>Associated lifetimes are probably not necessary for the 1.0 timeframe. While we
+currently have a few traits that are parameterized by lifetimes, most of these
+can go away once DST lands.</p>
+<p>On the other hand, associated lifetimes are probably trivial to implement once
+associated types have been implemented.</p>
+<h1 id="other-interactions"><a class="header" href="#other-interactions">Other interactions</a></h1>
+<h2 id="interaction-with-implied-bounds"><a class="header" href="#interaction-with-implied-bounds">Interaction with implied bounds</a></h2>
+<p>As part of the
+<a href="http://smallcultfollowing.com/babysteps/blog/2014/07/06/implied-bounds/">implied bounds</a>
+idea, it may be desirable for this:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn pick_node&lt;G&gt;(g: &amp;G) -&gt; &amp;&lt;G as Graph&gt;::N
+<span class="boring">}
+</span></code></pre></pre>
+<p>to be sugar for this:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn pick_node&lt;G: Graph&gt;(g: &amp;G) -&gt; &amp;&lt;G as Graph&gt;::N
+<span class="boring">}
+</span></code></pre></pre>
+<p>But this feature can easily be added later, as part of a general implied bounds RFC.</p>
+<h2 id="future-proofing-specialization-of-impls"><a class="header" href="#future-proofing-specialization-of-impls">Future-proofing: specialization of <code>impl</code>s</a></h2>
+<p>In the future, we may wish to relax the &quot;overlapping instances&quot; rule so that one
+can provide &quot;blanket&quot; trait implementations and then &quot;specialize&quot; them for
+particular types. For example:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Sliceable {
+    type Slice;
+    // note: not using &amp;self here to avoid need for HKT
+    fn as_slice(self) -&gt; Slice;
+}
+
+impl&lt;'a, T&gt; Sliceable for &amp;'a T {
+    type Slice = &amp;'a T;
+    fn as_slice(self) -&gt; &amp;'a T { self }
+}
+
+impl&lt;'a, T&gt; Sliceable for &amp;'a Vec&lt;T&gt; {
+    type Slice = &amp;'a [T];
+    fn as_slice(self) -&gt; &amp;'a [T] { self.as_slice() }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>But then there's a difficult question:</p>
+<pre><code>fn dice&lt;A&gt;(a: &amp;A) -&gt; &amp;A::Slice where &amp;A: Slicable {
+    a // is this allowed?
+}
+</code></pre>
+<p>Here, the blanket and specialized implementations provide incompatible
+associated types. When working with the trait generically, what can we assume
+about the associated type? If we assume it is the blanket one, the type may
+change during monomorphization (when specialization takes effect)!</p>
+<p>The RFC <em>does</em> allow generic code to &quot;see&quot; associated types provided by blanket
+implementations, so this is a potential problem.</p>
+<p>Our suggested strategy is the following. If at some later point we wish to add
+specialization, traits would have to <em>opt in</em> explicitly. For such traits, we
+would <em>not</em> allow generic code to &quot;see&quot; associated types for blanket
+implementations; instead, output types would only be visible when all input
+types were concretely known. This approach is backwards-compatible with the RFC,
+and is probably a good idea in any case.</p>
+<h1 id="alternatives"><a class="header" href="#alternatives">Alternatives</a></h1>
+<h2 id="multidispatch-through-tuple-types"><a class="header" href="#multidispatch-through-tuple-types">Multidispatch through tuple types</a></h2>
+<p>This RFC clarifies trait matching by making trait type parameters inputs to
+matching, and associated types outputs.</p>
+<p>A more radical alternative would be to <em>remove type parameters from traits</em>, and
+instead support multiple input types through a separate multidispatch mechanism.</p>
+<p>In this design, the <code>Add</code> trait would be written and implemented as follows:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Lhs and Rhs are *inputs*
+trait Add for (Lhs, Rhs) {
+    type Sum; // Sum is an *output*
+    fn add(&amp;Lhs, &amp;Rhs) -&gt; Sum;
+}
+
+impl Add for (int, int) {
+    type Sum = int;
+    fn add(left: &amp;int, right: &amp;int) -&gt; int { ... }
+}
+
+impl Add for (int, Complex) {
+    type Sum = Complex;
+    fn add(left: &amp;int, right: &amp;Complex) -&gt; Complex { ... }
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>The <code>for</code> syntax in the trait definition is used for multidispatch traits, here
+saying that <code>impl</code>s must be for pairs of types which are bound to <code>Lhs</code> and
+<code>Rhs</code> respectively. The <code>add</code> function can then be invoked in UFCS style by
+writing</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>Add::add(some_int, some_complex)
+<span class="boring">}
+</span></code></pre></pre>
+<p><em>Advantages of the tuple approach</em>:</p>
+<ul>
+<li>
+<p>It does not force a distinction between <code>Self</code> and other input types, which in
+some cases (including binary operators like <code>Add</code>) can be artificial.</p>
+</li>
+<li>
+<p>Makes it possible to specify input types without specifying the trait:
+<code>&lt;(A, B)&gt;::Sum</code> rather than <code>&lt;A as Add&lt;B&gt;&gt;::Sum</code>.</p>
+</li>
+</ul>
+<p><em>Disadvantages of the tuple approach</em>:</p>
+<ul>
+<li>
+<p>It's more painful when you <em>do</em> want a method rather than a function.</p>
+</li>
+<li>
+<p>Requires <code>where</code> clauses when used in bounds: <code>where (A, B): Trait</code> rather
+than <code>A: Trait&lt;B&gt;</code>.</p>
+</li>
+<li>
+<p>It gives two ways to write single dispatch: either without <code>for</code>, or using
+<code>for</code> with a single-element tuple.</p>
+</li>
+<li>
+<p>There's a somewhat jarring distinction between single/multiple dispatch
+traits, making the latter feel &quot;bolted on&quot;.</p>
+</li>
+<li>
+<p>The tuple syntax is unusual in acting as a binder of its types, as opposed to
+the <code>Trait&lt;A, B&gt;</code> syntax.</p>
+</li>
+<li>
+<p>Relatedly, the generics syntax for traits is immediately understandable (a
+family of traits) based on other uses of generics in the language, while the
+tuple notation stands alone.</p>
+</li>
+<li>
+<p>Less clear story for trait objects (although the fact that <code>Self</code> is the only
+erased input type in this RFC may seem somewhat arbitrary).</p>
+</li>
+</ul>
+<p>On balance, the generics-based approach seems like a better fit for the language
+design, especially in its interaction with methods and the object system.</p>
+<h2 id="a-backwards-compatible-version"><a class="header" href="#a-backwards-compatible-version">A backwards-compatible version</a></h2>
+<p>Yet another alternative would be to allow trait type parameters to be either
+inputs or outputs, marking the inputs with a keyword <code>in</code>:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>trait Add&lt;in Rhs, Sum&gt; {
+    fn add(&amp;Lhs, &amp;Rhs) -&gt; Sum;
+}
+<span class="boring">}
+</span></code></pre></pre>
+<p>This would provide a way of adding multidispatch now, and then adding associated
+items later on without breakage. If, in addition, output types had to come after
+all input types, it might even be possible to migrate output type parameters
+like <code>Sum</code> above into associated types later.</p>
+<p>This is perhaps a reasonable fallback, but it seems better to introduce a clean
+design with both multidispatch and associated items together.</p>
+<h1 id="unresolved-questions"><a class="header" href="#unresolved-questions">Unresolved questions</a></h1>
+<h2 id="super-traits"><a class="header" href="#super-traits">Super traits</a></h2>
+<p>This RFC largely ignores super traits.</p>
+<p>Currently, the implementation of super traits treats them identically to a
+<code>where</code> clause that bounds <code>Self</code>, and this RFC does not propose to change
+that. However, a follow-up RFC should clarify that this is the intended
+semantics for super traits.</p>
+<p>Note that this treatment of super traits is, in particular, consistent with the
+proposed scoping rules, which do not bring items from super traits into scope in
+the body of a subtrait; they must be accessed via <code>Self::item_name</code>.</p>
+<h2 id="equality-constraints-in-where-clauses"><a class="header" href="#equality-constraints-in-where-clauses">Equality constraints in <code>where</code> clauses</a></h2>
+<p>This RFC allows equality constraints on types for associated types, but does not
+propose a similar feature for <code>where</code> clauses. That will be the subject of a
+follow-up RFC.</p>
+<h2 id="multiple-trait-object-bounds-for-the-same-trait"><a class="header" href="#multiple-trait-object-bounds-for-the-same-trait">Multiple trait object bounds for the same trait</a></h2>
+<p>The design here makes it possible to write bounds or trait objects that mention
+the same trait, multiple times, with different inputs:</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>fn mulit_add&lt;T: Add&lt;int&gt; + Add&lt;Complex&gt;&gt;(t: T) -&gt; T { ... }
+fn mulit_add_obj(t: Box&lt;Add&lt;int&gt; + Add&lt;Complex&gt;&gt;) -&gt; Box&lt;Add&lt;int&gt; + Add&lt;Complex&gt;&gt; { ... }
+<span class="boring">}
+</span></code></pre></pre>
+<p>This seems like a potentially useful feature, and should be unproblematic for
+bounds, but may have implications for vtables that make it problematic for trait
+objects. Whether or not such trait combinations are allowed will likely depend
+on implementation concerns, which are not yet clear.</p>
+<h2 id="generic-associated-consts-in-match-patterns"><a class="header" href="#generic-associated-consts-in-match-patterns">Generic associated consts in match patterns</a></h2>
+<p>It seems desirable to allow constants that depend on type parameters in match
+patterns, but it's not clear how to do so while still checking exhaustiveness
+and reachability of the match arms. Most likely this requires new forms of
+where clause, to constrain associated constant values.</p>
+<p>For now, we simply defer the question.</p>
+<h2 id="generic-associated-consts-in-array-sizes"><a class="header" href="#generic-associated-consts-in-array-sizes">Generic associated consts in array sizes</a></h2>
+<p>It would be useful to be able to use trait-associated constants in generic code.</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>// Shouldn't this be OK?
+const ALIAS_N: usize = &lt;T&gt;::N;
+let x: [u8; &lt;T&gt;::N] = [0u8; ALIAS_N];
+// Or...
+let x: [u8; T::N + 1] = [0u8; T::N + 1];
+<span class="boring">}
+</span></code></pre></pre>
+<p>However, this causes some problems. What should we do with the following case in
+type checking, where we need to prove that a generic is valid for any <code>T</code>?</p>
+<pre><pre class="playground"><code class="language-rust">
+<span class="boring">#![allow(unused)]
+</span><span class="boring">fn main() {
+</span>let x: [u8; T::N + T::N] = [0u8; 2 * T::N];
+<span class="boring">}
+</span></code></pre></pre>
+<p>We would like to handle at least some obvious cases (e.g. proving that
+<code>T::N == T::N</code>), but without trying to prove arbitrary statements about
+arithmetic. The question of how to do this is deferred.</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../其他编程语言_3_rust/迭代与闭包.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../其他编程语言_3_rust/rfcs/0911-const-fn.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../其他编程语言_3_rust/迭代与闭包.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../其他编程语言_3_rust/rfcs/0911-const-fn.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

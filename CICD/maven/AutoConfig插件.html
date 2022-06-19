@@ -1,0 +1,924 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>AutoConfig插件 - note</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../index.html">我的笔记库</a></li><li class="chapter-item affix "><li class="part-title">spring</li><li class="chapter-item "><div><strong aria-hidden="true">1.</strong> spring</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/0.spring容器启动总览.html"><strong aria-hidden="true">1.1.</strong> spring容器启动总览</a></li><li class="chapter-item "><a href="../../spring_1_spring/1.spring容器启动-bean实例化流程.html"><strong aria-hidden="true">1.2.</strong> spring容器启动-bean实例化流程</a></li><li class="chapter-item "><a href="../../spring_1_spring/2.SpringBean实例化过程.html"><strong aria-hidden="true">1.3.</strong> SpringBean实例化过程</a></li><li class="chapter-item "><a href="../../spring_1_spring/3.Spring依赖注入与初始化.html"><strong aria-hidden="true">1.4.</strong> Spring依赖注入与初始化</a></li><li class="chapter-item "><a href="../../spring_1_spring/4.SpringBean的生命周期.html"><strong aria-hidden="true">1.5.</strong> SpringBean的生命周期</a></li><li class="chapter-item "><a href="../../spring_1_spring/5.SpringSchedule.html"><strong aria-hidden="true">1.6.</strong> SpringSchedule</a></li><li class="chapter-item "><a href="../../spring_1_spring/ClassPathScanningCandidateComponentProvider.html"><strong aria-hidden="true">1.7.</strong> ClassPathScanningCandidateComponentProvider</a></li><li class="chapter-item "><a href="../../spring_1_spring/PropertySource.html"><strong aria-hidden="true">1.8.</strong> PropertySource</a></li><li class="chapter-item "><a href="../../spring_1_spring/Spring总结.html"><strong aria-hidden="true">1.9.</strong> Spring总结</a></li><li class="chapter-item "><a href="../../spring_1_spring/applicationContext与BeanFactory的区别.html"><strong aria-hidden="true">1.10.</strong> applicationContext与BeanFactory的区别</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring杂项.html"><strong aria-hidden="true">1.11.</strong> spring杂项</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring组合注解.html"><strong aria-hidden="true">1.12.</strong> spring组合注解</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring解决循环依赖问题.html"><strong aria-hidden="true">1.13.</strong> spring解决循环依赖问题</a></li><li class="chapter-item "><a href="../../spring_1_spring/postprocessor/index.html"><strong aria-hidden="true">1.14.</strong> postprocessor</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/index.html"><strong aria-hidden="true">1.15.</strong> spring-aop</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-cglib动态代理.html"><strong aria-hidden="true">1.15.1.</strong> SpringAop-cglib动态代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-jdk动态代理.html"><strong aria-hidden="true">1.15.2.</strong> SpringAop-jdk动态代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-涉及到的类.html"><strong aria-hidden="true">1.15.3.</strong> SpringAop-涉及到的类</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-编程式代理.html"><strong aria-hidden="true">1.15.4.</strong> SpringAop-编程式代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-自动代理.html"><strong aria-hidden="true">1.15.5.</strong> SpringAop-自动代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop总结.html"><strong aria-hidden="true">1.15.6.</strong> SpringAop总结</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/aop包解析.html"><strong aria-hidden="true">1.15.7.</strong> aop包解析</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/taskList.html"><strong aria-hidden="true">1.15.8.</strong> taskList</a></li><li class="chapter-item "><div><strong aria-hidden="true">1.15.9.</strong> AOP应用解析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/AOP应用解析/Async异步.html"><strong aria-hidden="true">1.15.9.1.</strong> Async异步</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/AOP应用解析/依赖懒加载.html"><strong aria-hidden="true">1.15.9.2.</strong> 依赖懒加载</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/AOP应用解析/缓存.html"><strong aria-hidden="true">1.15.9.3.</strong> 缓存</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_1_spring/spring-bean定义/index.html"><strong aria-hidden="true">1.16.</strong> spring-bean定义</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/spring-bean定义/Bean定义.html"><strong aria-hidden="true">1.16.1.</strong> Bean定义</a></li></ol></li><li class="chapter-item "><a href="../../spring_1_spring/springBeanScope/index.html"><strong aria-hidden="true">1.17.</strong> springBeanScope</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/springBeanScope/spring自定义可刷新的上下文.html"><strong aria-hidden="true">1.17.1.</strong> spring自定义可刷新的上下文</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">1.18.</strong> springframework</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/springframework/MessageSource.html"><strong aria-hidden="true">1.18.1.</strong> MessageSource</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/spring-ioc.html"><strong aria-hidden="true">1.18.2.</strong> spring-ioc</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/springEL.html"><strong aria-hidden="true">1.18.3.</strong> springEL</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/spring代理.html"><strong aria-hidden="true">1.18.4.</strong> spring代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/基于Ant的路径匹配.html"><strong aria-hidden="true">1.18.5.</strong> 基于Ant的路径匹配</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/字段格式化.html"><strong aria-hidden="true">1.18.6.</strong> 字段格式化</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/属性源抽象.html"><strong aria-hidden="true">1.18.7.</strong> 属性源抽象</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/类型转换.html"><strong aria-hidden="true">1.18.8.</strong> 类型转换</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/资源抽象.html"><strong aria-hidden="true">1.18.9.</strong> 资源抽象</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/配置全局日期格式化.html"><strong aria-hidden="true">1.18.10.</strong> 配置全局日期格式化</a></li></ol></li><li class="chapter-item "><a href="../../spring_1_spring/编程式注入类/index.html"><strong aria-hidden="true">1.19.</strong> 编程式注入类</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/编程式注入类/AOP代理相关.html"><strong aria-hidden="true">1.19.1.</strong> AOP代理相关</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_2_springMVC/index.html"><strong aria-hidden="true">2.</strong> springMVC</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_2_springMVC/URI_Links.html"><strong aria-hidden="true">2.1.</strong> URI_Links</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/functional_endpoints.html"><strong aria-hidden="true">2.2.</strong> functional_endpoints</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/mvcannotation-driven注解的作用.html"><strong aria-hidden="true">2.3.</strong> mvcannotation-driven注解的作用</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/spring-mvc.html"><strong aria-hidden="true">2.4.</strong> spring-mvc</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMVC自定义参数解析注解.html"><strong aria-hidden="true">2.5.</strong> springMVC自定义参数解析注解</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMVC路径映射.html"><strong aria-hidden="true">2.6.</strong> springMVC路径映射</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMVC返回后.html"><strong aria-hidden="true">2.7.</strong> springMVC返回后</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMvcController配置.html"><strong aria-hidden="true">2.8.</strong> springMvcController配置</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/内置四种filters.html"><strong aria-hidden="true">2.9.</strong> 内置四种filters</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/基于注解的控制器.html"><strong aria-hidden="true">2.10.</strong> 基于注解的控制器</a></li><li class="chapter-item "><div><strong aria-hidden="true">2.11.</strong> spring_1_spring</div></li></ol></li><li class="chapter-item "><a href="../../spring_3_springboot/index.html"><strong aria-hidden="true">3.</strong> springboot</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_3_springboot/springBoot资源处理.html"><strong aria-hidden="true">3.1.</strong> springBoot资源处理</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-HiKariCP连接池动态数据源配置.html"><strong aria-hidden="true">3.2.</strong> springboot-HiKariCP连接池动态数据源配置</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-devtools.html"><strong aria-hidden="true">3.3.</strong> springboot-devtools</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-元数据.html"><strong aria-hidden="true">3.4.</strong> springboot-元数据</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-多模块.html"><strong aria-hidden="true">3.5.</strong> springboot-多模块</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-日志.html"><strong aria-hidden="true">3.6.</strong> springboot-日志</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-自动配置原理.html"><strong aria-hidden="true">3.7.</strong> springboot-自动配置原理</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-过滤器.html"><strong aria-hidden="true">3.8.</strong> springboot-过滤器</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-配置文件与jar分离.html"><strong aria-hidden="true">3.9.</strong> springboot-配置文件与jar分离</a></li><li class="chapter-item "><a href="../../spring_3_springboot/快速入门.html"><strong aria-hidden="true">3.10.</strong> 快速入门</a></li><li class="chapter-item "><a href="../../spring_3_springboot/自定义springBootStarter.html"><strong aria-hidden="true">3.11.</strong> 自定义springBootStarter</a></li><li class="chapter-item "><div><strong aria-hidden="true">3.12.</strong> springboot配置文件加载</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_3_springboot/springboot配置文件加载/propertySource原理.html"><strong aria-hidden="true">3.12.1.</strong> propertySource原理</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot配置文件加载/默认加载原则.html"><strong aria-hidden="true">3.12.2.</strong> 默认加载原则</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.13.</strong> 官方文档</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_3_springboot/官方文档/SpringApplication.html"><strong aria-hidden="true">3.13.1.</strong> SpringApplication</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_4_springSecurity/index.html"><strong aria-hidden="true">4.</strong> springSecurity</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_4_springSecurity/spring核心逻辑.html"><strong aria-hidden="true">4.1.</strong> spring核心逻辑</a></li></ol></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/index.html"><strong aria-hidden="true">5.</strong> springWebFlux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_5_springWebFlux/CoreFeatures.html"><strong aria-hidden="true">5.1.</strong> CoreFeatures</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/DispatcherHandler.html"><strong aria-hidden="true">5.2.</strong> DispatcherHandler</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/FunctionEndpoint.html"><strong aria-hidden="true">5.3.</strong> FunctionEndpoint</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/URILinks.html"><strong aria-hidden="true">5.4.</strong> URILinks</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/WebFluxConfig.html"><strong aria-hidden="true">5.5.</strong> WebFluxConfig</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/taskList.html"><strong aria-hidden="true">5.6.</strong> taskList</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/基于注解的控制器/index.html"><strong aria-hidden="true">5.7.</strong> 基于注解的控制器</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_5_springWebFlux/基于注解的控制器/HandlerMethod.html"><strong aria-hidden="true">5.7.1.</strong> HandlerMethod</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/基于注解的控制器/RequestMapping.html"><strong aria-hidden="true">5.7.2.</strong> RequestMapping</a></li></ol></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/源码分析/index.html"><strong aria-hidden="true">5.8.</strong> 源码分析</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_5_springWebFlux/源码分析/springBoot创建WebFlux分析.html"><strong aria-hidden="true">5.8.1.</strong> springBoot创建WebFlux分析</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_6_springCloud/index.html"><strong aria-hidden="true">6.</strong> springCloud</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">6.1.</strong> 服务注册与发现</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/服务注册与发现/nacos/index.html"><strong aria-hidden="true">6.1.1.</strong> nacos</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/服务注册与发现/nacos/nacos-with-spring.html"><strong aria-hidden="true">6.1.1.1.</strong> nacos-with-spring</a></li><li class="chapter-item "><a href="../../spring_6_springCloud/服务注册与发现/nacos/nacos-with-spring-clound.html"><strong aria-hidden="true">6.1.1.2.</strong> nacos-with-spring-clound</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.2.</strong> 服务消费</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/服务消费/Ribbon与Feign/index.html"><strong aria-hidden="true">6.2.1.</strong> Ribbon与Feign</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.3.</strong> 网关</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/网关/springCloudGateway/index.html"><strong aria-hidden="true">6.3.1.</strong> springCloudGateway</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/网关/springCloudGateway/springCloud中的构造者模式.html"><strong aria-hidden="true">6.3.1.1.</strong> springCloud中的构造者模式</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.</strong> springIntegration</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/index.html"><strong aria-hidden="true">7.1.</strong> springCache</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/1.基于申明式缓存.html"><strong aria-hidden="true">7.1.1.</strong> 基于申明式缓存</a></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/2.JCacheAnnotations.html"><strong aria-hidden="true">7.1.2.</strong> JCacheAnnotations</a></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/3.XML的申明式缓存.html"><strong aria-hidden="true">7.1.3.</strong> XML的申明式缓存</a></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/4.配置缓存库.html"><strong aria-hidden="true">7.1.4.</strong> 配置缓存库</a></li></ol></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springdata-redis/index.html"><strong aria-hidden="true">7.2.</strong> springdata-redis</a></li></ol></li><li class="chapter-item "><li class="part-title"></li><li class="chapter-item "><div><strong aria-hidden="true">8.</strong> 分布式与微服务</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../分布式与微服务/JWT无状态Session.html"><strong aria-hidden="true">8.1.</strong> JWT无状态Session</a></li><li class="chapter-item "><a href="../../分布式与微服务/一致性Hash.html"><strong aria-hidden="true">8.2.</strong> 一致性Hash</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式ID.html"><strong aria-hidden="true">8.3.</strong> 分布式ID</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式Session案.html"><strong aria-hidden="true">8.4.</strong> 分布式Session案</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式事务.html"><strong aria-hidden="true">8.5.</strong> 分布式事务</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式协调器-Zookeeper.html"><strong aria-hidden="true">8.6.</strong> 分布式协调器-Zookeeper</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式锁.html"><strong aria-hidden="true">8.7.</strong> 分布式锁</a></li><li class="chapter-item "><a href="../../分布式与微服务/接口幂等性.html"><strong aria-hidden="true">8.8.</strong> 接口幂等性</a></li><li class="chapter-item "><a href="../../分布式与微服务/负载均衡.html"><strong aria-hidden="true">8.9.</strong> 负载均衡</a></li></ol></li><li class="chapter-item "><a href="../../数据库/index.html"><strong aria-hidden="true">9.</strong> 数据库</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/sql通用优化.html"><strong aria-hidden="true">9.1.</strong> sql通用优化</a></li><li class="chapter-item "><a href="../../数据库/MongoDB/index.html"><strong aria-hidden="true">9.2.</strong> MongoDB</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/MongoDB/mongodb基本操作.html"><strong aria-hidden="true">9.2.1.</strong> mongodb基本操作</a></li><li class="chapter-item "><a href="../../数据库/MongoDB/mongodb高级语法.html"><strong aria-hidden="true">9.2.2.</strong> mongodb高级语法</a></li><li class="chapter-item "><a href="../../数据库/MongoDB/权限管理.html"><strong aria-hidden="true">9.2.3.</strong> 权限管理</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/index.html"><strong aria-hidden="true">9.3.</strong> elasticSearch</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/BackUpACluster.html"><strong aria-hidden="true">9.3.1.</strong> BackUpACluster</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/KQL.html"><strong aria-hidden="true">9.3.2.</strong> KQL</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/dataStream.html"><strong aria-hidden="true">9.3.3.</strong> dataStream</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/es堆内存如何分配.html"><strong aria-hidden="true">9.3.4.</strong> es堆内存如何分配</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/scroll查询.html"><strong aria-hidden="true">9.3.5.</strong> scroll查询</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/乐观并发控制.html"><strong aria-hidden="true">9.3.6.</strong> 乐观并发控制</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/分布式检索.html"><strong aria-hidden="true">9.3.7.</strong> 分布式检索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/分片内部原理.html"><strong aria-hidden="true">9.3.8.</strong> 分片内部原理</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/分词.html"><strong aria-hidden="true">9.3.9.</strong> 分词</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/前缀搜索与模糊搜索.html"><strong aria-hidden="true">9.3.10.</strong> 前缀搜索与模糊搜索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/数据分片.html"><strong aria-hidden="true">9.3.11.</strong> 数据分片</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/映射.html"><strong aria-hidden="true">9.3.12.</strong> 映射</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/杂项学习.html"><strong aria-hidden="true">9.3.13.</strong> 杂项学习</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引和分片.html"><strong aria-hidden="true">9.3.14.</strong> 索引和分片</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引管理.html"><strong aria-hidden="true">9.3.15.</strong> 索引管理</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/评分标准与相关性.html"><strong aria-hidden="true">9.3.16.</strong> 评分标准与相关性</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/集群内原理.html"><strong aria-hidden="true">9.3.17.</strong> 集群内原理</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/Datamanagement/index.html"><strong aria-hidden="true">9.3.18.</strong> Datamanagement</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/Datamanagement/DataTier.html"><strong aria-hidden="true">9.3.18.1.</strong> DataTier</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/index.html"><strong aria-hidden="true">9.3.19.</strong> ILM</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/1.AutomateRolloverWithILM.html"><strong aria-hidden="true">9.3.19.1.</strong> AutomateRolloverWithILM</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/FrozenIndices.html"><strong aria-hidden="true">9.3.19.2.</strong> FrozenIndices</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILM.html"><strong aria-hidden="true">9.3.19.3.</strong> ILM</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/RolloverAPI.html"><strong aria-hidden="true">9.3.19.4.</strong> RolloverAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ShrinkIndexAPI.html"><strong aria-hidden="true">9.3.19.5.</strong> ShrinkIndexAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILMConcepts/index.html"><strong aria-hidden="true">9.3.19.6.</strong> ILMConcepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILMConcepts/1.Rollover.html"><strong aria-hidden="true">9.3.19.6.1.</strong> Rollover</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILMConcepts/2.LifeCycleUpdates.html"><strong aria-hidden="true">9.3.19.6.2.</strong> LifeCycleUpdates</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/index.html"><strong aria-hidden="true">9.3.20.</strong> IndexModules</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/1.Analysis.html"><strong aria-hidden="true">9.3.20.1.</strong> Analysis</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/2.IndexShardAllocation.html"><strong aria-hidden="true">9.3.20.2.</strong> IndexShardAllocation</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/3.Indexblocks.html"><strong aria-hidden="true">9.3.20.3.</strong> Indexblocks</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/4.Mapper.html"><strong aria-hidden="true">9.3.20.4.</strong> Mapper</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/5.Merge.html"><strong aria-hidden="true">9.3.20.5.</strong> Merge</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/6.SimilarityModule.html"><strong aria-hidden="true">9.3.20.6.</strong> SimilarityModule</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/7.Slowlog.html"><strong aria-hidden="true">9.3.20.7.</strong> Slowlog</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/8.Store.html"><strong aria-hidden="true">9.3.20.8.</strong> Store</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/9.Translog.html"><strong aria-hidden="true">9.3.20.9.</strong> Translog</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/10.HistoryRetention.html"><strong aria-hidden="true">9.3.20.10.</strong> HistoryRetention</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/11.IndexSorting.html"><strong aria-hidden="true">9.3.20.11.</strong> IndexSorting</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/12.IndexPressure.html"><strong aria-hidden="true">9.3.20.12.</strong> IndexPressure</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.21.</strong> IngestPipeline</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/1.IngestPipelines.html"><strong aria-hidden="true">9.3.21.1.</strong> IngestPipelines</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/2.pipeLineExample.html"><strong aria-hidden="true">9.3.21.2.</strong> pipeLineExample</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/3.EnrichYourData.html"><strong aria-hidden="true">9.3.21.3.</strong> EnrichYourData</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/4.ExampleEnrichYourDataBasedOnGeolocation.html"><strong aria-hidden="true">9.3.21.4.</strong> ExampleEnrichYourDataBasedOnGeolocation</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/5.IngestProcessorReference.html"><strong aria-hidden="true">9.3.21.5.</strong> IngestProcessorReference</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/index.html"><strong aria-hidden="true">9.3.22.</strong> queryDSL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/1.QueryAndFilterContext.html"><strong aria-hidden="true">9.3.22.1.</strong> QueryAndFilterContext</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/2.CompoundQueries.html"><strong aria-hidden="true">9.3.22.2.</strong> CompoundQueries</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/SearchAfter.html"><strong aria-hidden="true">9.3.22.3.</strong> SearchAfter</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/FullTextQueries/index.html"><strong aria-hidden="true">9.3.22.4.</strong> FullTextQueries</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/FullTextQueries/1.IntervalsQuery.html"><strong aria-hidden="true">9.3.22.4.1.</strong> IntervalsQuery</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/FullTextQueries/2.MatchQuery.html"><strong aria-hidden="true">9.3.22.4.2.</strong> MatchQuery</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/index.html"><strong aria-hidden="true">9.3.23.</strong> snapshotAndRestore</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CleanUpSnapshotRepo.html"><strong aria-hidden="true">9.3.23.1.</strong> CleanUpSnapshotRepo</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CloneSnapshot.html"><strong aria-hidden="true">9.3.23.2.</strong> CloneSnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CreateOrUpdateSnapshotAPI.html"><strong aria-hidden="true">9.3.23.3.</strong> CreateOrUpdateSnapshotAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CreateSnapshot.html"><strong aria-hidden="true">9.3.23.4.</strong> CreateSnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/DeleteSnapShot.html"><strong aria-hidden="true">9.3.23.5.</strong> DeleteSnapShot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/DeleteSnapshotRepository.html"><strong aria-hidden="true">9.3.23.6.</strong> DeleteSnapshotRepository</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/GetSnapshotAPI.html"><strong aria-hidden="true">9.3.23.7.</strong> GetSnapshotAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/RegisterASnapshot.html"><strong aria-hidden="true">9.3.23.8.</strong> RegisterASnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/RestoreSnapshot.html"><strong aria-hidden="true">9.3.23.9.</strong> RestoreSnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/SLM.html"><strong aria-hidden="true">9.3.23.10.</strong> SLM</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/SearchableSnapshots.html"><strong aria-hidden="true">9.3.23.11.</strong> SearchableSnapshots</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/SearchableSnapshotsMountAPI.html"><strong aria-hidden="true">9.3.23.12.</strong> SearchableSnapshotsMountAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/repository-s3.html"><strong aria-hidden="true">9.3.23.13.</strong> repository-s3</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/使用OSS备份恢复集群实战.html"><strong aria-hidden="true">9.3.23.14.</strong> 使用OSS备份恢复集群实战</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/安装/index.html"><strong aria-hidden="true">9.3.24.</strong> 安装</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/安装/1.InstallingFromRpm.html"><strong aria-hidden="true">9.3.24.1.</strong> InstallingFromRpm</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/安装/2.InstallFromDeb.html"><strong aria-hidden="true">9.3.24.2.</strong> InstallFromDeb</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.25.</strong> 深入搜索</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/深入搜索/全文搜索.html"><strong aria-hidden="true">9.3.25.1.</strong> 全文搜索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/深入搜索/多字段搜索.html"><strong aria-hidden="true">9.3.25.2.</strong> 多字段搜索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/深入搜索/结构化搜索.html"><strong aria-hidden="true">9.3.25.3.</strong> 结构化搜索</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/index.html"><strong aria-hidden="true">9.3.26.</strong> 索引分片分配</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/1.索引级别的分片分配控制.html"><strong aria-hidden="true">9.3.26.1.</strong> 索引级别的分片分配控制</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/2.节点离开延迟分配.html"><strong aria-hidden="true">9.3.26.2.</strong> 节点离开延迟分配</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/3.索引恢复优先级.html"><strong aria-hidden="true">9.3.26.3.</strong> 索引恢复优先级</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/4.每个节点的总分片.html"><strong aria-hidden="true">9.3.26.4.</strong> 每个节点的总分片</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/5.索引级别数据层分配过滤.html"><strong aria-hidden="true">9.3.26.5.</strong> 索引级别数据层分配过滤</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/6.手动分配分片clusterRerouteAPI.html"><strong aria-hidden="true">9.3.26.6.</strong> 手动分配分片clusterRerouteAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/7.cluster-allocation-explain.html"><strong aria-hidden="true">9.3.26.7.</strong> cluster-allocation-explain</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/考纲解读/index.html"><strong aria-hidden="true">9.3.27.</strong> 考纲解读</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/考纲解读/1.ClusterManagement.html"><strong aria-hidden="true">9.3.27.1.</strong> ClusterManagement</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/考纲解读/2.DataManagement.html"><strong aria-hidden="true">9.3.27.2.</strong> DataManagement</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.28.</strong> 聚合</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/聚合/RareTermsAggregation.html"><strong aria-hidden="true">9.3.28.1.</strong> RareTermsAggregation</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/聚合/Term.html"><strong aria-hidden="true">9.3.28.2.</strong> Term</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/index.html"><strong aria-hidden="true">9.3.29.</strong> 配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/1.重要配置.html"><strong aria-hidden="true">9.3.29.1.</strong> 重要配置</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/2.elasticsearch.yml核心配置.html"><strong aria-hidden="true">9.3.29.2.</strong> elasticsearch.yml核心配置</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/3.es系统参数修改.html"><strong aria-hidden="true">9.3.29.3.</strong> es系统参数修改</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.30.</strong> 集群</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/集群/Health.html"><strong aria-hidden="true">9.3.30.1.</strong> Health</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.31.</strong> 高可用专题</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/高可用专题/弹性设计.html"><strong aria-hidden="true">9.3.31.1.</strong> 弹性设计</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/高可用专题/跨集群复制.html"><strong aria-hidden="true">9.3.31.2.</strong> 跨集群复制</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/高可用专题/集群备份.html"><strong aria-hidden="true">9.3.31.3.</strong> 集群备份</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.4.</strong> mysql</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysqlfunction.html"><strong aria-hidden="true">9.4.1.</strong> mysqlfunction</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysqlpdump.html"><strong aria-hidden="true">9.4.2.</strong> mysqlpdump</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysqlzip安装.html"><strong aria-hidden="true">9.4.3.</strong> mysqlzip安装</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql公用表达式.html"><strong aria-hidden="true">9.4.4.</strong> mysql公用表达式</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql学习.html"><strong aria-hidden="true">9.4.5.</strong> mysql学习</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql执行计划.html"><strong aria-hidden="true">9.4.6.</strong> mysql执行计划</a></li><li class="chapter-item "><a href="../../数据库/mysql/空值处理函数.html"><strong aria-hidden="true">9.4.7.</strong> 空值处理函数</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.4.8.</strong> mysql官方文档</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/mysql程序.html"><strong aria-hidden="true">9.4.8.1.</strong> mysql程序</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/客户端.html"><strong aria-hidden="true">9.4.8.2.</strong> 客户端</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/mysql程序/index.html"><strong aria-hidden="true">9.4.8.3.</strong> mysql程序</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/mysql程序/使用mysql相关程序.html"><strong aria-hidden="true">9.4.8.3.1.</strong> 使用mysql相关程序</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/index.html"><strong aria-hidden="true">9.4.9.</strong> mysql日志</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/mysql日志及分类.html"><strong aria-hidden="true">9.4.9.1.</strong> mysql日志及分类</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/二进制日志.html"><strong aria-hidden="true">9.4.9.2.</strong> 二进制日志</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/慢sql日志.html"><strong aria-hidden="true">9.4.9.3.</strong> 慢sql日志</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/通用日志.html"><strong aria-hidden="true">9.4.9.4.</strong> 通用日志</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/错误日志.html"><strong aria-hidden="true">9.4.9.5.</strong> 错误日志</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.5.</strong> oracle</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/oracle/Oracle小知识点.html"><strong aria-hidden="true">9.5.1.</strong> Oracle小知识点</a></li><li class="chapter-item "><a href="../../数据库/oracle/oracledocker快速搭建.html"><strong aria-hidden="true">9.5.2.</strong> oracledocker快速搭建</a></li><li class="chapter-item "><a href="../../数据库/oracle/oracle多表更新方法.html"><strong aria-hidden="true">9.5.3.</strong> oracle多表更新方法</a></li></ol></li><li class="chapter-item "><a href="../../数据库/redis/index.html"><strong aria-hidden="true">9.6.</strong> redis</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/redis/Redis应用-位图.html"><strong aria-hidden="true">9.6.1.</strong> Redis应用-位图</a></li><li class="chapter-item "><a href="../../数据库/redis/Redis应用-分布式锁.html"><strong aria-hidden="true">9.6.2.</strong> Redis应用-分布式锁</a></li><li class="chapter-item "><a href="../../数据库/redis/redis-keys与scan.html"><strong aria-hidden="true">9.6.3.</strong> redis-keys与scan</a></li><li class="chapter-item "><a href="../../数据库/redis/redis-serverAndRedis-cli.html"><strong aria-hidden="true">9.6.4.</strong> redis-serverAndRedis-cli</a></li><li class="chapter-item "><a href="../../数据库/redis/redis主从与哨兵.html"><strong aria-hidden="true">9.6.5.</strong> redis主从与哨兵</a></li><li class="chapter-item "><a href="../../数据库/redis/redis发布与订阅.html"><strong aria-hidden="true">9.6.6.</strong> redis发布与订阅</a></li><li class="chapter-item "><a href="../../数据库/redis/redis集群.html"><strong aria-hidden="true">9.6.7.</strong> redis集群</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.6.8.</strong> redis数据结构</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/redis/redis数据结构/Redis有序集合(sortedSet).html"><strong aria-hidden="true">9.6.8.1.</strong> Redis有序集合(sortedSet)</a></li><li class="chapter-item "><a href="../../数据库/redis/redis数据结构/基本数据结构.html"><strong aria-hidden="true">9.6.8.2.</strong> 基本数据结构</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">10.</strong> 日志收集</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../日志收集/filebeat/index.html"><strong aria-hidden="true">10.1.</strong> filebeat</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../日志收集/filebeat/1.HowFilebeatWorks.html"><strong aria-hidden="true">10.1.1.</strong> HowFilebeatWorks</a></li><li class="chapter-item "><a href="../../日志收集/filebeat/ConfigureFilebeat/index.html"><strong aria-hidden="true">10.1.2.</strong> ConfigureFilebeat</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../日志收集/filebeat/ConfigureFilebeat/1.Input.html"><strong aria-hidden="true">10.1.2.1.</strong> Input</a></li><li class="chapter-item "><a href="../../日志收集/filebeat/ConfigureFilebeat/2.InputFileStream.html"><strong aria-hidden="true">10.1.2.2.</strong> InputFileStream</a></li></ol></li></ol></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">11.</strong> CICD</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/ansible/index.html"><strong aria-hidden="true">11.1.</strong> ansible</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/ansible/1.入门.html"><strong aria-hidden="true">11.1.1.</strong> 入门</a></li><li class="chapter-item "><a href="../../CICD/ansible/Ansible.html"><strong aria-hidden="true">11.1.2.</strong> Ansible</a></li><li class="chapter-item "><a href="../../CICD/ansible/Loops.html"><strong aria-hidden="true">11.1.3.</strong> Loops</a></li><li class="chapter-item "><a href="../../CICD/ansible/ansible中的变量.html"><strong aria-hidden="true">11.1.4.</strong> ansible中的变量</a></li><li class="chapter-item "><a href="../../CICD/ansible/ansible示例.html"><strong aria-hidden="true">11.1.5.</strong> ansible示例</a></li><li class="chapter-item "><a href="../../CICD/ansible/inventor文件.html"><strong aria-hidden="true">11.1.6.</strong> inventor文件</a></li><li class="chapter-item "><a href="../../CICD/ansible/playbooks.html"><strong aria-hidden="true">11.1.7.</strong> playbooks</a></li><li class="chapter-item "><a href="../../CICD/ansible/临时命令行模式.html"><strong aria-hidden="true">11.1.8.</strong> 临时命令行模式</a></li><li class="chapter-item "><a href="../../CICD/ansible/2.AnsibleConcepts/index.html"><strong aria-hidden="true">11.1.9.</strong> 2.AnsibleConcepts</a></li><li class="chapter-item "><a href="../../CICD/ansible/3.内置模块/index.html"><strong aria-hidden="true">11.1.10.</strong> 3.内置模块</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/ansible/3.内置模块/1.Command.html"><strong aria-hidden="true">11.1.10.1.</strong> Command</a></li><li class="chapter-item "><a href="../../CICD/ansible/3.内置模块/2.Shell.html"><strong aria-hidden="true">11.1.10.2.</strong> Shell</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../CICD/docker/index.html"><strong aria-hidden="true">11.2.</strong> docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/docker/DockerFile简介.html"><strong aria-hidden="true">11.2.1.</strong> DockerFile简介</a></li><li class="chapter-item "><a href="../../CICD/docker/dockcer-swarm.html"><strong aria-hidden="true">11.2.2.</strong> dockcer-swarm</a></li><li class="chapter-item "><a href="../../CICD/docker/docker-compose.html"><strong aria-hidden="true">11.2.3.</strong> docker-compose</a></li><li class="chapter-item "><a href="../../CICD/docker/docker-swarm集群搭建实例.html"><strong aria-hidden="true">11.2.4.</strong> docker-swarm集群搭建实例</a></li><li class="chapter-item "><a href="../../CICD/docker/docker-volume管理.html"><strong aria-hidden="true">11.2.5.</strong> docker-volume管理</a></li><li class="chapter-item "><a href="../../CICD/docker/docker容器连接.html"><strong aria-hidden="true">11.2.6.</strong> docker容器连接</a></li><li class="chapter-item "><a href="../../CICD/docker/docker搭建registry仓库.html"><strong aria-hidden="true">11.2.7.</strong> docker搭建registry仓库</a></li><li class="chapter-item "><a href="../../CICD/docker/docker搭建私有镜像库.html"><strong aria-hidden="true">11.2.8.</strong> docker搭建私有镜像库</a></li><li class="chapter-item "><a href="../../CICD/docker/docker离线安装.html"><strong aria-hidden="true">11.2.9.</strong> docker离线安装</a></li><li class="chapter-item "><a href="../../CICD/docker/docker网络管理.html"><strong aria-hidden="true">11.2.10.</strong> docker网络管理</a></li><li class="chapter-item "><a href="../../CICD/docker/docker远程连接配置.html"><strong aria-hidden="true">11.2.11.</strong> docker远程连接配置</a></li><li class="chapter-item "><a href="../../CICD/docker/redis主从与哨兵.html"><strong aria-hidden="true">11.2.12.</strong> redis主从与哨兵</a></li><li class="chapter-item "><a href="../../CICD/docker/使用实例.html"><strong aria-hidden="true">11.2.13.</strong> 使用实例</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">11.3.</strong> jenkins</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/jenkins/Jenkins.html"><strong aria-hidden="true">11.3.1.</strong> Jenkins</a></li><li class="chapter-item "><a href="../../CICD/jenkins/jenkins_pipeline.html"><strong aria-hidden="true">11.3.2.</strong> jenkins_pipeline</a></li></ol></li><li class="chapter-item "><a href="../../CICD/k8s/index.html"><strong aria-hidden="true">11.4.</strong> k8s</a></li><li class="chapter-item expanded "><a href="../../CICD/maven/index.html"><strong aria-hidden="true">11.5.</strong> maven</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../CICD/maven/AutoConfig插件.html" class="active"><strong aria-hidden="true">11.5.1.</strong> AutoConfig插件</a></li><li class="chapter-item "><a href="../../CICD/maven/MavenArcheType.html"><strong aria-hidden="true">11.5.2.</strong> MavenArcheType</a></li><li class="chapter-item "><a href="../../CICD/maven/maven.html"><strong aria-hidden="true">11.5.3.</strong> maven</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-Maven_Resources_Plugin.html"><strong aria-hidden="true">11.5.4.</strong> maven-Maven_Resources_Plugin</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-archiver.html"><strong aria-hidden="true">11.5.5.</strong> maven-archiver</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-assembly-plugin.html"><strong aria-hidden="true">11.5.6.</strong> maven-assembly-plugin</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-bom.html"><strong aria-hidden="true">11.5.7.</strong> maven-bom</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-profile.html"><strong aria-hidden="true">11.5.8.</strong> maven-profile</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-依赖管理.html"><strong aria-hidden="true">11.5.9.</strong> maven-依赖管理</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-编译源码.html"><strong aria-hidden="true">11.5.10.</strong> maven-编译源码</a></li><li class="chapter-item "><a href="../../CICD/maven/maven中的生命周期、插件、目标.html"><strong aria-hidden="true">11.5.11.</strong> maven中的生命周期、插件、目标</a></li><li class="chapter-item "><a href="../../CICD/maven/maven打包方式.html"><strong aria-hidden="true">11.5.12.</strong> maven打包方式</a></li><li class="chapter-item "><a href="../../CICD/maven/maven聚合项目版本管理实践.html"><strong aria-hidden="true">11.5.13.</strong> maven聚合项目版本管理实践</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../模板引擎/index.html"><strong aria-hidden="true">12.</strong> 模板引擎</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../模板引擎/mustache/index.html"><strong aria-hidden="true">12.1.</strong> mustache</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">13.</strong> Linux</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Linux/CFSBandwidthControl.html"><strong aria-hidden="true">13.1.</strong> CFSBandwidthControl</a></li><li class="chapter-item "><a href="../../Linux/LinuxFor.html"><strong aria-hidden="true">13.2.</strong> LinuxFor</a></li><li class="chapter-item "><a href="../../Linux/LinuxWOL设置.html"><strong aria-hidden="true">13.3.</strong> LinuxWOL设置</a></li><li class="chapter-item "><a href="../../Linux/Linux条件测试.html"><strong aria-hidden="true">13.4.</strong> Linux条件测试</a></li><li class="chapter-item "><a href="../../Linux/Seed.html"><strong aria-hidden="true">13.5.</strong> Seed</a></li><li class="chapter-item "><a href="../../Linux/VIM.html"><strong aria-hidden="true">13.6.</strong> VIM</a></li><li class="chapter-item "><a href="../../Linux/caseIn.html"><strong aria-hidden="true">13.7.</strong> caseIn</a></li><li class="chapter-item "><a href="../../Linux/cgroup.html"><strong aria-hidden="true">13.8.</strong> cgroup</a></li><li class="chapter-item "><a href="../../Linux/curl.html"><strong aria-hidden="true">13.9.</strong> curl</a></li><li class="chapter-item "><a href="../../Linux/dd.html"><strong aria-hidden="true">13.10.</strong> dd</a></li><li class="chapter-item "><a href="../../Linux/diffPatch.html"><strong aria-hidden="true">13.11.</strong> diffPatch</a></li><li class="chapter-item "><a href="../../Linux/find.html"><strong aria-hidden="true">13.12.</strong> find</a></li><li class="chapter-item "><a href="../../Linux/iptables.html"><strong aria-hidden="true">13.13.</strong> iptables</a></li><li class="chapter-item "><a href="../../Linux/jq.html"><strong aria-hidden="true">13.14.</strong> jq</a></li><li class="chapter-item "><a href="../../Linux/lsof.html"><strong aria-hidden="true">13.15.</strong> lsof</a></li><li class="chapter-item "><a href="../../Linux/ps.html"><strong aria-hidden="true">13.16.</strong> ps</a></li><li class="chapter-item "><a href="../../Linux/read.html"><strong aria-hidden="true">13.17.</strong> read</a></li><li class="chapter-item "><a href="../../Linux/scp.html"><strong aria-hidden="true">13.18.</strong> scp</a></li><li class="chapter-item "><a href="../../Linux/select.html"><strong aria-hidden="true">13.19.</strong> select</a></li><li class="chapter-item "><a href="../../Linux/service脚本.html"><strong aria-hidden="true">13.20.</strong> service脚本</a></li><li class="chapter-item "><a href="../../Linux/set.html"><strong aria-hidden="true">13.21.</strong> set</a></li><li class="chapter-item "><a href="../../Linux/shell字符串.html"><strong aria-hidden="true">13.22.</strong> shell字符串</a></li><li class="chapter-item "><a href="../../Linux/shell脚本参数.html"><strong aria-hidden="true">13.23.</strong> shell脚本参数</a></li><li class="chapter-item "><a href="../../Linux/stat.html"><strong aria-hidden="true">13.24.</strong> stat</a></li><li class="chapter-item "><a href="../../Linux/tar.html"><strong aria-hidden="true">13.25.</strong> tar</a></li><li class="chapter-item "><a href="../../Linux/top命令.html"><strong aria-hidden="true">13.26.</strong> top命令</a></li><li class="chapter-item "><a href="../../Linux/uidGidSetUidSetGid.html"><strong aria-hidden="true">13.27.</strong> uidGidSetUidSetGid</a></li><li class="chapter-item "><a href="../../Linux/wsl关闭提示音.html"><strong aria-hidden="true">13.28.</strong> wsl关闭提示音</a></li><li class="chapter-item "><a href="../../Linux/yum本地包依赖.html"><strong aria-hidden="true">13.29.</strong> yum本地包依赖</a></li><li class="chapter-item "><a href="../../Linux/确定Linux发行版本.html"><strong aria-hidden="true">13.30.</strong> 确定Linux发行版本</a></li><li class="chapter-item "><a href="../../Linux/零拷贝.html"><strong aria-hidden="true">13.31.</strong> 零拷贝</a></li><li class="chapter-item "><a href="../../Linux/默认值语法糖.html"><strong aria-hidden="true">13.32.</strong> 默认值语法糖</a></li></ol></li><li class="chapter-item "><a href="../../数据结构与算法/index.html"><strong aria-hidden="true">14.</strong> 数据结构与算法</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据结构与算法/Base64编码.html"><strong aria-hidden="true">14.1.</strong> Base64编码</a></li><li class="chapter-item "><a href="../../数据结构与算法/Huffman编码.html"><strong aria-hidden="true">14.2.</strong> Huffman编码</a></li><li class="chapter-item "><a href="../../数据结构与算法/base64.html"><strong aria-hidden="true">14.3.</strong> base64</a></li><li class="chapter-item "><a href="../../数据结构与算法/fnv-hash算法.html"><strong aria-hidden="true">14.4.</strong> fnv-hash算法</a></li><li class="chapter-item "><a href="../../数据结构与算法/位运算.html"><strong aria-hidden="true">14.5.</strong> 位运算</a></li><li class="chapter-item "><a href="../../数据结构与算法/动态规划.html"><strong aria-hidden="true">14.6.</strong> 动态规划</a></li><li class="chapter-item "><a href="../../数据结构与算法/动态规划-新.html"><strong aria-hidden="true">14.7.</strong> 动态规划-新</a></li><li class="chapter-item "><a href="../../数据结构与算法/字符编码.html"><strong aria-hidden="true">14.8.</strong> 字符编码</a></li><li class="chapter-item "><a href="../../数据结构与算法/布隆过滤器.html"><strong aria-hidden="true">14.9.</strong> 布隆过滤器</a></li><li class="chapter-item "><a href="../../数据结构与算法/浮点数.html"><strong aria-hidden="true">14.10.</strong> 浮点数</a></li><li class="chapter-item "><a href="../../数据结构与算法/贪心算法.html"><strong aria-hidden="true">14.11.</strong> 贪心算法</a></li><li class="chapter-item "><a href="../../数据结构与算法/逆波兰表达式.html"><strong aria-hidden="true">14.12.</strong> 逆波兰表达式</a></li><li class="chapter-item "><div><strong aria-hidden="true">14.13.</strong> 树</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据结构与算法/树/二叉搜索平衡树.html"><strong aria-hidden="true">14.13.1.</strong> 二叉搜索平衡树</a></li><li class="chapter-item "><a href="../../数据结构与算法/树/红黑树.html"><strong aria-hidden="true">14.13.2.</strong> 红黑树</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">15.</strong> 数据格式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据格式/XML.html"><strong aria-hidden="true">15.1.</strong> XML</a></li><li class="chapter-item "><a href="../../数据格式/yaml.html"><strong aria-hidden="true">15.2.</strong> yaml</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">16.</strong> tmp</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tmp/大端与小端.html"><strong aria-hidden="true">16.1.</strong> 大端与小端</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">17.</strong> 消息队列</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../消息队列/RocketMQ/index.html"><strong aria-hidden="true">17.1.</strong> RocketMQ</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../消息队列/RocketMQ/MQ消息的投递机制.html"><strong aria-hidden="true">17.1.1.</strong> MQ消息的投递机制</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/MQ的一致性算法实现原理.html"><strong aria-hidden="true">17.1.2.</strong> MQ的一致性算法实现原理</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/架构和设计.html"><strong aria-hidden="true">17.1.3.</strong> 架构和设计</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/案例.html"><strong aria-hidden="true">17.1.4.</strong> 案例</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/概念和特性.html"><strong aria-hidden="true">17.1.5.</strong> 概念和特性</a></li></ol></li><li class="chapter-item "><a href="../../消息队列/kafaKa/index.html"><strong aria-hidden="true">17.2.</strong> kafaKa</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.</strong> 前端</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">18.1.</strong> ECMAScript</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/ECMAScript/ECMAScript6简介.html"><strong aria-hidden="true">18.1.1.</strong> ECMAScript6简介</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/Set-Map数据结构.html"><strong aria-hidden="true">18.1.2.</strong> Set-Map数据结构</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/async函数.html"><strong aria-hidden="true">18.1.3.</strong> async函数</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/generate函数.html"><strong aria-hidden="true">18.1.4.</strong> generate函数</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/let与const命令.html"><strong aria-hidden="true">18.1.5.</strong> let与const命令</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/proxy.html"><strong aria-hidden="true">18.1.6.</strong> proxy</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/symbol.html"><strong aria-hidden="true">18.1.7.</strong> symbol</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/函数.html"><strong aria-hidden="true">18.1.8.</strong> 函数</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/字符串-正则-数值.html"><strong aria-hidden="true">18.1.9.</strong> 字符串-正则-数值</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/对象.html"><strong aria-hidden="true">18.1.10.</strong> 对象</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/数组.html"><strong aria-hidden="true">18.1.11.</strong> 数组</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.2.</strong> Element-UI</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/Element-UI/Switch开关.html"><strong aria-hidden="true">18.2.1.</strong> Switch开关</a></li><li class="chapter-item "><a href="../../前端/Element-UI/Tree树形控件.html"><strong aria-hidden="true">18.2.2.</strong> Tree树形控件</a></li><li class="chapter-item "><a href="../../前端/Element-UI/backtop.html"><strong aria-hidden="true">18.2.3.</strong> backtop</a></li><li class="chapter-item "><a href="../../前端/Element-UI/card卡片.html"><strong aria-hidden="true">18.2.4.</strong> card卡片</a></li><li class="chapter-item "><a href="../../前端/Element-UI/form表单.html"><strong aria-hidden="true">18.2.5.</strong> form表单</a></li><li class="chapter-item "><a href="../../前端/Element-UI/image图片.html"><strong aria-hidden="true">18.2.6.</strong> image图片</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-Breadcrumb面包屑.html"><strong aria-hidden="true">18.2.7.</strong> navigation-Breadcrumb面包屑</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-dropdown.html"><strong aria-hidden="true">18.2.8.</strong> navigation-dropdown</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-navmenu.html"><strong aria-hidden="true">18.2.9.</strong> navigation-navmenu</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-steps.html"><strong aria-hidden="true">18.2.10.</strong> navigation-steps</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-标签页.html"><strong aria-hidden="true">18.2.11.</strong> navigation-标签页</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-页头.html"><strong aria-hidden="true">18.2.12.</strong> navigation-页头</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-Notification.html"><strong aria-hidden="true">18.2.13.</strong> notice-Notification</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-alert.html"><strong aria-hidden="true">18.2.14.</strong> notice-alert</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-loading.html"><strong aria-hidden="true">18.2.15.</strong> notice-loading</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-message-box.html"><strong aria-hidden="true">18.2.16.</strong> notice-message-box</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-message提示.html"><strong aria-hidden="true">18.2.17.</strong> notice-message提示</a></li><li class="chapter-item "><a href="../../前端/Element-UI/popConfirm.html"><strong aria-hidden="true">18.2.18.</strong> popConfirm</a></li><li class="chapter-item "><a href="../../前端/Element-UI/popOver弹出框.html"><strong aria-hidden="true">18.2.19.</strong> popOver弹出框</a></li><li class="chapter-item "><a href="../../前端/Element-UI/slider滑块.html"><strong aria-hidden="true">18.2.20.</strong> slider滑块</a></li><li class="chapter-item "><a href="../../前端/Element-UI/timeline.html"><strong aria-hidden="true">18.2.21.</strong> timeline</a></li><li class="chapter-item "><a href="../../前端/Element-UI/tooltip.html"><strong aria-hidden="true">18.2.22.</strong> tooltip</a></li><li class="chapter-item "><a href="../../前端/Element-UI/transfer穿梭框.html"><strong aria-hidden="true">18.2.23.</strong> transfer穿梭框</a></li><li class="chapter-item "><a href="../../前端/Element-UI/上传.html"><strong aria-hidden="true">18.2.24.</strong> 上传</a></li><li class="chapter-item "><a href="../../前端/Element-UI/入门.html"><strong aria-hidden="true">18.2.25.</strong> 入门</a></li><li class="chapter-item "><a href="../../前端/Element-UI/分割线.html"><strong aria-hidden="true">18.2.26.</strong> 分割线</a></li><li class="chapter-item "><a href="../../前端/Element-UI/分页.html"><strong aria-hidden="true">18.2.27.</strong> 分页</a></li><li class="chapter-item "><a href="../../前端/Element-UI/基础组件.html"><strong aria-hidden="true">18.2.28.</strong> 基础组件</a></li><li class="chapter-item "><a href="../../前端/Element-UI/头像.html"><strong aria-hidden="true">18.2.29.</strong> 头像</a></li><li class="chapter-item "><a href="../../前端/Element-UI/对话框.html"><strong aria-hidden="true">18.2.30.</strong> 对话框</a></li><li class="chapter-item "><a href="../../前端/Element-UI/常见input输入.html"><strong aria-hidden="true">18.2.31.</strong> 常见input输入</a></li><li class="chapter-item "><a href="../../前端/Element-UI/折叠面板.html"><strong aria-hidden="true">18.2.32.</strong> 折叠面板</a></li><li class="chapter-item "><a href="../../前端/Element-UI/抽屉.html"><strong aria-hidden="true">18.2.33.</strong> 抽屉</a></li><li class="chapter-item "><a href="../../前端/Element-UI/无限滚动.html"><strong aria-hidden="true">18.2.34.</strong> 无限滚动</a></li><li class="chapter-item "><a href="../../前端/Element-UI/日历.html"><strong aria-hidden="true">18.2.35.</strong> 日历</a></li><li class="chapter-item "><a href="../../前端/Element-UI/时间日期选择.html"><strong aria-hidden="true">18.2.36.</strong> 时间日期选择</a></li><li class="chapter-item "><a href="../../前端/Element-UI/标签.html"><strong aria-hidden="true">18.2.37.</strong> 标签</a></li><li class="chapter-item "><a href="../../前端/Element-UI/标记与提示.html"><strong aria-hidden="true">18.2.38.</strong> 标记与提示</a></li><li class="chapter-item "><a href="../../前端/Element-UI/级联选择器.html"><strong aria-hidden="true">18.2.39.</strong> 级联选择器</a></li><li class="chapter-item "><a href="../../前端/Element-UI/表格.html"><strong aria-hidden="true">18.2.40.</strong> 表格</a></li><li class="chapter-item "><a href="../../前端/Element-UI/评分.html"><strong aria-hidden="true">18.2.41.</strong> 评分</a></li><li class="chapter-item "><a href="../../前端/Element-UI/走马灯.html"><strong aria-hidden="true">18.2.42.</strong> 走马灯</a></li><li class="chapter-item "><a href="../../前端/Element-UI/进度条.html"><strong aria-hidden="true">18.2.43.</strong> 进度条</a></li><li class="chapter-item "><a href="../../前端/Element-UI/颜色选择器.html"><strong aria-hidden="true">18.2.44.</strong> 颜色选择器</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.3.</strong> HTTP</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/HTTP/Content-Disposition.html"><strong aria-hidden="true">18.3.1.</strong> Content-Disposition</a></li><li class="chapter-item "><a href="../../前端/HTTP/Cookie.html"><strong aria-hidden="true">18.3.2.</strong> Cookie</a></li><li class="chapter-item "><a href="../../前端/HTTP/HTTP缓存.html"><strong aria-hidden="true">18.3.3.</strong> HTTP缓存</a></li><li class="chapter-item "><a href="../../前端/HTTP/HTTP访问控制.html"><strong aria-hidden="true">18.3.4.</strong> HTTP访问控制</a></li><li class="chapter-item "><a href="../../前端/HTTP/Http响应码.html"><strong aria-hidden="true">18.3.5.</strong> Http响应码</a></li><li class="chapter-item "><a href="../../前端/HTTP/MIME.html"><strong aria-hidden="true">18.3.6.</strong> MIME</a></li><li class="chapter-item "><a href="../../前端/HTTP/http头.html"><strong aria-hidden="true">18.3.7.</strong> http头</a></li></ol></li><li class="chapter-item "><a href="../../前端/Html5/index.html"><strong aria-hidden="true">18.4.</strong> Html5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/Html5/CSS3.html"><strong aria-hidden="true">18.4.1.</strong> CSS3</a></li><li class="chapter-item "><a href="../../前端/Html5/H5canvas图形绘制.html"><strong aria-hidden="true">18.4.2.</strong> H5canvas图形绘制</a></li><li class="chapter-item "><a href="../../前端/Html5/HTML5.html"><strong aria-hidden="true">18.4.3.</strong> HTML5</a></li><li class="chapter-item "><a href="../../前端/Html5/HTML5的结构.html"><strong aria-hidden="true">18.4.4.</strong> HTML5的结构</a></li><li class="chapter-item "><a href="../../前端/Html5/HTML5表单.html"><strong aria-hidden="true">18.4.5.</strong> HTML5表单</a></li><li class="chapter-item "><a href="../../前端/Html5/WebWorkers.html"><strong aria-hidden="true">18.4.6.</strong> WebWorkers</a></li><li class="chapter-item "><a href="../../前端/Html5/多媒体播放.html"><strong aria-hidden="true">18.4.7.</strong> 多媒体播放</a></li><li class="chapter-item "><a href="../../前端/Html5/本地存储.html"><strong aria-hidden="true">18.4.8.</strong> 本地存储</a></li><li class="chapter-item "><a href="../../前端/Html5/离线应用程序.html"><strong aria-hidden="true">18.4.9.</strong> 离线应用程序</a></li><li class="chapter-item "><a href="../../前端/Html5/获取地址位置信息.html"><strong aria-hidden="true">18.4.10.</strong> 获取地址位置信息</a></li><li class="chapter-item "><a href="../../前端/Html5/通信API.html"><strong aria-hidden="true">18.4.11.</strong> 通信API</a></li></ol></li><li class="chapter-item "><a href="../../前端/css/index.html"><strong aria-hidden="true">18.5.</strong> css</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/css/BFC.html"><strong aria-hidden="true">18.5.1.</strong> BFC</a></li><li class="chapter-item "><a href="../../前端/css/CSS选择器.html"><strong aria-hidden="true">18.5.2.</strong> CSS选择器</a></li><li class="chapter-item "><a href="../../前端/css/内联元素垂直居中的方式.html"><strong aria-hidden="true">18.5.3.</strong> 内联元素垂直居中的方式</a></li><li class="chapter-item "><a href="../../前端/css/基本视觉格式化.html"><strong aria-hidden="true">18.5.4.</strong> 基本视觉格式化</a></li><li class="chapter-item "><a href="../../前端/css/基本视觉格式化-1.html"><strong aria-hidden="true">18.5.5.</strong> 基本视觉格式化-1</a></li><li class="chapter-item "><a href="../../前端/css/弹性布局.html"><strong aria-hidden="true">18.5.6.</strong> 弹性布局</a></li><li class="chapter-item "><a href="../../前端/css/结构与层叠.html"><strong aria-hidden="true">18.5.7.</strong> 结构与层叠</a></li><li class="chapter-item "><div><strong aria-hidden="true">18.5.8.</strong> CSS布局方式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/css/CSS布局方式/flex布局.html"><strong aria-hidden="true">18.5.8.1.</strong> flex布局</a></li><li class="chapter-item "><a href="../../前端/css/CSS布局方式/两栏布局.html"><strong aria-hidden="true">18.5.8.2.</strong> 两栏布局</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.5.9.</strong> CSS样式详解</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/css/CSS样式详解/Grid布局.html"><strong aria-hidden="true">18.5.9.1.</strong> Grid布局</a></li><li class="chapter-item "><a href="../../前端/css/CSS样式详解/flex布局.html"><strong aria-hidden="true">18.5.9.2.</strong> flex布局</a></li><li class="chapter-item "><a href="../../前端/css/CSS样式详解/定位.html"><strong aria-hidden="true">18.5.9.3.</strong> 定位</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../前端/quasar/index.html"><strong aria-hidden="true">18.6.</strong> quasar</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/quasar/quasarCli.html"><strong aria-hidden="true">18.6.1.</strong> quasarCli</a></li><li class="chapter-item "><a href="../../前端/quasar/quasar选项和辅助.html"><strong aria-hidden="true">18.6.2.</strong> quasar选项和辅助</a></li><li class="chapter-item "><a href="../../前端/quasar/vue组件.html"><strong aria-hidden="true">18.6.3.</strong> vue组件</a></li><li class="chapter-item "><a href="../../前端/quasar/布局.html"><strong aria-hidden="true">18.6.4.</strong> 布局</a></li><li class="chapter-item "><a href="../../前端/quasar/网格布局.html"><strong aria-hidden="true">18.6.5.</strong> 网格布局</a></li><li class="chapter-item "><a href="../../前端/quasar/风格和特性.html"><strong aria-hidden="true">18.6.6.</strong> 风格和特性</a></li><li class="chapter-item "><div><strong aria-hidden="true">18.6.7.</strong> 组件</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/quasar/组件/q-dialog.html"><strong aria-hidden="true">18.6.7.1.</strong> q-dialog</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-expansion-item.html"><strong aria-hidden="true">18.6.7.2.</strong> q-expansion-item</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-page-sticky.html"><strong aria-hidden="true">18.6.7.3.</strong> q-page-sticky</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-tabs.html"><strong aria-hidden="true">18.6.7.4.</strong> q-tabs</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-toolbar.html"><strong aria-hidden="true">18.6.7.5.</strong> q-toolbar</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../前端/reactor/index.html"><strong aria-hidden="true">18.7.</strong> reactor</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/reactor/1.搭建TS-Reactor环境.html"><strong aria-hidden="true">18.7.1.</strong> 搭建TS-Reactor环境</a></li><li class="chapter-item "><a href="../../前端/reactor/2.jsx.html"><strong aria-hidden="true">18.7.2.</strong> jsx</a></li><li class="chapter-item "><a href="../../前端/reactor/3.元素渲染.html"><strong aria-hidden="true">18.7.3.</strong> 元素渲染</a></li><li class="chapter-item "><a href="../../前端/reactor/4.组件与模块&Props.html"><strong aria-hidden="true">18.7.4.</strong> 组件与模块&Props</a></li><li class="chapter-item "><a href="../../前端/reactor/5.State生命周期.html"><strong aria-hidden="true">18.7.5.</strong> State生命周期</a></li><li class="chapter-item "><a href="../../前端/reactor/6.事件处理.html"><strong aria-hidden="true">18.7.6.</strong> 事件处理</a></li><li class="chapter-item "><a href="../../前端/reactor/7.条件渲染.html"><strong aria-hidden="true">18.7.7.</strong> 条件渲染</a></li><li class="chapter-item "><a href="../../前端/reactor/8.列表.html"><strong aria-hidden="true">18.7.8.</strong> 列表</a></li><li class="chapter-item "><a href="../../前端/reactor/9.表单.html"><strong aria-hidden="true">18.7.9.</strong> 表单</a></li><li class="chapter-item "><a href="../../前端/reactor/10.组合与继承.html"><strong aria-hidden="true">18.7.10.</strong> 组合与继承</a></li><li class="chapter-item "><a href="../../前端/reactor/11.React最佳实践.html"><strong aria-hidden="true">18.7.11.</strong> React最佳实践</a></li><li class="chapter-item "><a href="../../前端/reactor/高级特性/index.html"><strong aria-hidden="true">18.7.12.</strong> 高级特性</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/reactor/高级特性/Refs转发.html"><strong aria-hidden="true">18.7.12.1.</strong> Refs转发</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../前端/vue/index.html"><strong aria-hidden="true">18.8.</strong> vue</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/vue/class与style的绑定.html"><strong aria-hidden="true">18.8.1.</strong> class与style的绑定</a></li><li class="chapter-item "><a href="../../前端/vue/事件处理.html"><strong aria-hidden="true">18.8.2.</strong> 事件处理</a></li><li class="chapter-item "><a href="../../前端/vue/列表渲染.html"><strong aria-hidden="true">18.8.3.</strong> 列表渲染</a></li><li class="chapter-item "><a href="../../前端/vue/条件渲染.html"><strong aria-hidden="true">18.8.4.</strong> 条件渲染</a></li><li class="chapter-item "><a href="../../前端/vue/模板语法.html"><strong aria-hidden="true">18.8.5.</strong> 模板语法</a></li><li class="chapter-item "><a href="../../前端/vue/组件.html"><strong aria-hidden="true">18.8.6.</strong> 组件</a></li><li class="chapter-item "><a href="../../前端/vue/表单输入绑定.html"><strong aria-hidden="true">18.8.7.</strong> 表单输入绑定</a></li><li class="chapter-item "><a href="../../前端/vue/计算属性和侦听器.html"><strong aria-hidden="true">18.8.8.</strong> 计算属性和侦听器</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">java</li><li class="chapter-item "><a href="../../java_1_java基础/index.html"><strong aria-hidden="true">19.</strong> java基础</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/EasyRules.html"><strong aria-hidden="true">19.1.</strong> EasyRules</a></li><li class="chapter-item "><a href="../../java_1_java基础/PO、VO、BO.html"><strong aria-hidden="true">19.2.</strong> PO、VO、BO</a></li><li class="chapter-item "><a href="../../java_1_java基础/WeakCache.html"><strong aria-hidden="true">19.3.</strong> WeakCache</a></li><li class="chapter-item "><a href="../../java_1_java基础/apacheUtils类.html"><strong aria-hidden="true">19.4.</strong> apacheUtils类</a></li><li class="chapter-item "><a href="../../java_1_java基础/javaUnsafe工具类与CAS.html"><strong aria-hidden="true">19.5.</strong> javaUnsafe工具类与CAS</a></li><li class="chapter-item "><a href="../../java_1_java基础/java优化指南.html"><strong aria-hidden="true">19.6.</strong> java优化指南</a></li><li class="chapter-item "><a href="../../java_1_java基础/java各版本新特性.html"><strong aria-hidden="true">19.7.</strong> java各版本新特性</a></li><li class="chapter-item "><a href="../../java_1_java基础/java模块化.html"><strong aria-hidden="true">19.8.</strong> java模块化</a></li><li class="chapter-item "><a href="../../java_1_java基础/代码异味.html"><strong aria-hidden="true">19.9.</strong> 代码异味</a></li><li class="chapter-item "><a href="../../java_1_java基础/类的关系.html"><strong aria-hidden="true">19.10.</strong> 类的关系</a></li><li class="chapter-item "><a href="../../java_1_java基础/JSR/index.html"><strong aria-hidden="true">19.11.</strong> JSR</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JSR/jar包规范.html"><strong aria-hidden="true">19.11.1.</strong> jar包规范</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.12.</strong> JVM</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JVM/GC后对象地址变化了HashCode如何保持不变.html"><strong aria-hidden="true">19.12.1.</strong> GC后对象地址变化了HashCode如何保持不变</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JMM与volatile关键字.html"><strong aria-hidden="true">19.12.2.</strong> JMM与volatile关键字</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVMGC.html"><strong aria-hidden="true">19.12.3.</strong> JVMGC</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVM内存模型.html"><strong aria-hidden="true">19.12.4.</strong> JVM内存模型</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVM参数.html"><strong aria-hidden="true">19.12.5.</strong> JVM参数</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVM复制算法.html"><strong aria-hidden="true">19.12.6.</strong> JVM复制算法</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/java内存泄露与OOM.html"><strong aria-hidden="true">19.12.7.</strong> java内存泄露与OOM</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/java对象分析.html"><strong aria-hidden="true">19.12.8.</strong> java对象分析</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/java引用类型.html"><strong aria-hidden="true">19.12.9.</strong> java引用类型</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/index.html"><strong aria-hidden="true">19.12.10.</strong> 类加载</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/类加载器.html"><strong aria-hidden="true">19.12.10.1.</strong> 类加载器</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/类加载过程.html"><strong aria-hidden="true">19.12.10.2.</strong> 类加载过程</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/线程上下文加载器.html"><strong aria-hidden="true">19.12.10.3.</strong> 线程上下文加载器</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.13.</strong> JVM问题诊断与性能分析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/MAT.html"><strong aria-hidden="true">19.13.1.</strong> MAT</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/arthas.html"><strong aria-hidden="true">19.13.2.</strong> arthas</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/javaCPU占用高的问题.html"><strong aria-hidden="true">19.13.3.</strong> javaCPU占用高的问题</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/java远程调试.html"><strong aria-hidden="true">19.13.4.</strong> java远程调试</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/优雅停服.html"><strong aria-hidden="true">19.13.5.</strong> 优雅停服</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/排查内存溢出.html"><strong aria-hidden="true">19.13.6.</strong> 排查内存溢出</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.14.</strong> arthas</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/arthas/1.安装.html"><strong aria-hidden="true">19.14.1.</strong> 安装</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/2.快速入门.html"><strong aria-hidden="true">19.14.2.</strong> 快速入门</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/3.命令.html"><strong aria-hidden="true">19.14.3.</strong> 命令</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/4.ArthasTunnel.html"><strong aria-hidden="true">19.14.4.</strong> ArthasTunnel</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/5.Idea插件.html"><strong aria-hidden="true">19.14.5.</strong> Idea插件</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/6.JavaAgent启动.html"><strong aria-hidden="true">19.14.6.</strong> JavaAgent启动</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/7.火焰图.html"><strong aria-hidden="true">19.14.7.</strong> 火焰图</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/8.thread命令.html"><strong aria-hidden="true">19.14.8.</strong> thread命令</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/9.trace.html"><strong aria-hidden="true">19.14.9.</strong> trace</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.15.</strong> bean校验</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/bean校验/javaValidated.html"><strong aria-hidden="true">19.15.1.</strong> javaValidated</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/java.security框架/index.html"><strong aria-hidden="true">19.16.</strong> java.security框架</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.17.</strong> java基础</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java基础/JavaSPI.html"><strong aria-hidden="true">19.17.1.</strong> JavaSPI</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/Java异常.html"><strong aria-hidden="true">19.17.2.</strong> Java异常</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/Java泛型的协变与逆变.html"><strong aria-hidden="true">19.17.3.</strong> Java泛型的协变与逆变</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/java中常见的语法糖.html"><strong aria-hidden="true">19.17.4.</strong> java中常见的语法糖</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/java序列化接口.html"><strong aria-hidden="true">19.17.5.</strong> java序列化接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/jdk1.8新特性.html"><strong aria-hidden="true">19.17.6.</strong> jdk1.8新特性</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/jdk与jre.html"><strong aria-hidden="true">19.17.7.</strong> jdk与jre</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/枚举.html"><strong aria-hidden="true">19.17.8.</strong> 枚举</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/注解.html"><strong aria-hidden="true">19.17.9.</strong> 注解</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/index.html"><strong aria-hidden="true">19.18.</strong> java多线程与锁</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/JUC线程同步工具.html"><strong aria-hidden="true">19.18.1.</strong> JUC线程同步工具</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/LockSupport.html"><strong aria-hidden="true">19.18.2.</strong> LockSupport</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/java内存模型.html"><strong aria-hidden="true">19.18.3.</strong> java内存模型</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/java线程状态.html"><strong aria-hidden="true">19.18.4.</strong> java线程状态</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/java锁.html"><strong aria-hidden="true">19.18.5.</strong> java锁</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/jvm线程模型.html"><strong aria-hidden="true">19.18.6.</strong> jvm线程模型</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/关于多线程与并发编码的心得.html"><strong aria-hidden="true">19.18.7.</strong> 关于多线程与并发编码的心得</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/线程操作.html"><strong aria-hidden="true">19.18.8.</strong> 线程操作</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/线程池.html"><strong aria-hidden="true">19.18.9.</strong> 线程池</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.18.10.</strong> 基于AQS的同步工具</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/AQS.html"><strong aria-hidden="true">19.18.10.1.</strong> AQS</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/Condition条件等待.html"><strong aria-hidden="true">19.18.10.2.</strong> Condition条件等待</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/CountDownLatch.html"><strong aria-hidden="true">19.18.10.3.</strong> CountDownLatch</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/CyclicBarrier.html"><strong aria-hidden="true">19.18.10.4.</strong> CyclicBarrier</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/Lock锁接口.html"><strong aria-hidden="true">19.18.10.5.</strong> Lock锁接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/ReentrantLock.html"><strong aria-hidden="true">19.18.10.6.</strong> ReentrantLock</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/ReentrantReadWriteLock.html"><strong aria-hidden="true">19.18.10.7.</strong> ReentrantReadWriteLock</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/Semaphore.html"><strong aria-hidden="true">19.18.10.8.</strong> Semaphore</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/StampedLock.html"><strong aria-hidden="true">19.18.10.9.</strong> StampedLock</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.19.</strong> java源码分析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/1.java面试.html"><strong aria-hidden="true">19.19.1.</strong> java面试</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/JavaLocalDate.html"><strong aria-hidden="true">19.19.2.</strong> JavaLocalDate</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/JavaUnsafe类.html"><strong aria-hidden="true">19.19.3.</strong> JavaUnsafe类</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/foreach语法糖.html"><strong aria-hidden="true">19.19.4.</strong> foreach语法糖</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/formatter.html"><strong aria-hidden="true">19.19.5.</strong> formatter</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/integer的比较问题.html"><strong aria-hidden="true">19.19.6.</strong> integer的比较问题</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/java序列化接口.html"><strong aria-hidden="true">19.19.7.</strong> java序列化接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/string常量池.html"><strong aria-hidden="true">19.19.8.</strong> string常量池</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/threadLocal.html"><strong aria-hidden="true">19.19.9.</strong> threadLocal</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/基于jdk1.8的Arrays.sort.html"><strong aria-hidden="true">19.19.10.</strong> 基于jdk1.8的Arrays.sort</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/index.html"><strong aria-hidden="true">19.20.</strong> java集合框架</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/ArrayBlockingQueue.html"><strong aria-hidden="true">19.20.1.</strong> ArrayBlockingQueue</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/ArrayList.html"><strong aria-hidden="true">19.20.2.</strong> ArrayList</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/ConcurrentHashMap.html"><strong aria-hidden="true">19.20.3.</strong> ConcurrentHashMap</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/LinkedList与双向队列.html"><strong aria-hidden="true">19.20.4.</strong> LinkedList与双向队列</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/List.html"><strong aria-hidden="true">19.20.5.</strong> List</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/Map接口.html"><strong aria-hidden="true">19.20.6.</strong> Map接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/Queue与Deque.html"><strong aria-hidden="true">19.20.7.</strong> Queue与Deque</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/Set与LinkedHashMap.html"><strong aria-hidden="true">19.20.8.</strong> Set与LinkedHashMap</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/SynchronousQueue.html"><strong aria-hidden="true">19.20.9.</strong> SynchronousQueue</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/arraylist和linkedlist.html"><strong aria-hidden="true">19.20.10.</strong> arraylist和linkedlist</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/hashMap.html"><strong aria-hidden="true">19.20.11.</strong> hashMap</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/redission-java/index.html"><strong aria-hidden="true">19.21.</strong> redission-java</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.22.</strong> shiro</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/shiro/shiro频繁访问redis.html"><strong aria-hidden="true">19.22.1.</strong> shiro频繁访问redis</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/代理/index.html"><strong aria-hidden="true">19.23.</strong> 代理</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/代理/CGLIB.html"><strong aria-hidden="true">19.23.1.</strong> CGLIB</a></li><li class="chapter-item "><a href="../../java_1_java基础/代理/cglib的几种Callback.html"><strong aria-hidden="true">19.23.2.</strong> cglib的几种Callback</a></li><li class="chapter-item "><a href="../../java_1_java基础/代理/jdk动态代理.html"><strong aria-hidden="true">19.23.3.</strong> jdk动态代理</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.24.</strong> 其他</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/其他/Collections工具类.html"><strong aria-hidden="true">19.24.1.</strong> Collections工具类</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/JAVA命令行工具.html"><strong aria-hidden="true">19.24.2.</strong> JAVA命令行工具</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/Objects工具类.html"><strong aria-hidden="true">19.24.3.</strong> Objects工具类</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/javaIdea调试.html"><strong aria-hidden="true">19.24.4.</strong> javaIdea调试</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/javaPererences工具.html"><strong aria-hidden="true">19.24.5.</strong> javaPererences工具</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/java基准测试.html"><strong aria-hidden="true">19.24.6.</strong> java基准测试</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.25.</strong> 函数式编程</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/anyMatchAllMatch.html"><strong aria-hidden="true">19.25.1.</strong> anyMatchAllMatch</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/java函数式编程.html"><strong aria-hidden="true">19.25.2.</strong> java函数式编程</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/lamba表达式原理.html"><strong aria-hidden="true">19.25.3.</strong> lamba表达式原理</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/方法引用.html"><strong aria-hidden="true">19.25.4.</strong> 方法引用</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/流操作.html"><strong aria-hidden="true">19.25.5.</strong> 流操作</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.26.</strong> 对象拷贝</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/对象拷贝/mapstruct.html"><strong aria-hidden="true">19.26.1.</strong> mapstruct</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../java_2_响应式编程/index.html"><strong aria-hidden="true">20.</strong> 响应式编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/index.html"><strong aria-hidden="true">20.1.</strong> ProjectReactor</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/创建发布者.html"><strong aria-hidden="true">20.1.1.</strong> 创建发布者</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/创建订阅.html"><strong aria-hidden="true">20.1.2.</strong> 创建订阅</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/响应式流的动作.html"><strong aria-hidden="true">20.1.3.</strong> 响应式流的动作</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/选择合适的操作符.html"><strong aria-hidden="true">20.1.4.</strong> 选择合适的操作符</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/index.html"><strong aria-hidden="true">20.1.5.</strong> core-features</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/FluxAndMono.html"><strong aria-hidden="true">20.1.5.1.</strong> FluxAndMono</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/ProcessorOrSinks.html"><strong aria-hidden="true">20.1.5.2.</strong> ProcessorOrSinks</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/线程和调度.html"><strong aria-hidden="true">20.1.5.3.</strong> 线程和调度</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/编程式创建序列.html"><strong aria-hidden="true">20.1.5.4.</strong> 编程式创建序列</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/错误处理.html"><strong aria-hidden="true">20.1.5.5.</strong> 错误处理</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../../java_4_日志/index.html"><strong aria-hidden="true">21.</strong> 日志</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/JUL.html"><strong aria-hidden="true">21.1.</strong> JUL</a></li><li class="chapter-item "><a href="../../java_4_日志/SL4j.html"><strong aria-hidden="true">21.2.</strong> SL4j</a></li><li class="chapter-item "><a href="../../java_4_日志/日志处理进化史.html"><strong aria-hidden="true">21.3.</strong> 日志处理进化史</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/index.html"><strong aria-hidden="true">21.4.</strong> log4j2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/Log4j2API.html"><strong aria-hidden="true">21.4.1.</strong> Log4j2API</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/log4j2-web.html"><strong aria-hidden="true">21.4.2.</strong> log4j2-web</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/lookups.html"><strong aria-hidden="true">21.4.3.</strong> lookups</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/依赖管理.html"><strong aria-hidden="true">21.4.4.</strong> 依赖管理</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/index.html"><strong aria-hidden="true">21.4.5.</strong> appenders</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/AsyncAppender.html"><strong aria-hidden="true">21.4.5.1.</strong> AsyncAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/CassandraAppender.html"><strong aria-hidden="true">21.4.5.2.</strong> CassandraAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/ConsoleAppender.html"><strong aria-hidden="true">21.4.5.3.</strong> ConsoleAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/FailoverAppender.html"><strong aria-hidden="true">21.4.5.4.</strong> FailoverAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/FileAppender.html"><strong aria-hidden="true">21.4.5.5.</strong> FileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/JDBCAppender.html"><strong aria-hidden="true">21.4.5.6.</strong> JDBCAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/OutputStreamAppender.html"><strong aria-hidden="true">21.4.5.7.</strong> OutputStreamAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RandomAccessFileAppender.html"><strong aria-hidden="true">21.4.5.8.</strong> RandomAccessFileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RewriteAppender.html"><strong aria-hidden="true">21.4.5.9.</strong> RewriteAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RollingFileAppender.html"><strong aria-hidden="true">21.4.5.10.</strong> RollingFileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RollingRandomAccessFileAppender.html"><strong aria-hidden="true">21.4.5.11.</strong> RollingRandomAccessFileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RoutingAppender.html"><strong aria-hidden="true">21.4.5.12.</strong> RoutingAppender</a></li></ol></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/index.html"><strong aria-hidden="true">21.4.6.</strong> layouts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/CSVLayouts.html"><strong aria-hidden="true">21.4.6.1.</strong> CSVLayouts</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/HTMLayouts.html"><strong aria-hidden="true">21.4.6.2.</strong> HTMLayouts</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/JSONLayout.html"><strong aria-hidden="true">21.4.6.3.</strong> JSONLayout</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/JSONTemplateLayouts.html"><strong aria-hidden="true">21.4.6.4.</strong> JSONTemplateLayouts</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/PatternLayout.html"><strong aria-hidden="true">21.4.6.5.</strong> PatternLayout</a></li></ol></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/log4j2配置/index.html"><strong aria-hidden="true">21.4.7.</strong> log4j2配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/log4j2配置/高级配置.html"><strong aria-hidden="true">21.4.7.1.</strong> 高级配置</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">22.</strong> ORM</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">22.1.</strong> Mybatis</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/mybatis.html"><strong aria-hidden="true">22.1.1.</strong> mybatis</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/mybatis-插件开发.html"><strong aria-hidden="true">22.1.2.</strong> mybatis-插件开发</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/mybatis标签.html"><strong aria-hidden="true">22.1.3.</strong> mybatis标签</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/resultHandler.html"><strong aria-hidden="true">22.1.4.</strong> resultHandler</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/多结果集分页.html"><strong aria-hidden="true">22.1.5.</strong> 多结果集分页</a></li></ol></li><li class="chapter-item "><a href="../../java_5_ORM/jpa/index.html"><strong aria-hidden="true">22.2.</strong> jpa</a></li></ol></li><li class="chapter-item "><a href="../../java_6_IO/index.html"><strong aria-hidden="true">23.</strong> IO</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_6_IO/Buffer.html"><strong aria-hidden="true">23.1.</strong> Buffer</a></li><li class="chapter-item "><a href="../../java_6_IO/Channel.html"><strong aria-hidden="true">23.2.</strong> Channel</a></li><li class="chapter-item "><a href="../../java_6_IO/LinuxIO模型演变.html"><strong aria-hidden="true">23.3.</strong> LinuxIO模型演变</a></li><li class="chapter-item "><a href="../../java_6_IO/Selector（选择器）.html"><strong aria-hidden="true">23.4.</strong> Selector（选择器）</a></li><li class="chapter-item "><a href="../../java_6_IO/主流IO模型.html"><strong aria-hidden="true">23.5.</strong> 主流IO模型</a></li><li class="chapter-item "><a href="../../java_6_IO/从IO到NIO个人理解.html"><strong aria-hidden="true">23.6.</strong> 从IO到NIO个人理解</a></li><li class="chapter-item "><a href="../../java_6_IO/字符集.html"><strong aria-hidden="true">23.7.</strong> 字符集</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/index.html"><strong aria-hidden="true">23.8.</strong> FileIO(NIO-2.0)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/LinksSymbolicOtherwise.html"><strong aria-hidden="true">23.8.1.</strong> LinksSymbolicOtherwise</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/RandomAccessFiles.html"><strong aria-hidden="true">23.8.2.</strong> RandomAccessFiles</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/传统IO与NIO的API迁移.html"><strong aria-hidden="true">23.8.3.</strong> 传统IO与NIO的API迁移</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/元数据管理.html"><strong aria-hidden="true">23.8.4.</strong> 元数据管理</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/其他有用方法.html"><strong aria-hidden="true">23.8.5.</strong> 其他有用方法</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/开发自定义文件系统.html"><strong aria-hidden="true">23.8.6.</strong> 开发自定义文件系统</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/文件查找.html"><strong aria-hidden="true">23.8.7.</strong> 文件查找</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/文件管理.html"><strong aria-hidden="true">23.8.8.</strong> 文件管理</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/文件读写.html"><strong aria-hidden="true">23.8.9.</strong> 文件读写</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/监控目录变化.html"><strong aria-hidden="true">23.8.10.</strong> 监控目录变化</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/目录管理.html"><strong aria-hidden="true">23.8.11.</strong> 目录管理</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/路径操作.html"><strong aria-hidden="true">23.8.12.</strong> 路径操作</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/遍历目录树.html"><strong aria-hidden="true">23.8.13.</strong> 遍历目录树</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../java_7_servlet规范/index.html"><strong aria-hidden="true">24.</strong> servlet规范</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_7_servlet规范/fitler.html"><strong aria-hidden="true">24.1.</strong> fitler</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/httpServlet接口.html"><strong aria-hidden="true">24.2.</strong> httpServlet接口</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/request.html"><strong aria-hidden="true">24.3.</strong> request</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/response.html"><strong aria-hidden="true">24.4.</strong> response</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/servletContext.html"><strong aria-hidden="true">24.5.</strong> servletContext</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/servlet初始化.html"><strong aria-hidden="true">24.6.</strong> servlet初始化</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/session.html"><strong aria-hidden="true">24.7.</strong> session</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/入门.html"><strong aria-hidden="true">24.8.</strong> 入门</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/注解与可插拔.html"><strong aria-hidden="true">24.9.</strong> 注解与可插拔</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">25.</strong> 设计模式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_8_设计模式/PipeLine.html"><strong aria-hidden="true">25.1.</strong> PipeLine</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">26.</strong> 单元测试</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_9_单元测试/junit5/index.html"><strong aria-hidden="true">26.1.</strong> junit5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_9_单元测试/junit5/ConsoleLaunch.html"><strong aria-hidden="true">26.1.1.</strong> ConsoleLaunch</a></li><li class="chapter-item "><a href="../../java_9_单元测试/junit5/DependencyMetadata.html"><strong aria-hidden="true">26.1.2.</strong> DependencyMetadata</a></li><li class="chapter-item "><div><strong aria-hidden="true">26.1.3.</strong> writtingTest</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_9_单元测试/junit5/writtingTest/Annotations.html"><strong aria-hidden="true">26.1.3.1.</strong> Annotations</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">工具</li><li class="chapter-item "><a href="../../工具_3_git/index.html"><strong aria-hidden="true">27.</strong> git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_3_git/Git库管理.html"><strong aria-hidden="true">27.1.</strong> Git库管理</a></li><li class="chapter-item "><a href="../../工具_3_git/gitDiff原理.html"><strong aria-hidden="true">27.2.</strong> gitDiff原理</a></li><li class="chapter-item "><a href="../../工具_3_git/gitLog命令.html"><strong aria-hidden="true">27.3.</strong> gitLog命令</a></li><li class="chapter-item "><a href="../../工具_3_git/gitflow.html"><strong aria-hidden="true">27.4.</strong> gitflow</a></li><li class="chapter-item "><a href="../../工具_3_git/gitmerge.html"><strong aria-hidden="true">27.5.</strong> gitmerge</a></li><li class="chapter-item "><a href="../../工具_3_git/gitrebase.html"><strong aria-hidden="true">27.6.</strong> gitrebase</a></li><li class="chapter-item "><a href="../../工具_3_git/git使用案例.html"><strong aria-hidden="true">27.7.</strong> git使用案例</a></li><li class="chapter-item "><a href="../../工具_3_git/git分支.html"><strong aria-hidden="true">27.8.</strong> git分支</a></li><li class="chapter-item "><a href="../../工具_3_git/git命令杂项.html"><strong aria-hidden="true">27.9.</strong> git命令杂项</a></li><li class="chapter-item "><a href="../../工具_3_git/git基础.html"><strong aria-hidden="true">27.10.</strong> git基础</a></li><li class="chapter-item "><a href="../../工具_3_git/git错误提交后场景.html"><strong aria-hidden="true">27.11.</strong> git错误提交后场景</a></li><li class="chapter-item "><a href="../../工具_3_git/tag管理.html"><strong aria-hidden="true">27.12.</strong> tag管理</a></li><li class="chapter-item "><a href="../../工具_3_git/使用远程分支强制覆盖本地工作区暂存区版本库.html"><strong aria-hidden="true">27.13.</strong> 使用远程分支强制覆盖本地工作区暂存区版本库</a></li><li class="chapter-item "><a href="../../工具_3_git/克隆.html"><strong aria-hidden="true">27.14.</strong> 克隆</a></li><li class="chapter-item "><a href="../../工具_3_git/历史提交.html"><strong aria-hidden="true">27.15.</strong> 历史提交</a></li><li class="chapter-item "><a href="../../工具_3_git/回退合并提交.html"><strong aria-hidden="true">27.16.</strong> 回退合并提交</a></li><li class="chapter-item "><a href="../../工具_3_git/基本操作.html"><strong aria-hidden="true">27.17.</strong> 基本操作</a></li><li class="chapter-item "><a href="../../工具_3_git/杂项.html"><strong aria-hidden="true">27.18.</strong> 杂项</a></li><li class="chapter-item "><div><strong aria-hidden="true">27.19.</strong> GIT协作</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_3_git/GIT协作/Git支持的协议.html"><strong aria-hidden="true">27.19.1.</strong> Git支持的协议</a></li><li class="chapter-item "><a href="../../工具_3_git/GIT协作/冲突解决.html"><strong aria-hidden="true">27.19.2.</strong> 冲突解决</a></li><li class="chapter-item "><a href="../../工具_3_git/GIT协作/补丁文件交互.html"><strong aria-hidden="true">27.19.3.</strong> 补丁文件交互</a></li><li class="chapter-item "><a href="../../工具_3_git/GIT协作/远程版本库.html"><strong aria-hidden="true">27.19.4.</strong> 远程版本库</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">28.</strong> 绘图建模</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_4_绘图建模/UML.html"><strong aria-hidden="true">28.1.</strong> UML</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/flowchart_fun.html"><strong aria-hidden="true">28.2.</strong> flowchart_fun</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid;README.html"><strong aria-hidden="true">28.3.</strong> mermaid;README</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/plantUML语法.html"><strong aria-hidden="true">28.4.</strong> plantUML语法</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/index.html"><strong aria-hidden="true">28.5.</strong> mermaid</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/时序图.html"><strong aria-hidden="true">28.5.1.</strong> 时序图</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/流程图.html"><strong aria-hidden="true">28.5.2.</strong> 流程图</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/类图.html"><strong aria-hidden="true">28.5.3.</strong> 类图</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/语法总览.html"><strong aria-hidden="true">28.5.4.</strong> 语法总览</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">其他</li><li class="chapter-item "><a href="../../其他_2_其他/index.html"><strong aria-hidden="true">29.</strong> 其他</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_2_其他/Multipass.html"><strong aria-hidden="true">29.1.</strong> Multipass</a></li><li class="chapter-item "><a href="../../其他_2_其他/Wallabag.html"><strong aria-hidden="true">29.2.</strong> Wallabag</a></li><li class="chapter-item "><a href="../../其他_2_其他/v2rayN代理.html"><strong aria-hidden="true">29.3.</strong> v2rayN代理</a></li><li class="chapter-item "><a href="../../其他_2_其他/个人清算汇缴.html"><strong aria-hidden="true">29.4.</strong> 个人清算汇缴</a></li><li class="chapter-item "><a href="../../其他_2_其他/概率论与数理统计.html"><strong aria-hidden="true">29.5.</strong> 概率论与数理统计</a></li><li class="chapter-item "><a href="../../其他_2_其他/虚拟机操作.html"><strong aria-hidden="true">29.6.</strong> 虚拟机操作</a></li><li class="chapter-item "><div><strong aria-hidden="true">29.7.</strong> intellj</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_2_其他/intellj/Http请求发送.html"><strong aria-hidden="true">29.7.1.</strong> Http请求发送</a></li><li class="chapter-item "><a href="../../其他_2_其他/intellj/ideaSettings.html"><strong aria-hidden="true">29.7.2.</strong> ideaSettings</a></li></ol></li><li class="chapter-item "><a href="../../其他_2_其他/osascript/index.html"><strong aria-hidden="true">29.8.</strong> osascript</a></li><li class="chapter-item "><a href="../../其他_2_其他/taskList/index.html"><strong aria-hidden="true">29.9.</strong> taskList</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">29.9.1.</strong> java</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_2_其他/taskList/java/AnnotationProcessing.html"><strong aria-hidden="true">29.9.1.1.</strong> AnnotationProcessing</a></li><li class="chapter-item "><a href="../../其他_2_其他/taskList/java/ruoyi项目开发.html"><strong aria-hidden="true">29.9.1.2.</strong> ruoyi项目开发</a></li><li class="chapter-item "><a href="../../其他_2_其他/taskList/java/可继承的ThreadLocal.html"><strong aria-hidden="true">29.9.1.3.</strong> 可继承的ThreadLocal</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../../其他_4_思考/index.html"><strong aria-hidden="true">30.</strong> 思考</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_4_思考/学习总结.html"><strong aria-hidden="true">30.1.</strong> 学习总结</a></li><li class="chapter-item "><a href="../../其他_4_思考/杂项.html"><strong aria-hidden="true">30.2.</strong> 杂项</a></li><li class="chapter-item "><a href="../../其他_4_思考/编程技巧.html"><strong aria-hidden="true">30.3.</strong> 编程技巧</a></li></ol></li><li class="chapter-item "><li class="part-title">其他编程语言</li><li class="chapter-item "><div><strong aria-hidden="true">31.</strong> C++</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_1_C++/C++与C的区别.html"><strong aria-hidden="true">31.1.</strong> C++与C的区别</a></li><li class="chapter-item "><a href="../../其他编程语言_1_C++/C++面向对象.html"><strong aria-hidden="true">31.2.</strong> C++面向对象</a></li><li class="chapter-item "><a href="../../其他编程语言_1_C++/泛型编程.html"><strong aria-hidden="true">31.3.</strong> 泛型编程</a></li><li class="chapter-item "><a href="../../其他编程语言_1_C++/cmake/index.html"><strong aria-hidden="true">31.4.</strong> cmake</a></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_2_LUA/index.html"><strong aria-hidden="true">32.</strong> LUA</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_2_LUA/基本语法.html"><strong aria-hidden="true">32.1.</strong> 基本语法</a></li><li class="chapter-item "><a href="../../其他编程语言_2_LUA/高级语法.html"><strong aria-hidden="true">32.2.</strong> 高级语法</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">33.</strong> rust</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_3_rust/1常见编程概念.html"><strong aria-hidden="true">33.1.</strong> 1常见编程概念</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/2所有权.html"><strong aria-hidden="true">33.2.</strong> 2所有权</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/ConstantsAndVariables.html"><strong aria-hidden="true">33.3.</strong> ConstantsAndVariables</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/Rust中的Sizedness.html"><strong aria-hidden="true">33.4.</strong> Rust中的Sizedness</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/Rust库API设计文档规范.html"><strong aria-hidden="true">33.5.</strong> Rust库API设计文档规范</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/const类型与函数.html"><strong aria-hidden="true">33.6.</strong> const类型与函数</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/newType模式.html"><strong aria-hidden="true">33.7.</strong> newType模式</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rust执行shell命令.html"><strong aria-hidden="true">33.8.</strong> rust执行shell命令</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rust指针.html"><strong aria-hidden="true">33.9.</strong> rust指针</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rust面向对象特性.html"><strong aria-hidden="true">33.10.</strong> rust面向对象特性</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/依赖管理.html"><strong aria-hidden="true">33.11.</strong> 依赖管理</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/函数式编程.html"><strong aria-hidden="true">33.12.</strong> 函数式编程</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/宏.html"><strong aria-hidden="true">33.13.</strong> 宏</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/常见集合.html"><strong aria-hidden="true">33.14.</strong> 常见集合</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/模式匹配.html"><strong aria-hidden="true">33.15.</strong> 模式匹配</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/泛型与trait.html"><strong aria-hidden="true">33.16.</strong> 泛型与trait</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/结构体.html"><strong aria-hidden="true">33.17.</strong> 结构体</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/迭代与闭包.html"><strong aria-hidden="true">33.18.</strong> 迭代与闭包</a></li><li class="chapter-item "><div><strong aria-hidden="true">33.19.</strong> rfcs</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_3_rust/rfcs/0195_associated-items.html"><strong aria-hidden="true">33.19.1.</strong> 0195_associated-items</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rfcs/0911-const-fn.html"><strong aria-hidden="true">33.19.2.</strong> 0911-const-fn</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">34.</strong> groovy</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_4_groovy/RuntimeAndCompile-timeMetaprogramming.html"><strong aria-hidden="true">34.1.</strong> RuntimeAndCompile-timeMetaprogramming</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/基础语法.html"><strong aria-hidden="true">34.2.</strong> 基础语法</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/开发工具类.html"><strong aria-hidden="true">34.3.</strong> 开发工具类</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/操作符.html"><strong aria-hidden="true">34.4.</strong> 操作符</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/编程结构.html"><strong aria-hidden="true">34.5.</strong> 编程结构</a></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/index.html"><strong aria-hidden="true">35.</strong> nodejs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/fakeJS.html"><strong aria-hidden="true">35.1.</strong> fakeJS</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/nodejs事件循环.html"><strong aria-hidden="true">35.2.</strong> nodejs事件循环</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/入门.html"><strong aria-hidden="true">35.3.</strong> 入门</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/包管理.html"><strong aria-hidden="true">35.4.</strong> 包管理</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/定时器.html"><strong aria-hidden="true">35.5.</strong> 定时器</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/异步编程.html"><strong aria-hidden="true">35.6.</strong> 异步编程</a></li><li class="chapter-item "><div><strong aria-hidden="true">35.7.</strong> packageInfo参数解析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/packageInfo参数解析/1.scripts.html"><strong aria-hidden="true">35.7.1.</strong> scripts</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/index.html"><strong aria-hidden="true">36.</strong> typescript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_6_typescript/1.基础类型.html"><strong aria-hidden="true">36.1.</strong> 基础类型</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/2.变量声明.html"><strong aria-hidden="true">36.2.</strong> 变量声明</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/3.接口.html"><strong aria-hidden="true">36.3.</strong> 接口</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/4.模块.html"><strong aria-hidden="true">36.4.</strong> 模块</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/index.html"><strong aria-hidden="true">36.5.</strong> jtest测试框架</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/Except.html"><strong aria-hidden="true">36.5.1.</strong> Except</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/Globals.html"><strong aria-hidden="true">36.5.2.</strong> Globals</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/Hook顺序.html"><strong aria-hidden="true">36.5.3.</strong> Hook顺序</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_7_python/index.html"><strong aria-hidden="true">37.</strong> python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_7_python/1.python3基础语法.html"><strong aria-hidden="true">37.1.</strong> python3基础语法</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/2.基本数据类型.html"><strong aria-hidden="true">37.2.</strong> 基本数据类型</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/3.Python3数据类型转换.html"><strong aria-hidden="true">37.3.</strong> Python3数据类型转换</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/4.Python推导式.html"><strong aria-hidden="true">37.4.</strong> Python推导式</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/5.Python3运算符.html"><strong aria-hidden="true">37.5.</strong> Python3运算符</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/6.Python3字符串.html"><strong aria-hidden="true">37.6.</strong> Python3字符串</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/7.python3列表.html"><strong aria-hidden="true">37.7.</strong> python3列表</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/8.元祖.html"><strong aria-hidden="true">37.8.</strong> 元祖</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/9.Python3字典.html"><strong aria-hidden="true">37.9.</strong> Python3字典</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/10.Python3集合.html"><strong aria-hidden="true">37.10.</strong> Python3集合</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/11.Number类型.html"><strong aria-hidden="true">37.11.</strong> Number类型</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/12.python3流程控制.html"><strong aria-hidden="true">37.12.</strong> python3流程控制</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/13.Python3迭代器与生成器.html"><strong aria-hidden="true">37.13.</strong> Python3迭代器与生成器</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/14.函数.html"><strong aria-hidden="true">37.14.</strong> 函数</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/15.Python3JSON数据解析.html"><strong aria-hidden="true">37.15.</strong> Python3JSON数据解析</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/16.Python3面向对象.html"><strong aria-hidden="true">37.16.</strong> Python3面向对象</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/17.模块与包.html"><strong aria-hidden="true">37.17.</strong> 模块与包</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/With关键字.html"><strong aria-hidden="true">37.18.</strong> With关键字</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/杂项.html"><strong aria-hidden="true">37.19.</strong> 杂项</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/fabric/index.html"><strong aria-hidden="true">37.20.</strong> fabric</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_7_python/fabric/Configuration.html"><strong aria-hidden="true">37.20.1.</strong> Configuration</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/fabric/README_1.x.html"><strong aria-hidden="true">37.20.2.</strong> README_1.x</a></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/index.html"><strong aria-hidden="true">37.21.</strong> invoke</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/1.DefiningAndRunningTask.html"><strong aria-hidden="true">37.21.1.</strong> DefiningAndRunningTask</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/2.InvokeCoreUsage.html"><strong aria-hidden="true">37.21.2.</strong> InvokeCoreUsage</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/3.Configuration.html"><strong aria-hidden="true">37.21.3.</strong> Configuration</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/4.loadingCollections.html"><strong aria-hidden="true">37.21.4.</strong> loadingCollections</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/5.UsingInvokeAslibrary.html"><strong aria-hidden="true">37.21.5.</strong> UsingInvokeAslibrary</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">note</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="需求分析"><a class="header" href="#需求分析">需求分析</a></h2>
+<p>在一个应用中，我们总是会遇到一些参数，例如：</p>
+<ul>
+<li>数据库服务器IP地址、端口、用户名；</li>
+<li>用来保存上传资料的目录。</li>
+<li>一些参数，诸如是否打开cache、加密所用的密钥名称等等。</li>
+</ul>
+<p>这些参数有一个共性，那就是：<em>它们和应用的逻辑无关，只和当前环境、当前系统用户相关</em>。以下场景很常见：</p>
+<ul>
+<li>在开发、测试、发布阶段，使用不同的数据库服务器；</li>
+<li>在开发阶段，使用Windows的A开发者将用户上传的文件存放在<code>d:\my_upload</code>目录中，而使用Linux的B开发者将同样的文件存放在<code>/home/myname/my_upload</code>目录中。</li>
+<li>在开发阶段设置<code>cache=off</code>，在生产环境中设置<code>cache=on</code>。</li>
+</ul>
+<p>很明显，<em>这些参数不适合被“硬编码”在配置文件或代码中</em>。因为每一个从源码库中取得它们的人，都有可能需要修改它们，使之与自己的环境相匹配。</p>
+<h2 id="解决方案"><a class="header" href="#解决方案">解决方案</a></h2>
+<h3 id="运行时替换的placeholders"><a class="header" href="#运行时替换的placeholders">运行时替换的placeholders</a></h3>
+<p>很多框架支持在运行时刻替换配置文件中的placeholder占位符。例如， Webx/Spring就有这个功能。</p>
+<pre><code class="language-xml">&lt;services:property-placeholder /&gt;
+
+&lt;services:webx-configuration&gt;
+    &lt;services:productionMode&gt;${productionMode:true}&lt;/services:productionMode&gt;
+&lt;/services:webx-configuration&gt;
+</code></pre>
+<p>在上面这个例子中，你可以在启动应用时，加上JVM参数：“<code>-DproductionMode=false|true</code>”来告诉系统用哪一种模式来工作。如果不指定，则取默认值“<code>true</code>”。</p>
+<p>运行时替换placeholder是一种非常实用的技术，它有如下优缺点：</p>
+<table><thead><tr><th style="text-align: left">优点</th><th style="text-align: left">缺点</th></tr></thead><tbody>
+<tr><td style="text-align: left">配置文件是静态的、不变的。即使采用不同的参数值，你也不需要更改配置文件本身。你可以随时改变参数的值，只需要启动时指定不同的JVM参数、或指定不同的properties文件即可。这种配置对于应用程序各组件是透明的 —— 应用程序不需要做特别的编程，即可使用placeholders。</td><td style="text-align: left">并非所有框架都支持这种技术。<br />支持该技术的框架各有不同的用法。例如：Spring和Log4j都支持placeholder替换，然则它们的做法是完全不同的。Spring通过<code>PropertyPlaceholderConfigurer</code>类来配置，而Log4j则需要在<code>DomConfigurator</code>中把参数传进去。</td></tr>
+</tbody></table>
+<h3 id="中心配置服务器config-server"><a class="header" href="#中心配置服务器config-server">中心配置服务器（Config Server）</a></h3>
+<p>这也是一种运行时技术。它可以在运行时刻，将应用所需的参数推送到应用中。</p>
+<p><strong>中心配置服务器的优缺点</strong></p>
+<table><thead><tr><th style="text-align: left">优点</th><th style="text-align: left">缺点</th></tr></thead><tbody>
+<tr><td style="text-align: left">它可以集中管理所有应用的配置，避免可能的错误；它可以在运行时改变参数的值，并推送到所有应用中。参数的更改可立即生效。</td><td style="text-align: left">需要一套独立的服务器系统。性能、可用性（availability）都是必须考虑的问题。对应用不是透明的，有一定的侵入性。应用程序必须主动来配合该技术。因此，该技术不可能适用于所有情况，特别对于第三方提供的代码，很难使用该技术。为了连接到中心配置服务器，你仍然需要配置适当的IP、端口等参数。你需要用其它技术来处理这些参数（例如placeholders）。</td></tr>
+</tbody></table>
+<h2 id="maven-filtering机制"><a class="header" href="#maven-filtering机制">Maven Filtering机制</a></h2>
+<p>Maven提供了一种过滤机制，可以在资源文件被复制到目标目录的同时，替换其中的placeholders。</p>
+<pre><code>web-project
+ │  pom.xml
+ │
+ └─src
+     └─main
+         ├─java
+         ├─resources
+         └─webapp
+             └─WEB-INF
+                     web.xml
+</code></pre>
+<p>在<code>pom.xml</code>中这样写：</p>
+<pre><code class="language-xml">&lt;build&gt;
+    &lt;filters&gt;
+        &lt;filter&gt;${user.home}/antx.properties&lt;/filter&gt; 
+    &lt;/filters&gt;
+    &lt;resources&gt;
+        &lt;resource&gt;
+            &lt;directory&gt;src/main/resources&lt;/directory&gt; 
+            &lt;includes&gt;
+                &lt;include&gt;**.xml&lt;/include&gt;
+            &lt;/includes&gt;
+            &lt;filtering&gt;true&lt;/filtering&gt;
+        &lt;/resource&gt;
+        &lt;resource&gt;
+            &lt;directory&gt;src/main/resources&lt;/directory&gt;
+            &lt;excludes&gt;
+                &lt;exclude&gt;**.xml&lt;/exclude&gt;
+            &lt;/excludes&gt;
+        &lt;/resource&gt;
+    &lt;/resources&gt;
+    &lt;plugins&gt;
+        &lt;plugin&gt;
+            &lt;artifactId&gt;maven-war-plugin&lt;/artifactId&gt;
+            &lt;configuration&gt;
+                &lt;webResources&gt;
+                    &lt;resource&gt;
+                        &lt;directory&gt;src/main/webapp&lt;/directory&gt; 
+                        &lt;includes&gt;
+                            &lt;include&gt;WEB-INF/**.xml&lt;/include&gt;
+                        &lt;/includes&gt;
+                        &lt;filtering&gt;true&lt;/filtering&gt;
+                    &lt;/resource&gt;
+                    &lt;resource&gt;
+                        &lt;directory&gt;src/main/webapp&lt;/directory&gt;
+                        &lt;excludes&gt;
+                            &lt;include&gt;WEB-INF/**.xml&lt;/include&gt;
+                        &lt;/excludes&gt;
+                    &lt;/resource&gt;
+                &lt;/webResources&gt;
+            &lt;/configuration&gt;
+        &lt;/plugin&gt;
+    &lt;/plugins&gt;
+&lt;/build&gt;
+</code></pre>
+<p>这段pom定义告诉maven：</p>
+<ol>
+<li>用指定的properties文件（<code>${user.home}/antx.properties</code>）中的值，替换文件中的placeholders</li>
+<li>过滤<code>src/main/resources/</code>目录中的所有xml文件，替换其中的placeholders。</li>
+<li>过滤<code>src/webapp/WEB-INF/</code>目录中的所有xml文件，替换其中的placeholders。</li>
+</ol>
+<p>如果上述xml文件中，包含“<code>${xxx.yyy.zzz}</code>”这样的placeholders，将被替换成properties文件中的相应值。</p>
+<p>和运行时替换placeholders方案相比，Maven Filtering是一个build时进行的过程。它的优缺点是：</p>
+<p><strong>Maven Filtering机制的优缺点</strong></p>
+<table><thead><tr><th style="text-align: left">优点</th><th style="text-align: left">缺点</th></tr></thead><tbody>
+<tr><td style="text-align: left">Maven filtering机制和应用所采用的技术、框架完全无关，对应用完全透明，通用性好。</td><td style="text-align: left">Maven filtering机制在build时刻永久性改变被过滤的配置文件的内容，build结束以后无法更改。这将导致一个问题：如果要改变配置文件的参数，必须获取源码并重新build。缺少验证机制。当某个placeholder拼写错误；当properties中的值写错；当某配置文件中新增了一个placeholder，而你的properties文件中没有对应的值时，maven不会提醒你。而这些错误往往被拖延到应用程序运行时才会被报告出来。</td></tr>
+</tbody></table>
+<h2 id="autoconfig机制"><a class="header" href="#autoconfig机制">AutoConfig机制</a></h2>
+<p>AutoConfig是一种类似于Maven Filtering的<em>build时刻的工具</em>。</p>
+<p>这意味着该机制与应用所采用的技术、框架完全无关，对应用完全透明，具有良好的通用性。</p>
+<p>同时，AutoConfig与运行时的配置技术并不冲突。</p>
+<p>它可以和运行时替换的placeholders以及中心配置服务器完美并存，互为补充。</p>
+<p>AutoConfig书写placeholder的方法和Maven Filtering机制完全相同。</p>
+<p>换言之，Maven Filtering的配置文件模板（前例中的<code>/WEB-INF/**.xml</code>）可以不加修改地用在AutoConfig中。</p>
+<p>然而，autoconfig成功克服了Maven Filtering的主要问题。</p>
+<p><strong>Maven Filtering和AutoConfig的比较</strong></p>
+<table><thead><tr><th style="text-align: left">问题</th><th style="text-align: left">Maven Filtering</th><th style="text-align: left">AutoConfig</th></tr></thead><tbody>
+<tr><td style="text-align: left">如何修改配置文件的参数？</td><td style="text-align: left">Maven Filtering必须获得源码并重新build；</td><td style="text-align: left">而AutoConfig不需要提取源码，也不需要重新build，即可改变<em>目标文件</em>中所有配置文件中placeholders的值。</td></tr>
+<tr><td style="text-align: left">如何确保placeholder替换的正确性？</td><td style="text-align: left">Maven Filtering不能验证placeholder值的缺失和错误；</td><td style="text-align: left">但AutoConfig可以对placeholder及其值进行检查。</td></tr>
+</tbody></table>
+<h2 id="autoconfig的设计"><a class="header" href="#autoconfig的设计">AutoConfig的设计</a></h2>
+<p>为了把事情说清楚，我们必须要定义两种角色：<em>开发者（Developer）<em>和</em>部署者（Deployer）</em>。</p>
+<h3 id="角色和职责"><a class="header" href="#角色和职责"><strong>角色和职责</strong></a></h3>
+<table><thead><tr><th style="text-align: left">角色名称</th><th style="text-align: left">职责</th></tr></thead><tbody>
+<tr><td style="text-align: left">开发者</td><td style="text-align: left">定义应用所需要的properties，及其限定条件；提供包含placeholders的配置文件模板。</td></tr>
+<tr><td style="text-align: left">部署者</td><td style="text-align: left">根据所定义的properties，提供符合限定条件的属性值。调用AutoConfig来生成目标配置文件。</td></tr>
+</tbody></table>
+<p>例如，一个宠物店（petstore）的WEB应用中需要指定一个用来上传文件的目录。于是，</p>
+<h3 id="petstore应用中的角色和职责"><a class="header" href="#petstore应用中的角色和职责"><strong>Petstore应用中的角色和职责</strong></a></h3>
+<table><thead><tr><th style="text-align: left">开发者</th><th style="text-align: left">部署者</th></tr></thead><tbody>
+<tr><td style="text-align: left">开发者定义了一个property：<code>petstore.upload_dir</code>，限定条件为：“合法的文件系统的目录名”。</td><td style="text-align: left">部署者取得petstore的二进制发布包，通过AutoConfig了解到，应用需要一个名为<code>petstore.upload_dir</code>目录名。部署者便指定一个目录给petstore，该目录名的具体值可能因不同的系统而异。AutoConfig会检验该值是否符合限定条件（是否为合法目录名），如果检验通过，就生成配置文件，并将其中的<code>${petstore.upload_dir}</code>替换成该目录名。</td></tr>
+</tbody></table>
+<p>需要注意的是，一个“物理人”所对应的“角色”不是一成不变的。例如：某“开发者”需要试运行应用，此时，他就变成“部署者”。</p>
+<h3 id="分享二进制目标文件"><a class="header" href="#分享二进制目标文件">分享二进制目标文件</a></h3>
+<p>假设现在有两个team要互相合作，team A的开发者创建了project A，而team B的开发者创建了project B。假定project B依赖于project A。如果我们利用maven这样的build工具，那么最显而易见的合作方案是这样的：</p>
+<ul>
+<li>Team A发布一个project A的版本到maven repository中。</li>
+<li>Team B从maven repository中取得project A的二进制目标文件。</li>
+</ul>
+<p>这种方案有很多好处，</p>
+<ul>
+<li>每个team都可以独立控制自己发布版本的节奏；</li>
+<li>Team之间的关系较松散，唯一的关系纽带就是maven repository。</li>
+<li>Team之间不需要共享源码。</li>
+</ul>
+<p>然而，假如project A中有一些配置文件中的placeholders需要被替换，如果使用Maven Filtering机制，就会出现问题。因为Maven Filtering只能在project A被build时替换其中的placeholders，一旦project A被发布到repository中，team B的人将无法修改任何project A中的配置参数。除非team B的人取得project A的源码，并重新build。这将带来很大的负担。</p>
+<p>然而，假如project A中有一些配置文件中的placeholders需要被替换，如果使用Maven Filtering机制，就会出现问题。因为Maven Filtering只能在project A被build时替换其中的placeholders，一旦project A被发布到repository中，team B的人将无法修改任何project A中的配置参数。除非team B的人取得project A的源码，并重新build。这将带来很大的负担。</p>
+<p>AutoConfig解决了这个问题。因为当team B的人从maven repository中取得project A的二进制包时，仍然有机会修改其配置文件里的placeholders。Team B的人甚至不需要了解project A里配置文件的任何细节，AutoConfig会自动发现所有的properties定义，并提示编辑。</p>
+<h3 id="部署二进制目标文件"><a class="header" href="#部署二进制目标文件">部署二进制目标文件</a></h3>
+<p>部署应用的人（即部署者、deployer）也从中受益。因为deployer不再需要亲手去build源代码，而是从maven repository中取得二进制目标文件即可。</p>
+<p>从这个意义上讲，AutoConfig不应当被看成是一个build时的简单配置工具</p>
+<p>，而是一个“<em>软件安装工具</em>”。如同我们安装一个Windows软件 —— 我们当然不需要从源码开始build它们，而是执行其安装程序，设定一些参数诸如安装目录、文档目录、可选项等。安装程序就会自动把软件设置好，确保软件可正确运行于当前的Windows环境中。</p>
+<h3 id="autoconfig特性列表"><a class="header" href="#autoconfig特性列表">AutoConfig特性列表</a></h3>
+<table><thead><tr><th style="text-align: left">名称</th><th style="text-align: left">描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">两种用法</td><td style="text-align: left">既可独立使用（支持Windows和Unix-like平台）。也可以作为maven插件来使用。</td></tr>
+<tr><td style="text-align: left">对目标文件而不是源文件进行配置</td><td style="text-align: left">可对同一个目标文件反复配置。配置时不依赖于项目源文件。支持嵌套包文件，例如：ear包含war，war又包含jar。高性能，特别对于嵌套的包文件。</td></tr>
+<tr><td style="text-align: left">验证和编辑properties</td><td style="text-align: left">自动发现保存于war包、jar包、ear包中的properties定义。验证properties的正确性。交互式编辑properties。当配置文件中出现未定义的placeholders时，提示报错。</td></tr>
+</tbody></table>
+<h2 id="autoconfig的使用--开发者指南"><a class="header" href="#autoconfig的使用--开发者指南">AutoConfig的使用 —— 开发者指南</a></h2>
+<h3 id="建立autoconfig目录结构"><a class="header" href="#建立autoconfig目录结构">建立AutoConfig目录结构</a></h3>
+<p>和Maven Filtering不同的是，AutoConfig是针对目标文件的配置工具</p>
+<p>因此AutoConfig关心的目录结构是<em>目标文件的目录结构</em></p>
+<p>不同的build工具，创建同一目标目录结构所需要的源文件的目录结构会各有不同。</p>
+<p>本文仅以maven标准目录结构为例，来说明源文件的目录结构编排。</p>
+<h4 id="war包的目录结构"><a class="header" href="#war包的目录结构">WAR包的目录结构</a></h4>
+<p>这里所说的war包，可以是一个以zip方式打包的文件，也可以是一个展开的目录。下面以maven标准目录为例，说明项目源文件和目标文件的目录结构的对比：</p>
+<pre><code>war-project（源目录结构）               -&gt; war-project.war（目标目录结构）
+ │  pom.xml
+ │
+ └─src
+     └─main
+         ├─java
+         ├─resources                    -&gt; /WEB-INF/classes
+         │      file1.xml                      file1.xml
+         │      file2.xml                      file2.xml
+         │
+         └─webapp                       -&gt; /
+             ├─META-INF                 -&gt; /META-INF
+             │  └─autoconf              -&gt; /META-INF/autoconf 
+             │        auto-config.xml          auto-config.xml 
+             │
+             └─WEB-INF                  -&gt; /WEB-INF
+                   web.xml                     web.xml
+                   file3.xml                   file3.xml
+</code></pre>
+<ol>
+<li><em>/META-INF/autoconf</em>目录用来存放AutoConfig的描述文件，以及可选的模板文件。</li>
+<li><code>auto-config.xml</code>是用来指导AutoConfig行为的关键描述文件。</li>
+</ol>
+<p>创建war包的AutoConfig机制，关键在于创建war目标文件中的<code>/META-INF/autoconf/auto-config.xml</code>描述文件。该描述文件对应的maven项目源文件为：<code>/src/main/webapp/META-INF/autoconf/auto-config.xml</code>。</p>
+<h4 id="jar包的目录结构"><a class="header" href="#jar包的目录结构">JAR包的目录结构</a></h4>
+<p>这里所说的jar包，可以是一个以zip方式打包的文件，也可以是一个展开的目录。下面以maven标准目录为例，说明项目源文件和目标文件的目录结构的对比：</p>
+<p><strong>JAR包的源文件和目标文件目录结构</strong></p>
+<pre><code>jar-project（源目录结构）               -&gt; jar-project.jar（目标目录结构）
+ │  pom.xml
+ │
+ └─src
+     └─main
+         ├─java
+         └─resources                    -&gt; /
+             │  file1.xml                      file1.xml
+             │  file2.xml                      file2.xml
+             │
+             └─META-INF                 -&gt; /META-INF
+                 └─autoconf             -&gt; /META-INF/autoconf 
+                       auto-config.xml         auto-config.xml 
+</code></pre>
+<ol>
+<li>/META-INF/autoconf目录用来存放AutoConfig的描述文件，以及可选的模板文件。</li>
+<li>创建jar包的AutoConfig机制，关键在于创建jar目标文件中的<code>/META-INF/autoconf/auto-config.xml</code>描述文件。该描述文件对应的maven项目源文件为：<code>/src/main/resources/META-INF/autoconf/auto-config.xml</code>。</li>
+</ol>
+<h4 id="普通目录"><a class="header" href="#普通目录">普通目录</a></h4>
+<p>AutoConfig也支持对普通文件目录进行配置。</p>
+<pre><code>directory
+ │  file1.xml
+ │  file2.xml
+ │
+ └─conf 
+       auto-config.xml 
+</code></pre>
+<ol>
+<li>默认情况下，AutoConfig在/conf目录中寻找AutoConfig的描述文件，以及可选的模板文件。</li>
+</ol>
+<h3 id="建立auto-configxml描述文件"><a class="header" href="#建立auto-configxml描述文件">建立auto-config.xml描述文件</a></h3>
+<p>AutoConfig系统的核心就是<code>auto-config.xml</code>描述文件。该描述文件中包含两部分内容：</p>
+<ol>
+<li>定义properties：properties的名称、描述、默认值、约束条件等信息；</li>
+<li>指定包含placeholders的模板文件。</li>
+</ol>
+<p>下面是<code>auto-config.xml</code>文件的样子：（以petstore应用为例）</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;config&gt;
+    &lt;group&gt;
+
+        &lt;property name=&quot;petstore.work&quot;
+                    description=&quot;应用程序的工作目录&quot; /&gt; 
+
+        &lt;property name=&quot;petstore.loggingRoot&quot; 
+                    defaultValue=&quot;${petstore.work}/logs&quot;
+                    description=&quot;日志文件目录&quot; /&gt; 
+
+        &lt;property name=&quot;petstore.upload&quot;
+                    defaultValue=&quot;${petstore.work}/upload&quot;
+                    description=&quot;上传文件的目录&quot; /&gt; 
+
+        &lt;property name=&quot;petstore.loggingLevel&quot;
+                    defaultValue=&quot;warn&quot;
+                    description=&quot;日志文件级别&quot;&gt; 
+
+            &lt;validator name=&quot;choice&quot;
+                         choice=&quot;trace, debug, info, warn, error&quot; /&gt; 
+        &lt;/property&gt;
+
+    &lt;/group&gt;
+    &lt;script&gt;
+        &lt;generate template=&quot;WEB-INF/web.xml&quot; /&gt; 
+        &lt;generate template=&quot;WEB-INF/common/resources.xml&quot; /&gt;
+    &lt;/script&gt;
+&lt;/config&gt;
+</code></pre>
+<h4 id="定义properties"><a class="header" href="#定义properties">定义properties</a></h4>
+<pre><code class="language-xml">&lt;property
+    name=&quot;...&quot;
+    [defaultValue=&quot;...&quot;]
+    [description=&quot;...&quot;]
+    [required=&quot;true|false&quot;]
+&gt;
+    &lt;validator name=&quot;...&quot; /&gt;
+    &lt;validator name=&quot;...&quot; /&gt;
+    ...
+&lt;/property&gt;
+</code></pre>
+<p><strong>定义property时可用的参数</strong></p>
+<table><thead><tr><th style="text-align: left">参数名</th><th style="text-align: left">说明</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>name</code></td><td style="text-align: left">Property名称。</td></tr>
+<tr><td style="text-align: left"><code>defaultValue</code>（可选）</td><td style="text-align: left">默认值。默认值中可包含对其它property的引用，如<code>${petstore.work}/logs</code>。</td></tr>
+<tr><td style="text-align: left"><code>description</code>（可选）</td><td style="text-align: left">对字段的描述，这个描述会显示给deployer，这对他理解该property非常重要。</td></tr>
+<tr><td style="text-align: left"><code>required</code>（可选）</td><td style="text-align: left">是否“必填”，默认为<code>true</code>。如果deployer未提供必填项的值，就会报错。</td></tr>
+</tbody></table>
+<p><strong>定义property的验证规则</strong></p>
+<p><strong>可用的property验证规则</strong></p>
+<table><thead><tr><th style="text-align: left">验证规则</th><th style="text-align: left">说明</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>&lt;validator name=&quot;boolean&quot; /&gt;</code></td><td style="text-align: left">Property值必须为<code>true</code>或<code>false</code>。</td></tr>
+<tr><td style="text-align: left"><code>&lt;validator name=&quot;choice&quot;           choice=&quot;trace, debug, info, warn, error&quot; /&gt;</code></td><td style="text-align: left">Property值必须为choice所定义的值之一。</td></tr>
+<tr><td style="text-align: left"><code>&lt;validator** name=&quot;email&quot; /&gt;</code></td><td style="text-align: left">Property值必须为合法的email格式。</td></tr>
+<tr><td style="text-align: left"><code>&lt;validator name=&quot;fileExist&quot;           [file=&quot;WEB-INF/web.xml&quot;] /&gt;</code></td><td style="text-align: left">Property值必须为某个存在的文件或目录。如果指定了file，那就意味着property值所指的目录下，必须存在file所指的文件或子目录。</td></tr>
+<tr><td style="text-align: left"><code>&lt;validator name=&quot;hostExist&quot; /&gt;</code></td><td style="text-align: left">Property值必须为合法的IP地址，或者可以解析得到的域名。</td></tr>
+<tr><td style="text-align: left"><code>&lt;validator name=&quot;keyword&quot; /&gt;</code></td><td style="text-align: left">Property值必须为字母、数字、下划线的组合。</td></tr>
+<tr><td style="text-align: left"><code>&lt;validator name=&quot;number&quot; /&gt;</code></td><td style="text-align: left">Property值必须为数字的组合。</td></tr>
+<tr><td style="text-align: left">`&lt;validator name=&quot;regexp&quot;           regexp=&quot;...&quot;           [mode=&quot;exact</td><td style="text-align: left">prefix</td></tr>
+<tr><td style="text-align: left"><code>&lt;validator name=&quot;url&quot;           [checkHostExist=&quot;false&quot;]           [protocols=&quot;http, https&quot;]           [endsWithSlash=&quot;true&quot;] /&gt;</code></td><td style="text-align: left">Property值必须是合法URL。假如指定了<code>checkHostExist=true</code>，那么还会检查域名或IP的正确性；假如指定了protocols，那么URL的协议必须为其中之一；假如指定了<code>endsWithSlash=true</code>，那么URL必须以/结尾。</td></tr>
+</tbody></table>
+<h4 id="生成配置文件的指令"><a class="header" href="#生成配置文件的指令">生成配置文件的指令</a></h4>
+<p>描述文件中，每个<code>&lt;generate&gt;</code>标签指定了一个包含<em>placeholders</em>的配置文件模板，具体格式为：</p>
+<pre><code>&lt;generate
+    template=&quot;...&quot;
+    [destfile=&quot;...&quot;]
+    [charset=&quot;...&quot;]
+    [outputCharset=&quot;...&quot;]
+&gt;
+</code></pre>
+<p><strong>生成配置文件的指令参数</strong></p>
+<table><thead><tr><th style="text-align: left">参数名</th><th style="text-align: left">说明</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>template</code></td><td style="text-align: left">需要配置的模板名。模板名为相对路径，相对于当前jar/war/ear包的根目录。</td></tr>
+<tr><td style="text-align: left"><code>destfile</code>（可选）</td><td style="text-align: left">目标文件。如不指定，表示目标文件和模板文件相同。</td></tr>
+<tr><td style="text-align: left"><code>charset</code>（可选）</td><td style="text-align: left">模板的字符集编码。XML文件不需要指定<code>charset</code>，因为AutoConfig可以自动取得XML文件的字符集编码；对其它文件必须指定charset。</td></tr>
+<tr><td style="text-align: left"><code>outputCharset</code>（可选）</td><td style="text-align: left">目标文件的输出字符集编码。如不指定，表示和模板charset相同。</td></tr>
+</tbody></table>
+<h3 id="建立模板文件"><a class="header" href="#建立模板文件">建立模板文件</a></h3>
+<h4 id="模板文件的位置"><a class="header" href="#模板文件的位置">模板文件的位置</a></h4>
+<p>定义完<code>auto-config.xml</code>描述文件以后，就可以创建模板了。模板放在哪里呢？举例说明。</p>
+<p>假设在一个典型的WEB应用中，你的<code>auto-config.xml</code>中包含指定了如下模板：</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;config&gt;
+    &lt;group&gt;
+        ...
+    &lt;/group&gt;
+    &lt;script&gt;
+        &lt;generate template=&quot;WEB-INF/classes/file1.xml&quot; /&gt;
+        &lt;generate template=&quot;WEB-INF/classes/file2.xml&quot; /&gt;
+        &lt;generate template=&quot;WEB-INF/file3.xml&quot; /&gt;
+    &lt;/script&gt;
+&lt;/config&gt;
+</code></pre>
+<p>那么，你可以把<code>file1.xml</code>、<code>file2.xml</code>、<code>file3.xml</code>放在下面的位置：</p>
+<pre><code>war-project（源目录结构）               -&gt; war-project.war（目标目录结构）
+ │  pom.xml
+ │
+ └─src
+     └─main
+         ├─java
+         ├─resources                    -&gt; /WEB-INF/classes
+         │     file1.xml                       file1.xml - 建议放在这里
+         │     file2.xml                       file2.xml - 建议放在这里
+         │
+         └─webapp
+             ├─META-INF
+             │  └─autoconf
+             │      │  auto-config.xml
+             │      │
+             │      └─WEB-INF           -&gt; /WEB-INF
+             │          │ file3.xml            file3.xml - 也可以放在这里
+             │          │
+             │          └─classes       -&gt; /WEB-INF/classes
+             │                file1.xml        file1.xml - 也可以放在这里
+             │                file2.xml        file2.xml - 也可以放在这里
+             │
+             └─WEB-INF                  -&gt; /WEB-INF
+                   file3.xml                   file3.xml - 建议放在这里
+</code></pre>
+<p>AutoConfig的寻找模板的逻辑是：</p>
+<ul>
+<li>如果在<code>auto-config.xml</code>所在的目录下发现模板文件，就使用它；</li>
+<li>否则在包的根目录中查找模板文件；如果两处均未找到，则报错。</li>
+</ul>
+<h4 id="模板的写法"><a class="header" href="#模板的写法">模板的写法</a></h4>
+<p>书写模板是很简单的事，你只要：</p>
+<ul>
+<li>把需要配置的点替换成placeholder：“<code>${property.name}</code>”。当然，你得确保property.name被定义在<code>auto-config.xml</code>中。</li>
+<li>假如模板中包含<em>不希望被替换的</em>运行时的placeholder“<em><code>$</code></em><code>{...}</code>”，需要更改成“<em><code>${D}</code></em><code>{...}</code>” 。</li>
+</ul>
+<pre><code class="language-xml">...
+&lt;context-param&gt;
+    &lt;param-name&gt;loggingRoot&lt;/param-name&gt;
+    &lt;param-value&gt;${petstore.loggingRoot}&lt;/param-value&gt;
+&lt;/context-param&gt;
+&lt;context-param&gt;
+    &lt;param-name&gt;loggingLevel&lt;/param-name&gt;
+    &lt;param-value&gt;${petstore.loggingLevel}&lt;/param-value&gt;
+&lt;/context-param&gt;
+...
+${D}{runtime.placeholder}
+</code></pre>
+<p>此外，AutoConfig模板其实是由Velocity模板引擎来渲染的。因此，所有的placeholder必须能够通过velocity的语法。</p>
+<p><strong>使用不符合velocity语法的placeholders</strong></p>
+<p>例如，下面的placeholder被velocity看作非法：</p>
+<pre><code>${my.property.2}
+</code></pre>
+<p>解决的办法是，改写成如下样式：</p>
+<pre><code>${my_property_2}
+</code></pre>
+<h2 id="autoconfig的使用--部署者指南"><a class="header" href="#autoconfig的使用--部署者指南">AutoConfig的使用 —— 部署者指南</a></h2>
+<p>部署者有两种方法可以使用AutoConfig：</p>
+<ul>
+<li>在命令行上直接运行。</li>
+<li>在maven中调用AutoConfig plugin。</li>
+</ul>
+<h3 id="在命令行中使用autoconfig"><a class="header" href="#在命令行中使用autoconfig">在命令行中使用AutoConfig</a></h3>
+<h4 id="取得可执行文件"><a class="header" href="#取得可执行文件">取得可执行文件</a></h4>
+<p>AutoConfig提供了Windows以及Unix-like（Linux、Mac OS等）等平台上均可使用的native可执行程序。可执行程序文件被发布在Maven repository中。</p>
+<p>如果你已经配置好了maven，那么可以让maven来帮你下载目标文件。</p>
+<p><strong>例 13.12. 让maven帮忙下载AutoConfig可执行文件</strong></p>
+<p>请创建一个临时文件：<code>pom.xml</code>。</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;&gt;
+    &lt;parent&gt;
+        &lt;groupId&gt;com.alibaba.citrus.tool&lt;/groupId&gt;
+        &lt;artifactId&gt;antx-parent&lt;/artifactId&gt;
+        &lt;version&gt;1.2&lt;/version&gt; 
+    &lt;/parent&gt;
+    &lt;modelVersion&gt;4.0.0&lt;/modelVersion&gt;
+    &lt;artifactId&gt;temp&lt;/artifactId&gt;
+&lt;/project&gt;
+</code></pre>
+<p>文件中的parent pom的版本号（1.2）决定了你要取得的AutoConfig的版本号。</p>
+<p>然后在命令行上执行如下命令：</p>
+<pre><code>mvn dependency:copy
+</code></pre>
+<p>这样就取得了两个文件：</p>
+<ul>
+<li><code>autoconfig-1.2.tgz</code></li>
+<li><code>autoexpand-1.2.tgz</code> - AutoExpand是另一个小工具。它是用来展开war、jar、ear包的。关于AutoExpand的详情，请见<a href="https://jjm2473.github.io/citrus-doc/autoexpand.html">第 14 章 <em>AutoExpand工具使用指南</em></a>。</li>
+</ul>
+<p>你也可以直接去maven repository中手工下载以上两个包：</p>
+<ul>
+<li>http://repo1.maven.org/maven2/com/alibaba/citrus/tool/antx-autoconfig/1.2/antx-autoconfig-1.2.tgz</li>
+<li>http://repo1.maven.org/maven2/com/alibaba/citrus/tool/antx-autoexpand/1.2/antx-autoexpand-1.2.tgz</li>
+</ul>
+<p>取得压缩包以后，可以用下面的命令来展开并安装工具。</p>
+<p><strong>展开并安装工具</strong></p>
+<table><thead><tr><th style="text-align: left">Unix-like系统</th><th style="text-align: left">Windows系统</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>tar zxvf autoconfig-1.2.tgz tar zxvf autoexpand-1.2.tgz cp autoconfig /usr/local/bin cp autoexpand /usr/local/bin</code></td><td style="text-align: left"><code>tar zxvf autoconfig-1.2.tgz tar zxvf autoexpand-1.2.tgz copy autoconfig.exe c:\windows\system32 copy autoexpand.exe c:\windows\system32</code></td></tr>
+</tbody></table>
+<h4 id="执行autoconfig命令"><a class="header" href="#执行autoconfig命令">执行AutoConfig命令</a></h4>
+<p>取得可执行文件以后，就可以试用一下：在命令行上输入<strong>autoconfig</strong>。不带参数的<strong>autoconfig</strong>命令会显示出如下帮助信息。</p>
+<p><strong>例 13.13. AutoConfig的帮助信息</strong></p>
+<pre><code>$ autoconfig
+Detected system charset encoding: UTF-8
+If your can't read the following text, specify correct one like this: 
+  autoconfig -c mycharset
+
+使用方法：autoconfig [可选参数] [目录名|包文件名]
+                
+可选参数：
+ -c,--charset                输入/输出编码字符集
+ -d,--include-descriptors
+                             包含哪些配置描述文件，例如：conf/auto-config.xml，可使用*、**、?通配符，如有多项，用逗号分隔
+ -D,--exclude-descriptors    排除哪些配置描述文件，可使用*、**、?通配符，如有多项，用逗号分隔
+ -g,--gui                    图形用户界面（交互模式）
+ -h,--help                   显示帮助信息
+ -i,--interactive            交互模式：auto|on|off，默认为auto，无参数表示on
+ -I,--non-interactive        非交互模式，相当于--interactive=off
+ -n,--shared-props-name      共享的属性文件的名称
+ -o,--output                 输出文件名或目录名
+ -P,--exclude-packages       排除哪些打包文件，可使用*、**、?通配符，如有多项，用逗号分隔
+ -p,--include-packages
+                             包含哪些打包文件，例如：target/*.war，可使用*、**、?通配符，如有多项，用逗号分隔
+ -s,--shared-props           共享的属性文件URL列表，以逗号分隔
+ -T,--type                   文件类型，例如：war, jar, ear等
+ -t,--text                   文本用户界面（交互模式）
+ -u,--userprop               用户属性文件
+ -v,--verbose                显示更多信息
+
+总耗费时间：546毫秒
+</code></pre>
+<p><strong>最简单的AutoConfig命令</strong></p>
+<pre><code>autoconfig petstore.war
+</code></pre>
+<p>无论<code>petstore.war</code>是一个zip包还是目录，AutoConfig都会正确地生成其中的配置文件。</p>
+<h3 id="在maven中使用autoconfig"><a class="header" href="#在maven中使用autoconfig">在maven中使用AutoConfig</a></h3>
+<p>AutoConfig也可以通过maven plugin来执行。</p>
+<p>这种方式使用方式，方便了开发者试运行并测试应用程序。开发者可以在build项目的同时，把AutoConfig也配置好。然而对于非开发的应用测试人员、发布应用的系统管理员来说，最好的方法是使用独立可执行的AutoConfig来配置应用的二进制目标文件。</p>
+<p>为了使用maven插件，你需要修改项目的<code>pom.xml</code>来设定它。请注意，一般来说，不要在parent <code>pom.xml</code>中设定AutoConfig，因为这个设置会作用在每个子项目上，导致不必要的AutoConfig执行。只在生成最终目标文件的子项目<code>pom.xml</code>中设定AutoConfig就可以了。例如，对于一个web项目，你可以在生成war包的子项目上设置AutoConfig plugin。</p>
+<p><strong>在pom.xml中设定AutoConfig plugin</strong></p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;project xmlns=&quot;http://maven.apache.org/POM/4.0.0&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xsi:schemaLocation=&quot;http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd&quot;&gt;
+    ...
+    &lt;properties&gt;
+        ...
+        &lt;!-- 定义autoconfig的版本，建议将此行写在parent pom.xml中。 --&gt;
+        &lt;autoconfig-plugin-version&gt;1.2&lt;/autoconfig-plugin-version&gt;
+    &lt;/properties&gt;
+    ...
+    &lt;build&gt;
+        &lt;plugins&gt;
+            &lt;plugin&gt;
+                &lt;groupId&gt;com.alibaba.citrus.tool&lt;/groupId&gt;
+                &lt;artifactId&gt;autoconfig-maven-plugin&lt;/artifactId&gt;
+                &lt;version&gt;${autoconfig-plugin-version}&lt;/version&gt;
+                &lt;configuration&gt;
+                    &lt;!-- 要进行AutoConfig的目标文件，默认为${project.artifact.file}。 
+                    &lt;dest&gt;${project.artifact.file}&lt;/dest&gt;
+                    --&gt;
+                    &lt;!-- 配置后，是否展开目标文件，默认为false，不展开。 
+                    &lt;exploding&gt;true&lt;/exploding&gt;
+                    --&gt;
+                    &lt;!-- 展开到指定目录，默认为${project.build.directory}/${project.build.finalName}。 
+                    &lt;explodedDirectory&gt;
+                        ${project.build.directory}/${project.build.finalName}
+                    &lt;/explodedDirectory&gt;
+                    --&gt;
+                &lt;/configuration&gt;
+                &lt;executions&gt;
+                    &lt;execution&gt;
+                        &lt;phase&gt;package&lt;/phase&gt;
+                        &lt;goals&gt;
+                            &lt;goal&gt;autoconfig&lt;/goal&gt;
+                        &lt;/goals&gt;
+                    &lt;/execution&gt;
+                &lt;/executions&gt;
+            &lt;/plugin&gt;
+        &lt;/plugins&gt;
+    &lt;/build&gt;
+&lt;/project&gt;
+</code></pre>
+<p>这样，每次执行<code>mvn package</code>或者<code>mvn install</code>时，都会激活AutoConfig，对package目标文件进行配置。</p>
+<p>想要避免AutoConfig，只需要一个额外的命令行参数：</p>
+<p><strong>避免执行AutoConfig</strong></p>
+<pre><code>mvn install –Dautoconfig.skip
+</code></pre>
+<h3 id="运行并观察autoconfig的结果"><a class="header" href="#运行并观察autoconfig的结果">运行并观察AutoConfig的结果</a></h3>
+<p>第一次执行AutoConfig，无论通过何种方式（独立命令行或maven插件），</p>
+<p>AutoConfig都会提示你修改user properties文件，以提供所需要的properties值。</p>
+<p>AutoConfig提供了一套基于文本的交互式界面来编辑这些properties。</p>
+<p><strong>交互式编辑properties</strong></p>
+<pre><code>╭───────────────────────┈┈┈┈
+│
+│ 您的配置文件需要被更新：
+│
+│ file:/.../antx.properties
+│
+│ 这个文件包括了您个人的特殊设置，
+│ 包括服务器端口、您的邮件地址等内容。
+│
+└───────┈┈┈┈┈┈┈┈┈┈┈
+
+ 如果不更新此文件，可能会导致配置文件的内容不完整。
+ 您需要现在更新此文件吗? [Yes][No] y
+</code></pre>
+<p>当你通过交互式界面填写了所有properties的值，并通过了AutoConfig的验证以后，AutoConfig就开始生成配置文件：</p>
+<pre><code>即将保存到文件&quot;file:/.../antx.properties&quot;中, 确定? [Yes][No] y
+
+╭───────────────────────┈┈┈┈
+│ 保存文件 file:/.../antx.properties...
+│┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈┈
+│petstore.loggingLevel  = warn
+│petstore.loggingRoot   = ${petstore.work}/logs
+│petstore.upload        = ${petstore.work}/upload
+│petstore.work          = /tmp
+└───────┈┈┈┈┈┈┈┈┈┈┈
+ 已保存至文件: file:/.../antx.properties
+Loading file:/.../antx.properties
+&lt;jar:file:/.../Work/my/apps/petstore-webx3/target/petstore.war!/&gt;
+    Generating WEB-INF/web.xml [UTF-8] =&gt; WEB-INF/web.xml [UTF-8]
+
+&lt;jar:file:/.../Work/my/apps/petstore-webx3/target/petstore.war!/&gt;
+    Generating WEB-INF/common/resources.xml [UTF-8] =&gt; WEB-INF/common/resources.xml [UTF-8]
+
+&lt;jar:file:/.../Work/my/apps/petstore-webx3/target/petstore.war!/&gt;
+    Generating log file: META-INF/autoconf/auto-config.xml.log
+
+Expanding: /.../Work/my/apps/petstore-webx3/target/petstore.war
+       To: /.../Work/my/apps/petstore-webx3/target/petstore
+done.
+</code></pre>
+<p>假如发现模板中某个placeholder，并未在<code>auto-config.xml</code>中定义，就会出现以下错误：</p>
+<pre><code>ERROR - Undefined placeholders found in template:
+- Template:   META-INF/autoconf/WEB-INF/web.xml
+- Descriptor: META-INF/autoconf/auto-config.xml
+- Base URL:   file:/.../Work/my/apps/petstore-webx3/target/petstore/
+---------------------------------------------------------------
+-&gt; petstore.loggingRoot
+---------------------------------------------------------------
+</code></pre>
+<p>出现错误以后，Maven会报错，并停止build过程。假如你不希望maven停止，可以用下面的命令来执行maven：</p>
+<p><strong>避免maven因为placeholder未定义而停止</strong></p>
+<pre><code>mvn ... –Dautoconfig.strict=false
+</code></pre>
+<p>AutoConfig会生成一个日志文件，就在<code>auto-config.xml</code>所在的目录下，名字为：<code>auto-config.xml.log</code>。</p>
+<p><strong>AutoConfig所生成的日志文件</strong></p>
+<pre><code>Last Configured at: Fri Jun 18 13:54:22 CST 2010
+
+Base URL: file:/.../Work/my/apps/petstore-webx3/target/petstore/
+Descriptor: META-INF/autoconf/auto-config.xml
+
+Generating META-INF/autoconf/WEB-INF/web.xml [UTF-8] =&gt; WEB-INF/web.xml [UTF-8]
+Generating META-INF/autoconf/WEB-INF/common/resources.xml [UTF-8] =&gt; WEB-INF/common/resources.xml [UTF-8]
+</code></pre>
+<p>最后，让我们查看一下AutoConfig所生成的文件，其中所有的placeholders应当被替换成你所提供的值了。</p>
+<p><strong>AutoConfig生成的结果</strong></p>
+<pre><code>...
+&lt;context-param&gt;
+    &lt;param-name&gt;loggingRoot&lt;/param-name&gt;
+    &lt;param-value&gt;/tmp/logs&lt;/param-value&gt;
+&lt;/context-param&gt;
+&lt;context-param&gt;
+    &lt;param-name&gt;loggingLevel&lt;/param-name&gt;
+    &lt;param-value&gt;warn&lt;/param-value&gt;
+&lt;/context-param&gt;
+...
+${runtime.placeholder}
+</code></pre>
+<h3 id="共享properties文件"><a class="header" href="#共享properties文件">共享properties文件</a></h3>
+<p>当需要配置的内容越来越多时，即使使用AutoConfig这样的机制，也会变得不胜其烦。</p>
+<p>假如你的项目包含了好几个模块，而你只负责其中的一个模块。</p>
+<p>一般来说，你对其它模块的配置是什么并不清楚，事实上你也懒得去关心。</p>
+<p>但是你为了运行这个项目，你不得不去配置这些模块。</p>
+<p>假如模块A就是一个你不想关心的模块，但为了运行它，你需要告诉模块A一些参数：数据库连接的参数、域名、端口、文件目录、搜索引擎……可你并不清楚这些参数应该取什么值。</p>
+<p>好在AutoConfig提供了一个共享properties文件的方法。</p>
+<p><strong>共享的properties文件</strong></p>
+<p>你可以创建一系列文件：<code>module-a-db.properites</code>，<code>module-a-searchengine.properties</code>等等。每个文件中都包含了某个运行环境中的关于module A模块的配置参数。</p>
+<p>现在，你可以不关心module A了！你只要使用下面的命令：</p>
+<p><code>-s</code>参数代表“共享的properties文件”。</p>
+<pre><code>autoconfig -s module-a-db.properties,module-a-searchengine.properties ……
+</code></pre>
+<p>同时，你的<code>antx.properties</code>也被简化了，因为这里只会保存你定义的配置项，而不会包含共享的配置项。</p>
+<h3 id="共享整个目录"><a class="header" href="#共享整个目录">共享整个目录</a></h3>
+<p>假如共享的文件很多的话，AutoConfig还有一个贴心的功能，你可以把这些文件按目录来组织：</p>
+<pre><code>shared-properties/
+ ├─test/                                 // 测试环境的共享配置
+ │    module-a-db.properties
+ │    module-a-searchengine.properties
+ │    module-b.properties
+ └─prod/                                 // 生产环境的共享配置
+       module-a-db.properties
+       module-a-searchengine.properties
+       module-b.properties
+</code></pre>
+<p>然后，你可以直接在AutoConfig中引用目录：</p>
+<pre><code>autoconfig -s shared-propertes/test/ ……
+</code></pre>
+<p>AutoConfig就会为你装载这个目录下的所有共享配置文件。（注意，<em>目录必须以斜杠“/”结尾</em>）</p>
+<h4 id="将共享目录放在httphttps或ssh服务器上"><a class="header" href="#将共享目录放在httphttps或ssh服务器上">将共享目录放在http、https或ssh服务器上</a></h4>
+<p>AutoConfig还支持从http、https或ssh服务器上取得共享配置文件，只需要将前面例子中的文件名改成http或ssh的URI就可以了：</p>
+<pre><code>autoconfig -s http://share.alibaba.com/shared-propertes/test/ ……
+autoconfig -s http://myname@share.alibaba.com/shared-propertes/test/ ……
+autoconfig -s https://share.alibaba.com/shared-propertes/test/ ……
+autoconfig -s https://myname@share.alibaba.com/shared-propertes/test/ ……
+autoconfig -s ssh://myname@share.alibaba.com/shared-propertes/test/ ……
+</code></pre>
+<p>由于Subversion、Git服务器是支持HTTP/HTTPS协议的，因此将properties文件存放在Subversion或Git服务器上，也是一个极好的办法。由于采用了Subversion或Git，properties文件的版本管理问题也被一举解决了。</p>
+<p>需要注意的是，访问http和ssh有可能需要验证用户和密码。当需要验证时，AutoConfig会提示你输入用户名和密码。输入以后，密码将被保存在*<code>$HOME/passwd.autoconfig</code>*文件中，以后就不需要重复提问了。</p>
+<h4 id="在多种配置项中切换"><a class="header" href="#在多种配置项中切换">在多种配置项中切换</a></h4>
+<p>当你使用前文所述的<code>autoconfig –s</code>命令来生成<code>antx.properties</code>文件时，你会发现<code>antx.properties</code>中增加了几行特别的内容：</p>
+<p><strong>包含共享文件、目录信息的<code>antx.properties</code>文件</strong></p>
+<pre><code>antx.properties.default  = http://share.alibaba.com/shared-propertes/test/
+</code></pre>
+<p>如果你在<code>-s</code>参数中指定了多项共享properties文件或目录，那么<code>antx.properties</code>中将会这样：</p>
+<pre><code>antx.properties.default.1  = http://share.alibaba.com/shared-propertes/test/
+antx.properties.default.2  = file:/shared-properties/test/my-1.properites
+antx.properties.default.3  = file:/shared-properties/test/my-2.properites
+</code></pre>
+<p>事实上，AutoConfig还支持多组共享配置，请试用下面的命令：</p>
+<p><strong>使用多组共享配置</strong></p>
+<pre><code>autoconfig -s http://share.alibaba.com/shared-propertes/test/ -n test ……
+</code></pre>
+<p>为当前共享配置定义一个名字，以后可以用这个名字来简化命令。</p>
+<p>antx.properties就会是这个样子：</p>
+<pre><code>antx.properties = test
+antx.properties.test = http://share.alibaba.com/shared-propertes/test/
+</code></pre>
+<pre><code>autoconfig -s http://share.alibaba.com/shared-propertes/prod/ -n prod ……
+</code></pre>
+<p>antx.properties就会变成这个样子：</p>
+<pre><code>antx.properties = prod
+antx.properties.test = http://share.alibaba.com/shared-propertes/test/
+antx.properties.prod = http://share.alibaba.com/shared-propertes/prod/
+</code></pre>
+<p>以后再执行，就不需要再指定<code>-s</code>参数了，只需用<code>-n</code>参数选择一组共享properties文件即可。例如：</p>
+<pre><code>autoconfig -n prod ……                      // 使用prod生产环境的参数
+autoconfig -n test ……                      // 使用test测试环境的参数
+autoconfig  ……                             // 不指定，则使用最近一次所选择的共享文件
+</code></pre>
+<h3 id="autoconfig常用命令"><a class="header" href="#autoconfig常用命令">AutoConfig常用命令</a></h3>
+<p>下面罗列了AutoConfig的常用的命令及参数：</p>
+<h4 id="指定交互式界面的charset"><a class="header" href="#指定交互式界面的charset">指定交互式界面的charset</a></h4>
+<p>一般不需要特别指定charset，除非AutoConfig自动识别系统编码出错，导致显示乱码。</p>
+<pre><code>运行AutoConfig独立可执行程序	
+autoconfig ... -c GBK
+运行AutoConfig maven插件	
+mvn ... -Dautoconfig.charset=GBK
+
+
+</code></pre>
+<h4 id="指定交互模式"><a class="header" href="#指定交互模式">指定交互模式</a></h4>
+<p>默认情况下，交互模式为自动（auto）。仅当user properties中的值不满足auto-config.xml中的定义时，才会交互式地引导用户提供properties值。</p>
+<p>但你可以强制打开交互模式：</p>
+<pre><code>运行AutoConfig独立可执行程序	
+autoconfig ... –i
+autoconfig ... –i on
+</code></pre>
+<pre><code>运行AutoConfig maven插件	
+mvn ... -Dautoconfig.interactive
+mvn ...  -Dautoconfig.interactive=true
+</code></pre>
+<p>或强制关闭交互模式：</p>
+<pre><code>运行AutoConfig独立可执行程序	
+autoconfig ... –I
+autoconfig ... –i off
+运行AutoConfig maven插件	
+mvn ...  -Dautoconfig.interactive=false
+</code></pre>
+<h4 id="指定user-properties"><a class="header" href="#指定user-properties">指定user properties</a></h4>
+<p>默认情况下，AutoConfig会按下列顺序查找user properties：</p>
+<ol>
+<li><code>当前目录/antx.properties</code></li>
+<li><code>当前用户HOME目录/antx.properties</code></li>
+</ol>
+<p>但你可以指定一个自己的properties文件，用下面的命令：</p>
+<pre><code>运行AutoConfig独立可执行程序	
+autoconfig ... –u my.props
+运行AutoConfig maven插件	
+mvn ... -Dautoconfig.userProperties=my.props
+</code></pre>
+<h4 id="指定输出文件"><a class="header" href="#指定输出文件">指定输出文件</a></h4>
+<p>默认情况下，AutoConfig所生成的配置文件以及日志信息会直接输出到当前包文件或目录中。例如以下命令会改变<code>petstore.war</code>的内容：</p>
+<pre><code>autoconfig petstore.war
+</code></pre>
+<p>但你可以指定另一个输出文件或目录，这样，原来的文件或目录就不会被修改：</p>
+<pre><code>运行AutoConfig独立可执行程序	
+autoconfig petstore.war –o petstore-configured.war
+运行AutoConfig maven插件	不适用
+</code></pre>
+<h4 id="避免执行autoconfig"><a class="header" href="#避免执行autoconfig">避免执行AutoConfig</a></h4>
+<p>将AutoConfig和maven package phase绑定以后，每次build都会激活AutoConfig。假如你想跳过这一步，只需要下面的命令：</p>
+<pre><code>mvn ... -Dautoconfig.skip
+</code></pre>
+<h4 id="避免中断maven-build"><a class="header" href="#避免中断maven-build">避免中断maven build</a></h4>
+<pre><code>mvn ... -Dautoconfig.strict=false
+</code></pre>
+<p>AutoConfig是一个简单而有用的小工具，弥补了Maven Filtering及类似机制的不足。但它还有不少改进的余地。</p>
+<ul>
+<li>界面不够直观。如果能够通过GUI或WEB界面来配置，就更好了。</li>
+<li>Properties validator目前不易扩展。</li>
+<li>缺少集成环境的支持。</li>
+</ul>
+<p><a href="https://jjm2473.github.io/citrus-doc/autoconfig.html">COPY LINK</a></p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../CICD/maven/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../CICD/maven/MavenArcheType.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../CICD/maven/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../CICD/maven/MavenArcheType.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

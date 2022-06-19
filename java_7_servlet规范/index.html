@@ -1,0 +1,1052 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>servlet规范 - note</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../index.html">我的笔记库</a></li><li class="chapter-item affix "><li class="part-title">spring</li><li class="chapter-item "><div><strong aria-hidden="true">1.</strong> spring</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/0.spring容器启动总览.html"><strong aria-hidden="true">1.1.</strong> spring容器启动总览</a></li><li class="chapter-item "><a href="../spring_1_spring/1.spring容器启动-bean实例化流程.html"><strong aria-hidden="true">1.2.</strong> spring容器启动-bean实例化流程</a></li><li class="chapter-item "><a href="../spring_1_spring/2.SpringBean实例化过程.html"><strong aria-hidden="true">1.3.</strong> SpringBean实例化过程</a></li><li class="chapter-item "><a href="../spring_1_spring/3.Spring依赖注入与初始化.html"><strong aria-hidden="true">1.4.</strong> Spring依赖注入与初始化</a></li><li class="chapter-item "><a href="../spring_1_spring/4.SpringBean的生命周期.html"><strong aria-hidden="true">1.5.</strong> SpringBean的生命周期</a></li><li class="chapter-item "><a href="../spring_1_spring/5.SpringSchedule.html"><strong aria-hidden="true">1.6.</strong> SpringSchedule</a></li><li class="chapter-item "><a href="../spring_1_spring/ClassPathScanningCandidateComponentProvider.html"><strong aria-hidden="true">1.7.</strong> ClassPathScanningCandidateComponentProvider</a></li><li class="chapter-item "><a href="../spring_1_spring/PropertySource.html"><strong aria-hidden="true">1.8.</strong> PropertySource</a></li><li class="chapter-item "><a href="../spring_1_spring/Spring总结.html"><strong aria-hidden="true">1.9.</strong> Spring总结</a></li><li class="chapter-item "><a href="../spring_1_spring/applicationContext与BeanFactory的区别.html"><strong aria-hidden="true">1.10.</strong> applicationContext与BeanFactory的区别</a></li><li class="chapter-item "><a href="../spring_1_spring/spring杂项.html"><strong aria-hidden="true">1.11.</strong> spring杂项</a></li><li class="chapter-item "><a href="../spring_1_spring/spring组合注解.html"><strong aria-hidden="true">1.12.</strong> spring组合注解</a></li><li class="chapter-item "><a href="../spring_1_spring/spring解决循环依赖问题.html"><strong aria-hidden="true">1.13.</strong> spring解决循环依赖问题</a></li><li class="chapter-item "><a href="../spring_1_spring/postprocessor/index.html"><strong aria-hidden="true">1.14.</strong> postprocessor</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/index.html"><strong aria-hidden="true">1.15.</strong> spring-aop</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop-cglib动态代理.html"><strong aria-hidden="true">1.15.1.</strong> SpringAop-cglib动态代理</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop-jdk动态代理.html"><strong aria-hidden="true">1.15.2.</strong> SpringAop-jdk动态代理</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop-涉及到的类.html"><strong aria-hidden="true">1.15.3.</strong> SpringAop-涉及到的类</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop-编程式代理.html"><strong aria-hidden="true">1.15.4.</strong> SpringAop-编程式代理</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop-自动代理.html"><strong aria-hidden="true">1.15.5.</strong> SpringAop-自动代理</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop总结.html"><strong aria-hidden="true">1.15.6.</strong> SpringAop总结</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/aop包解析.html"><strong aria-hidden="true">1.15.7.</strong> aop包解析</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/taskList.html"><strong aria-hidden="true">1.15.8.</strong> taskList</a></li><li class="chapter-item "><div><strong aria-hidden="true">1.15.9.</strong> AOP应用解析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/spring-aop/AOP应用解析/Async异步.html"><strong aria-hidden="true">1.15.9.1.</strong> Async异步</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/AOP应用解析/依赖懒加载.html"><strong aria-hidden="true">1.15.9.2.</strong> 依赖懒加载</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/AOP应用解析/缓存.html"><strong aria-hidden="true">1.15.9.3.</strong> 缓存</a></li></ol></li></ol></li><li class="chapter-item "><a href="../spring_1_spring/spring-bean定义/index.html"><strong aria-hidden="true">1.16.</strong> spring-bean定义</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/spring-bean定义/Bean定义.html"><strong aria-hidden="true">1.16.1.</strong> Bean定义</a></li></ol></li><li class="chapter-item "><a href="../spring_1_spring/springBeanScope/index.html"><strong aria-hidden="true">1.17.</strong> springBeanScope</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/springBeanScope/spring自定义可刷新的上下文.html"><strong aria-hidden="true">1.17.1.</strong> spring自定义可刷新的上下文</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">1.18.</strong> springframework</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/springframework/MessageSource.html"><strong aria-hidden="true">1.18.1.</strong> MessageSource</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/spring-ioc.html"><strong aria-hidden="true">1.18.2.</strong> spring-ioc</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/springEL.html"><strong aria-hidden="true">1.18.3.</strong> springEL</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/spring代理.html"><strong aria-hidden="true">1.18.4.</strong> spring代理</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/基于Ant的路径匹配.html"><strong aria-hidden="true">1.18.5.</strong> 基于Ant的路径匹配</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/字段格式化.html"><strong aria-hidden="true">1.18.6.</strong> 字段格式化</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/属性源抽象.html"><strong aria-hidden="true">1.18.7.</strong> 属性源抽象</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/类型转换.html"><strong aria-hidden="true">1.18.8.</strong> 类型转换</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/资源抽象.html"><strong aria-hidden="true">1.18.9.</strong> 资源抽象</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/配置全局日期格式化.html"><strong aria-hidden="true">1.18.10.</strong> 配置全局日期格式化</a></li></ol></li><li class="chapter-item "><a href="../spring_1_spring/编程式注入类/index.html"><strong aria-hidden="true">1.19.</strong> 编程式注入类</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/编程式注入类/AOP代理相关.html"><strong aria-hidden="true">1.19.1.</strong> AOP代理相关</a></li></ol></li></ol></li><li class="chapter-item "><a href="../spring_2_springMVC/index.html"><strong aria-hidden="true">2.</strong> springMVC</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_2_springMVC/URI_Links.html"><strong aria-hidden="true">2.1.</strong> URI_Links</a></li><li class="chapter-item "><a href="../spring_2_springMVC/functional_endpoints.html"><strong aria-hidden="true">2.2.</strong> functional_endpoints</a></li><li class="chapter-item "><a href="../spring_2_springMVC/mvcannotation-driven注解的作用.html"><strong aria-hidden="true">2.3.</strong> mvcannotation-driven注解的作用</a></li><li class="chapter-item "><a href="../spring_2_springMVC/spring-mvc.html"><strong aria-hidden="true">2.4.</strong> spring-mvc</a></li><li class="chapter-item "><a href="../spring_2_springMVC/springMVC自定义参数解析注解.html"><strong aria-hidden="true">2.5.</strong> springMVC自定义参数解析注解</a></li><li class="chapter-item "><a href="../spring_2_springMVC/springMVC路径映射.html"><strong aria-hidden="true">2.6.</strong> springMVC路径映射</a></li><li class="chapter-item "><a href="../spring_2_springMVC/springMVC返回后.html"><strong aria-hidden="true">2.7.</strong> springMVC返回后</a></li><li class="chapter-item "><a href="../spring_2_springMVC/springMvcController配置.html"><strong aria-hidden="true">2.8.</strong> springMvcController配置</a></li><li class="chapter-item "><a href="../spring_2_springMVC/内置四种filters.html"><strong aria-hidden="true">2.9.</strong> 内置四种filters</a></li><li class="chapter-item "><a href="../spring_2_springMVC/基于注解的控制器.html"><strong aria-hidden="true">2.10.</strong> 基于注解的控制器</a></li><li class="chapter-item "><div><strong aria-hidden="true">2.11.</strong> spring_1_spring</div></li></ol></li><li class="chapter-item "><a href="../spring_3_springboot/index.html"><strong aria-hidden="true">3.</strong> springboot</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_3_springboot/springBoot资源处理.html"><strong aria-hidden="true">3.1.</strong> springBoot资源处理</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-HiKariCP连接池动态数据源配置.html"><strong aria-hidden="true">3.2.</strong> springboot-HiKariCP连接池动态数据源配置</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-devtools.html"><strong aria-hidden="true">3.3.</strong> springboot-devtools</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-元数据.html"><strong aria-hidden="true">3.4.</strong> springboot-元数据</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-多模块.html"><strong aria-hidden="true">3.5.</strong> springboot-多模块</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-日志.html"><strong aria-hidden="true">3.6.</strong> springboot-日志</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-自动配置原理.html"><strong aria-hidden="true">3.7.</strong> springboot-自动配置原理</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-过滤器.html"><strong aria-hidden="true">3.8.</strong> springboot-过滤器</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-配置文件与jar分离.html"><strong aria-hidden="true">3.9.</strong> springboot-配置文件与jar分离</a></li><li class="chapter-item "><a href="../spring_3_springboot/快速入门.html"><strong aria-hidden="true">3.10.</strong> 快速入门</a></li><li class="chapter-item "><a href="../spring_3_springboot/自定义springBootStarter.html"><strong aria-hidden="true">3.11.</strong> 自定义springBootStarter</a></li><li class="chapter-item "><div><strong aria-hidden="true">3.12.</strong> springboot配置文件加载</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_3_springboot/springboot配置文件加载/propertySource原理.html"><strong aria-hidden="true">3.12.1.</strong> propertySource原理</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot配置文件加载/默认加载原则.html"><strong aria-hidden="true">3.12.2.</strong> 默认加载原则</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.13.</strong> 官方文档</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_3_springboot/官方文档/SpringApplication.html"><strong aria-hidden="true">3.13.1.</strong> SpringApplication</a></li></ol></li></ol></li><li class="chapter-item "><a href="../spring_4_springSecurity/index.html"><strong aria-hidden="true">4.</strong> springSecurity</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_4_springSecurity/spring核心逻辑.html"><strong aria-hidden="true">4.1.</strong> spring核心逻辑</a></li></ol></li><li class="chapter-item "><a href="../spring_5_springWebFlux/index.html"><strong aria-hidden="true">5.</strong> springWebFlux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_5_springWebFlux/CoreFeatures.html"><strong aria-hidden="true">5.1.</strong> CoreFeatures</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/DispatcherHandler.html"><strong aria-hidden="true">5.2.</strong> DispatcherHandler</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/FunctionEndpoint.html"><strong aria-hidden="true">5.3.</strong> FunctionEndpoint</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/URILinks.html"><strong aria-hidden="true">5.4.</strong> URILinks</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/WebFluxConfig.html"><strong aria-hidden="true">5.5.</strong> WebFluxConfig</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/taskList.html"><strong aria-hidden="true">5.6.</strong> taskList</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/基于注解的控制器/index.html"><strong aria-hidden="true">5.7.</strong> 基于注解的控制器</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_5_springWebFlux/基于注解的控制器/HandlerMethod.html"><strong aria-hidden="true">5.7.1.</strong> HandlerMethod</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/基于注解的控制器/RequestMapping.html"><strong aria-hidden="true">5.7.2.</strong> RequestMapping</a></li></ol></li><li class="chapter-item "><a href="../spring_5_springWebFlux/源码分析/index.html"><strong aria-hidden="true">5.8.</strong> 源码分析</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_5_springWebFlux/源码分析/springBoot创建WebFlux分析.html"><strong aria-hidden="true">5.8.1.</strong> springBoot创建WebFlux分析</a></li></ol></li></ol></li><li class="chapter-item "><a href="../spring_6_springCloud/index.html"><strong aria-hidden="true">6.</strong> springCloud</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">6.1.</strong> 服务注册与发现</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_6_springCloud/服务注册与发现/nacos/index.html"><strong aria-hidden="true">6.1.1.</strong> nacos</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_6_springCloud/服务注册与发现/nacos/nacos-with-spring.html"><strong aria-hidden="true">6.1.1.1.</strong> nacos-with-spring</a></li><li class="chapter-item "><a href="../spring_6_springCloud/服务注册与发现/nacos/nacos-with-spring-clound.html"><strong aria-hidden="true">6.1.1.2.</strong> nacos-with-spring-clound</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.2.</strong> 服务消费</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_6_springCloud/服务消费/Ribbon与Feign/index.html"><strong aria-hidden="true">6.2.1.</strong> Ribbon与Feign</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.3.</strong> 网关</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_6_springCloud/网关/springCloudGateway/index.html"><strong aria-hidden="true">6.3.1.</strong> springCloudGateway</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_6_springCloud/网关/springCloudGateway/springCloud中的构造者模式.html"><strong aria-hidden="true">6.3.1.1.</strong> springCloud中的构造者模式</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.</strong> springIntegration</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_7_springIntegration/springCache/index.html"><strong aria-hidden="true">7.1.</strong> springCache</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_7_springIntegration/springCache/1.基于申明式缓存.html"><strong aria-hidden="true">7.1.1.</strong> 基于申明式缓存</a></li><li class="chapter-item "><a href="../spring_7_springIntegration/springCache/2.JCacheAnnotations.html"><strong aria-hidden="true">7.1.2.</strong> JCacheAnnotations</a></li><li class="chapter-item "><a href="../spring_7_springIntegration/springCache/3.XML的申明式缓存.html"><strong aria-hidden="true">7.1.3.</strong> XML的申明式缓存</a></li><li class="chapter-item "><a href="../spring_7_springIntegration/springCache/4.配置缓存库.html"><strong aria-hidden="true">7.1.4.</strong> 配置缓存库</a></li></ol></li><li class="chapter-item "><a href="../spring_7_springIntegration/springdata-redis/index.html"><strong aria-hidden="true">7.2.</strong> springdata-redis</a></li></ol></li><li class="chapter-item "><li class="part-title"></li><li class="chapter-item "><div><strong aria-hidden="true">8.</strong> 分布式与微服务</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../分布式与微服务/JWT无状态Session.html"><strong aria-hidden="true">8.1.</strong> JWT无状态Session</a></li><li class="chapter-item "><a href="../分布式与微服务/一致性Hash.html"><strong aria-hidden="true">8.2.</strong> 一致性Hash</a></li><li class="chapter-item "><a href="../分布式与微服务/分布式ID.html"><strong aria-hidden="true">8.3.</strong> 分布式ID</a></li><li class="chapter-item "><a href="../分布式与微服务/分布式Session案.html"><strong aria-hidden="true">8.4.</strong> 分布式Session案</a></li><li class="chapter-item "><a href="../分布式与微服务/分布式事务.html"><strong aria-hidden="true">8.5.</strong> 分布式事务</a></li><li class="chapter-item "><a href="../分布式与微服务/分布式协调器-Zookeeper.html"><strong aria-hidden="true">8.6.</strong> 分布式协调器-Zookeeper</a></li><li class="chapter-item "><a href="../分布式与微服务/分布式锁.html"><strong aria-hidden="true">8.7.</strong> 分布式锁</a></li><li class="chapter-item "><a href="../分布式与微服务/接口幂等性.html"><strong aria-hidden="true">8.8.</strong> 接口幂等性</a></li><li class="chapter-item "><a href="../分布式与微服务/负载均衡.html"><strong aria-hidden="true">8.9.</strong> 负载均衡</a></li></ol></li><li class="chapter-item "><a href="../数据库/index.html"><strong aria-hidden="true">9.</strong> 数据库</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/sql通用优化.html"><strong aria-hidden="true">9.1.</strong> sql通用优化</a></li><li class="chapter-item "><a href="../数据库/MongoDB/index.html"><strong aria-hidden="true">9.2.</strong> MongoDB</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/MongoDB/mongodb基本操作.html"><strong aria-hidden="true">9.2.1.</strong> mongodb基本操作</a></li><li class="chapter-item "><a href="../数据库/MongoDB/mongodb高级语法.html"><strong aria-hidden="true">9.2.2.</strong> mongodb高级语法</a></li><li class="chapter-item "><a href="../数据库/MongoDB/权限管理.html"><strong aria-hidden="true">9.2.3.</strong> 权限管理</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/index.html"><strong aria-hidden="true">9.3.</strong> elasticSearch</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/BackUpACluster.html"><strong aria-hidden="true">9.3.1.</strong> BackUpACluster</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/KQL.html"><strong aria-hidden="true">9.3.2.</strong> KQL</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/dataStream.html"><strong aria-hidden="true">9.3.3.</strong> dataStream</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/es堆内存如何分配.html"><strong aria-hidden="true">9.3.4.</strong> es堆内存如何分配</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/scroll查询.html"><strong aria-hidden="true">9.3.5.</strong> scroll查询</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/乐观并发控制.html"><strong aria-hidden="true">9.3.6.</strong> 乐观并发控制</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/分布式检索.html"><strong aria-hidden="true">9.3.7.</strong> 分布式检索</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/分片内部原理.html"><strong aria-hidden="true">9.3.8.</strong> 分片内部原理</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/分词.html"><strong aria-hidden="true">9.3.9.</strong> 分词</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/前缀搜索与模糊搜索.html"><strong aria-hidden="true">9.3.10.</strong> 前缀搜索与模糊搜索</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/数据分片.html"><strong aria-hidden="true">9.3.11.</strong> 数据分片</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/映射.html"><strong aria-hidden="true">9.3.12.</strong> 映射</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/杂项学习.html"><strong aria-hidden="true">9.3.13.</strong> 杂项学习</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引和分片.html"><strong aria-hidden="true">9.3.14.</strong> 索引和分片</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引管理.html"><strong aria-hidden="true">9.3.15.</strong> 索引管理</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/评分标准与相关性.html"><strong aria-hidden="true">9.3.16.</strong> 评分标准与相关性</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/集群内原理.html"><strong aria-hidden="true">9.3.17.</strong> 集群内原理</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/Datamanagement/index.html"><strong aria-hidden="true">9.3.18.</strong> Datamanagement</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/Datamanagement/DataTier.html"><strong aria-hidden="true">9.3.18.1.</strong> DataTier</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/index.html"><strong aria-hidden="true">9.3.19.</strong> ILM</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/1.AutomateRolloverWithILM.html"><strong aria-hidden="true">9.3.19.1.</strong> AutomateRolloverWithILM</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/FrozenIndices.html"><strong aria-hidden="true">9.3.19.2.</strong> FrozenIndices</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/ILM.html"><strong aria-hidden="true">9.3.19.3.</strong> ILM</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/RolloverAPI.html"><strong aria-hidden="true">9.3.19.4.</strong> RolloverAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/ShrinkIndexAPI.html"><strong aria-hidden="true">9.3.19.5.</strong> ShrinkIndexAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/ILMConcepts/index.html"><strong aria-hidden="true">9.3.19.6.</strong> ILMConcepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/ILMConcepts/1.Rollover.html"><strong aria-hidden="true">9.3.19.6.1.</strong> Rollover</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/ILMConcepts/2.LifeCycleUpdates.html"><strong aria-hidden="true">9.3.19.6.2.</strong> LifeCycleUpdates</a></li></ol></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/index.html"><strong aria-hidden="true">9.3.20.</strong> IndexModules</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/1.Analysis.html"><strong aria-hidden="true">9.3.20.1.</strong> Analysis</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/2.IndexShardAllocation.html"><strong aria-hidden="true">9.3.20.2.</strong> IndexShardAllocation</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/3.Indexblocks.html"><strong aria-hidden="true">9.3.20.3.</strong> Indexblocks</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/4.Mapper.html"><strong aria-hidden="true">9.3.20.4.</strong> Mapper</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/5.Merge.html"><strong aria-hidden="true">9.3.20.5.</strong> Merge</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/6.SimilarityModule.html"><strong aria-hidden="true">9.3.20.6.</strong> SimilarityModule</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/7.Slowlog.html"><strong aria-hidden="true">9.3.20.7.</strong> Slowlog</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/8.Store.html"><strong aria-hidden="true">9.3.20.8.</strong> Store</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/9.Translog.html"><strong aria-hidden="true">9.3.20.9.</strong> Translog</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/10.HistoryRetention.html"><strong aria-hidden="true">9.3.20.10.</strong> HistoryRetention</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/11.IndexSorting.html"><strong aria-hidden="true">9.3.20.11.</strong> IndexSorting</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/12.IndexPressure.html"><strong aria-hidden="true">9.3.20.12.</strong> IndexPressure</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.21.</strong> IngestPipeline</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/IngestPipeline/1.IngestPipelines.html"><strong aria-hidden="true">9.3.21.1.</strong> IngestPipelines</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IngestPipeline/2.pipeLineExample.html"><strong aria-hidden="true">9.3.21.2.</strong> pipeLineExample</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IngestPipeline/3.EnrichYourData.html"><strong aria-hidden="true">9.3.21.3.</strong> EnrichYourData</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IngestPipeline/4.ExampleEnrichYourDataBasedOnGeolocation.html"><strong aria-hidden="true">9.3.21.4.</strong> ExampleEnrichYourDataBasedOnGeolocation</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IngestPipeline/5.IngestProcessorReference.html"><strong aria-hidden="true">9.3.21.5.</strong> IngestProcessorReference</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/index.html"><strong aria-hidden="true">9.3.22.</strong> queryDSL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/1.QueryAndFilterContext.html"><strong aria-hidden="true">9.3.22.1.</strong> QueryAndFilterContext</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/2.CompoundQueries.html"><strong aria-hidden="true">9.3.22.2.</strong> CompoundQueries</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/SearchAfter.html"><strong aria-hidden="true">9.3.22.3.</strong> SearchAfter</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/FullTextQueries/index.html"><strong aria-hidden="true">9.3.22.4.</strong> FullTextQueries</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/FullTextQueries/1.IntervalsQuery.html"><strong aria-hidden="true">9.3.22.4.1.</strong> IntervalsQuery</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/FullTextQueries/2.MatchQuery.html"><strong aria-hidden="true">9.3.22.4.2.</strong> MatchQuery</a></li></ol></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/index.html"><strong aria-hidden="true">9.3.23.</strong> snapshotAndRestore</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/CleanUpSnapshotRepo.html"><strong aria-hidden="true">9.3.23.1.</strong> CleanUpSnapshotRepo</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/CloneSnapshot.html"><strong aria-hidden="true">9.3.23.2.</strong> CloneSnapshot</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/CreateOrUpdateSnapshotAPI.html"><strong aria-hidden="true">9.3.23.3.</strong> CreateOrUpdateSnapshotAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/CreateSnapshot.html"><strong aria-hidden="true">9.3.23.4.</strong> CreateSnapshot</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/DeleteSnapShot.html"><strong aria-hidden="true">9.3.23.5.</strong> DeleteSnapShot</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/DeleteSnapshotRepository.html"><strong aria-hidden="true">9.3.23.6.</strong> DeleteSnapshotRepository</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/GetSnapshotAPI.html"><strong aria-hidden="true">9.3.23.7.</strong> GetSnapshotAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/RegisterASnapshot.html"><strong aria-hidden="true">9.3.23.8.</strong> RegisterASnapshot</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/RestoreSnapshot.html"><strong aria-hidden="true">9.3.23.9.</strong> RestoreSnapshot</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/SLM.html"><strong aria-hidden="true">9.3.23.10.</strong> SLM</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/SearchableSnapshots.html"><strong aria-hidden="true">9.3.23.11.</strong> SearchableSnapshots</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/SearchableSnapshotsMountAPI.html"><strong aria-hidden="true">9.3.23.12.</strong> SearchableSnapshotsMountAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/repository-s3.html"><strong aria-hidden="true">9.3.23.13.</strong> repository-s3</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/使用OSS备份恢复集群实战.html"><strong aria-hidden="true">9.3.23.14.</strong> 使用OSS备份恢复集群实战</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/安装/index.html"><strong aria-hidden="true">9.3.24.</strong> 安装</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/安装/1.InstallingFromRpm.html"><strong aria-hidden="true">9.3.24.1.</strong> InstallingFromRpm</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/安装/2.InstallFromDeb.html"><strong aria-hidden="true">9.3.24.2.</strong> InstallFromDeb</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.25.</strong> 深入搜索</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/深入搜索/全文搜索.html"><strong aria-hidden="true">9.3.25.1.</strong> 全文搜索</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/深入搜索/多字段搜索.html"><strong aria-hidden="true">9.3.25.2.</strong> 多字段搜索</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/深入搜索/结构化搜索.html"><strong aria-hidden="true">9.3.25.3.</strong> 结构化搜索</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/index.html"><strong aria-hidden="true">9.3.26.</strong> 索引分片分配</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/1.索引级别的分片分配控制.html"><strong aria-hidden="true">9.3.26.1.</strong> 索引级别的分片分配控制</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/2.节点离开延迟分配.html"><strong aria-hidden="true">9.3.26.2.</strong> 节点离开延迟分配</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/3.索引恢复优先级.html"><strong aria-hidden="true">9.3.26.3.</strong> 索引恢复优先级</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/4.每个节点的总分片.html"><strong aria-hidden="true">9.3.26.4.</strong> 每个节点的总分片</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/5.索引级别数据层分配过滤.html"><strong aria-hidden="true">9.3.26.5.</strong> 索引级别数据层分配过滤</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/6.手动分配分片clusterRerouteAPI.html"><strong aria-hidden="true">9.3.26.6.</strong> 手动分配分片clusterRerouteAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/7.cluster-allocation-explain.html"><strong aria-hidden="true">9.3.26.7.</strong> cluster-allocation-explain</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/考纲解读/index.html"><strong aria-hidden="true">9.3.27.</strong> 考纲解读</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/考纲解读/1.ClusterManagement.html"><strong aria-hidden="true">9.3.27.1.</strong> ClusterManagement</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/考纲解读/2.DataManagement.html"><strong aria-hidden="true">9.3.27.2.</strong> DataManagement</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.28.</strong> 聚合</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/聚合/RareTermsAggregation.html"><strong aria-hidden="true">9.3.28.1.</strong> RareTermsAggregation</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/聚合/Term.html"><strong aria-hidden="true">9.3.28.2.</strong> Term</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/配置/index.html"><strong aria-hidden="true">9.3.29.</strong> 配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/配置/1.重要配置.html"><strong aria-hidden="true">9.3.29.1.</strong> 重要配置</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/配置/2.elasticsearch.yml核心配置.html"><strong aria-hidden="true">9.3.29.2.</strong> elasticsearch.yml核心配置</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/配置/3.es系统参数修改.html"><strong aria-hidden="true">9.3.29.3.</strong> es系统参数修改</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.30.</strong> 集群</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/集群/Health.html"><strong aria-hidden="true">9.3.30.1.</strong> Health</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.31.</strong> 高可用专题</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/高可用专题/弹性设计.html"><strong aria-hidden="true">9.3.31.1.</strong> 弹性设计</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/高可用专题/跨集群复制.html"><strong aria-hidden="true">9.3.31.2.</strong> 跨集群复制</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/高可用专题/集群备份.html"><strong aria-hidden="true">9.3.31.3.</strong> 集群备份</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.4.</strong> mysql</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/mysql/mysqlfunction.html"><strong aria-hidden="true">9.4.1.</strong> mysqlfunction</a></li><li class="chapter-item "><a href="../数据库/mysql/mysqlpdump.html"><strong aria-hidden="true">9.4.2.</strong> mysqlpdump</a></li><li class="chapter-item "><a href="../数据库/mysql/mysqlzip安装.html"><strong aria-hidden="true">9.4.3.</strong> mysqlzip安装</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql公用表达式.html"><strong aria-hidden="true">9.4.4.</strong> mysql公用表达式</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql学习.html"><strong aria-hidden="true">9.4.5.</strong> mysql学习</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql执行计划.html"><strong aria-hidden="true">9.4.6.</strong> mysql执行计划</a></li><li class="chapter-item "><a href="../数据库/mysql/空值处理函数.html"><strong aria-hidden="true">9.4.7.</strong> 空值处理函数</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.4.8.</strong> mysql官方文档</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/mysql/mysql官方文档/mysql程序.html"><strong aria-hidden="true">9.4.8.1.</strong> mysql程序</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql官方文档/客户端.html"><strong aria-hidden="true">9.4.8.2.</strong> 客户端</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql官方文档/mysql程序/index.html"><strong aria-hidden="true">9.4.8.3.</strong> mysql程序</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/mysql/mysql官方文档/mysql程序/使用mysql相关程序.html"><strong aria-hidden="true">9.4.8.3.1.</strong> 使用mysql相关程序</a></li></ol></li></ol></li><li class="chapter-item "><a href="../数据库/mysql/mysql日志/index.html"><strong aria-hidden="true">9.4.9.</strong> mysql日志</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/mysql/mysql日志/mysql日志及分类.html"><strong aria-hidden="true">9.4.9.1.</strong> mysql日志及分类</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql日志/二进制日志.html"><strong aria-hidden="true">9.4.9.2.</strong> 二进制日志</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql日志/慢sql日志.html"><strong aria-hidden="true">9.4.9.3.</strong> 慢sql日志</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql日志/通用日志.html"><strong aria-hidden="true">9.4.9.4.</strong> 通用日志</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql日志/错误日志.html"><strong aria-hidden="true">9.4.9.5.</strong> 错误日志</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.5.</strong> oracle</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/oracle/Oracle小知识点.html"><strong aria-hidden="true">9.5.1.</strong> Oracle小知识点</a></li><li class="chapter-item "><a href="../数据库/oracle/oracledocker快速搭建.html"><strong aria-hidden="true">9.5.2.</strong> oracledocker快速搭建</a></li><li class="chapter-item "><a href="../数据库/oracle/oracle多表更新方法.html"><strong aria-hidden="true">9.5.3.</strong> oracle多表更新方法</a></li></ol></li><li class="chapter-item "><a href="../数据库/redis/index.html"><strong aria-hidden="true">9.6.</strong> redis</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/redis/Redis应用-位图.html"><strong aria-hidden="true">9.6.1.</strong> Redis应用-位图</a></li><li class="chapter-item "><a href="../数据库/redis/Redis应用-分布式锁.html"><strong aria-hidden="true">9.6.2.</strong> Redis应用-分布式锁</a></li><li class="chapter-item "><a href="../数据库/redis/redis-keys与scan.html"><strong aria-hidden="true">9.6.3.</strong> redis-keys与scan</a></li><li class="chapter-item "><a href="../数据库/redis/redis-serverAndRedis-cli.html"><strong aria-hidden="true">9.6.4.</strong> redis-serverAndRedis-cli</a></li><li class="chapter-item "><a href="../数据库/redis/redis主从与哨兵.html"><strong aria-hidden="true">9.6.5.</strong> redis主从与哨兵</a></li><li class="chapter-item "><a href="../数据库/redis/redis发布与订阅.html"><strong aria-hidden="true">9.6.6.</strong> redis发布与订阅</a></li><li class="chapter-item "><a href="../数据库/redis/redis集群.html"><strong aria-hidden="true">9.6.7.</strong> redis集群</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.6.8.</strong> redis数据结构</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/redis/redis数据结构/Redis有序集合(sortedSet).html"><strong aria-hidden="true">9.6.8.1.</strong> Redis有序集合(sortedSet)</a></li><li class="chapter-item "><a href="../数据库/redis/redis数据结构/基本数据结构.html"><strong aria-hidden="true">9.6.8.2.</strong> 基本数据结构</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">10.</strong> 日志收集</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../日志收集/filebeat/index.html"><strong aria-hidden="true">10.1.</strong> filebeat</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../日志收集/filebeat/1.HowFilebeatWorks.html"><strong aria-hidden="true">10.1.1.</strong> HowFilebeatWorks</a></li><li class="chapter-item "><a href="../日志收集/filebeat/ConfigureFilebeat/index.html"><strong aria-hidden="true">10.1.2.</strong> ConfigureFilebeat</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../日志收集/filebeat/ConfigureFilebeat/1.Input.html"><strong aria-hidden="true">10.1.2.1.</strong> Input</a></li><li class="chapter-item "><a href="../日志收集/filebeat/ConfigureFilebeat/2.InputFileStream.html"><strong aria-hidden="true">10.1.2.2.</strong> InputFileStream</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">11.</strong> CICD</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/ansible/index.html"><strong aria-hidden="true">11.1.</strong> ansible</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/ansible/1.入门.html"><strong aria-hidden="true">11.1.1.</strong> 入门</a></li><li class="chapter-item "><a href="../CICD/ansible/Ansible.html"><strong aria-hidden="true">11.1.2.</strong> Ansible</a></li><li class="chapter-item "><a href="../CICD/ansible/Loops.html"><strong aria-hidden="true">11.1.3.</strong> Loops</a></li><li class="chapter-item "><a href="../CICD/ansible/ansible中的变量.html"><strong aria-hidden="true">11.1.4.</strong> ansible中的变量</a></li><li class="chapter-item "><a href="../CICD/ansible/ansible示例.html"><strong aria-hidden="true">11.1.5.</strong> ansible示例</a></li><li class="chapter-item "><a href="../CICD/ansible/inventor文件.html"><strong aria-hidden="true">11.1.6.</strong> inventor文件</a></li><li class="chapter-item "><a href="../CICD/ansible/playbooks.html"><strong aria-hidden="true">11.1.7.</strong> playbooks</a></li><li class="chapter-item "><a href="../CICD/ansible/临时命令行模式.html"><strong aria-hidden="true">11.1.8.</strong> 临时命令行模式</a></li><li class="chapter-item "><a href="../CICD/ansible/2.AnsibleConcepts/index.html"><strong aria-hidden="true">11.1.9.</strong> 2.AnsibleConcepts</a></li><li class="chapter-item "><a href="../CICD/ansible/3.内置模块/index.html"><strong aria-hidden="true">11.1.10.</strong> 3.内置模块</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/ansible/3.内置模块/1.Command.html"><strong aria-hidden="true">11.1.10.1.</strong> Command</a></li><li class="chapter-item "><a href="../CICD/ansible/3.内置模块/2.Shell.html"><strong aria-hidden="true">11.1.10.2.</strong> Shell</a></li></ol></li></ol></li><li class="chapter-item "><a href="../CICD/docker/index.html"><strong aria-hidden="true">11.2.</strong> docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/docker/DockerFile简介.html"><strong aria-hidden="true">11.2.1.</strong> DockerFile简介</a></li><li class="chapter-item "><a href="../CICD/docker/dockcer-swarm.html"><strong aria-hidden="true">11.2.2.</strong> dockcer-swarm</a></li><li class="chapter-item "><a href="../CICD/docker/docker-compose.html"><strong aria-hidden="true">11.2.3.</strong> docker-compose</a></li><li class="chapter-item "><a href="../CICD/docker/docker-swarm集群搭建实例.html"><strong aria-hidden="true">11.2.4.</strong> docker-swarm集群搭建实例</a></li><li class="chapter-item "><a href="../CICD/docker/docker-volume管理.html"><strong aria-hidden="true">11.2.5.</strong> docker-volume管理</a></li><li class="chapter-item "><a href="../CICD/docker/docker容器连接.html"><strong aria-hidden="true">11.2.6.</strong> docker容器连接</a></li><li class="chapter-item "><a href="../CICD/docker/docker搭建registry仓库.html"><strong aria-hidden="true">11.2.7.</strong> docker搭建registry仓库</a></li><li class="chapter-item "><a href="../CICD/docker/docker搭建私有镜像库.html"><strong aria-hidden="true">11.2.8.</strong> docker搭建私有镜像库</a></li><li class="chapter-item "><a href="../CICD/docker/docker离线安装.html"><strong aria-hidden="true">11.2.9.</strong> docker离线安装</a></li><li class="chapter-item "><a href="../CICD/docker/docker网络管理.html"><strong aria-hidden="true">11.2.10.</strong> docker网络管理</a></li><li class="chapter-item "><a href="../CICD/docker/docker远程连接配置.html"><strong aria-hidden="true">11.2.11.</strong> docker远程连接配置</a></li><li class="chapter-item "><a href="../CICD/docker/redis主从与哨兵.html"><strong aria-hidden="true">11.2.12.</strong> redis主从与哨兵</a></li><li class="chapter-item "><a href="../CICD/docker/使用实例.html"><strong aria-hidden="true">11.2.13.</strong> 使用实例</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">11.3.</strong> jenkins</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/jenkins/Jenkins.html"><strong aria-hidden="true">11.3.1.</strong> Jenkins</a></li><li class="chapter-item "><a href="../CICD/jenkins/jenkins_pipeline.html"><strong aria-hidden="true">11.3.2.</strong> jenkins_pipeline</a></li></ol></li><li class="chapter-item "><a href="../CICD/k8s/index.html"><strong aria-hidden="true">11.4.</strong> k8s</a></li><li class="chapter-item "><a href="../CICD/maven/index.html"><strong aria-hidden="true">11.5.</strong> maven</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/maven/AutoConfig插件.html"><strong aria-hidden="true">11.5.1.</strong> AutoConfig插件</a></li><li class="chapter-item "><a href="../CICD/maven/MavenArcheType.html"><strong aria-hidden="true">11.5.2.</strong> MavenArcheType</a></li><li class="chapter-item "><a href="../CICD/maven/maven.html"><strong aria-hidden="true">11.5.3.</strong> maven</a></li><li class="chapter-item "><a href="../CICD/maven/maven-Maven_Resources_Plugin.html"><strong aria-hidden="true">11.5.4.</strong> maven-Maven_Resources_Plugin</a></li><li class="chapter-item "><a href="../CICD/maven/maven-archiver.html"><strong aria-hidden="true">11.5.5.</strong> maven-archiver</a></li><li class="chapter-item "><a href="../CICD/maven/maven-assembly-plugin.html"><strong aria-hidden="true">11.5.6.</strong> maven-assembly-plugin</a></li><li class="chapter-item "><a href="../CICD/maven/maven-bom.html"><strong aria-hidden="true">11.5.7.</strong> maven-bom</a></li><li class="chapter-item "><a href="../CICD/maven/maven-profile.html"><strong aria-hidden="true">11.5.8.</strong> maven-profile</a></li><li class="chapter-item "><a href="../CICD/maven/maven-依赖管理.html"><strong aria-hidden="true">11.5.9.</strong> maven-依赖管理</a></li><li class="chapter-item "><a href="../CICD/maven/maven-编译源码.html"><strong aria-hidden="true">11.5.10.</strong> maven-编译源码</a></li><li class="chapter-item "><a href="../CICD/maven/maven中的生命周期、插件、目标.html"><strong aria-hidden="true">11.5.11.</strong> maven中的生命周期、插件、目标</a></li><li class="chapter-item "><a href="../CICD/maven/maven打包方式.html"><strong aria-hidden="true">11.5.12.</strong> maven打包方式</a></li><li class="chapter-item "><a href="../CICD/maven/maven聚合项目版本管理实践.html"><strong aria-hidden="true">11.5.13.</strong> maven聚合项目版本管理实践</a></li></ol></li></ol></li><li class="chapter-item "><a href="../模板引擎/index.html"><strong aria-hidden="true">12.</strong> 模板引擎</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../模板引擎/mustache/index.html"><strong aria-hidden="true">12.1.</strong> mustache</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">13.</strong> Linux</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Linux/CFSBandwidthControl.html"><strong aria-hidden="true">13.1.</strong> CFSBandwidthControl</a></li><li class="chapter-item "><a href="../Linux/LinuxFor.html"><strong aria-hidden="true">13.2.</strong> LinuxFor</a></li><li class="chapter-item "><a href="../Linux/LinuxWOL设置.html"><strong aria-hidden="true">13.3.</strong> LinuxWOL设置</a></li><li class="chapter-item "><a href="../Linux/Linux条件测试.html"><strong aria-hidden="true">13.4.</strong> Linux条件测试</a></li><li class="chapter-item "><a href="../Linux/Seed.html"><strong aria-hidden="true">13.5.</strong> Seed</a></li><li class="chapter-item "><a href="../Linux/VIM.html"><strong aria-hidden="true">13.6.</strong> VIM</a></li><li class="chapter-item "><a href="../Linux/caseIn.html"><strong aria-hidden="true">13.7.</strong> caseIn</a></li><li class="chapter-item "><a href="../Linux/cgroup.html"><strong aria-hidden="true">13.8.</strong> cgroup</a></li><li class="chapter-item "><a href="../Linux/curl.html"><strong aria-hidden="true">13.9.</strong> curl</a></li><li class="chapter-item "><a href="../Linux/dd.html"><strong aria-hidden="true">13.10.</strong> dd</a></li><li class="chapter-item "><a href="../Linux/diffPatch.html"><strong aria-hidden="true">13.11.</strong> diffPatch</a></li><li class="chapter-item "><a href="../Linux/find.html"><strong aria-hidden="true">13.12.</strong> find</a></li><li class="chapter-item "><a href="../Linux/iptables.html"><strong aria-hidden="true">13.13.</strong> iptables</a></li><li class="chapter-item "><a href="../Linux/jq.html"><strong aria-hidden="true">13.14.</strong> jq</a></li><li class="chapter-item "><a href="../Linux/lsof.html"><strong aria-hidden="true">13.15.</strong> lsof</a></li><li class="chapter-item "><a href="../Linux/ps.html"><strong aria-hidden="true">13.16.</strong> ps</a></li><li class="chapter-item "><a href="../Linux/read.html"><strong aria-hidden="true">13.17.</strong> read</a></li><li class="chapter-item "><a href="../Linux/scp.html"><strong aria-hidden="true">13.18.</strong> scp</a></li><li class="chapter-item "><a href="../Linux/select.html"><strong aria-hidden="true">13.19.</strong> select</a></li><li class="chapter-item "><a href="../Linux/service脚本.html"><strong aria-hidden="true">13.20.</strong> service脚本</a></li><li class="chapter-item "><a href="../Linux/set.html"><strong aria-hidden="true">13.21.</strong> set</a></li><li class="chapter-item "><a href="../Linux/shell字符串.html"><strong aria-hidden="true">13.22.</strong> shell字符串</a></li><li class="chapter-item "><a href="../Linux/shell脚本参数.html"><strong aria-hidden="true">13.23.</strong> shell脚本参数</a></li><li class="chapter-item "><a href="../Linux/stat.html"><strong aria-hidden="true">13.24.</strong> stat</a></li><li class="chapter-item "><a href="../Linux/tar.html"><strong aria-hidden="true">13.25.</strong> tar</a></li><li class="chapter-item "><a href="../Linux/top命令.html"><strong aria-hidden="true">13.26.</strong> top命令</a></li><li class="chapter-item "><a href="../Linux/uidGidSetUidSetGid.html"><strong aria-hidden="true">13.27.</strong> uidGidSetUidSetGid</a></li><li class="chapter-item "><a href="../Linux/wsl关闭提示音.html"><strong aria-hidden="true">13.28.</strong> wsl关闭提示音</a></li><li class="chapter-item "><a href="../Linux/yum本地包依赖.html"><strong aria-hidden="true">13.29.</strong> yum本地包依赖</a></li><li class="chapter-item "><a href="../Linux/确定Linux发行版本.html"><strong aria-hidden="true">13.30.</strong> 确定Linux发行版本</a></li><li class="chapter-item "><a href="../Linux/零拷贝.html"><strong aria-hidden="true">13.31.</strong> 零拷贝</a></li><li class="chapter-item "><a href="../Linux/默认值语法糖.html"><strong aria-hidden="true">13.32.</strong> 默认值语法糖</a></li></ol></li><li class="chapter-item "><a href="../数据结构与算法/index.html"><strong aria-hidden="true">14.</strong> 数据结构与算法</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据结构与算法/Base64编码.html"><strong aria-hidden="true">14.1.</strong> Base64编码</a></li><li class="chapter-item "><a href="../数据结构与算法/Huffman编码.html"><strong aria-hidden="true">14.2.</strong> Huffman编码</a></li><li class="chapter-item "><a href="../数据结构与算法/base64.html"><strong aria-hidden="true">14.3.</strong> base64</a></li><li class="chapter-item "><a href="../数据结构与算法/fnv-hash算法.html"><strong aria-hidden="true">14.4.</strong> fnv-hash算法</a></li><li class="chapter-item "><a href="../数据结构与算法/位运算.html"><strong aria-hidden="true">14.5.</strong> 位运算</a></li><li class="chapter-item "><a href="../数据结构与算法/动态规划.html"><strong aria-hidden="true">14.6.</strong> 动态规划</a></li><li class="chapter-item "><a href="../数据结构与算法/动态规划-新.html"><strong aria-hidden="true">14.7.</strong> 动态规划-新</a></li><li class="chapter-item "><a href="../数据结构与算法/字符编码.html"><strong aria-hidden="true">14.8.</strong> 字符编码</a></li><li class="chapter-item "><a href="../数据结构与算法/布隆过滤器.html"><strong aria-hidden="true">14.9.</strong> 布隆过滤器</a></li><li class="chapter-item "><a href="../数据结构与算法/浮点数.html"><strong aria-hidden="true">14.10.</strong> 浮点数</a></li><li class="chapter-item "><a href="../数据结构与算法/贪心算法.html"><strong aria-hidden="true">14.11.</strong> 贪心算法</a></li><li class="chapter-item "><a href="../数据结构与算法/逆波兰表达式.html"><strong aria-hidden="true">14.12.</strong> 逆波兰表达式</a></li><li class="chapter-item "><div><strong aria-hidden="true">14.13.</strong> 树</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据结构与算法/树/二叉搜索平衡树.html"><strong aria-hidden="true">14.13.1.</strong> 二叉搜索平衡树</a></li><li class="chapter-item "><a href="../数据结构与算法/树/红黑树.html"><strong aria-hidden="true">14.13.2.</strong> 红黑树</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">15.</strong> 数据格式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据格式/XML.html"><strong aria-hidden="true">15.1.</strong> XML</a></li><li class="chapter-item "><a href="../数据格式/yaml.html"><strong aria-hidden="true">15.2.</strong> yaml</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">16.</strong> tmp</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tmp/大端与小端.html"><strong aria-hidden="true">16.1.</strong> 大端与小端</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">17.</strong> 消息队列</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../消息队列/RocketMQ/index.html"><strong aria-hidden="true">17.1.</strong> RocketMQ</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../消息队列/RocketMQ/MQ消息的投递机制.html"><strong aria-hidden="true">17.1.1.</strong> MQ消息的投递机制</a></li><li class="chapter-item "><a href="../消息队列/RocketMQ/MQ的一致性算法实现原理.html"><strong aria-hidden="true">17.1.2.</strong> MQ的一致性算法实现原理</a></li><li class="chapter-item "><a href="../消息队列/RocketMQ/架构和设计.html"><strong aria-hidden="true">17.1.3.</strong> 架构和设计</a></li><li class="chapter-item "><a href="../消息队列/RocketMQ/案例.html"><strong aria-hidden="true">17.1.4.</strong> 案例</a></li><li class="chapter-item "><a href="../消息队列/RocketMQ/概念和特性.html"><strong aria-hidden="true">17.1.5.</strong> 概念和特性</a></li></ol></li><li class="chapter-item "><a href="../消息队列/kafaKa/index.html"><strong aria-hidden="true">17.2.</strong> kafaKa</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.</strong> 前端</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">18.1.</strong> ECMAScript</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/ECMAScript/ECMAScript6简介.html"><strong aria-hidden="true">18.1.1.</strong> ECMAScript6简介</a></li><li class="chapter-item "><a href="../前端/ECMAScript/Set-Map数据结构.html"><strong aria-hidden="true">18.1.2.</strong> Set-Map数据结构</a></li><li class="chapter-item "><a href="../前端/ECMAScript/async函数.html"><strong aria-hidden="true">18.1.3.</strong> async函数</a></li><li class="chapter-item "><a href="../前端/ECMAScript/generate函数.html"><strong aria-hidden="true">18.1.4.</strong> generate函数</a></li><li class="chapter-item "><a href="../前端/ECMAScript/let与const命令.html"><strong aria-hidden="true">18.1.5.</strong> let与const命令</a></li><li class="chapter-item "><a href="../前端/ECMAScript/proxy.html"><strong aria-hidden="true">18.1.6.</strong> proxy</a></li><li class="chapter-item "><a href="../前端/ECMAScript/symbol.html"><strong aria-hidden="true">18.1.7.</strong> symbol</a></li><li class="chapter-item "><a href="../前端/ECMAScript/函数.html"><strong aria-hidden="true">18.1.8.</strong> 函数</a></li><li class="chapter-item "><a href="../前端/ECMAScript/字符串-正则-数值.html"><strong aria-hidden="true">18.1.9.</strong> 字符串-正则-数值</a></li><li class="chapter-item "><a href="../前端/ECMAScript/对象.html"><strong aria-hidden="true">18.1.10.</strong> 对象</a></li><li class="chapter-item "><a href="../前端/ECMAScript/数组.html"><strong aria-hidden="true">18.1.11.</strong> 数组</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.2.</strong> Element-UI</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/Element-UI/Switch开关.html"><strong aria-hidden="true">18.2.1.</strong> Switch开关</a></li><li class="chapter-item "><a href="../前端/Element-UI/Tree树形控件.html"><strong aria-hidden="true">18.2.2.</strong> Tree树形控件</a></li><li class="chapter-item "><a href="../前端/Element-UI/backtop.html"><strong aria-hidden="true">18.2.3.</strong> backtop</a></li><li class="chapter-item "><a href="../前端/Element-UI/card卡片.html"><strong aria-hidden="true">18.2.4.</strong> card卡片</a></li><li class="chapter-item "><a href="../前端/Element-UI/form表单.html"><strong aria-hidden="true">18.2.5.</strong> form表单</a></li><li class="chapter-item "><a href="../前端/Element-UI/image图片.html"><strong aria-hidden="true">18.2.6.</strong> image图片</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-Breadcrumb面包屑.html"><strong aria-hidden="true">18.2.7.</strong> navigation-Breadcrumb面包屑</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-dropdown.html"><strong aria-hidden="true">18.2.8.</strong> navigation-dropdown</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-navmenu.html"><strong aria-hidden="true">18.2.9.</strong> navigation-navmenu</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-steps.html"><strong aria-hidden="true">18.2.10.</strong> navigation-steps</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-标签页.html"><strong aria-hidden="true">18.2.11.</strong> navigation-标签页</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-页头.html"><strong aria-hidden="true">18.2.12.</strong> navigation-页头</a></li><li class="chapter-item "><a href="../前端/Element-UI/notice-Notification.html"><strong aria-hidden="true">18.2.13.</strong> notice-Notification</a></li><li class="chapter-item "><a href="../前端/Element-UI/notice-alert.html"><strong aria-hidden="true">18.2.14.</strong> notice-alert</a></li><li class="chapter-item "><a href="../前端/Element-UI/notice-loading.html"><strong aria-hidden="true">18.2.15.</strong> notice-loading</a></li><li class="chapter-item "><a href="../前端/Element-UI/notice-message-box.html"><strong aria-hidden="true">18.2.16.</strong> notice-message-box</a></li><li class="chapter-item "><a href="../前端/Element-UI/notice-message提示.html"><strong aria-hidden="true">18.2.17.</strong> notice-message提示</a></li><li class="chapter-item "><a href="../前端/Element-UI/popConfirm.html"><strong aria-hidden="true">18.2.18.</strong> popConfirm</a></li><li class="chapter-item "><a href="../前端/Element-UI/popOver弹出框.html"><strong aria-hidden="true">18.2.19.</strong> popOver弹出框</a></li><li class="chapter-item "><a href="../前端/Element-UI/slider滑块.html"><strong aria-hidden="true">18.2.20.</strong> slider滑块</a></li><li class="chapter-item "><a href="../前端/Element-UI/timeline.html"><strong aria-hidden="true">18.2.21.</strong> timeline</a></li><li class="chapter-item "><a href="../前端/Element-UI/tooltip.html"><strong aria-hidden="true">18.2.22.</strong> tooltip</a></li><li class="chapter-item "><a href="../前端/Element-UI/transfer穿梭框.html"><strong aria-hidden="true">18.2.23.</strong> transfer穿梭框</a></li><li class="chapter-item "><a href="../前端/Element-UI/上传.html"><strong aria-hidden="true">18.2.24.</strong> 上传</a></li><li class="chapter-item "><a href="../前端/Element-UI/入门.html"><strong aria-hidden="true">18.2.25.</strong> 入门</a></li><li class="chapter-item "><a href="../前端/Element-UI/分割线.html"><strong aria-hidden="true">18.2.26.</strong> 分割线</a></li><li class="chapter-item "><a href="../前端/Element-UI/分页.html"><strong aria-hidden="true">18.2.27.</strong> 分页</a></li><li class="chapter-item "><a href="../前端/Element-UI/基础组件.html"><strong aria-hidden="true">18.2.28.</strong> 基础组件</a></li><li class="chapter-item "><a href="../前端/Element-UI/头像.html"><strong aria-hidden="true">18.2.29.</strong> 头像</a></li><li class="chapter-item "><a href="../前端/Element-UI/对话框.html"><strong aria-hidden="true">18.2.30.</strong> 对话框</a></li><li class="chapter-item "><a href="../前端/Element-UI/常见input输入.html"><strong aria-hidden="true">18.2.31.</strong> 常见input输入</a></li><li class="chapter-item "><a href="../前端/Element-UI/折叠面板.html"><strong aria-hidden="true">18.2.32.</strong> 折叠面板</a></li><li class="chapter-item "><a href="../前端/Element-UI/抽屉.html"><strong aria-hidden="true">18.2.33.</strong> 抽屉</a></li><li class="chapter-item "><a href="../前端/Element-UI/无限滚动.html"><strong aria-hidden="true">18.2.34.</strong> 无限滚动</a></li><li class="chapter-item "><a href="../前端/Element-UI/日历.html"><strong aria-hidden="true">18.2.35.</strong> 日历</a></li><li class="chapter-item "><a href="../前端/Element-UI/时间日期选择.html"><strong aria-hidden="true">18.2.36.</strong> 时间日期选择</a></li><li class="chapter-item "><a href="../前端/Element-UI/标签.html"><strong aria-hidden="true">18.2.37.</strong> 标签</a></li><li class="chapter-item "><a href="../前端/Element-UI/标记与提示.html"><strong aria-hidden="true">18.2.38.</strong> 标记与提示</a></li><li class="chapter-item "><a href="../前端/Element-UI/级联选择器.html"><strong aria-hidden="true">18.2.39.</strong> 级联选择器</a></li><li class="chapter-item "><a href="../前端/Element-UI/表格.html"><strong aria-hidden="true">18.2.40.</strong> 表格</a></li><li class="chapter-item "><a href="../前端/Element-UI/评分.html"><strong aria-hidden="true">18.2.41.</strong> 评分</a></li><li class="chapter-item "><a href="../前端/Element-UI/走马灯.html"><strong aria-hidden="true">18.2.42.</strong> 走马灯</a></li><li class="chapter-item "><a href="../前端/Element-UI/进度条.html"><strong aria-hidden="true">18.2.43.</strong> 进度条</a></li><li class="chapter-item "><a href="../前端/Element-UI/颜色选择器.html"><strong aria-hidden="true">18.2.44.</strong> 颜色选择器</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.3.</strong> HTTP</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/HTTP/Content-Disposition.html"><strong aria-hidden="true">18.3.1.</strong> Content-Disposition</a></li><li class="chapter-item "><a href="../前端/HTTP/Cookie.html"><strong aria-hidden="true">18.3.2.</strong> Cookie</a></li><li class="chapter-item "><a href="../前端/HTTP/HTTP缓存.html"><strong aria-hidden="true">18.3.3.</strong> HTTP缓存</a></li><li class="chapter-item "><a href="../前端/HTTP/HTTP访问控制.html"><strong aria-hidden="true">18.3.4.</strong> HTTP访问控制</a></li><li class="chapter-item "><a href="../前端/HTTP/Http响应码.html"><strong aria-hidden="true">18.3.5.</strong> Http响应码</a></li><li class="chapter-item "><a href="../前端/HTTP/MIME.html"><strong aria-hidden="true">18.3.6.</strong> MIME</a></li><li class="chapter-item "><a href="../前端/HTTP/http头.html"><strong aria-hidden="true">18.3.7.</strong> http头</a></li></ol></li><li class="chapter-item "><a href="../前端/Html5/index.html"><strong aria-hidden="true">18.4.</strong> Html5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/Html5/CSS3.html"><strong aria-hidden="true">18.4.1.</strong> CSS3</a></li><li class="chapter-item "><a href="../前端/Html5/H5canvas图形绘制.html"><strong aria-hidden="true">18.4.2.</strong> H5canvas图形绘制</a></li><li class="chapter-item "><a href="../前端/Html5/HTML5.html"><strong aria-hidden="true">18.4.3.</strong> HTML5</a></li><li class="chapter-item "><a href="../前端/Html5/HTML5的结构.html"><strong aria-hidden="true">18.4.4.</strong> HTML5的结构</a></li><li class="chapter-item "><a href="../前端/Html5/HTML5表单.html"><strong aria-hidden="true">18.4.5.</strong> HTML5表单</a></li><li class="chapter-item "><a href="../前端/Html5/WebWorkers.html"><strong aria-hidden="true">18.4.6.</strong> WebWorkers</a></li><li class="chapter-item "><a href="../前端/Html5/多媒体播放.html"><strong aria-hidden="true">18.4.7.</strong> 多媒体播放</a></li><li class="chapter-item "><a href="../前端/Html5/本地存储.html"><strong aria-hidden="true">18.4.8.</strong> 本地存储</a></li><li class="chapter-item "><a href="../前端/Html5/离线应用程序.html"><strong aria-hidden="true">18.4.9.</strong> 离线应用程序</a></li><li class="chapter-item "><a href="../前端/Html5/获取地址位置信息.html"><strong aria-hidden="true">18.4.10.</strong> 获取地址位置信息</a></li><li class="chapter-item "><a href="../前端/Html5/通信API.html"><strong aria-hidden="true">18.4.11.</strong> 通信API</a></li></ol></li><li class="chapter-item "><a href="../前端/css/index.html"><strong aria-hidden="true">18.5.</strong> css</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/css/BFC.html"><strong aria-hidden="true">18.5.1.</strong> BFC</a></li><li class="chapter-item "><a href="../前端/css/CSS选择器.html"><strong aria-hidden="true">18.5.2.</strong> CSS选择器</a></li><li class="chapter-item "><a href="../前端/css/内联元素垂直居中的方式.html"><strong aria-hidden="true">18.5.3.</strong> 内联元素垂直居中的方式</a></li><li class="chapter-item "><a href="../前端/css/基本视觉格式化.html"><strong aria-hidden="true">18.5.4.</strong> 基本视觉格式化</a></li><li class="chapter-item "><a href="../前端/css/基本视觉格式化-1.html"><strong aria-hidden="true">18.5.5.</strong> 基本视觉格式化-1</a></li><li class="chapter-item "><a href="../前端/css/弹性布局.html"><strong aria-hidden="true">18.5.6.</strong> 弹性布局</a></li><li class="chapter-item "><a href="../前端/css/结构与层叠.html"><strong aria-hidden="true">18.5.7.</strong> 结构与层叠</a></li><li class="chapter-item "><div><strong aria-hidden="true">18.5.8.</strong> CSS布局方式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/css/CSS布局方式/flex布局.html"><strong aria-hidden="true">18.5.8.1.</strong> flex布局</a></li><li class="chapter-item "><a href="../前端/css/CSS布局方式/两栏布局.html"><strong aria-hidden="true">18.5.8.2.</strong> 两栏布局</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.5.9.</strong> CSS样式详解</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/css/CSS样式详解/Grid布局.html"><strong aria-hidden="true">18.5.9.1.</strong> Grid布局</a></li><li class="chapter-item "><a href="../前端/css/CSS样式详解/flex布局.html"><strong aria-hidden="true">18.5.9.2.</strong> flex布局</a></li><li class="chapter-item "><a href="../前端/css/CSS样式详解/定位.html"><strong aria-hidden="true">18.5.9.3.</strong> 定位</a></li></ol></li></ol></li><li class="chapter-item "><a href="../前端/quasar/index.html"><strong aria-hidden="true">18.6.</strong> quasar</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/quasar/quasarCli.html"><strong aria-hidden="true">18.6.1.</strong> quasarCli</a></li><li class="chapter-item "><a href="../前端/quasar/quasar选项和辅助.html"><strong aria-hidden="true">18.6.2.</strong> quasar选项和辅助</a></li><li class="chapter-item "><a href="../前端/quasar/vue组件.html"><strong aria-hidden="true">18.6.3.</strong> vue组件</a></li><li class="chapter-item "><a href="../前端/quasar/布局.html"><strong aria-hidden="true">18.6.4.</strong> 布局</a></li><li class="chapter-item "><a href="../前端/quasar/网格布局.html"><strong aria-hidden="true">18.6.5.</strong> 网格布局</a></li><li class="chapter-item "><a href="../前端/quasar/风格和特性.html"><strong aria-hidden="true">18.6.6.</strong> 风格和特性</a></li><li class="chapter-item "><div><strong aria-hidden="true">18.6.7.</strong> 组件</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/quasar/组件/q-dialog.html"><strong aria-hidden="true">18.6.7.1.</strong> q-dialog</a></li><li class="chapter-item "><a href="../前端/quasar/组件/q-expansion-item.html"><strong aria-hidden="true">18.6.7.2.</strong> q-expansion-item</a></li><li class="chapter-item "><a href="../前端/quasar/组件/q-page-sticky.html"><strong aria-hidden="true">18.6.7.3.</strong> q-page-sticky</a></li><li class="chapter-item "><a href="../前端/quasar/组件/q-tabs.html"><strong aria-hidden="true">18.6.7.4.</strong> q-tabs</a></li><li class="chapter-item "><a href="../前端/quasar/组件/q-toolbar.html"><strong aria-hidden="true">18.6.7.5.</strong> q-toolbar</a></li></ol></li></ol></li><li class="chapter-item "><a href="../前端/reactor/index.html"><strong aria-hidden="true">18.7.</strong> reactor</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/reactor/1.搭建TS-Reactor环境.html"><strong aria-hidden="true">18.7.1.</strong> 搭建TS-Reactor环境</a></li><li class="chapter-item "><a href="../前端/reactor/2.jsx.html"><strong aria-hidden="true">18.7.2.</strong> jsx</a></li><li class="chapter-item "><a href="../前端/reactor/3.元素渲染.html"><strong aria-hidden="true">18.7.3.</strong> 元素渲染</a></li><li class="chapter-item "><a href="../前端/reactor/4.组件与模块&Props.html"><strong aria-hidden="true">18.7.4.</strong> 组件与模块&Props</a></li><li class="chapter-item "><a href="../前端/reactor/5.State生命周期.html"><strong aria-hidden="true">18.7.5.</strong> State生命周期</a></li><li class="chapter-item "><a href="../前端/reactor/6.事件处理.html"><strong aria-hidden="true">18.7.6.</strong> 事件处理</a></li><li class="chapter-item "><a href="../前端/reactor/7.条件渲染.html"><strong aria-hidden="true">18.7.7.</strong> 条件渲染</a></li><li class="chapter-item "><a href="../前端/reactor/8.列表.html"><strong aria-hidden="true">18.7.8.</strong> 列表</a></li><li class="chapter-item "><a href="../前端/reactor/9.表单.html"><strong aria-hidden="true">18.7.9.</strong> 表单</a></li><li class="chapter-item "><a href="../前端/reactor/10.组合与继承.html"><strong aria-hidden="true">18.7.10.</strong> 组合与继承</a></li><li class="chapter-item "><a href="../前端/reactor/11.React最佳实践.html"><strong aria-hidden="true">18.7.11.</strong> React最佳实践</a></li><li class="chapter-item "><a href="../前端/reactor/高级特性/index.html"><strong aria-hidden="true">18.7.12.</strong> 高级特性</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/reactor/高级特性/Refs转发.html"><strong aria-hidden="true">18.7.12.1.</strong> Refs转发</a></li></ol></li></ol></li><li class="chapter-item "><a href="../前端/vue/index.html"><strong aria-hidden="true">18.8.</strong> vue</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/vue/class与style的绑定.html"><strong aria-hidden="true">18.8.1.</strong> class与style的绑定</a></li><li class="chapter-item "><a href="../前端/vue/事件处理.html"><strong aria-hidden="true">18.8.2.</strong> 事件处理</a></li><li class="chapter-item "><a href="../前端/vue/列表渲染.html"><strong aria-hidden="true">18.8.3.</strong> 列表渲染</a></li><li class="chapter-item "><a href="../前端/vue/条件渲染.html"><strong aria-hidden="true">18.8.4.</strong> 条件渲染</a></li><li class="chapter-item "><a href="../前端/vue/模板语法.html"><strong aria-hidden="true">18.8.5.</strong> 模板语法</a></li><li class="chapter-item "><a href="../前端/vue/组件.html"><strong aria-hidden="true">18.8.6.</strong> 组件</a></li><li class="chapter-item "><a href="../前端/vue/表单输入绑定.html"><strong aria-hidden="true">18.8.7.</strong> 表单输入绑定</a></li><li class="chapter-item "><a href="../前端/vue/计算属性和侦听器.html"><strong aria-hidden="true">18.8.8.</strong> 计算属性和侦听器</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">java</li><li class="chapter-item "><a href="../java_1_java基础/index.html"><strong aria-hidden="true">19.</strong> java基础</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/EasyRules.html"><strong aria-hidden="true">19.1.</strong> EasyRules</a></li><li class="chapter-item "><a href="../java_1_java基础/PO、VO、BO.html"><strong aria-hidden="true">19.2.</strong> PO、VO、BO</a></li><li class="chapter-item "><a href="../java_1_java基础/WeakCache.html"><strong aria-hidden="true">19.3.</strong> WeakCache</a></li><li class="chapter-item "><a href="../java_1_java基础/apacheUtils类.html"><strong aria-hidden="true">19.4.</strong> apacheUtils类</a></li><li class="chapter-item "><a href="../java_1_java基础/javaUnsafe工具类与CAS.html"><strong aria-hidden="true">19.5.</strong> javaUnsafe工具类与CAS</a></li><li class="chapter-item "><a href="../java_1_java基础/java优化指南.html"><strong aria-hidden="true">19.6.</strong> java优化指南</a></li><li class="chapter-item "><a href="../java_1_java基础/java各版本新特性.html"><strong aria-hidden="true">19.7.</strong> java各版本新特性</a></li><li class="chapter-item "><a href="../java_1_java基础/java模块化.html"><strong aria-hidden="true">19.8.</strong> java模块化</a></li><li class="chapter-item "><a href="../java_1_java基础/代码异味.html"><strong aria-hidden="true">19.9.</strong> 代码异味</a></li><li class="chapter-item "><a href="../java_1_java基础/类的关系.html"><strong aria-hidden="true">19.10.</strong> 类的关系</a></li><li class="chapter-item "><a href="../java_1_java基础/JSR/index.html"><strong aria-hidden="true">19.11.</strong> JSR</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/JSR/jar包规范.html"><strong aria-hidden="true">19.11.1.</strong> jar包规范</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.12.</strong> JVM</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/JVM/GC后对象地址变化了HashCode如何保持不变.html"><strong aria-hidden="true">19.12.1.</strong> GC后对象地址变化了HashCode如何保持不变</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/JMM与volatile关键字.html"><strong aria-hidden="true">19.12.2.</strong> JMM与volatile关键字</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/JVMGC.html"><strong aria-hidden="true">19.12.3.</strong> JVMGC</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/JVM内存模型.html"><strong aria-hidden="true">19.12.4.</strong> JVM内存模型</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/JVM参数.html"><strong aria-hidden="true">19.12.5.</strong> JVM参数</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/JVM复制算法.html"><strong aria-hidden="true">19.12.6.</strong> JVM复制算法</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/java内存泄露与OOM.html"><strong aria-hidden="true">19.12.7.</strong> java内存泄露与OOM</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/java对象分析.html"><strong aria-hidden="true">19.12.8.</strong> java对象分析</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/java引用类型.html"><strong aria-hidden="true">19.12.9.</strong> java引用类型</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/类加载/index.html"><strong aria-hidden="true">19.12.10.</strong> 类加载</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/JVM/类加载/类加载器.html"><strong aria-hidden="true">19.12.10.1.</strong> 类加载器</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/类加载/类加载过程.html"><strong aria-hidden="true">19.12.10.2.</strong> 类加载过程</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/类加载/线程上下文加载器.html"><strong aria-hidden="true">19.12.10.3.</strong> 线程上下文加载器</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.13.</strong> JVM问题诊断与性能分析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/MAT.html"><strong aria-hidden="true">19.13.1.</strong> MAT</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/arthas.html"><strong aria-hidden="true">19.13.2.</strong> arthas</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/javaCPU占用高的问题.html"><strong aria-hidden="true">19.13.3.</strong> javaCPU占用高的问题</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/java远程调试.html"><strong aria-hidden="true">19.13.4.</strong> java远程调试</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/优雅停服.html"><strong aria-hidden="true">19.13.5.</strong> 优雅停服</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/排查内存溢出.html"><strong aria-hidden="true">19.13.6.</strong> 排查内存溢出</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.14.</strong> arthas</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/arthas/1.安装.html"><strong aria-hidden="true">19.14.1.</strong> 安装</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/2.快速入门.html"><strong aria-hidden="true">19.14.2.</strong> 快速入门</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/3.命令.html"><strong aria-hidden="true">19.14.3.</strong> 命令</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/4.ArthasTunnel.html"><strong aria-hidden="true">19.14.4.</strong> ArthasTunnel</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/5.Idea插件.html"><strong aria-hidden="true">19.14.5.</strong> Idea插件</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/6.JavaAgent启动.html"><strong aria-hidden="true">19.14.6.</strong> JavaAgent启动</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/7.火焰图.html"><strong aria-hidden="true">19.14.7.</strong> 火焰图</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/8.thread命令.html"><strong aria-hidden="true">19.14.8.</strong> thread命令</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/9.trace.html"><strong aria-hidden="true">19.14.9.</strong> trace</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.15.</strong> bean校验</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/bean校验/javaValidated.html"><strong aria-hidden="true">19.15.1.</strong> javaValidated</a></li></ol></li><li class="chapter-item "><a href="../java_1_java基础/java.security框架/index.html"><strong aria-hidden="true">19.16.</strong> java.security框架</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.17.</strong> java基础</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/java基础/JavaSPI.html"><strong aria-hidden="true">19.17.1.</strong> JavaSPI</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/Java异常.html"><strong aria-hidden="true">19.17.2.</strong> Java异常</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/Java泛型的协变与逆变.html"><strong aria-hidden="true">19.17.3.</strong> Java泛型的协变与逆变</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/java中常见的语法糖.html"><strong aria-hidden="true">19.17.4.</strong> java中常见的语法糖</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/java序列化接口.html"><strong aria-hidden="true">19.17.5.</strong> java序列化接口</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/jdk1.8新特性.html"><strong aria-hidden="true">19.17.6.</strong> jdk1.8新特性</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/jdk与jre.html"><strong aria-hidden="true">19.17.7.</strong> jdk与jre</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/枚举.html"><strong aria-hidden="true">19.17.8.</strong> 枚举</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/注解.html"><strong aria-hidden="true">19.17.9.</strong> 注解</a></li></ol></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/index.html"><strong aria-hidden="true">19.18.</strong> java多线程与锁</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/JUC线程同步工具.html"><strong aria-hidden="true">19.18.1.</strong> JUC线程同步工具</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/LockSupport.html"><strong aria-hidden="true">19.18.2.</strong> LockSupport</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/java内存模型.html"><strong aria-hidden="true">19.18.3.</strong> java内存模型</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/java线程状态.html"><strong aria-hidden="true">19.18.4.</strong> java线程状态</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/java锁.html"><strong aria-hidden="true">19.18.5.</strong> java锁</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/jvm线程模型.html"><strong aria-hidden="true">19.18.6.</strong> jvm线程模型</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/关于多线程与并发编码的心得.html"><strong aria-hidden="true">19.18.7.</strong> 关于多线程与并发编码的心得</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/线程操作.html"><strong aria-hidden="true">19.18.8.</strong> 线程操作</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/线程池.html"><strong aria-hidden="true">19.18.9.</strong> 线程池</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.18.10.</strong> 基于AQS的同步工具</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/AQS.html"><strong aria-hidden="true">19.18.10.1.</strong> AQS</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/Condition条件等待.html"><strong aria-hidden="true">19.18.10.2.</strong> Condition条件等待</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/CountDownLatch.html"><strong aria-hidden="true">19.18.10.3.</strong> CountDownLatch</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/CyclicBarrier.html"><strong aria-hidden="true">19.18.10.4.</strong> CyclicBarrier</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/Lock锁接口.html"><strong aria-hidden="true">19.18.10.5.</strong> Lock锁接口</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/ReentrantLock.html"><strong aria-hidden="true">19.18.10.6.</strong> ReentrantLock</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/ReentrantReadWriteLock.html"><strong aria-hidden="true">19.18.10.7.</strong> ReentrantReadWriteLock</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/Semaphore.html"><strong aria-hidden="true">19.18.10.8.</strong> Semaphore</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/StampedLock.html"><strong aria-hidden="true">19.18.10.9.</strong> StampedLock</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.19.</strong> java源码分析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/java源码分析/1.java面试.html"><strong aria-hidden="true">19.19.1.</strong> java面试</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/JavaLocalDate.html"><strong aria-hidden="true">19.19.2.</strong> JavaLocalDate</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/JavaUnsafe类.html"><strong aria-hidden="true">19.19.3.</strong> JavaUnsafe类</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/foreach语法糖.html"><strong aria-hidden="true">19.19.4.</strong> foreach语法糖</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/formatter.html"><strong aria-hidden="true">19.19.5.</strong> formatter</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/integer的比较问题.html"><strong aria-hidden="true">19.19.6.</strong> integer的比较问题</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/java序列化接口.html"><strong aria-hidden="true">19.19.7.</strong> java序列化接口</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/string常量池.html"><strong aria-hidden="true">19.19.8.</strong> string常量池</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/threadLocal.html"><strong aria-hidden="true">19.19.9.</strong> threadLocal</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/基于jdk1.8的Arrays.sort.html"><strong aria-hidden="true">19.19.10.</strong> 基于jdk1.8的Arrays.sort</a></li></ol></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/index.html"><strong aria-hidden="true">19.20.</strong> java集合框架</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/java集合框架/ArrayBlockingQueue.html"><strong aria-hidden="true">19.20.1.</strong> ArrayBlockingQueue</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/ArrayList.html"><strong aria-hidden="true">19.20.2.</strong> ArrayList</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/ConcurrentHashMap.html"><strong aria-hidden="true">19.20.3.</strong> ConcurrentHashMap</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/LinkedList与双向队列.html"><strong aria-hidden="true">19.20.4.</strong> LinkedList与双向队列</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/List.html"><strong aria-hidden="true">19.20.5.</strong> List</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/Map接口.html"><strong aria-hidden="true">19.20.6.</strong> Map接口</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/Queue与Deque.html"><strong aria-hidden="true">19.20.7.</strong> Queue与Deque</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/Set与LinkedHashMap.html"><strong aria-hidden="true">19.20.8.</strong> Set与LinkedHashMap</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/SynchronousQueue.html"><strong aria-hidden="true">19.20.9.</strong> SynchronousQueue</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/arraylist和linkedlist.html"><strong aria-hidden="true">19.20.10.</strong> arraylist和linkedlist</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/hashMap.html"><strong aria-hidden="true">19.20.11.</strong> hashMap</a></li></ol></li><li class="chapter-item "><a href="../java_1_java基础/redission-java/index.html"><strong aria-hidden="true">19.21.</strong> redission-java</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.22.</strong> shiro</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/shiro/shiro频繁访问redis.html"><strong aria-hidden="true">19.22.1.</strong> shiro频繁访问redis</a></li></ol></li><li class="chapter-item "><a href="../java_1_java基础/代理/index.html"><strong aria-hidden="true">19.23.</strong> 代理</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/代理/CGLIB.html"><strong aria-hidden="true">19.23.1.</strong> CGLIB</a></li><li class="chapter-item "><a href="../java_1_java基础/代理/cglib的几种Callback.html"><strong aria-hidden="true">19.23.2.</strong> cglib的几种Callback</a></li><li class="chapter-item "><a href="../java_1_java基础/代理/jdk动态代理.html"><strong aria-hidden="true">19.23.3.</strong> jdk动态代理</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.24.</strong> 其他</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/其他/Collections工具类.html"><strong aria-hidden="true">19.24.1.</strong> Collections工具类</a></li><li class="chapter-item "><a href="../java_1_java基础/其他/JAVA命令行工具.html"><strong aria-hidden="true">19.24.2.</strong> JAVA命令行工具</a></li><li class="chapter-item "><a href="../java_1_java基础/其他/Objects工具类.html"><strong aria-hidden="true">19.24.3.</strong> Objects工具类</a></li><li class="chapter-item "><a href="../java_1_java基础/其他/javaIdea调试.html"><strong aria-hidden="true">19.24.4.</strong> javaIdea调试</a></li><li class="chapter-item "><a href="../java_1_java基础/其他/javaPererences工具.html"><strong aria-hidden="true">19.24.5.</strong> javaPererences工具</a></li><li class="chapter-item "><a href="../java_1_java基础/其他/java基准测试.html"><strong aria-hidden="true">19.24.6.</strong> java基准测试</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.25.</strong> 函数式编程</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/函数式编程/anyMatchAllMatch.html"><strong aria-hidden="true">19.25.1.</strong> anyMatchAllMatch</a></li><li class="chapter-item "><a href="../java_1_java基础/函数式编程/java函数式编程.html"><strong aria-hidden="true">19.25.2.</strong> java函数式编程</a></li><li class="chapter-item "><a href="../java_1_java基础/函数式编程/lamba表达式原理.html"><strong aria-hidden="true">19.25.3.</strong> lamba表达式原理</a></li><li class="chapter-item "><a href="../java_1_java基础/函数式编程/方法引用.html"><strong aria-hidden="true">19.25.4.</strong> 方法引用</a></li><li class="chapter-item "><a href="../java_1_java基础/函数式编程/流操作.html"><strong aria-hidden="true">19.25.5.</strong> 流操作</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.26.</strong> 对象拷贝</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/对象拷贝/mapstruct.html"><strong aria-hidden="true">19.26.1.</strong> mapstruct</a></li></ol></li></ol></li><li class="chapter-item "><a href="../java_2_响应式编程/index.html"><strong aria-hidden="true">20.</strong> 响应式编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/index.html"><strong aria-hidden="true">20.1.</strong> ProjectReactor</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/创建发布者.html"><strong aria-hidden="true">20.1.1.</strong> 创建发布者</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/创建订阅.html"><strong aria-hidden="true">20.1.2.</strong> 创建订阅</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/响应式流的动作.html"><strong aria-hidden="true">20.1.3.</strong> 响应式流的动作</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/选择合适的操作符.html"><strong aria-hidden="true">20.1.4.</strong> 选择合适的操作符</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/index.html"><strong aria-hidden="true">20.1.5.</strong> core-features</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/FluxAndMono.html"><strong aria-hidden="true">20.1.5.1.</strong> FluxAndMono</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/ProcessorOrSinks.html"><strong aria-hidden="true">20.1.5.2.</strong> ProcessorOrSinks</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/线程和调度.html"><strong aria-hidden="true">20.1.5.3.</strong> 线程和调度</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/编程式创建序列.html"><strong aria-hidden="true">20.1.5.4.</strong> 编程式创建序列</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/错误处理.html"><strong aria-hidden="true">20.1.5.5.</strong> 错误处理</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../java_4_日志/index.html"><strong aria-hidden="true">21.</strong> 日志</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_4_日志/JUL.html"><strong aria-hidden="true">21.1.</strong> JUL</a></li><li class="chapter-item "><a href="../java_4_日志/SL4j.html"><strong aria-hidden="true">21.2.</strong> SL4j</a></li><li class="chapter-item "><a href="../java_4_日志/日志处理进化史.html"><strong aria-hidden="true">21.3.</strong> 日志处理进化史</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/index.html"><strong aria-hidden="true">21.4.</strong> log4j2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_4_日志/log4j2/Log4j2API.html"><strong aria-hidden="true">21.4.1.</strong> Log4j2API</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/log4j2-web.html"><strong aria-hidden="true">21.4.2.</strong> log4j2-web</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/lookups.html"><strong aria-hidden="true">21.4.3.</strong> lookups</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/依赖管理.html"><strong aria-hidden="true">21.4.4.</strong> 依赖管理</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/index.html"><strong aria-hidden="true">21.4.5.</strong> appenders</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/AsyncAppender.html"><strong aria-hidden="true">21.4.5.1.</strong> AsyncAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/CassandraAppender.html"><strong aria-hidden="true">21.4.5.2.</strong> CassandraAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/ConsoleAppender.html"><strong aria-hidden="true">21.4.5.3.</strong> ConsoleAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/FailoverAppender.html"><strong aria-hidden="true">21.4.5.4.</strong> FailoverAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/FileAppender.html"><strong aria-hidden="true">21.4.5.5.</strong> FileAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/JDBCAppender.html"><strong aria-hidden="true">21.4.5.6.</strong> JDBCAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/OutputStreamAppender.html"><strong aria-hidden="true">21.4.5.7.</strong> OutputStreamAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/RandomAccessFileAppender.html"><strong aria-hidden="true">21.4.5.8.</strong> RandomAccessFileAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/RewriteAppender.html"><strong aria-hidden="true">21.4.5.9.</strong> RewriteAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/RollingFileAppender.html"><strong aria-hidden="true">21.4.5.10.</strong> RollingFileAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/RollingRandomAccessFileAppender.html"><strong aria-hidden="true">21.4.5.11.</strong> RollingRandomAccessFileAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/RoutingAppender.html"><strong aria-hidden="true">21.4.5.12.</strong> RoutingAppender</a></li></ol></li><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/index.html"><strong aria-hidden="true">21.4.6.</strong> layouts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/CSVLayouts.html"><strong aria-hidden="true">21.4.6.1.</strong> CSVLayouts</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/HTMLayouts.html"><strong aria-hidden="true">21.4.6.2.</strong> HTMLayouts</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/JSONLayout.html"><strong aria-hidden="true">21.4.6.3.</strong> JSONLayout</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/JSONTemplateLayouts.html"><strong aria-hidden="true">21.4.6.4.</strong> JSONTemplateLayouts</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/PatternLayout.html"><strong aria-hidden="true">21.4.6.5.</strong> PatternLayout</a></li></ol></li><li class="chapter-item "><a href="../java_4_日志/log4j2/log4j2配置/index.html"><strong aria-hidden="true">21.4.7.</strong> log4j2配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_4_日志/log4j2/log4j2配置/高级配置.html"><strong aria-hidden="true">21.4.7.1.</strong> 高级配置</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">22.</strong> ORM</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">22.1.</strong> Mybatis</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_5_ORM/Mybatis/mybatis.html"><strong aria-hidden="true">22.1.1.</strong> mybatis</a></li><li class="chapter-item "><a href="../java_5_ORM/Mybatis/mybatis-插件开发.html"><strong aria-hidden="true">22.1.2.</strong> mybatis-插件开发</a></li><li class="chapter-item "><a href="../java_5_ORM/Mybatis/mybatis标签.html"><strong aria-hidden="true">22.1.3.</strong> mybatis标签</a></li><li class="chapter-item "><a href="../java_5_ORM/Mybatis/resultHandler.html"><strong aria-hidden="true">22.1.4.</strong> resultHandler</a></li><li class="chapter-item "><a href="../java_5_ORM/Mybatis/多结果集分页.html"><strong aria-hidden="true">22.1.5.</strong> 多结果集分页</a></li></ol></li><li class="chapter-item "><a href="../java_5_ORM/jpa/index.html"><strong aria-hidden="true">22.2.</strong> jpa</a></li></ol></li><li class="chapter-item "><a href="../java_6_IO/index.html"><strong aria-hidden="true">23.</strong> IO</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_6_IO/Buffer.html"><strong aria-hidden="true">23.1.</strong> Buffer</a></li><li class="chapter-item "><a href="../java_6_IO/Channel.html"><strong aria-hidden="true">23.2.</strong> Channel</a></li><li class="chapter-item "><a href="../java_6_IO/LinuxIO模型演变.html"><strong aria-hidden="true">23.3.</strong> LinuxIO模型演变</a></li><li class="chapter-item "><a href="../java_6_IO/Selector（选择器）.html"><strong aria-hidden="true">23.4.</strong> Selector（选择器）</a></li><li class="chapter-item "><a href="../java_6_IO/主流IO模型.html"><strong aria-hidden="true">23.5.</strong> 主流IO模型</a></li><li class="chapter-item "><a href="../java_6_IO/从IO到NIO个人理解.html"><strong aria-hidden="true">23.6.</strong> 从IO到NIO个人理解</a></li><li class="chapter-item "><a href="../java_6_IO/字符集.html"><strong aria-hidden="true">23.7.</strong> 字符集</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/index.html"><strong aria-hidden="true">23.8.</strong> FileIO(NIO-2.0)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/LinksSymbolicOtherwise.html"><strong aria-hidden="true">23.8.1.</strong> LinksSymbolicOtherwise</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/RandomAccessFiles.html"><strong aria-hidden="true">23.8.2.</strong> RandomAccessFiles</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/传统IO与NIO的API迁移.html"><strong aria-hidden="true">23.8.3.</strong> 传统IO与NIO的API迁移</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/元数据管理.html"><strong aria-hidden="true">23.8.4.</strong> 元数据管理</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/其他有用方法.html"><strong aria-hidden="true">23.8.5.</strong> 其他有用方法</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/开发自定义文件系统.html"><strong aria-hidden="true">23.8.6.</strong> 开发自定义文件系统</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/文件查找.html"><strong aria-hidden="true">23.8.7.</strong> 文件查找</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/文件管理.html"><strong aria-hidden="true">23.8.8.</strong> 文件管理</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/文件读写.html"><strong aria-hidden="true">23.8.9.</strong> 文件读写</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/监控目录变化.html"><strong aria-hidden="true">23.8.10.</strong> 监控目录变化</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/目录管理.html"><strong aria-hidden="true">23.8.11.</strong> 目录管理</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/路径操作.html"><strong aria-hidden="true">23.8.12.</strong> 路径操作</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/遍历目录树.html"><strong aria-hidden="true">23.8.13.</strong> 遍历目录树</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../java_7_servlet规范/index.html" class="active"><strong aria-hidden="true">24.</strong> servlet规范</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_7_servlet规范/fitler.html"><strong aria-hidden="true">24.1.</strong> fitler</a></li><li class="chapter-item "><a href="../java_7_servlet规范/httpServlet接口.html"><strong aria-hidden="true">24.2.</strong> httpServlet接口</a></li><li class="chapter-item "><a href="../java_7_servlet规范/request.html"><strong aria-hidden="true">24.3.</strong> request</a></li><li class="chapter-item "><a href="../java_7_servlet规范/response.html"><strong aria-hidden="true">24.4.</strong> response</a></li><li class="chapter-item "><a href="../java_7_servlet规范/servletContext.html"><strong aria-hidden="true">24.5.</strong> servletContext</a></li><li class="chapter-item "><a href="../java_7_servlet规范/servlet初始化.html"><strong aria-hidden="true">24.6.</strong> servlet初始化</a></li><li class="chapter-item "><a href="../java_7_servlet规范/session.html"><strong aria-hidden="true">24.7.</strong> session</a></li><li class="chapter-item "><a href="../java_7_servlet规范/入门.html"><strong aria-hidden="true">24.8.</strong> 入门</a></li><li class="chapter-item "><a href="../java_7_servlet规范/注解与可插拔.html"><strong aria-hidden="true">24.9.</strong> 注解与可插拔</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">25.</strong> 设计模式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_8_设计模式/PipeLine.html"><strong aria-hidden="true">25.1.</strong> PipeLine</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">26.</strong> 单元测试</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_9_单元测试/junit5/index.html"><strong aria-hidden="true">26.1.</strong> junit5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_9_单元测试/junit5/ConsoleLaunch.html"><strong aria-hidden="true">26.1.1.</strong> ConsoleLaunch</a></li><li class="chapter-item "><a href="../java_9_单元测试/junit5/DependencyMetadata.html"><strong aria-hidden="true">26.1.2.</strong> DependencyMetadata</a></li><li class="chapter-item "><div><strong aria-hidden="true">26.1.3.</strong> writtingTest</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_9_单元测试/junit5/writtingTest/Annotations.html"><strong aria-hidden="true">26.1.3.1.</strong> Annotations</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">工具</li><li class="chapter-item "><a href="../工具_3_git/index.html"><strong aria-hidden="true">27.</strong> git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../工具_3_git/Git库管理.html"><strong aria-hidden="true">27.1.</strong> Git库管理</a></li><li class="chapter-item "><a href="../工具_3_git/gitDiff原理.html"><strong aria-hidden="true">27.2.</strong> gitDiff原理</a></li><li class="chapter-item "><a href="../工具_3_git/gitLog命令.html"><strong aria-hidden="true">27.3.</strong> gitLog命令</a></li><li class="chapter-item "><a href="../工具_3_git/gitflow.html"><strong aria-hidden="true">27.4.</strong> gitflow</a></li><li class="chapter-item "><a href="../工具_3_git/gitmerge.html"><strong aria-hidden="true">27.5.</strong> gitmerge</a></li><li class="chapter-item "><a href="../工具_3_git/gitrebase.html"><strong aria-hidden="true">27.6.</strong> gitrebase</a></li><li class="chapter-item "><a href="../工具_3_git/git使用案例.html"><strong aria-hidden="true">27.7.</strong> git使用案例</a></li><li class="chapter-item "><a href="../工具_3_git/git分支.html"><strong aria-hidden="true">27.8.</strong> git分支</a></li><li class="chapter-item "><a href="../工具_3_git/git命令杂项.html"><strong aria-hidden="true">27.9.</strong> git命令杂项</a></li><li class="chapter-item "><a href="../工具_3_git/git基础.html"><strong aria-hidden="true">27.10.</strong> git基础</a></li><li class="chapter-item "><a href="../工具_3_git/git错误提交后场景.html"><strong aria-hidden="true">27.11.</strong> git错误提交后场景</a></li><li class="chapter-item "><a href="../工具_3_git/tag管理.html"><strong aria-hidden="true">27.12.</strong> tag管理</a></li><li class="chapter-item "><a href="../工具_3_git/使用远程分支强制覆盖本地工作区暂存区版本库.html"><strong aria-hidden="true">27.13.</strong> 使用远程分支强制覆盖本地工作区暂存区版本库</a></li><li class="chapter-item "><a href="../工具_3_git/克隆.html"><strong aria-hidden="true">27.14.</strong> 克隆</a></li><li class="chapter-item "><a href="../工具_3_git/历史提交.html"><strong aria-hidden="true">27.15.</strong> 历史提交</a></li><li class="chapter-item "><a href="../工具_3_git/回退合并提交.html"><strong aria-hidden="true">27.16.</strong> 回退合并提交</a></li><li class="chapter-item "><a href="../工具_3_git/基本操作.html"><strong aria-hidden="true">27.17.</strong> 基本操作</a></li><li class="chapter-item "><a href="../工具_3_git/杂项.html"><strong aria-hidden="true">27.18.</strong> 杂项</a></li><li class="chapter-item "><div><strong aria-hidden="true">27.19.</strong> GIT协作</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../工具_3_git/GIT协作/Git支持的协议.html"><strong aria-hidden="true">27.19.1.</strong> Git支持的协议</a></li><li class="chapter-item "><a href="../工具_3_git/GIT协作/冲突解决.html"><strong aria-hidden="true">27.19.2.</strong> 冲突解决</a></li><li class="chapter-item "><a href="../工具_3_git/GIT协作/补丁文件交互.html"><strong aria-hidden="true">27.19.3.</strong> 补丁文件交互</a></li><li class="chapter-item "><a href="../工具_3_git/GIT协作/远程版本库.html"><strong aria-hidden="true">27.19.4.</strong> 远程版本库</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">28.</strong> 绘图建模</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../工具_4_绘图建模/UML.html"><strong aria-hidden="true">28.1.</strong> UML</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/flowchart_fun.html"><strong aria-hidden="true">28.2.</strong> flowchart_fun</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid;README.html"><strong aria-hidden="true">28.3.</strong> mermaid;README</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/plantUML语法.html"><strong aria-hidden="true">28.4.</strong> plantUML语法</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid/index.html"><strong aria-hidden="true">28.5.</strong> mermaid</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid/时序图.html"><strong aria-hidden="true">28.5.1.</strong> 时序图</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid/流程图.html"><strong aria-hidden="true">28.5.2.</strong> 流程图</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid/类图.html"><strong aria-hidden="true">28.5.3.</strong> 类图</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid/语法总览.html"><strong aria-hidden="true">28.5.4.</strong> 语法总览</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">其他</li><li class="chapter-item "><a href="../其他_2_其他/index.html"><strong aria-hidden="true">29.</strong> 其他</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他_2_其他/Multipass.html"><strong aria-hidden="true">29.1.</strong> Multipass</a></li><li class="chapter-item "><a href="../其他_2_其他/Wallabag.html"><strong aria-hidden="true">29.2.</strong> Wallabag</a></li><li class="chapter-item "><a href="../其他_2_其他/v2rayN代理.html"><strong aria-hidden="true">29.3.</strong> v2rayN代理</a></li><li class="chapter-item "><a href="../其他_2_其他/个人清算汇缴.html"><strong aria-hidden="true">29.4.</strong> 个人清算汇缴</a></li><li class="chapter-item "><a href="../其他_2_其他/概率论与数理统计.html"><strong aria-hidden="true">29.5.</strong> 概率论与数理统计</a></li><li class="chapter-item "><a href="../其他_2_其他/虚拟机操作.html"><strong aria-hidden="true">29.6.</strong> 虚拟机操作</a></li><li class="chapter-item "><div><strong aria-hidden="true">29.7.</strong> intellj</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他_2_其他/intellj/Http请求发送.html"><strong aria-hidden="true">29.7.1.</strong> Http请求发送</a></li><li class="chapter-item "><a href="../其他_2_其他/intellj/ideaSettings.html"><strong aria-hidden="true">29.7.2.</strong> ideaSettings</a></li></ol></li><li class="chapter-item "><a href="../其他_2_其他/osascript/index.html"><strong aria-hidden="true">29.8.</strong> osascript</a></li><li class="chapter-item "><a href="../其他_2_其他/taskList/index.html"><strong aria-hidden="true">29.9.</strong> taskList</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">29.9.1.</strong> java</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他_2_其他/taskList/java/AnnotationProcessing.html"><strong aria-hidden="true">29.9.1.1.</strong> AnnotationProcessing</a></li><li class="chapter-item "><a href="../其他_2_其他/taskList/java/ruoyi项目开发.html"><strong aria-hidden="true">29.9.1.2.</strong> ruoyi项目开发</a></li><li class="chapter-item "><a href="../其他_2_其他/taskList/java/可继承的ThreadLocal.html"><strong aria-hidden="true">29.9.1.3.</strong> 可继承的ThreadLocal</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../其他_4_思考/index.html"><strong aria-hidden="true">30.</strong> 思考</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他_4_思考/学习总结.html"><strong aria-hidden="true">30.1.</strong> 学习总结</a></li><li class="chapter-item "><a href="../其他_4_思考/杂项.html"><strong aria-hidden="true">30.2.</strong> 杂项</a></li><li class="chapter-item "><a href="../其他_4_思考/编程技巧.html"><strong aria-hidden="true">30.3.</strong> 编程技巧</a></li></ol></li><li class="chapter-item "><li class="part-title">其他编程语言</li><li class="chapter-item "><div><strong aria-hidden="true">31.</strong> C++</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_1_C++/C++与C的区别.html"><strong aria-hidden="true">31.1.</strong> C++与C的区别</a></li><li class="chapter-item "><a href="../其他编程语言_1_C++/C++面向对象.html"><strong aria-hidden="true">31.2.</strong> C++面向对象</a></li><li class="chapter-item "><a href="../其他编程语言_1_C++/泛型编程.html"><strong aria-hidden="true">31.3.</strong> 泛型编程</a></li><li class="chapter-item "><a href="../其他编程语言_1_C++/cmake/index.html"><strong aria-hidden="true">31.4.</strong> cmake</a></li></ol></li><li class="chapter-item "><a href="../其他编程语言_2_LUA/index.html"><strong aria-hidden="true">32.</strong> LUA</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_2_LUA/基本语法.html"><strong aria-hidden="true">32.1.</strong> 基本语法</a></li><li class="chapter-item "><a href="../其他编程语言_2_LUA/高级语法.html"><strong aria-hidden="true">32.2.</strong> 高级语法</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">33.</strong> rust</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_3_rust/1常见编程概念.html"><strong aria-hidden="true">33.1.</strong> 1常见编程概念</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/2所有权.html"><strong aria-hidden="true">33.2.</strong> 2所有权</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/ConstantsAndVariables.html"><strong aria-hidden="true">33.3.</strong> ConstantsAndVariables</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/Rust中的Sizedness.html"><strong aria-hidden="true">33.4.</strong> Rust中的Sizedness</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/Rust库API设计文档规范.html"><strong aria-hidden="true">33.5.</strong> Rust库API设计文档规范</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/const类型与函数.html"><strong aria-hidden="true">33.6.</strong> const类型与函数</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/newType模式.html"><strong aria-hidden="true">33.7.</strong> newType模式</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/rust执行shell命令.html"><strong aria-hidden="true">33.8.</strong> rust执行shell命令</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/rust指针.html"><strong aria-hidden="true">33.9.</strong> rust指针</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/rust面向对象特性.html"><strong aria-hidden="true">33.10.</strong> rust面向对象特性</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/依赖管理.html"><strong aria-hidden="true">33.11.</strong> 依赖管理</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/函数式编程.html"><strong aria-hidden="true">33.12.</strong> 函数式编程</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/宏.html"><strong aria-hidden="true">33.13.</strong> 宏</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/常见集合.html"><strong aria-hidden="true">33.14.</strong> 常见集合</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/模式匹配.html"><strong aria-hidden="true">33.15.</strong> 模式匹配</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/泛型与trait.html"><strong aria-hidden="true">33.16.</strong> 泛型与trait</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/结构体.html"><strong aria-hidden="true">33.17.</strong> 结构体</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/迭代与闭包.html"><strong aria-hidden="true">33.18.</strong> 迭代与闭包</a></li><li class="chapter-item "><div><strong aria-hidden="true">33.19.</strong> rfcs</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_3_rust/rfcs/0195_associated-items.html"><strong aria-hidden="true">33.19.1.</strong> 0195_associated-items</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/rfcs/0911-const-fn.html"><strong aria-hidden="true">33.19.2.</strong> 0911-const-fn</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">34.</strong> groovy</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_4_groovy/RuntimeAndCompile-timeMetaprogramming.html"><strong aria-hidden="true">34.1.</strong> RuntimeAndCompile-timeMetaprogramming</a></li><li class="chapter-item "><a href="../其他编程语言_4_groovy/基础语法.html"><strong aria-hidden="true">34.2.</strong> 基础语法</a></li><li class="chapter-item "><a href="../其他编程语言_4_groovy/开发工具类.html"><strong aria-hidden="true">34.3.</strong> 开发工具类</a></li><li class="chapter-item "><a href="../其他编程语言_4_groovy/操作符.html"><strong aria-hidden="true">34.4.</strong> 操作符</a></li><li class="chapter-item "><a href="../其他编程语言_4_groovy/编程结构.html"><strong aria-hidden="true">34.5.</strong> 编程结构</a></li></ol></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/index.html"><strong aria-hidden="true">35.</strong> nodejs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_5_nodejs/fakeJS.html"><strong aria-hidden="true">35.1.</strong> fakeJS</a></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/nodejs事件循环.html"><strong aria-hidden="true">35.2.</strong> nodejs事件循环</a></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/入门.html"><strong aria-hidden="true">35.3.</strong> 入门</a></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/包管理.html"><strong aria-hidden="true">35.4.</strong> 包管理</a></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/定时器.html"><strong aria-hidden="true">35.5.</strong> 定时器</a></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/异步编程.html"><strong aria-hidden="true">35.6.</strong> 异步编程</a></li><li class="chapter-item "><div><strong aria-hidden="true">35.7.</strong> packageInfo参数解析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_5_nodejs/packageInfo参数解析/1.scripts.html"><strong aria-hidden="true">35.7.1.</strong> scripts</a></li></ol></li></ol></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/index.html"><strong aria-hidden="true">36.</strong> typescript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_6_typescript/1.基础类型.html"><strong aria-hidden="true">36.1.</strong> 基础类型</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/2.变量声明.html"><strong aria-hidden="true">36.2.</strong> 变量声明</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/3.接口.html"><strong aria-hidden="true">36.3.</strong> 接口</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/4.模块.html"><strong aria-hidden="true">36.4.</strong> 模块</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/jtest测试框架/index.html"><strong aria-hidden="true">36.5.</strong> jtest测试框架</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_6_typescript/jtest测试框架/Except.html"><strong aria-hidden="true">36.5.1.</strong> Except</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/jtest测试框架/Globals.html"><strong aria-hidden="true">36.5.2.</strong> Globals</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/jtest测试框架/Hook顺序.html"><strong aria-hidden="true">36.5.3.</strong> Hook顺序</a></li></ol></li></ol></li><li class="chapter-item "><a href="../其他编程语言_7_python/index.html"><strong aria-hidden="true">37.</strong> python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_7_python/1.python3基础语法.html"><strong aria-hidden="true">37.1.</strong> python3基础语法</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/2.基本数据类型.html"><strong aria-hidden="true">37.2.</strong> 基本数据类型</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/3.Python3数据类型转换.html"><strong aria-hidden="true">37.3.</strong> Python3数据类型转换</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/4.Python推导式.html"><strong aria-hidden="true">37.4.</strong> Python推导式</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/5.Python3运算符.html"><strong aria-hidden="true">37.5.</strong> Python3运算符</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/6.Python3字符串.html"><strong aria-hidden="true">37.6.</strong> Python3字符串</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/7.python3列表.html"><strong aria-hidden="true">37.7.</strong> python3列表</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/8.元祖.html"><strong aria-hidden="true">37.8.</strong> 元祖</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/9.Python3字典.html"><strong aria-hidden="true">37.9.</strong> Python3字典</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/10.Python3集合.html"><strong aria-hidden="true">37.10.</strong> Python3集合</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/11.Number类型.html"><strong aria-hidden="true">37.11.</strong> Number类型</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/12.python3流程控制.html"><strong aria-hidden="true">37.12.</strong> python3流程控制</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/13.Python3迭代器与生成器.html"><strong aria-hidden="true">37.13.</strong> Python3迭代器与生成器</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/14.函数.html"><strong aria-hidden="true">37.14.</strong> 函数</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/15.Python3JSON数据解析.html"><strong aria-hidden="true">37.15.</strong> Python3JSON数据解析</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/16.Python3面向对象.html"><strong aria-hidden="true">37.16.</strong> Python3面向对象</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/17.模块与包.html"><strong aria-hidden="true">37.17.</strong> 模块与包</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/With关键字.html"><strong aria-hidden="true">37.18.</strong> With关键字</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/杂项.html"><strong aria-hidden="true">37.19.</strong> 杂项</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/fabric/index.html"><strong aria-hidden="true">37.20.</strong> fabric</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_7_python/fabric/Configuration.html"><strong aria-hidden="true">37.20.1.</strong> Configuration</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/fabric/README_1.x.html"><strong aria-hidden="true">37.20.2.</strong> README_1.x</a></li></ol></li><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/index.html"><strong aria-hidden="true">37.21.</strong> invoke</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/1.DefiningAndRunningTask.html"><strong aria-hidden="true">37.21.1.</strong> DefiningAndRunningTask</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/2.InvokeCoreUsage.html"><strong aria-hidden="true">37.21.2.</strong> InvokeCoreUsage</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/3.Configuration.html"><strong aria-hidden="true">37.21.3.</strong> Configuration</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/4.loadingCollections.html"><strong aria-hidden="true">37.21.4.</strong> loadingCollections</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/5.UsingInvokeAslibrary.html"><strong aria-hidden="true">37.21.5.</strong> UsingInvokeAslibrary</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">note</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="什么是-servlet"><a class="header" href="#什么是-servlet">什么是 Servlet?</a></h1>
+<p><strong>基于请求-响应 模型的框架</strong></p>
+<ul>
+<li>提供基于请求/响应发送模型的网络服务，解码基于 <em><a href="..%5CWeb%5CHTTP%5CMIME.html">MIME</a></em> 的请求，并且格式化基于 <a href="..%5CWeb%5CHTTP%5CMIME.html"><em>MIME</em></a> 的响应</li>
+<li>必须支持基于 HTTP 协议的请求/响应模型</li>
+</ul>
+<p><strong>Servlet 执行以下主要任务</strong>：</p>
+<ul>
+<li><strong>读取客户端（浏览器）发送的显式的数据</strong>。这包括网页上的 HTML 表单，或者也可以是来自 applet 或自定义的 HTTP 客户端程序的表单。</li>
+<li><strong>读取客户端（浏览器）发送的隐式的 HTTP 请求数据</strong>。这包括 cookies、媒体类型和浏览器能理解的压缩格式等等。</li>
+<li><strong>处理数据并生成结果</strong>。这个过程可能需要访问数据库，执行 RMI 或 CORBA 调用，调用 Web 服务，或者直接计算得出对应的响应。</li>
+<li><strong>发送显式的数据（即文档）到客户端（浏览器）</strong>。该文档的格式可以是多种多样的，包括文本文件（HTML 或 XML）、二进制文件（GIF 图像）、Excel 等。</li>
+<li><strong>发送隐式的 HTTP 响应到客户端（浏览器）</strong>。这包括告诉浏览器或其他客户端被返回的文档类型（例如 HTML），设置 cookies 和缓存参数，以及其他类似的任务。</li>
+</ul>
+<h1 id="servlet接口"><a class="header" href="#servlet接口">Servlet接口</a></h1>
+<p><a href="httpServlet.html">基于Http协议的servlet接口</a></p>
+<h1 id="servlet-生命周期"><a class="header" href="#servlet-生命周期">Servlet <strong>生命周期</strong></a></h1>
+<h2 id="servlet"><a class="header" href="#servlet"><strong>servlet</strong></a></h2>
+<p><strong>动作</strong></p>
+<pre><code>init
+service(resquest,respoonse)
+destroy
+</code></pre>
+<p><em>contextPath + servletPath = url</em> </p>
+<h1 id="请求"><a class="header" href="#请求">请求</a></h1>
+<h2 id="请求数据获取"><a class="header" href="#请求数据获取"><strong>请求数据获取</strong></a></h2>
+<ul>
+<li>**getParameter()：**您可以调用 request.getParameter() 方法来获取表单参数的值。</li>
+<li>**getParameterValues()：**如果参数出现一次以上，则调用该方法，并返回多个值，例如复选框。</li>
+<li>**getParameterNames()：**如果您想要得到当前请求中的所有参数的完整列表，则调用该方法。</li>
+</ul>
+<h2 id="请求头"><a class="header" href="#请求头"><strong>请求头</strong></a></h2>
+<table><thead><tr><th style="text-align: left">头信息</th><th style="text-align: left">描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">Accept</td><td style="text-align: left">这个头信息指定浏览器或其他客户端可以处理的 MIME 类型。值 <strong>image/png</strong> 或 <strong>image/jpeg</strong> 是最常见的两种可能值。</td></tr>
+<tr><td style="text-align: left">Accept-Charset</td><td style="text-align: left">这个头信息指定浏览器可以用来显示信息的字符集。例如 ISO-8859-1。</td></tr>
+<tr><td style="text-align: left">Accept-Encoding</td><td style="text-align: left">这个头信息指定浏览器知道如何处理的编码类型。值 <strong>gzip</strong> 或 <strong>compress</strong> 是最常见的两种可能值。</td></tr>
+<tr><td style="text-align: left">Accept-Language</td><td style="text-align: left">这个头信息指定客户端的首选语言，在这种情况下，Servlet 会产生多种语言的结果。例如，en、en-us、ru 等。</td></tr>
+<tr><td style="text-align: left">Authorization</td><td style="text-align: left">这个头信息用于客户端在访问受密码保护的网页时识别自己的身份。</td></tr>
+<tr><td style="text-align: left">Connection</td><td style="text-align: left">这个头信息指示客户端是否可以处理持久 HTTP 连接。持久连接允许客户端或其他浏览器通过单个请求来检索多个文件。值 <strong>Keep-Alive</strong> 意味着使用了持续连接。</td></tr>
+<tr><td style="text-align: left">Content-Length</td><td style="text-align: left">这个头信息只适用于 POST 请求，并给出 POST 数据的大小（以字节为单位）。</td></tr>
+<tr><td style="text-align: left">Cookie</td><td style="text-align: left">这个头信息把之前发送到浏览器的 cookies 返回到服务器。</td></tr>
+<tr><td style="text-align: left">Host</td><td style="text-align: left">这个头信息指定原始的 URL 中的主机和端口。</td></tr>
+<tr><td style="text-align: left">If-Modified-Since</td><td style="text-align: left">这个头信息表示只有当页面在指定的日期后已更改时，客户端想要的页面。如果没有新的结果可以使用，服务器会发送一个 304 代码，表示 <strong>Not Modified</strong> 头信息。</td></tr>
+<tr><td style="text-align: left">If-Unmodified-Since</td><td style="text-align: left">这个头信息是 If-Modified-Since 的对立面，它指定只有当文档早于指定日期时，操作才会成功。</td></tr>
+<tr><td style="text-align: left">Referer</td><td style="text-align: left">这个头信息指示所指向的 Web 页的 URL。例如，如果您在网页 1，点击一个链接到网页 2，当浏览器请求网页 2 时，网页 1 的 URL 就会包含在 Referer 头信息中。</td></tr>
+<tr><td style="text-align: left">User-Agent</td><td style="text-align: left">这个头信息识别发出请求的浏览器或其他客户端，并可以向不同类型的浏览器返回不同的内容。</td></tr>
+</tbody></table>
+<h2 id="api读取"><a class="header" href="#api读取"><strong>API读取</strong></a></h2>
+<table><thead><tr><th style="text-align: left">序号</th><th style="text-align: left">方法 &amp; 描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>Cookie[] getCookies()</strong> 返回一个数组，包含客户端发送该请求的所有的 Cookie 对象。</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>Enumeration getAttributeNames()</strong> 返回一个枚举，包含提供给该请求可用的属性名称。</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>Enumeration getHeaderNames()</strong> 返回一个枚举，包含在该请求中包含的所有的头名。</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left"><strong>Enumeration getParameterNames()</strong> 返回一个 String 对象的枚举，包含在该请求中包含的参数的名称。</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left"><strong>HttpSession getSession()</strong> 返回与该请求关联的当前 session 会话，或者如果请求没有 session 会话，则创建一个。</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left"><strong>HttpSession getSession(boolean create)</strong> 返回与该请求关联的当前 HttpSession，或者如果没有当前会话，且创建是真的，则返回一个新的 session 会话。</td></tr>
+<tr><td style="text-align: left">7</td><td style="text-align: left"><strong>Locale getLocale()</strong> 基于 Accept-Language 头，返回客户端接受内容的首选的区域设置。</td></tr>
+<tr><td style="text-align: left">8</td><td style="text-align: left"><strong>Object getAttribute(String name)</strong> 以对象形式返回已命名属性的值，如果没有给定名称的属性存在，则返回 null。</td></tr>
+<tr><td style="text-align: left">9</td><td style="text-align: left"><strong>ServletInputStream getInputStream()</strong> 使用 ServletInputStream，以二进制数据形式检索请求的主体。</td></tr>
+<tr><td style="text-align: left">10</td><td style="text-align: left"><strong>String getAuthType()</strong> 返回用于保护 Servlet 的身份验证方案的名称，例如，&quot;BASIC&quot; 或 &quot;SSL&quot;，如果JSP没有受到保护则返回 null。</td></tr>
+<tr><td style="text-align: left">11</td><td style="text-align: left"><strong>String getCharacterEncoding()</strong> 返回请求主体中使用的字符编码的名称。</td></tr>
+<tr><td style="text-align: left">12</td><td style="text-align: left"><strong>String getContentType()</strong> 返回请求主体的 MIME 类型，如果不知道类型则返回 null。</td></tr>
+<tr><td style="text-align: left">13</td><td style="text-align: left"><strong>String getContextPath()</strong> 返回指示请求上下文的请求 URI 部分。</td></tr>
+<tr><td style="text-align: left">14</td><td style="text-align: left"><strong>String getHeader(String name)</strong> 以字符串形式返回指定的请求头的值。</td></tr>
+<tr><td style="text-align: left">15</td><td style="text-align: left"><strong>String getMethod()</strong> 返回请求的 HTTP 方法的名称，例如，GET、POST 或 PUT。</td></tr>
+<tr><td style="text-align: left">16</td><td style="text-align: left"><strong>String getParameter(String name)</strong> 以字符串形式返回请求参数的值，或者如果参数不存在则返回 null。</td></tr>
+<tr><td style="text-align: left">17</td><td style="text-align: left"><strong>String getPathInfo()</strong> 当请求发出时，返回与客户端发送的 URL 相关的任何额外的路径信息。</td></tr>
+<tr><td style="text-align: left">18</td><td style="text-align: left"><strong>String getProtocol()</strong> 返回请求协议的名称和版本。</td></tr>
+<tr><td style="text-align: left">19</td><td style="text-align: left"><strong>String getQueryString()</strong> 返回包含在路径后的请求 URL 中的查询字符串。</td></tr>
+<tr><td style="text-align: left">20</td><td style="text-align: left"><strong>String getRemoteAddr()</strong> 返回发送请求的客户端的互联网协议（IP）地址。</td></tr>
+<tr><td style="text-align: left">21</td><td style="text-align: left"><strong>String getRemoteHost()</strong> 返回发送请求的客户端的完全限定名称。</td></tr>
+<tr><td style="text-align: left">22</td><td style="text-align: left"><strong>String getRemoteUser()</strong> 如果用户已通过身份验证，则返回发出请求的登录用户，或者如果用户未通过身份验证，则返回 null。</td></tr>
+<tr><td style="text-align: left">23</td><td style="text-align: left"><strong>String getRequestURI()</strong> 从协议名称直到 HTTP 请求的第一行的查询字符串中，返回该请求的 URL 的一部分。</td></tr>
+<tr><td style="text-align: left">24</td><td style="text-align: left"><strong>String getRequestedSessionId()</strong> 返回由客户端指定的 session 会话 ID。</td></tr>
+<tr><td style="text-align: left">25</td><td style="text-align: left"><strong>String getServletPath()</strong> 返回调用 JSP 的请求的 URL 的一部分。</td></tr>
+<tr><td style="text-align: left">26</td><td style="text-align: left"><strong>String[] getParameterValues(String name)</strong> 返回一个字符串对象的数组，包含所有给定的请求参数的值，如果参数不存在则返回 null。</td></tr>
+<tr><td style="text-align: left">27</td><td style="text-align: left"><strong>boolean isSecure()</strong> 返回一个布尔值，指示请求是否使用安全通道，如 HTTPS。</td></tr>
+<tr><td style="text-align: left">28</td><td style="text-align: left"><strong>int getContentLength()</strong> 以字节为单位返回请求主体的长度，并提供输入流，或者如果长度未知则返回 -1。</td></tr>
+<tr><td style="text-align: left">29</td><td style="text-align: left"><strong>int getIntHeader(String name)</strong> 返回指定的请求头的值为一个 int 值。</td></tr>
+<tr><td style="text-align: left">30</td><td style="text-align: left"><strong>int getServerPort()</strong> 返回接收到这个请求的端口号。</td></tr>
+<tr><td style="text-align: left">31</td><td style="text-align: left"><strong>int getParameterMap()</strong> 将参数封装成 Map 类型。</td></tr>
+</tbody></table>
+<h1 id="响应"><a class="header" href="#响应">响应</a></h1>
+<h2 id="响应头"><a class="header" href="#响应头"><strong>响应头</strong></a></h2>
+<table><thead><tr><th style="text-align: left">头信息</th><th style="text-align: left">描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">Allow</td><td style="text-align: left">这个头信息指定服务器支持的请求方法（GET、POST 等）。</td></tr>
+<tr><td style="text-align: left">Cache-Control</td><td style="text-align: left">这个头信息指定响应文档在何种情况下可以安全地缓存。可能的值有：<strong>public、private</strong> 或 <strong>no-cache</strong> 等。Public 意味着文档是可缓存，Private 意味着文档是单个用户私用文档，且只能存储在私有（非共享）缓存中，no-cache 意味着文档不应被缓存。</td></tr>
+<tr><td style="text-align: left">Connection</td><td style="text-align: left">这个头信息指示浏览器是否使用持久 HTTP 连接。值 <strong>close</strong> 指示浏览器不使用持久 HTTP 连接，值 <strong>keep-alive</strong> 意味着使用持久连接。</td></tr>
+<tr><td style="text-align: left">Content-Disposition</td><td style="text-align: left">这个头信息可以让您请求浏览器要求用户以给定名称的文件把响应保存到磁盘。</td></tr>
+<tr><td style="text-align: left">Content-Encoding</td><td style="text-align: left">在传输过程中，这个头信息指定页面的编码方式。</td></tr>
+<tr><td style="text-align: left">Content-Language</td><td style="text-align: left">这个头信息表示文档编写所使用的语言。例如，en、en-us、ru 等。</td></tr>
+<tr><td style="text-align: left">Content-Length</td><td style="text-align: left">这个头信息指示响应中的字节数。只有当浏览器使用持久（keep-alive）HTTP 连接时才需要这些信息。</td></tr>
+<tr><td style="text-align: left">Content-Type</td><td style="text-align: left">这个头信息提供了响应文档的 MIME（Multipurpose Internet Mail Extension）类型。</td></tr>
+<tr><td style="text-align: left">Expires</td><td style="text-align: left">这个头信息指定内容过期的时间，在这之后内容不再被缓存。</td></tr>
+<tr><td style="text-align: left">Last-Modified</td><td style="text-align: left">这个头信息指示文档的最后修改时间。然后，客户端可以缓存文件，并在以后的请求中通过 <strong>If-Modified-Since</strong> 请求头信息提供一个日期。</td></tr>
+<tr><td style="text-align: left">Location</td><td style="text-align: left">这个头信息应被包含在所有的带有状态码的响应中。在 300s 内，这会通知浏览器文档的地址。浏览器会自动重新连接到这个位置，并获取新的文档。</td></tr>
+<tr><td style="text-align: left">Refresh</td><td style="text-align: left">这个头信息指定浏览器应该如何尽快请求更新的页面。您可以指定页面刷新的秒数。</td></tr>
+<tr><td style="text-align: left">Retry-After</td><td style="text-align: left">这个头信息可以与 503（Service Unavailable 服务不可用）响应配合使用，这会告诉客户端多久就可以重复它的请求。</td></tr>
+<tr><td style="text-align: left">Set-Cookie</td><td style="text-align: left">这个头信息指定一个与页面关联的 cookie。</td></tr>
+</tbody></table>
+<h2 id="api"><a class="header" href="#api"><strong>API</strong></a></h2>
+<table><thead><tr><th style="text-align: left">序号</th><th style="text-align: left">方法 &amp; 描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>String encodeRedirectURL(String url)</strong> 为 sendRedirect 方法中使用的指定的 URL 进行编码，或者如果编码不是必需的，则返回 URL 未改变。</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>String encodeURL(String url)</strong> 对包含 session 会话 ID 的指定 URL 进行编码，或者如果编码不是必需的，则返回 URL 未改变。</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>boolean containsHeader(String name)</strong> 返回一个布尔值，指示是否已经设置已命名的响应报头。</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left"><strong>boolean isCommitted()</strong> 返回一个布尔值，指示响应是否已经提交。</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left"><strong>void addCookie(Cookie cookie)</strong> 把指定的 cookie 添加到响应。</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left"><strong>void addDateHeader(String name, long date)</strong> 添加一个带有给定的名称和日期值的响应报头。</td></tr>
+<tr><td style="text-align: left">7</td><td style="text-align: left"><strong>void addHeader(String name, String value)</strong> 添加一个带有给定的名称和值的响应报头。</td></tr>
+<tr><td style="text-align: left">8</td><td style="text-align: left"><strong>void addIntHeader(String name, int value)</strong> 添加一个带有给定的名称和整数值的响应报头。</td></tr>
+<tr><td style="text-align: left">9</td><td style="text-align: left"><strong>void flushBuffer()</strong> 强制任何在缓冲区中的内容被写入到客户端。</td></tr>
+<tr><td style="text-align: left">10</td><td style="text-align: left"><strong>void reset()</strong> 清除缓冲区中存在的任何数据，包括状态码和头。</td></tr>
+<tr><td style="text-align: left">11</td><td style="text-align: left"><strong>void resetBuffer()</strong> 清除响应中基础缓冲区的内容，不清除状态码和头。</td></tr>
+<tr><td style="text-align: left">12</td><td style="text-align: left"><strong>void sendError(int sc)</strong> 使用指定的状态码发送错误响应到客户端，并清除缓冲区。</td></tr>
+<tr><td style="text-align: left">13</td><td style="text-align: left"><strong>void sendError(int sc, String msg)</strong> 使用指定的状态发送错误响应到客户端。</td></tr>
+<tr><td style="text-align: left">14</td><td style="text-align: left"><strong>void sendRedirect(String location)</strong> 使用指定的重定向位置 URL 发送临时重定向响应到客户端。</td></tr>
+<tr><td style="text-align: left">15</td><td style="text-align: left"><strong>void setBufferSize(int size)</strong> 为响应主体设置首选的缓冲区大小。</td></tr>
+<tr><td style="text-align: left">16</td><td style="text-align: left"><strong>void setCharacterEncoding(String charset)</strong> 设置被发送到客户端的响应的字符编码（MIME 字符集）例如，UTF-8。</td></tr>
+<tr><td style="text-align: left">17</td><td style="text-align: left"><strong>void setContentLength(int len)</strong> 设置在 HTTP Servlet 响应中的内容主体的长度，该方法设置 HTTP Content-Length 头。</td></tr>
+<tr><td style="text-align: left">18</td><td style="text-align: left"><strong>void setContentType(String type)</strong> 如果响应还未被提交，设置被发送到客户端的响应的内容类型。</td></tr>
+<tr><td style="text-align: left">19</td><td style="text-align: left"><strong>void setDateHeader(String name, long date)</strong> 设置一个带有给定的名称和日期值的响应报头。</td></tr>
+<tr><td style="text-align: left">20</td><td style="text-align: left"><strong>void setHeader(String name, String value)</strong> 设置一个带有给定的名称和值的响应报头。</td></tr>
+<tr><td style="text-align: left">21</td><td style="text-align: left"><strong>void setIntHeader(String name, int value)</strong> 设置一个带有给定的名称和整数值的响应报头。</td></tr>
+<tr><td style="text-align: left">22</td><td style="text-align: left"><strong>void setLocale(Locale loc)</strong> 如果响应还未被提交，设置响应的区域。</td></tr>
+<tr><td style="text-align: left">23</td><td style="text-align: left"><strong>void setStatus(int sc)</strong> 为该响应设置状态码。</td></tr>
+</tbody></table>
+<h2 id="实例"><a class="header" href="#实例"><strong>实例</strong></a></h2>
+<pre><code class="language-java">  // 设置刷新自动加载时间为 5 秒
+        response.setIntHeader(&quot;Refresh&quot;, 5);
+        // 设置响应内容类型
+        response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+
+        //使用默认时区和语言环境获得一个日历
+        Calendar cale = Calendar.getInstance();
+        //将Calendar类型转换成Date类型
+        Date tasktime=cale.getTime();
+        //设置日期输出的格式
+        SimpleDateFormat df=new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);
+        //格式化输出
+        String nowTime = df.format(tasktime);
+        PrintWriter out = response.getWriter();
+        String title = &quot;自动刷新 Header 设置&quot;;
+        String docType =
+                &quot;&lt;!DOCTYPE html&gt;\n&quot;;
+        out.println(docType +
+                &quot;&lt;html&gt;\n&quot; +
+                &quot;&lt;head&gt;&lt;title&gt;&quot; + title + &quot;&lt;/title&gt;&lt;/head&gt;\n&quot;+
+                &quot;&lt;body bgcolor=\&quot;#f0f0f0\&quot;&gt;\n&quot; +
+                &quot;&lt;h1 align=\&quot;center\&quot;&gt;&quot; + title + &quot;&lt;/h1&gt;\n&quot; +
+                &quot;&lt;p&gt;当前时间是：&quot; + nowTime + &quot;&lt;/p&gt;\n&quot;);
+</code></pre>
+<h1 id="http状态码"><a class="header" href="#http状态码">Http状态码</a></h1>
+<h2 id="实例-1"><a class="header" href="#实例-1"><strong>实例</strong></a></h2>
+<pre><code>HTTP/1.1 200 OK
+Content-Type: text/html
+Header2: ...
+...
+HeaderN: ...
+  (Blank Line)
+&lt;!doctype ...&gt;
+&lt;html&gt;
+&lt;head&gt;...&lt;/head&gt;
+&lt;body&gt;
+...
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h2 id="状态码"><a class="header" href="#状态码"><strong>状态码</strong></a></h2>
+<table><thead><tr><th style="text-align: left">代码</th><th style="text-align: left">消息</th><th style="text-align: left">描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">100</td><td style="text-align: left">Continue</td><td style="text-align: left">只有请求的一部分已经被服务器接收，但只要它没有被拒绝，客户端应继续该请求。</td></tr>
+<tr><td style="text-align: left">101</td><td style="text-align: left">Switching Protocols</td><td style="text-align: left">服务器切换协议。</td></tr>
+<tr><td style="text-align: left">200</td><td style="text-align: left">OK</td><td style="text-align: left">请求成功。</td></tr>
+<tr><td style="text-align: left">201</td><td style="text-align: left">Created</td><td style="text-align: left">该请求是完整的，并创建一个新的资源。</td></tr>
+<tr><td style="text-align: left">202</td><td style="text-align: left">Accepted</td><td style="text-align: left">该请求被接受处理，但是该处理是不完整的。</td></tr>
+<tr><td style="text-align: left">203</td><td style="text-align: left">Non-authoritative Information</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">204</td><td style="text-align: left">No Content</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">205</td><td style="text-align: left">Reset Content</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">206</td><td style="text-align: left">Partial Content</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">300</td><td style="text-align: left">Multiple Choices</td><td style="text-align: left">链接列表。用户可以选择一个链接，进入到该位置。最多五个地址。</td></tr>
+<tr><td style="text-align: left">301</td><td style="text-align: left">Moved Permanently</td><td style="text-align: left">所请求的页面已经转移到一个新的 URL。</td></tr>
+<tr><td style="text-align: left">302</td><td style="text-align: left">Found</td><td style="text-align: left">所请求的页面已经临时转移到一个新的 URL。</td></tr>
+<tr><td style="text-align: left">303</td><td style="text-align: left">See Other</td><td style="text-align: left">所请求的页面可以在另一个不同的 URL 下被找到。</td></tr>
+<tr><td style="text-align: left">304</td><td style="text-align: left">Not Modified</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">305</td><td style="text-align: left">Use Proxy</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">306</td><td style="text-align: left"><em>Unused</em></td><td style="text-align: left">在以前的版本中使用该代码。现在已不再使用它，但代码仍被保留。</td></tr>
+<tr><td style="text-align: left">307</td><td style="text-align: left">Temporary Redirect</td><td style="text-align: left">所请求的页面已经临时转移到一个新的 URL。</td></tr>
+<tr><td style="text-align: left">400</td><td style="text-align: left">Bad Request</td><td style="text-align: left">服务器不理解请求。</td></tr>
+<tr><td style="text-align: left">401</td><td style="text-align: left">Unauthorized</td><td style="text-align: left">所请求的页面需要用户名和密码。</td></tr>
+<tr><td style="text-align: left">402</td><td style="text-align: left">Payment Required</td><td style="text-align: left"><em>您还不能使用该代码。</em></td></tr>
+<tr><td style="text-align: left">403</td><td style="text-align: left">Forbidden</td><td style="text-align: left">禁止访问所请求的页面。</td></tr>
+<tr><td style="text-align: left">404</td><td style="text-align: left">Not Found</td><td style="text-align: left">服务器无法找到所请求的页面。.</td></tr>
+<tr><td style="text-align: left">405</td><td style="text-align: left">Method Not Allowed</td><td style="text-align: left">在请求中指定的方法是不允许的。</td></tr>
+<tr><td style="text-align: left">406</td><td style="text-align: left">Not Acceptable</td><td style="text-align: left">服务器只生成一个不被客户端接受的响应。</td></tr>
+<tr><td style="text-align: left">407</td><td style="text-align: left">Proxy Authentication Required</td><td style="text-align: left">在请求送达之前，您必须使用代理服务器的验证。</td></tr>
+<tr><td style="text-align: left">408</td><td style="text-align: left">Request Timeout</td><td style="text-align: left">请求需要的时间比服务器能够等待的时间长，超时。</td></tr>
+<tr><td style="text-align: left">409</td><td style="text-align: left">Conflict</td><td style="text-align: left">请求因为冲突无法完成。</td></tr>
+<tr><td style="text-align: left">410</td><td style="text-align: left">Gone</td><td style="text-align: left">所请求的页面不再可用。</td></tr>
+<tr><td style="text-align: left">411</td><td style="text-align: left">Length Required</td><td style="text-align: left">&quot;Content-Length&quot; 未定义。服务器无法处理客户端发送的不带 Content-Length 的请求信息。</td></tr>
+<tr><td style="text-align: left">412</td><td style="text-align: left">Precondition Failed</td><td style="text-align: left">请求中给出的先决条件被服务器评估为 false。</td></tr>
+<tr><td style="text-align: left">413</td><td style="text-align: left">Request Entity Too Large</td><td style="text-align: left">服务器不接受该请求，因为请求实体过大。</td></tr>
+<tr><td style="text-align: left">414</td><td style="text-align: left">Request-url Too Long</td><td style="text-align: left">服务器不接受该请求，因为 URL 太长。当您转换一个 &quot;post&quot; 请求为一个带有长的查询信息的 &quot;get&quot; 请求时发生。</td></tr>
+<tr><td style="text-align: left">415</td><td style="text-align: left">Unsupported Media Type</td><td style="text-align: left">服务器不接受该请求，因为媒体类型不被支持。</td></tr>
+<tr><td style="text-align: left">417</td><td style="text-align: left">Expectation Failed</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">500</td><td style="text-align: left">Internal Server Error</td><td style="text-align: left">未完成的请求。服务器遇到了一个意外的情况。</td></tr>
+<tr><td style="text-align: left">501</td><td style="text-align: left">Not Implemented</td><td style="text-align: left">未完成的请求。服务器不支持所需的功能。</td></tr>
+<tr><td style="text-align: left">502</td><td style="text-align: left">Bad Gateway</td><td style="text-align: left">未完成的请求。服务器从上游服务器收到无效响应。</td></tr>
+<tr><td style="text-align: left">503</td><td style="text-align: left">Service Unavailable</td><td style="text-align: left">未完成的请求。服务器暂时超载或死机。</td></tr>
+<tr><td style="text-align: left">504</td><td style="text-align: left">Gateway Timeout</td><td style="text-align: left">网关超时。</td></tr>
+<tr><td style="text-align: left">505</td><td style="text-align: left">HTTP Version Not Supported</td><td style="text-align: left">服务器不支持&quot;HTTP协议&quot;版本。</td></tr>
+</tbody></table>
+<h2 id="设置-http-状态代码的方法"><a class="header" href="#设置-http-状态代码的方法">设置 HTTP 状态代码的方法</a></h2>
+<p>下面的方法可用于在 Servlet 程序中设置 HTTP 状态码。这些方法通过 <em>HttpServletResponse</em> 对象可用。</p>
+<table><thead><tr><th style="text-align: left">序号</th><th style="text-align: left">方法 &amp; 描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>public void setStatus ( int statusCode )</strong> 该方法设置一个任意的状态码。setStatus 方法接受一个 int（状态码）作为参数。如果您的响应包含了一个特殊的状态码和文档，请确保在使用 <em>PrintWriter</em> 实际返回任何内容之前调用 setStatus。</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>public void sendRedirect(String url)</strong> 该方法生成一个 302 响应，连同一个带有新文档 URL 的 <em>Location</em> 头。</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>public void sendError(int code, String message)</strong> 该方法发送一个状态码（通常为 404），连同一个在 HTML 文档内部自动格式化并发送到客户端的短消息。</td></tr>
+</tbody></table>
+<h1 id="servlet-过滤器"><a class="header" href="#servlet-过滤器">Servlet 过滤器</a></h1>
+<blockquote>
+<p>Servlet 过滤器可以动态地拦截请求和响应，以变换或使用包含在请求或响应中的信息。</p>
+</blockquote>
+<p>根据规范建议的各种类型的过滤器：</p>
+<ul>
+<li>身份验证过滤器（Authentication Filters）。</li>
+<li>数据压缩过滤器（Data compression Filters）。</li>
+<li>加密过滤器（Encryption Filters）。</li>
+<li>触发资源访问事件过滤器。</li>
+<li>图像转换过滤器（Image Conversion Filters）。</li>
+<li>日志记录和审核过滤器（Logging and Auditing Filters）。</li>
+<li>MIME-TYPE 链过滤器（MIME-TYPE Chain Filters）。</li>
+<li>标记化过滤器（Tokenizing Filters）。</li>
+<li>XSL/T 过滤器（XSL/T Filters），转换 XML 内容。</li>
+</ul>
+<p><strong>Servlet 过滤器方法</strong></p>
+<p>过滤器是一个实现了 javax.servlet.Filter 接口的 Java 类。javax.servlet.Filter 接口定义了三个方法：</p>
+<table><thead><tr><th style="text-align: left">序号</th><th style="text-align: left">方法 &amp; 描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>public void doFilter (ServletRequest, ServletResponse, FilterChain)</strong> 该方法完成实际的过滤操作，当客户端请求方法与过滤器设置匹配的URL时，Servlet容器将先调用过滤器的doFilter方法。FilterChain用户访问后续过滤器。</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>public void init(FilterConfig filterConfig)</strong> web 应用程序启动时，web 服务器将创建Filter 的实例对象，并调用其init方法，读取web.xml配置，完成对象的初始化功能，从而为后续的用户请求作好拦截的准备工作（filter对象只会创建一次，init方法也只会执行一次）。开发人员通过init方法的参数，可获得代表当前filter配置信息的FilterConfig对象。</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>public void destroy()</strong> Servlet容器在销毁过滤器实例前调用该方法，在该方法中释放Servlet过滤器占用的资源。</td></tr>
+</tbody></table>
+<p><strong>FilterConfig</strong> </p>
+<p>FilterConfig 使用, Filter 的 init 方法中提供了一个 FilterConfig 对象。</p>
+<p>如 web.xml 文件配置如下：</p>
+<pre><code>&lt;filter&gt;
+    &lt;filter-name&gt;LogFilter&lt;/filter-name&gt;
+    &lt;filter-class&gt;com.runoob.test.LogFilter&lt;/filter-class&gt;
+    &lt;init-param&gt;
+        &lt;param-name&gt;Site&lt;/param-name&gt;
+        &lt;param-value&gt;菜鸟教程&lt;/param-value&gt;
+    &lt;/init-param&gt;
+&lt;/filter&gt;
+
+&lt;filter&gt;
+  &lt;filter-name&gt;LogFilter&lt;/filter-name&gt;
+  &lt;filter-class&gt;com.runoob.test.LogFilter&lt;/filter-class&gt;
+  &lt;init-param&gt;
+    &lt;param-name&gt;Site&lt;/param-name&gt;
+    &lt;param-value&gt;菜鸟教程&lt;/param-value&gt;
+  &lt;/init-param&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+  &lt;filter-name&gt;LogFilter&lt;/filter-name&gt;
+  &lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;/filter-mapping&gt;
+</code></pre>
+<p>在 init 方法使用 FilterConfig 对象获取参数：</p>
+<pre><code>public void  init(FilterConfig config) throws ServletException {
+    // 获取初始化参数
+    String site = config.getInitParameter(&quot;Site&quot;); 
+    // 输出初始化参数
+    System.out.println(&quot;网站名称: &quot; + site); 
+}
+</code></pre>
+<p><strong>过滤器的应用顺序</strong></p>
+<p>web.xml 中的 filter-mapping 元素的顺序决定了 Web 容器应用过滤器到 Servlet 的顺序</p>
+<p><code>&lt;dispatcher&gt;</code>的意义</p>
+<p><code>&lt;dispatcher&gt;</code>指定过滤器所拦截的资源被 Servlet 容器调用的方式，可以是<code>REQUEST</code>,<code>INCLUDE</code>,<code>FORWARD</code>和<code>ERROR</code>之一，默认<code>REQUEST</code>。用户可以设置多个<code>&lt;dispatcher&gt;</code>子元素用来指定 Filter 对资源的多种调用方式进行拦截。</p>
+<ul>
+<li><code>REQUEST</code>：当用户直接访问页面时，Web容器将会调用过滤器。如果目标资源是通过RequestDispatcher的include()或forward()方法访问时，那么该过滤器就不会被调用。</li>
+<li><code>INCLUDE</code>：如果目标资源是通过RequestDispatcher的include()方法访问时，那么该过滤器将被调用。除此之外，该过滤器不会被调用。</li>
+<li><code>FORWARD</code>：如果目标资源是通过RequestDispatcher的forward()方法访问时，那么该过滤器将被调用，除此之外，该过滤器不会被调用。</li>
+<li><code>ERROR</code>：如果目标资源是通过声明式异常处理机制调用时，那么该过滤器将被调用。除此之外，过滤器不会被调用。</li>
+</ul>
+<h2 id="servlet-异常处理"><a class="header" href="#servlet-异常处理"><strong>Servlet 异常处理</strong></a></h2>
+<p><strong>web.xml</strong>处理</p>
+<pre><code class="language-xml">&lt;!-- servlet 定义 --&gt;
+&lt;servlet&gt;
+        &lt;servlet-name&gt;ErrorHandler&lt;/servlet-name&gt;
+        &lt;servlet-class&gt;ErrorHandler&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+&lt;!-- servlet 映射 --&gt;
+&lt;servlet-mapping&gt;
+        &lt;servlet-name&gt;ErrorHandler&lt;/servlet-name&gt;
+        &lt;url-pattern&gt;/ErrorHandler&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+
+&lt;!-- error-code 相关的错误页面 --&gt;
+&lt;error-page&gt;
+    &lt;error-code&gt;404&lt;/error-code&gt;
+    &lt;location&gt;/ErrorHandler&lt;/location&gt;
+&lt;/error-page&gt;
+&lt;error-page&gt;
+    &lt;error-code&gt;403&lt;/error-code&gt;
+    &lt;location&gt;/ErrorHandler&lt;/location&gt;
+&lt;/error-page&gt;
+
+&lt;!-- exception-type 相关的错误页面 --&gt;
+&lt;error-page&gt;
+    &lt;exception-type&gt;
+          javax.servlet.ServletException
+    &lt;/exception-type &gt;
+    &lt;location&gt;/ErrorHandler&lt;/location&gt;
+&lt;/error-page&gt;
+
+&lt;error-page&gt;
+    &lt;exception-type&gt;java.io.IOException&lt;/exception-type &gt;
+    &lt;location&gt;/ErrorHandler&lt;/location&gt;
+&lt;/error-page&gt;
+
+通用的错误处理程序，那么应该定义下面的 error-page
+&lt;error-page&gt;
+    &lt;exception-type&gt;java.lang.Throwable&lt;/exception-type &gt;
+    &lt;location&gt;/ErrorHandler&lt;/location&gt;
+&lt;/error-page&gt;
+</code></pre>
+<p><strong>错误处理handler</strong></p>
+<pre><code class="language-java">{
+    Throwable throwable = (Throwable)
+    request.getAttribute(&quot;javax.servlet.error.exception&quot;);
+    Integer statusCode = (Integer)
+    request.getAttribute(&quot;javax.servlet.error.status_code&quot;);
+    String servletName = (String)
+    request.getAttribute(&quot;javax.servlet.error.servlet_name&quot;);
+    if (servletName == null){
+        servletName = &quot;Unknown&quot;;
+    }
+    String requestUri = (String)
+    request.getAttribute(&quot;javax.servlet.error.request_uri&quot;);
+    if (requestUri == null){
+        requestUri = &quot;Unknown&quot;;
+    }
+    // 设置响应内容类型
+    response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+
+    PrintWriter out = response.getWriter();
+    String title = &quot;Error/Exception 信息&quot;;
+   
+    String docType = &quot;&lt;!DOCTYPE html&gt;\n&quot;;
+    out.println(docType +
+        &quot;&lt;html&gt;\n&quot; +
+         &quot;&lt;head&gt;&lt;title&gt;&quot; + title + &quot;&lt;/title&gt;&lt;/head&gt;\n&quot; +
+         &quot;&lt;body bgcolor=\&quot;#f0f0f0\&quot;&gt;\n&quot;);
+       out.println(&quot;&lt;h1&gt;菜鸟教程异常信息实例演示&lt;/h1&gt;&quot;);
+       if (throwable == null &amp;&amp; statusCode == null){
+          out.println(&quot;&lt;h2&gt;错误信息丢失&lt;/h2&gt;&quot;);
+          out.println(&quot;请返回 &lt;a href=\&quot;&quot; + 
+        response.encodeURL(&quot;http://localhost:8080/&quot;) + 
+            &quot;\&quot;&gt;主页&lt;/a&gt;。&quot;);
+       }else if (statusCode != null) {
+          out.println(&quot;错误代码 : &quot; + statusCode);
+    }else{
+           out.println(&quot;&lt;h2&gt;错误信息&lt;/h2&gt;&quot;);
+          out.println(&quot;Servlet Name : &quot; + servletName + 
+                          &quot;&lt;/br&gt;&lt;/br&gt;&quot;);
+          out.println(&quot;异常类型 : &quot; + 
+                          throwable.getClass( ).getName( ) + 
+                          &quot;&lt;/br&gt;&lt;/br&gt;&quot;);
+          out.println(&quot;请求 URI: &quot; + requestUri + 
+                          &quot;&lt;br&gt;&lt;br&gt;&quot;);
+          out.println(&quot;异常信息: &quot; + 
+                              throwable.getMessage( ));
+       }
+       out.println(&quot;&lt;/body&gt;&quot;);
+       out.println(&quot;&lt;/html&gt;&quot;);
+}
+</code></pre>
+<p><strong>请求属性 - 错误/异常</strong></p>
+<p>以下是错误处理的 Servlet 可以访问的请求属性列表，用来分析错误/异常的性质。</p>
+<table><thead><tr><th style="text-align: left">序号</th><th style="text-align: left">属性 &amp; 描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>javax.servlet.error.status_code</strong> 该属性给出状态码，状态码可被存储，并在存储为 java.lang.Integer 数据类型后可被分析。</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>javax.servlet.error.exception_type</strong> 该属性给出异常类型的信息，异常类型可被存储，并在存储为 java.lang.Class 数据类型后可被分析。</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>javax.servlet.error.message</strong> 该属性给出确切错误消息的信息，信息可被存储，并在存储为 java.lang.String 数据类型后可被分析。</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left"><strong>javax.servlet.error.request_uri</strong> 该属性给出有关 URL 调用 Servlet 的信息，信息可被存储，并在存储为 java.lang.String 数据类型后可被分析。</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left"><strong>javax.servlet.error.exception</strong> 该属性给出异常产生的信息，信息可被存储，并在存储为 java.lang.Throwable 数据类型后可被分析。</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left"><strong>javax.servlet.error.servlet_name</strong> 该属性给出 Servlet 的名称，名称可被存储，并在存储为 java.lang.String 数据类型后可被分析。</td></tr>
+</tbody></table>
+<h1 id="cookie处理"><a class="header" href="#cookie处理">Cookie处理</a></h1>
+<blockquote>
+<p>Cookie 是存储在客户端计算机上的文本文件，并保留了各种跟踪信息</p>
+</blockquote>
+<h2 id="识别返回用户包括三个步骤"><a class="header" href="#识别返回用户包括三个步骤"><strong>识别返回用户包括三个步骤</strong>：</a></h2>
+<ul>
+<li>服务器脚本向浏览器发送一组 Cookie。例如：姓名、年龄或识别号码等。</li>
+<li>浏览器将这些信息存储在本地计算机上，以备将来使用。</li>
+<li>当下一次浏览器向 Web 服务器发送任何请求时，浏览器会把这些 Cookie 信息发送到服务器，服务器将使用这些信息来识别用户。</li>
+</ul>
+<h2 id="编码与解码"><a class="header" href="#编码与解码"><strong>编码与解码</strong></a></h2>
+<p><em>Servlet Cookie 处理需要对中文进行编码与解码</em></p>
+<h2 id="cookie-剖析"><a class="header" href="#cookie-剖析"><strong>Cookie 剖析</strong></a></h2>
+<blockquote>
+<p>Cookie 通常设置在 HTTP 头信息中（虽然 JavaScript 也可以直接在浏览器上设置一个 Cookie）。设置 Cookie 的 Servlet 会发送如下的头信息</p>
+</blockquote>
+<pre><code>HTTP/1.1 200 OK
+Date: Fri, 04 Feb 2000 21:03:38 GMT
+Server: Apache/1.3.9 (UNIX) PHP/4.0b3
+Set-Cookie: name=xyz; expires=Friday, 04-Feb-07 22:03:38 GMT; 
+                 path=/; domain=runoob.com
+Connection: close
+Content-Type: text/html
+</code></pre>
+<p>正如您所看到的，Set-Cookie 头包含了一个名称值对、一个 GMT 日期、一个路径和一个域。名称和值会被 URL 编码。expires 字段是一个指令，告诉浏览器在给定的时间和日期之后&quot;忘记&quot;该 Cookie。</p>
+<p><strong>Cooke的表示信息</strong></p>
+<ul>
+<li>名称</li>
+<li>值</li>
+<li>过期时间 GMT格式</li>
+<li>适用路径</li>
+<li>域</li>
+</ul>
+<p><strong>API</strong></p>
+<h2 id="servlet-cookie-方法"><a class="header" href="#servlet-cookie-方法">Servlet Cookie 方法</a></h2>
+<p>以下是在 Servlet 中操作 Cookie 时可使用的有用的方法列表。</p>
+<table><thead><tr><th style="text-align: left">序号</th><th style="text-align: left">方法 &amp; 描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>public void setDomain(String pattern)</strong> 该方法设置 cookie 适用的域，例如 runoob.com。</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>public String getDomain()</strong> 该方法获取 cookie 适用的域，例如 runoob.com。</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>public void setMaxAge(int expiry)</strong> 该方法设置 cookie 过期的时间（以秒为单位）。如果不这样设置，cookie 只会在当前 session 会话中持续有效。</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left"><strong>public int getMaxAge()</strong> 该方法返回 cookie 的最大生存周期（以秒为单位），默认情况下，-1 表示 cookie 将持续下去，直到浏览器关闭。</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left"><strong>public String getName()</strong> 该方法返回 cookie 的名称。名称在创建后不能改变。</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left"><strong>public void setValue(String newValue)</strong> 该方法设置与 cookie 关联的值。</td></tr>
+<tr><td style="text-align: left">7</td><td style="text-align: left"><strong>public String getValue()</strong> 该方法获取与 cookie 关联的值。</td></tr>
+<tr><td style="text-align: left">8</td><td style="text-align: left"><strong>public void setPath(String uri)</strong> 该方法设置 cookie 适用的路径。如果您不指定路径，与当前页面相同目录下的（包括子目录下的）所有 URL 都会返回 cookie。</td></tr>
+<tr><td style="text-align: left">9</td><td style="text-align: left"><strong>public String getPath()</strong> 该方法获取 cookie 适用的路径。</td></tr>
+<tr><td style="text-align: left">10</td><td style="text-align: left"><strong>public void setSecure(boolean flag)</strong> 该方法设置布尔值，表示 cookie 是否应该只在加密的（即 SSL）连接上发送。</td></tr>
+<tr><td style="text-align: left">11</td><td style="text-align: left"><strong>public void setComment(String purpose)</strong> 设置cookie的注释。该注释在浏览器向用户呈现 cookie 时非常有用。</td></tr>
+<tr><td style="text-align: left">12</td><td style="text-align: left"><strong>public String getComment()</strong> 获取 cookie 的注释，如果 cookie 没有注释则返回 null。</td></tr>
+</tbody></table>
+<p><strong>删除cookie</strong></p>
+<ul>
+<li>读取一个现有的 cookie，并把它存储在 Cookie 对象中。</li>
+<li>使用 <strong>setMaxAge()</strong> 方法设置 cookie 的年龄为零，来删除现有的 cookie。</li>
+<li>把这个 cookie 添加到响应头。</li>
+<li>一个负值意味着cookie不连续存储，并且在浏览器推出的时候删除。</li>
+</ul>
+<h1 id="session跟踪"><a class="header" href="#session跟踪">Session跟踪</a></h1>
+<blockquote>
+<p>HTTP 是一种&quot;无状态&quot;协议，这意味着每次客户端检索网页时，客户端打开一个单独的连接到 Web 服务器，服务器会自动不保留之前客户端请求的任何记录。</p>
+</blockquote>
+<p>但是仍然有以下<strong>三种方式来维持 Web 客户端和 Web 服务器之间的 session 会话</strong>：</p>
+<h2 id="维持会话的三种方式"><a class="header" href="#维持会话的三种方式">维持会话的三种方式</a></h2>
+<h3 id="cookies"><a class="header" href="#cookies">Cookies</a></h3>
+<p>一个 Web 服务器可以分配一个唯一的 session 会话 ID 作为每个 Web 客户端的 cookie，对于客户端的后续请求可以使用接收到的 cookie 来识别。</p>
+<h3 id="隐藏的表单字段"><a class="header" href="#隐藏的表单字段">隐藏的表单字段</a></h3>
+<p>一个 Web 服务器可以发送一个隐藏的 HTML 表单字段，以及一个唯一的 session 会话 ID，如下所示：</p>
+<pre><code>&lt;input type=&quot;hidden&quot; name=&quot;sessionid&quot; value=&quot;12345&quot;&gt;
+</code></pre>
+<p>该条目意味着，当表单被提交时，指定的名称和值会被自动包含在 GET 或 POST 数据中。每次当 Web 浏览器发送回请求时，session_id 值可以用于保持不同的 Web 浏览器的跟踪。</p>
+<p>这可能是一种保持 session 会话跟踪的有效方式，但是点击常规的超文本链接（<A HREF...>）不会导致表单提交，因此隐藏的表单字段也不支持常规的 session 会话跟踪。</p>
+<h3 id="url-重写"><a class="header" href="#url-重写">URL 重写</a></h3>
+<p>您可以在每个 URL 末尾追加一些额外的数据来标识 session 会话，服务器会把该 session 会话标识符与已存储的有关 session 会话的数据相关联。</p>
+<p>例如，http://w3cschool.cc/file.htm;sessionid=12345，session 会话标识符被附加为 sessionid=12345，标识符可被 Web 服务器访问以识别客户端。</p>
+<p>URL 重写是一种更好的维持 session 会话的方式，它在浏览器不支持 cookie 时能够很好地工作，但是它的缺点是会动态生成每个 URL 来为页面分配一个 session 会话 ID，即使是在很简单的静态 HTML 页面中也会如此。</p>
+<h2 id="httpsession-对象"><a class="header" href="#httpsession-对象">HttpSession 对象</a></h2>
+<blockquote>
+<p>该接口提供了一种跨多个页面请求或访问网站时识别用户以及存储有关用户信息的方式。</p>
+</blockquote>
+<table><thead><tr><th style="text-align: left">序号</th><th style="text-align: left">方法 &amp; 描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>public Object getAttribute(String name)</strong> 该方法返回在该 session 会话中具有指定名称的对象，如果没有指定名称的对象，则返回 null。</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>public Enumeration getAttributeNames()</strong> 该方法返回 String 对象的枚举，String 对象包含所有绑定到该 session 会话的对象的名称。</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>public long getCreationTime()</strong> 该方法返回该 session 会话被创建的时间，自格林尼治标准时间 1970 年 1 月 1 日午夜算起，以毫秒为单位。</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left"><strong>public String getId()</strong> 该方法返回一个包含分配给该 session 会话的唯一标识符的字符串。</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left"><strong>public long getLastAccessedTime()</strong> 该方法返回客户端最后一次发送与该 session 会话相关的请求的时间自格林尼治标准时间 1970 年 1 月 1 日午夜算起，以毫秒为单位。</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left"><strong>public int getMaxInactiveInterval()</strong> 该方法返回 Servlet 容器在客户端访问时保持 session 会话打开的最大时间间隔，以秒为单位。</td></tr>
+<tr><td style="text-align: left">7</td><td style="text-align: left"><strong>public void invalidate()</strong> 该方法指示该 session 会话无效，并解除绑定到它上面的任何对象。</td></tr>
+<tr><td style="text-align: left">8</td><td style="text-align: left"><strong>public boolean isNew()</strong> 如果客户端还不知道该 session 会话，或者如果客户选择不参入该 session 会话，则该方法返回 true。</td></tr>
+<tr><td style="text-align: left">9</td><td style="text-align: left"><strong>public void removeAttribute(String name)</strong> 该方法将从该 session 会话移除指定名称的对象。</td></tr>
+<tr><td style="text-align: left">10</td><td style="text-align: left"><strong>public void setAttribute(String name, Object value)</strong> 该方法使用指定的名称绑定一个对象到该 session 会话。</td></tr>
+<tr><td style="text-align: left">11</td><td style="text-align: left"><strong>public void setMaxInactiveInterval(int interval)</strong> 该方法在 Servlet 容器指示该 session 会话无效之前，指定客户端请求之间的时间，以秒为单位。</td></tr>
+</tbody></table>
+<p>提供了</p>
+<ul>
+<li>session唯一标识</li>
+<li>session创建信息</li>
+<li>session是否有效,什么时候过期</li>
+<li>session中的属性 维护</li>
+</ul>
+<h2 id="开启session追踪实例"><a class="header" href="#开启session追踪实例"><strong>开启session追踪实例</strong></a></h2>
+<pre><code class="language-java">  // 如果不存在 session 会话，则创建一个 session 对象
+        HttpSession session = request.getSession(true);
+        // 获取 session 创建时间
+        Date createTime = new Date(session.getCreationTime());
+        // 获取该网页的最后一次访问时间
+        Date lastAccessTime = new Date(session.getLastAccessedTime());
+         
+        //设置日期输出的格式  
+        SimpleDateFormat df=new SimpleDateFormat(&quot;yyyy-MM-dd HH:mm:ss&quot;);
+    
+        String title = &quot;Servlet Session 实例 - 菜鸟教程&quot;;
+        Integer visitCount = new Integer(0);
+        String visitCountKey = new String(&quot;visitCount&quot;);
+        String userIDKey = new String(&quot;userID&quot;);
+        String userID = new String(&quot;Runoob&quot;);
+        if(session.getAttribute(visitCountKey) == null) {
+            session.setAttribute(visitCountKey, new Integer(0));
+        }
+
+    
+        // 检查网页上是否有新的访问者
+        if (session.isNew()){
+            title = &quot;Servlet Session 实例 - 菜鸟教程&quot;;
+             session.setAttribute(userIDKey, userID);
+        } else {
+             visitCount = (Integer)session.getAttribute(visitCountKey);
+             visitCount = visitCount + 1;
+             userID = (String)session.getAttribute(userIDKey);
+        }
+        session.setAttribute(visitCountKey,  visitCount);
+    
+        // 设置响应内容类型
+        response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+        PrintWriter out = response.getWriter();
+    
+        String docType = &quot;&lt;!DOCTYPE html&gt;\n&quot;;
+        out.println(docType +
+                &quot;&lt;html&gt;\n&quot; +
+                &quot;&lt;head&gt;&lt;title&gt;&quot; + title + &quot;&lt;/title&gt;&lt;/head&gt;\n&quot; +
+                &quot;&lt;body bgcolor=\&quot;#f0f0f0\&quot;&gt;\n&quot; +
+                &quot;&lt;h1 align=\&quot;center\&quot;&gt;&quot; + title + &quot;&lt;/h1&gt;\n&quot; +
+                 &quot;&lt;h2 align=\&quot;center\&quot;&gt;Session 信息&lt;/h2&gt;\n&quot; +
+                &quot;&lt;table border=\&quot;1\&quot; align=\&quot;center\&quot;&gt;\n&quot; +
+                &quot;&lt;tr bgcolor=\&quot;#949494\&quot;&gt;\n&quot; +
+                &quot;  &lt;th&gt;Session 信息&lt;/th&gt;&lt;th&gt;值&lt;/th&gt;&lt;/tr&gt;\n&quot; +
+                &quot;&lt;tr&gt;\n&quot; +
+                &quot;  &lt;td&gt;id&lt;/td&gt;\n&quot; +
+                &quot;  &lt;td&gt;&quot; + session.getId() + &quot;&lt;/td&gt;&lt;/tr&gt;\n&quot; +
+                &quot;&lt;tr&gt;\n&quot; +
+                &quot;  &lt;td&gt;创建时间&lt;/td&gt;\n&quot; +
+                &quot;  &lt;td&gt;&quot; +  df.format(createTime) + 
+                &quot;  &lt;/td&gt;&lt;/tr&gt;\n&quot; +
+                &quot;&lt;tr&gt;\n&quot; +
+                &quot;  &lt;td&gt;最后访问时间&lt;/td&gt;\n&quot; +
+                &quot;  &lt;td&gt;&quot; + df.format(lastAccessTime) + 
+                &quot;  &lt;/td&gt;&lt;/tr&gt;\n&quot; +
+                &quot;&lt;tr&gt;\n&quot; +
+                &quot;  &lt;td&gt;用户 ID&lt;/td&gt;\n&quot; +
+                &quot;  &lt;td&gt;&quot; + userID + 
+                &quot;  &lt;/td&gt;&lt;/tr&gt;\n&quot; +
+                &quot;&lt;tr&gt;\n&quot; +
+                &quot;  &lt;td&gt;访问统计：&lt;/td&gt;\n&quot; +
+                &quot;  &lt;td&gt;&quot; + visitCount + &quot;&lt;/td&gt;&lt;/tr&gt;\n&quot; +
+                &quot;&lt;/table&gt;\n&quot; +
+                &quot;&lt;/body&gt;&lt;/html&gt;&quot;); 
+    }
+</code></pre>
+<h2 id="删除-session-会话数据"><a class="header" href="#删除-session-会话数据"><strong>删除 Session 会话数据</strong></a></h2>
+<p>当您完成了一个用户的 session 会话数据，您有以下几种选择：</p>
+<ul>
+<li>**移除一个特定的属性：**您可以调用 <em>public void removeAttribute(String name)</em> 方法来删除与特定的键相关联的值。</li>
+<li>**删除整个 session 会话：**您可以调用 <em>public void invalidate()</em> 方法来丢弃整个 session 会话。</li>
+<li>**设置 session 会话过期时间：**您可以调用 <em>public void setMaxInactiveInterval(int interval)</em> 方法来单独设置 session 会话超时。</li>
+<li>**注销用户：**如果使用的是支持 servlet 2.4 的服务器，您可以调用 <strong>logout</strong> 来注销 Web 服务器的客户端，并把属于所有用户的所有 session 会话设置为无效。</li>
+<li>**web.xml 配置：**如果您使用的是 Tomcat，除了上述方法，您还可以在 web.xml 文件中配置 session 会话超时，如下所示：</li>
+</ul>
+<pre><code>  &lt;session-config&gt;
+    &lt;session-timeout&gt;15&lt;/session-timeout&gt;
+  &lt;/session-config&gt;
+</code></pre>
+<blockquote>
+<p>上面实例中的超时时间是以分钟为单位，将覆盖 Tomcat 中默认的 30 分钟超时时间。</p>
+</blockquote>
+<blockquote>
+<p>在一个 Servlet 中的 getMaxInactiveInterval() 方法会返回 session 会话的超时时间，以秒为单位。所以，如果在 web.xml 中配置 session 会话超时时间为 15 分钟，那么 getMaxInactiveInterval() 会返回 900。</p>
+</blockquote>
+<h1 id="文件上传"><a class="header" href="#文件上传">文件上传</a></h1>
+<h2 id="示例"><a class="header" href="#示例"><strong>示例</strong></a></h2>
+<pre><code class="language-java">{
+
+        // 检测是否为多媒体上传
+        if (!ServletFileUpload.isMultipartContent(request)) {
+            // 如果不是则停止
+            PrintWriter writer = response.getWriter();
+            writer.println(&quot;Error: 表单必须包含 enctype=multipart/form-data&quot;);
+            writer.flush();
+            return;
+        }
+ 
+        // 配置上传参数
+        DiskFileItemFactory factory = new DiskFileItemFactory();
+        // 设置内存临界值 - 超过后将产生临时文件并存储于临时目录中
+        factory.setSizeThreshold(MEMORY_THRESHOLD);
+        // 设置临时存储目录
+        factory.setRepository(new File(System.getProperty(&quot;java.io.tmpdir&quot;)));
+ 
+        ServletFileUpload upload = new ServletFileUpload(factory);
+         
+        // 设置最大文件上传值
+        upload.setFileSizeMax(MAX_FILE_SIZE);
+         
+        // 设置最大请求值 (包含文件和表单数据)
+        upload.setSizeMax(MAX_REQUEST_SIZE);
+
+        // 中文处理
+        upload.setHeaderEncoding(&quot;UTF-8&quot;); 
+
+        // 构造临时路径来存储上传的文件
+        // 这个路径相对当前应用的目录
+        String uploadPath = request.getServletContext().getRealPath(&quot;./&quot;) + File.separator + UPLOAD_DIRECTORY;
+       
+         
+        // 如果目录不存在则创建
+        File uploadDir = new File(uploadPath);
+        if (!uploadDir.exists()) {
+            uploadDir.mkdir();
+        }
+ 
+        try {
+            // 解析请求的内容提取文件数据
+            @SuppressWarnings(&quot;unchecked&quot;)
+            List&lt;FileItem&gt; formItems = upload.parseRequest(request);
+ 
+            if (formItems != null &amp;&amp; formItems.size() &gt; 0) {
+                // 迭代表单数据
+                for (FileItem item : formItems) {
+                    // 处理不在表单中的字段
+                    if (!item.isFormField()) {
+                        String fileName = new File(item.getName()).getName();
+                        String filePath = uploadPath + File.separator + fileName;
+                        File storeFile = new File(filePath);
+                        storeFile.delete();
+                        // 保存文件到硬盘
+                        item.write(storeFile);
+                        request.setAttribute(&quot;message&quot;,
+                            &quot;文件上传成功!&quot;);
+                        HttpSession session = request.getSession();
+                        Object fileList = session.getAttribute(&quot;fileList&quot;);
+                        if(fileList == null){
+                            fileList = new ArrayList&lt;&gt;();
+                            session.setAttribute(&quot;fileList&quot;,fileList);
+                        }
+                        ((List&lt;File&gt;)(fileList)).add(storeFile);
+                    }
+                }
+            }
+        } catch (Exception ex) {
+            request.setAttribute(&quot;message&quot;,
+                    &quot;错误信息: &quot; + ex.getMessage());
+        }
+        // 跳转到 message.jsp
+        response.sendRedirect(&quot;/xjq/message.jsp&quot;);
+    }
+</code></pre>
+<h2 id="理解"><a class="header" href="#理解">理解</a></h2>
+<pre><code>由 apache的 common-io comon-file-upload 实现的  http文件上传
+包括校验 文件类型, multipart-file 文件分割符
+由 deferedOutputStream代理实现, 一开始 读入 内存, 达到 阈值之后 写入文件
+然后用户 将由 内存的文件或者 物理磁盘的文件 写入 用户的文件中
+</code></pre>
+<h1 id="servlet-国际化"><a class="header" href="#servlet-国际化">Servlet 国际化</a></h1>
+<h2 id="三大术语"><a class="header" href="#三大术语">三大术语</a></h2>
+<ul>
+<li>**国际化（i18n）：**这意味着一个网站提供了不同版本的翻译成访问者的语言或国籍的内容。</li>
+<li>**本地化（l10n）：**这意味着向网站添加资源，以使其适应特定的地理或文化区域，例如网站翻译成印地文（Hindi）。</li>
+<li>**区域设置（locale）：**这是一个特殊的文化或地理区域。它通常指语言符号后跟一个下划线和一个国家符号。例如 &quot;en_US&quot; 表示针对 US 的英语区域设置。</li>
+</ul>
+<h2 id="获取locale"><a class="header" href="#获取locale">获取Locale</a></h2>
+<pre><code>java.util.Locale request.getLocale() 
+</code></pre>
+<h2 id="localeapi"><a class="header" href="#localeapi">LocaleAPI</a></h2>
+<p>下面列出了重要的区域设置方法，您可以使用它们来检测请求者的地理位置、语言和区域设置。下面所有的方法都显示了请求者浏览器中设置的国家名称和语言名称。</p>
+<table><thead><tr><th style="text-align: left">序号</th><th style="text-align: left">方法 &amp; 描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">1</td><td style="text-align: left"><strong>String getCountry()</strong> 该方法以 2 个大写字母形式的 ISO 3166 格式返回该区域设置的国家/地区代码。</td></tr>
+<tr><td style="text-align: left">2</td><td style="text-align: left"><strong>String getDisplayCountry()</strong> 该方法返回适合向用户显示的区域设置的国家的名称。</td></tr>
+<tr><td style="text-align: left">3</td><td style="text-align: left"><strong>String getLanguage()</strong> 该方法以小写字母形式的 ISO 639 格式返回该区域设置的语言代码。</td></tr>
+<tr><td style="text-align: left">4</td><td style="text-align: left"><strong>String getDisplayLanguage()</strong> 该方法返回适合向用户显示的区域设置的语言的名称。</td></tr>
+<tr><td style="text-align: left">5</td><td style="text-align: left"><strong>String getISO3Country()</strong> 该方法返回该区域设置的国家的三个字母缩写。</td></tr>
+<tr><td style="text-align: left">6</td><td style="text-align: left"><strong>String getISO3Language()</strong> 该方法返回该区域设置的语言的三个字母的缩写。</td></tr>
+</tbody></table>
+<h2 id="实例-2"><a class="header" href="#实例-2"><strong>实例</strong></a></h2>
+<pre><code class="language-java">import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.Locale;
+
+public class GetLocale extends HttpServlet{
+    
+  public void doGet(HttpServletRequest request,
+                    HttpServletResponse response)
+            throws ServletException, IOException
+  {
+      // 获取客户端的区域设置
+      Locale locale = request.getLocale();
+      String language = locale.getLanguage();
+      String country = locale.getCountry();
+
+      // 设置响应内容类型
+      response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+      PrintWriter out = response.getWriter();
+
+      String title = &quot;检测区域设置&quot;;
+      String docType = &quot;&lt;!DOCTYPE html&gt; \n&quot;;
+      out.println(docType +
+        &quot;&lt;html&gt;\n&quot; +
+        &quot;&lt;head&gt;&lt;title&gt;&quot; + title + &quot;&lt;/title&gt;&lt;/head&gt;\n&quot; +
+        &quot;&lt;body bgcolor=\&quot;#f0f0f0\&quot;&gt;\n&quot; +
+        &quot;&lt;h1 align=\&quot;center\&quot;&gt;&quot; + language + &quot;&lt;/h1&gt;\n&quot; +
+        &quot;&lt;h2 align=\&quot;center\&quot;&gt;&quot; + country + &quot;&lt;/h2&gt;\n&quot; +
+        &quot;&lt;/body&gt;&lt;/html&gt;&quot;);
+  }
+} 
+</code></pre>
+<h2 id="根据区域设定语言"><a class="header" href="#根据区域设定语言">根据区域设定语言</a></h2>
+<pre><code class="language-java">import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.Locale;
+
+public class DisplaySpanish extends HttpServlet{
+    
+  public void doGet(HttpServletRequest request,
+                    HttpServletResponse response)
+            throws ServletException, IOException
+  {
+    // 设置响应内容类型
+    response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+    PrintWriter out = response.getWriter();
+    // 设置西班牙语言代码
+    response.setHeader(&quot;Content-Language&quot;, &quot;es&quot;);
+
+    String title = &quot;En Espa&amp;ntilde;ol&quot;;
+    String docType = &quot;&lt;!DOCTYPE html&gt; \n&quot;;
+     out.println(docType +
+     &quot;&lt;html&gt;\n&quot; +
+     &quot;&lt;head&gt;&lt;title&gt;&quot; + title + &quot;&lt;/title&gt;&lt;/head&gt;\n&quot; +
+     &quot;&lt;body bgcolor=\&quot;#f0f0f0\&quot;&gt;\n&quot; +
+     &quot;&lt;h1&gt;&quot; + &quot;En Espa&amp;ntilde;ol:&quot; + &quot;&lt;/h1&gt;\n&quot; +
+     &quot;&lt;h1&gt;&quot; + &quot;&amp;iexcl;Hola Mundo!&quot; + &quot;&lt;/h1&gt;\n&quot; +
+     &quot;&lt;/body&gt;&lt;/html&gt;&quot;);
+  }
+} 
+</code></pre>
+<h2 id="根据区域设置日期"><a class="header" href="#根据区域设置日期">根据区域设置日期</a></h2>
+<pre><code class="language-java">import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.Locale;
+import java.text.DateFormat;
+import java.util.Date;
+
+public class DateLocale extends HttpServlet{
+    
+  public void doGet(HttpServletRequest request,
+                    HttpServletResponse response)
+            throws ServletException, IOException
+  {
+    // 设置响应内容类型
+    response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+    PrintWriter out = response.getWriter();
+    // 获取客户端的区域设置
+    Locale locale = request.getLocale( );
+    String date = DateFormat.getDateTimeInstance(
+                                  DateFormat.FULL, 
+                                  DateFormat.SHORT, 
+                                  locale).format(new Date( ));
+
+    String title = &quot;特定于区域设置的日期&quot;;
+    String docType = &quot;&lt;!DOCTYPE html&gt; \n&quot;;
+      out.println(docType +
+      &quot;&lt;html&gt;\n&quot; +
+      &quot;&lt;head&gt;&lt;title&gt;&quot; + title + &quot;&lt;/title&gt;&lt;/head&gt;\n&quot; +
+      &quot;&lt;body bgcolor=\&quot;#f0f0f0\&quot;&gt;\n&quot; +
+      &quot;&lt;h1 align=\&quot;center\&quot;&gt;&quot; + date + &quot;&lt;/h1&gt;\n&quot; +
+      &quot;&lt;/body&gt;&lt;/html&gt;&quot;);
+  }
+} 
+</code></pre>
+<h2 id="根据区域设置货币"><a class="header" href="#根据区域设置货币">根据区域设置货币</a></h2>
+<pre><code class="language-java">import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.Locale;
+import java.text.NumberFormat;
+import java.util.Date;
+
+public class CurrencyLocale extends HttpServlet{
+    
+  public void doGet(HttpServletRequest request,
+                    HttpServletResponse response)
+            throws ServletException, IOException
+  {
+    // 设置响应内容类型
+    response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+    PrintWriter out = response.getWriter();
+    // 获取客户端的区域设置
+    Locale locale = request.getLocale( );
+    NumberFormat nft = NumberFormat.getCurrencyInstance(locale);
+    String formattedCurr = nft.format(1000000);
+
+    String title = &quot;特定于区域设置的货币&quot;;
+    String docType = &quot;&lt;!DOCTYPE html&gt; \n&quot;;
+      out.println(docType +
+      &quot;&lt;html&gt;\n&quot; +
+      &quot;&lt;head&gt;&lt;title&gt;&quot; + title + &quot;&lt;/title&gt;&lt;/head&gt;\n&quot; +
+      &quot;&lt;body bgcolor=\&quot;#f0f0f0\&quot;&gt;\n&quot; +
+      &quot;&lt;h1 align=\&quot;center\&quot;&gt;&quot; + formattedCurr + &quot;&lt;/h1&gt;\n&quot; +
+      &quot;&lt;/body&gt;&lt;/html&gt;&quot;);
+  }
+} 
+</code></pre>
+<h2 id="根据区域设置百分比"><a class="header" href="#根据区域设置百分比">根据区域设置百分比</a></h2>
+<pre><code class="language-java">import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.util.Locale;
+import java.text.NumberFormat;
+import java.util.Date;
+
+public class PercentageLocale extends HttpServlet{
+    
+  public void doGet(HttpServletRequest request,
+                    HttpServletResponse response)
+            throws ServletException, IOException
+  {
+    // 设置响应内容类型
+    response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+    PrintWriter out = response.getWriter();
+    // 获取客户端的区域设置
+    Locale locale = request.getLocale( );
+    NumberFormat nft = NumberFormat.getPercentInstance(locale);
+    String formattedPerc = nft.format(0.51);
+
+    String title = &quot;特定于区域设置的百分比&quot;;
+    String docType = &quot;&lt;!DOCTYPE html&gt; \n&quot;;
+      out.println(docType +
+      &quot;&lt;html&gt;\n&quot; +
+      &quot;&lt;head&gt;&lt;title&gt;&quot; + title + &quot;&lt;/title&gt;&lt;/head&gt;\n&quot; +
+      &quot;&lt;body bgcolor=\&quot;#f0f0f0\&quot;&gt;\n&quot; +
+      &quot;&lt;h1 align=\&quot;center\&quot;&gt;&quot; + formattedPerc + &quot;&lt;/h1&gt;\n&quot; +
+      &quot;&lt;/body&gt;&lt;/html&gt;&quot;);
+  }
+} 
+</code></pre>
+<h1 id="其他"><a class="header" href="#其他">其他</a></h1>
+<h2 id="jsp的理解"><a class="header" href="#jsp的理解"><strong>JSP的理解</strong></a></h2>
+<pre><code class="language-2">一种特殊的servlet
+含HTML的内容是 response
+含Java代码的是 get,或post
+</code></pre>
+<h2 id="重定向"><a class="header" href="#重定向"><strong>重定向</strong></a></h2>
+<pre><code>      // 设置响应内容类型
+      response.setContentType(&quot;text/html;charset=UTF-8&quot;);
+
+      // 要重定向的新位置
+      String site = new String(&quot;http://www.runoob.com&quot;);
+
+      response.setStatus(response.SC_MOVED_TEMPORARILY);
+      response.setHeader(&quot;Location&quot;, site);    
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../java_6_IO/FileIO(NIO-2.0)/遍历目录树.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../java_7_servlet规范/fitler.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../java_6_IO/FileIO(NIO-2.0)/遍历目录树.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../java_7_servlet规范/fitler.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

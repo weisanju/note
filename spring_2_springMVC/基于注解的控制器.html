@@ -1,0 +1,1020 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>基于注解的控制器 - note</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../highlight.css">
+        <link rel="stylesheet" href="../tomorrow-night.css">
+        <link rel="stylesheet" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../index.html">我的笔记库</a></li><li class="chapter-item affix "><li class="part-title">spring</li><li class="chapter-item "><div><strong aria-hidden="true">1.</strong> spring</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/0.spring容器启动总览.html"><strong aria-hidden="true">1.1.</strong> spring容器启动总览</a></li><li class="chapter-item "><a href="../spring_1_spring/1.spring容器启动-bean实例化流程.html"><strong aria-hidden="true">1.2.</strong> spring容器启动-bean实例化流程</a></li><li class="chapter-item "><a href="../spring_1_spring/2.SpringBean实例化过程.html"><strong aria-hidden="true">1.3.</strong> SpringBean实例化过程</a></li><li class="chapter-item "><a href="../spring_1_spring/3.Spring依赖注入与初始化.html"><strong aria-hidden="true">1.4.</strong> Spring依赖注入与初始化</a></li><li class="chapter-item "><a href="../spring_1_spring/4.SpringBean的生命周期.html"><strong aria-hidden="true">1.5.</strong> SpringBean的生命周期</a></li><li class="chapter-item "><a href="../spring_1_spring/5.SpringSchedule.html"><strong aria-hidden="true">1.6.</strong> SpringSchedule</a></li><li class="chapter-item "><a href="../spring_1_spring/ClassPathScanningCandidateComponentProvider.html"><strong aria-hidden="true">1.7.</strong> ClassPathScanningCandidateComponentProvider</a></li><li class="chapter-item "><a href="../spring_1_spring/PropertySource.html"><strong aria-hidden="true">1.8.</strong> PropertySource</a></li><li class="chapter-item "><a href="../spring_1_spring/Spring总结.html"><strong aria-hidden="true">1.9.</strong> Spring总结</a></li><li class="chapter-item "><a href="../spring_1_spring/applicationContext与BeanFactory的区别.html"><strong aria-hidden="true">1.10.</strong> applicationContext与BeanFactory的区别</a></li><li class="chapter-item "><a href="../spring_1_spring/spring杂项.html"><strong aria-hidden="true">1.11.</strong> spring杂项</a></li><li class="chapter-item "><a href="../spring_1_spring/spring组合注解.html"><strong aria-hidden="true">1.12.</strong> spring组合注解</a></li><li class="chapter-item "><a href="../spring_1_spring/spring解决循环依赖问题.html"><strong aria-hidden="true">1.13.</strong> spring解决循环依赖问题</a></li><li class="chapter-item "><a href="../spring_1_spring/postprocessor/index.html"><strong aria-hidden="true">1.14.</strong> postprocessor</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/index.html"><strong aria-hidden="true">1.15.</strong> spring-aop</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop-cglib动态代理.html"><strong aria-hidden="true">1.15.1.</strong> SpringAop-cglib动态代理</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop-jdk动态代理.html"><strong aria-hidden="true">1.15.2.</strong> SpringAop-jdk动态代理</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop-涉及到的类.html"><strong aria-hidden="true">1.15.3.</strong> SpringAop-涉及到的类</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop-编程式代理.html"><strong aria-hidden="true">1.15.4.</strong> SpringAop-编程式代理</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop-自动代理.html"><strong aria-hidden="true">1.15.5.</strong> SpringAop-自动代理</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/SpringAop总结.html"><strong aria-hidden="true">1.15.6.</strong> SpringAop总结</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/aop包解析.html"><strong aria-hidden="true">1.15.7.</strong> aop包解析</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/taskList.html"><strong aria-hidden="true">1.15.8.</strong> taskList</a></li><li class="chapter-item "><div><strong aria-hidden="true">1.15.9.</strong> AOP应用解析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/spring-aop/AOP应用解析/Async异步.html"><strong aria-hidden="true">1.15.9.1.</strong> Async异步</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/AOP应用解析/依赖懒加载.html"><strong aria-hidden="true">1.15.9.2.</strong> 依赖懒加载</a></li><li class="chapter-item "><a href="../spring_1_spring/spring-aop/AOP应用解析/缓存.html"><strong aria-hidden="true">1.15.9.3.</strong> 缓存</a></li></ol></li></ol></li><li class="chapter-item "><a href="../spring_1_spring/spring-bean定义/index.html"><strong aria-hidden="true">1.16.</strong> spring-bean定义</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/spring-bean定义/Bean定义.html"><strong aria-hidden="true">1.16.1.</strong> Bean定义</a></li></ol></li><li class="chapter-item "><a href="../spring_1_spring/springBeanScope/index.html"><strong aria-hidden="true">1.17.</strong> springBeanScope</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/springBeanScope/spring自定义可刷新的上下文.html"><strong aria-hidden="true">1.17.1.</strong> spring自定义可刷新的上下文</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">1.18.</strong> springframework</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/springframework/MessageSource.html"><strong aria-hidden="true">1.18.1.</strong> MessageSource</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/spring-ioc.html"><strong aria-hidden="true">1.18.2.</strong> spring-ioc</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/springEL.html"><strong aria-hidden="true">1.18.3.</strong> springEL</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/spring代理.html"><strong aria-hidden="true">1.18.4.</strong> spring代理</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/基于Ant的路径匹配.html"><strong aria-hidden="true">1.18.5.</strong> 基于Ant的路径匹配</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/字段格式化.html"><strong aria-hidden="true">1.18.6.</strong> 字段格式化</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/属性源抽象.html"><strong aria-hidden="true">1.18.7.</strong> 属性源抽象</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/类型转换.html"><strong aria-hidden="true">1.18.8.</strong> 类型转换</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/资源抽象.html"><strong aria-hidden="true">1.18.9.</strong> 资源抽象</a></li><li class="chapter-item "><a href="../spring_1_spring/springframework/配置全局日期格式化.html"><strong aria-hidden="true">1.18.10.</strong> 配置全局日期格式化</a></li></ol></li><li class="chapter-item "><a href="../spring_1_spring/编程式注入类/index.html"><strong aria-hidden="true">1.19.</strong> 编程式注入类</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_1_spring/编程式注入类/AOP代理相关.html"><strong aria-hidden="true">1.19.1.</strong> AOP代理相关</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../spring_2_springMVC/index.html"><strong aria-hidden="true">2.</strong> springMVC</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_2_springMVC/URI_Links.html"><strong aria-hidden="true">2.1.</strong> URI_Links</a></li><li class="chapter-item "><a href="../spring_2_springMVC/functional_endpoints.html"><strong aria-hidden="true">2.2.</strong> functional_endpoints</a></li><li class="chapter-item "><a href="../spring_2_springMVC/mvcannotation-driven注解的作用.html"><strong aria-hidden="true">2.3.</strong> mvcannotation-driven注解的作用</a></li><li class="chapter-item "><a href="../spring_2_springMVC/spring-mvc.html"><strong aria-hidden="true">2.4.</strong> spring-mvc</a></li><li class="chapter-item "><a href="../spring_2_springMVC/springMVC自定义参数解析注解.html"><strong aria-hidden="true">2.5.</strong> springMVC自定义参数解析注解</a></li><li class="chapter-item "><a href="../spring_2_springMVC/springMVC路径映射.html"><strong aria-hidden="true">2.6.</strong> springMVC路径映射</a></li><li class="chapter-item "><a href="../spring_2_springMVC/springMVC返回后.html"><strong aria-hidden="true">2.7.</strong> springMVC返回后</a></li><li class="chapter-item "><a href="../spring_2_springMVC/springMvcController配置.html"><strong aria-hidden="true">2.8.</strong> springMvcController配置</a></li><li class="chapter-item "><a href="../spring_2_springMVC/内置四种filters.html"><strong aria-hidden="true">2.9.</strong> 内置四种filters</a></li><li class="chapter-item expanded "><a href="../spring_2_springMVC/基于注解的控制器.html" class="active"><strong aria-hidden="true">2.10.</strong> 基于注解的控制器</a></li><li class="chapter-item "><div><strong aria-hidden="true">2.11.</strong> spring_1_spring</div></li></ol></li><li class="chapter-item "><a href="../spring_3_springboot/index.html"><strong aria-hidden="true">3.</strong> springboot</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_3_springboot/springBoot资源处理.html"><strong aria-hidden="true">3.1.</strong> springBoot资源处理</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-HiKariCP连接池动态数据源配置.html"><strong aria-hidden="true">3.2.</strong> springboot-HiKariCP连接池动态数据源配置</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-devtools.html"><strong aria-hidden="true">3.3.</strong> springboot-devtools</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-元数据.html"><strong aria-hidden="true">3.4.</strong> springboot-元数据</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-多模块.html"><strong aria-hidden="true">3.5.</strong> springboot-多模块</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-日志.html"><strong aria-hidden="true">3.6.</strong> springboot-日志</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-自动配置原理.html"><strong aria-hidden="true">3.7.</strong> springboot-自动配置原理</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-过滤器.html"><strong aria-hidden="true">3.8.</strong> springboot-过滤器</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot-配置文件与jar分离.html"><strong aria-hidden="true">3.9.</strong> springboot-配置文件与jar分离</a></li><li class="chapter-item "><a href="../spring_3_springboot/快速入门.html"><strong aria-hidden="true">3.10.</strong> 快速入门</a></li><li class="chapter-item "><a href="../spring_3_springboot/自定义springBootStarter.html"><strong aria-hidden="true">3.11.</strong> 自定义springBootStarter</a></li><li class="chapter-item "><div><strong aria-hidden="true">3.12.</strong> springboot配置文件加载</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_3_springboot/springboot配置文件加载/propertySource原理.html"><strong aria-hidden="true">3.12.1.</strong> propertySource原理</a></li><li class="chapter-item "><a href="../spring_3_springboot/springboot配置文件加载/默认加载原则.html"><strong aria-hidden="true">3.12.2.</strong> 默认加载原则</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.13.</strong> 官方文档</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_3_springboot/官方文档/SpringApplication.html"><strong aria-hidden="true">3.13.1.</strong> SpringApplication</a></li></ol></li></ol></li><li class="chapter-item "><a href="../spring_4_springSecurity/index.html"><strong aria-hidden="true">4.</strong> springSecurity</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_4_springSecurity/spring核心逻辑.html"><strong aria-hidden="true">4.1.</strong> spring核心逻辑</a></li></ol></li><li class="chapter-item "><a href="../spring_5_springWebFlux/index.html"><strong aria-hidden="true">5.</strong> springWebFlux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_5_springWebFlux/CoreFeatures.html"><strong aria-hidden="true">5.1.</strong> CoreFeatures</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/DispatcherHandler.html"><strong aria-hidden="true">5.2.</strong> DispatcherHandler</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/FunctionEndpoint.html"><strong aria-hidden="true">5.3.</strong> FunctionEndpoint</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/URILinks.html"><strong aria-hidden="true">5.4.</strong> URILinks</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/WebFluxConfig.html"><strong aria-hidden="true">5.5.</strong> WebFluxConfig</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/taskList.html"><strong aria-hidden="true">5.6.</strong> taskList</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/基于注解的控制器/index.html"><strong aria-hidden="true">5.7.</strong> 基于注解的控制器</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_5_springWebFlux/基于注解的控制器/HandlerMethod.html"><strong aria-hidden="true">5.7.1.</strong> HandlerMethod</a></li><li class="chapter-item "><a href="../spring_5_springWebFlux/基于注解的控制器/RequestMapping.html"><strong aria-hidden="true">5.7.2.</strong> RequestMapping</a></li></ol></li><li class="chapter-item "><a href="../spring_5_springWebFlux/源码分析/index.html"><strong aria-hidden="true">5.8.</strong> 源码分析</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_5_springWebFlux/源码分析/springBoot创建WebFlux分析.html"><strong aria-hidden="true">5.8.1.</strong> springBoot创建WebFlux分析</a></li></ol></li></ol></li><li class="chapter-item "><a href="../spring_6_springCloud/index.html"><strong aria-hidden="true">6.</strong> springCloud</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">6.1.</strong> 服务注册与发现</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_6_springCloud/服务注册与发现/nacos/index.html"><strong aria-hidden="true">6.1.1.</strong> nacos</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_6_springCloud/服务注册与发现/nacos/nacos-with-spring.html"><strong aria-hidden="true">6.1.1.1.</strong> nacos-with-spring</a></li><li class="chapter-item "><a href="../spring_6_springCloud/服务注册与发现/nacos/nacos-with-spring-clound.html"><strong aria-hidden="true">6.1.1.2.</strong> nacos-with-spring-clound</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.2.</strong> 服务消费</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_6_springCloud/服务消费/Ribbon与Feign/index.html"><strong aria-hidden="true">6.2.1.</strong> Ribbon与Feign</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.3.</strong> 网关</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_6_springCloud/网关/springCloudGateway/index.html"><strong aria-hidden="true">6.3.1.</strong> springCloudGateway</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_6_springCloud/网关/springCloudGateway/springCloud中的构造者模式.html"><strong aria-hidden="true">6.3.1.1.</strong> springCloud中的构造者模式</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.</strong> springIntegration</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_7_springIntegration/springCache/index.html"><strong aria-hidden="true">7.1.</strong> springCache</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../spring_7_springIntegration/springCache/1.基于申明式缓存.html"><strong aria-hidden="true">7.1.1.</strong> 基于申明式缓存</a></li><li class="chapter-item "><a href="../spring_7_springIntegration/springCache/2.JCacheAnnotations.html"><strong aria-hidden="true">7.1.2.</strong> JCacheAnnotations</a></li><li class="chapter-item "><a href="../spring_7_springIntegration/springCache/3.XML的申明式缓存.html"><strong aria-hidden="true">7.1.3.</strong> XML的申明式缓存</a></li><li class="chapter-item "><a href="../spring_7_springIntegration/springCache/4.配置缓存库.html"><strong aria-hidden="true">7.1.4.</strong> 配置缓存库</a></li></ol></li><li class="chapter-item "><a href="../spring_7_springIntegration/springdata-redis/index.html"><strong aria-hidden="true">7.2.</strong> springdata-redis</a></li></ol></li><li class="chapter-item "><li class="part-title"></li><li class="chapter-item "><div><strong aria-hidden="true">8.</strong> 分布式与微服务</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../分布式与微服务/JWT无状态Session.html"><strong aria-hidden="true">8.1.</strong> JWT无状态Session</a></li><li class="chapter-item "><a href="../分布式与微服务/一致性Hash.html"><strong aria-hidden="true">8.2.</strong> 一致性Hash</a></li><li class="chapter-item "><a href="../分布式与微服务/分布式ID.html"><strong aria-hidden="true">8.3.</strong> 分布式ID</a></li><li class="chapter-item "><a href="../分布式与微服务/分布式Session案.html"><strong aria-hidden="true">8.4.</strong> 分布式Session案</a></li><li class="chapter-item "><a href="../分布式与微服务/分布式事务.html"><strong aria-hidden="true">8.5.</strong> 分布式事务</a></li><li class="chapter-item "><a href="../分布式与微服务/分布式协调器-Zookeeper.html"><strong aria-hidden="true">8.6.</strong> 分布式协调器-Zookeeper</a></li><li class="chapter-item "><a href="../分布式与微服务/分布式锁.html"><strong aria-hidden="true">8.7.</strong> 分布式锁</a></li><li class="chapter-item "><a href="../分布式与微服务/接口幂等性.html"><strong aria-hidden="true">8.8.</strong> 接口幂等性</a></li><li class="chapter-item "><a href="../分布式与微服务/负载均衡.html"><strong aria-hidden="true">8.9.</strong> 负载均衡</a></li></ol></li><li class="chapter-item "><a href="../数据库/index.html"><strong aria-hidden="true">9.</strong> 数据库</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/sql通用优化.html"><strong aria-hidden="true">9.1.</strong> sql通用优化</a></li><li class="chapter-item "><a href="../数据库/MongoDB/index.html"><strong aria-hidden="true">9.2.</strong> MongoDB</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/MongoDB/mongodb基本操作.html"><strong aria-hidden="true">9.2.1.</strong> mongodb基本操作</a></li><li class="chapter-item "><a href="../数据库/MongoDB/mongodb高级语法.html"><strong aria-hidden="true">9.2.2.</strong> mongodb高级语法</a></li><li class="chapter-item "><a href="../数据库/MongoDB/权限管理.html"><strong aria-hidden="true">9.2.3.</strong> 权限管理</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/index.html"><strong aria-hidden="true">9.3.</strong> elasticSearch</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/BackUpACluster.html"><strong aria-hidden="true">9.3.1.</strong> BackUpACluster</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/KQL.html"><strong aria-hidden="true">9.3.2.</strong> KQL</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/dataStream.html"><strong aria-hidden="true">9.3.3.</strong> dataStream</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/es堆内存如何分配.html"><strong aria-hidden="true">9.3.4.</strong> es堆内存如何分配</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/scroll查询.html"><strong aria-hidden="true">9.3.5.</strong> scroll查询</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/乐观并发控制.html"><strong aria-hidden="true">9.3.6.</strong> 乐观并发控制</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/分布式检索.html"><strong aria-hidden="true">9.3.7.</strong> 分布式检索</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/分片内部原理.html"><strong aria-hidden="true">9.3.8.</strong> 分片内部原理</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/分词.html"><strong aria-hidden="true">9.3.9.</strong> 分词</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/前缀搜索与模糊搜索.html"><strong aria-hidden="true">9.3.10.</strong> 前缀搜索与模糊搜索</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/数据分片.html"><strong aria-hidden="true">9.3.11.</strong> 数据分片</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/映射.html"><strong aria-hidden="true">9.3.12.</strong> 映射</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/杂项学习.html"><strong aria-hidden="true">9.3.13.</strong> 杂项学习</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引和分片.html"><strong aria-hidden="true">9.3.14.</strong> 索引和分片</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引管理.html"><strong aria-hidden="true">9.3.15.</strong> 索引管理</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/评分标准与相关性.html"><strong aria-hidden="true">9.3.16.</strong> 评分标准与相关性</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/集群内原理.html"><strong aria-hidden="true">9.3.17.</strong> 集群内原理</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/Datamanagement/index.html"><strong aria-hidden="true">9.3.18.</strong> Datamanagement</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/Datamanagement/DataTier.html"><strong aria-hidden="true">9.3.18.1.</strong> DataTier</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/index.html"><strong aria-hidden="true">9.3.19.</strong> ILM</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/1.AutomateRolloverWithILM.html"><strong aria-hidden="true">9.3.19.1.</strong> AutomateRolloverWithILM</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/FrozenIndices.html"><strong aria-hidden="true">9.3.19.2.</strong> FrozenIndices</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/ILM.html"><strong aria-hidden="true">9.3.19.3.</strong> ILM</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/RolloverAPI.html"><strong aria-hidden="true">9.3.19.4.</strong> RolloverAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/ShrinkIndexAPI.html"><strong aria-hidden="true">9.3.19.5.</strong> ShrinkIndexAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/ILMConcepts/index.html"><strong aria-hidden="true">9.3.19.6.</strong> ILMConcepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/ILMConcepts/1.Rollover.html"><strong aria-hidden="true">9.3.19.6.1.</strong> Rollover</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/ILM/ILMConcepts/2.LifeCycleUpdates.html"><strong aria-hidden="true">9.3.19.6.2.</strong> LifeCycleUpdates</a></li></ol></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/index.html"><strong aria-hidden="true">9.3.20.</strong> IndexModules</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/1.Analysis.html"><strong aria-hidden="true">9.3.20.1.</strong> Analysis</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/2.IndexShardAllocation.html"><strong aria-hidden="true">9.3.20.2.</strong> IndexShardAllocation</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/3.Indexblocks.html"><strong aria-hidden="true">9.3.20.3.</strong> Indexblocks</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/4.Mapper.html"><strong aria-hidden="true">9.3.20.4.</strong> Mapper</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/5.Merge.html"><strong aria-hidden="true">9.3.20.5.</strong> Merge</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/6.SimilarityModule.html"><strong aria-hidden="true">9.3.20.6.</strong> SimilarityModule</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/7.Slowlog.html"><strong aria-hidden="true">9.3.20.7.</strong> Slowlog</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/8.Store.html"><strong aria-hidden="true">9.3.20.8.</strong> Store</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/9.Translog.html"><strong aria-hidden="true">9.3.20.9.</strong> Translog</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/10.HistoryRetention.html"><strong aria-hidden="true">9.3.20.10.</strong> HistoryRetention</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/11.IndexSorting.html"><strong aria-hidden="true">9.3.20.11.</strong> IndexSorting</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IndexModules/12.IndexPressure.html"><strong aria-hidden="true">9.3.20.12.</strong> IndexPressure</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.21.</strong> IngestPipeline</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/IngestPipeline/1.IngestPipelines.html"><strong aria-hidden="true">9.3.21.1.</strong> IngestPipelines</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IngestPipeline/2.pipeLineExample.html"><strong aria-hidden="true">9.3.21.2.</strong> pipeLineExample</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IngestPipeline/3.EnrichYourData.html"><strong aria-hidden="true">9.3.21.3.</strong> EnrichYourData</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IngestPipeline/4.ExampleEnrichYourDataBasedOnGeolocation.html"><strong aria-hidden="true">9.3.21.4.</strong> ExampleEnrichYourDataBasedOnGeolocation</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/IngestPipeline/5.IngestProcessorReference.html"><strong aria-hidden="true">9.3.21.5.</strong> IngestProcessorReference</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/index.html"><strong aria-hidden="true">9.3.22.</strong> queryDSL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/1.QueryAndFilterContext.html"><strong aria-hidden="true">9.3.22.1.</strong> QueryAndFilterContext</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/2.CompoundQueries.html"><strong aria-hidden="true">9.3.22.2.</strong> CompoundQueries</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/SearchAfter.html"><strong aria-hidden="true">9.3.22.3.</strong> SearchAfter</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/FullTextQueries/index.html"><strong aria-hidden="true">9.3.22.4.</strong> FullTextQueries</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/FullTextQueries/1.IntervalsQuery.html"><strong aria-hidden="true">9.3.22.4.1.</strong> IntervalsQuery</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/queryDSL/FullTextQueries/2.MatchQuery.html"><strong aria-hidden="true">9.3.22.4.2.</strong> MatchQuery</a></li></ol></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/index.html"><strong aria-hidden="true">9.3.23.</strong> snapshotAndRestore</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/CleanUpSnapshotRepo.html"><strong aria-hidden="true">9.3.23.1.</strong> CleanUpSnapshotRepo</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/CloneSnapshot.html"><strong aria-hidden="true">9.3.23.2.</strong> CloneSnapshot</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/CreateOrUpdateSnapshotAPI.html"><strong aria-hidden="true">9.3.23.3.</strong> CreateOrUpdateSnapshotAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/CreateSnapshot.html"><strong aria-hidden="true">9.3.23.4.</strong> CreateSnapshot</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/DeleteSnapShot.html"><strong aria-hidden="true">9.3.23.5.</strong> DeleteSnapShot</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/DeleteSnapshotRepository.html"><strong aria-hidden="true">9.3.23.6.</strong> DeleteSnapshotRepository</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/GetSnapshotAPI.html"><strong aria-hidden="true">9.3.23.7.</strong> GetSnapshotAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/RegisterASnapshot.html"><strong aria-hidden="true">9.3.23.8.</strong> RegisterASnapshot</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/RestoreSnapshot.html"><strong aria-hidden="true">9.3.23.9.</strong> RestoreSnapshot</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/SLM.html"><strong aria-hidden="true">9.3.23.10.</strong> SLM</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/SearchableSnapshots.html"><strong aria-hidden="true">9.3.23.11.</strong> SearchableSnapshots</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/SearchableSnapshotsMountAPI.html"><strong aria-hidden="true">9.3.23.12.</strong> SearchableSnapshotsMountAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/repository-s3.html"><strong aria-hidden="true">9.3.23.13.</strong> repository-s3</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/snapshotAndRestore/使用OSS备份恢复集群实战.html"><strong aria-hidden="true">9.3.23.14.</strong> 使用OSS备份恢复集群实战</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/安装/index.html"><strong aria-hidden="true">9.3.24.</strong> 安装</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/安装/1.InstallingFromRpm.html"><strong aria-hidden="true">9.3.24.1.</strong> InstallingFromRpm</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/安装/2.InstallFromDeb.html"><strong aria-hidden="true">9.3.24.2.</strong> InstallFromDeb</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.25.</strong> 深入搜索</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/深入搜索/全文搜索.html"><strong aria-hidden="true">9.3.25.1.</strong> 全文搜索</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/深入搜索/多字段搜索.html"><strong aria-hidden="true">9.3.25.2.</strong> 多字段搜索</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/深入搜索/结构化搜索.html"><strong aria-hidden="true">9.3.25.3.</strong> 结构化搜索</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/index.html"><strong aria-hidden="true">9.3.26.</strong> 索引分片分配</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/1.索引级别的分片分配控制.html"><strong aria-hidden="true">9.3.26.1.</strong> 索引级别的分片分配控制</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/2.节点离开延迟分配.html"><strong aria-hidden="true">9.3.26.2.</strong> 节点离开延迟分配</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/3.索引恢复优先级.html"><strong aria-hidden="true">9.3.26.3.</strong> 索引恢复优先级</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/4.每个节点的总分片.html"><strong aria-hidden="true">9.3.26.4.</strong> 每个节点的总分片</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/5.索引级别数据层分配过滤.html"><strong aria-hidden="true">9.3.26.5.</strong> 索引级别数据层分配过滤</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/6.手动分配分片clusterRerouteAPI.html"><strong aria-hidden="true">9.3.26.6.</strong> 手动分配分片clusterRerouteAPI</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/索引分片分配/7.cluster-allocation-explain.html"><strong aria-hidden="true">9.3.26.7.</strong> cluster-allocation-explain</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/考纲解读/index.html"><strong aria-hidden="true">9.3.27.</strong> 考纲解读</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/考纲解读/1.ClusterManagement.html"><strong aria-hidden="true">9.3.27.1.</strong> ClusterManagement</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/考纲解读/2.DataManagement.html"><strong aria-hidden="true">9.3.27.2.</strong> DataManagement</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.28.</strong> 聚合</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/聚合/RareTermsAggregation.html"><strong aria-hidden="true">9.3.28.1.</strong> RareTermsAggregation</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/聚合/Term.html"><strong aria-hidden="true">9.3.28.2.</strong> Term</a></li></ol></li><li class="chapter-item "><a href="../数据库/elasticSearch/配置/index.html"><strong aria-hidden="true">9.3.29.</strong> 配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/配置/1.重要配置.html"><strong aria-hidden="true">9.3.29.1.</strong> 重要配置</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/配置/2.elasticsearch.yml核心配置.html"><strong aria-hidden="true">9.3.29.2.</strong> elasticsearch.yml核心配置</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/配置/3.es系统参数修改.html"><strong aria-hidden="true">9.3.29.3.</strong> es系统参数修改</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.30.</strong> 集群</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/集群/Health.html"><strong aria-hidden="true">9.3.30.1.</strong> Health</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.31.</strong> 高可用专题</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/elasticSearch/高可用专题/弹性设计.html"><strong aria-hidden="true">9.3.31.1.</strong> 弹性设计</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/高可用专题/跨集群复制.html"><strong aria-hidden="true">9.3.31.2.</strong> 跨集群复制</a></li><li class="chapter-item "><a href="../数据库/elasticSearch/高可用专题/集群备份.html"><strong aria-hidden="true">9.3.31.3.</strong> 集群备份</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.4.</strong> mysql</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/mysql/mysqlfunction.html"><strong aria-hidden="true">9.4.1.</strong> mysqlfunction</a></li><li class="chapter-item "><a href="../数据库/mysql/mysqlpdump.html"><strong aria-hidden="true">9.4.2.</strong> mysqlpdump</a></li><li class="chapter-item "><a href="../数据库/mysql/mysqlzip安装.html"><strong aria-hidden="true">9.4.3.</strong> mysqlzip安装</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql公用表达式.html"><strong aria-hidden="true">9.4.4.</strong> mysql公用表达式</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql学习.html"><strong aria-hidden="true">9.4.5.</strong> mysql学习</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql执行计划.html"><strong aria-hidden="true">9.4.6.</strong> mysql执行计划</a></li><li class="chapter-item "><a href="../数据库/mysql/空值处理函数.html"><strong aria-hidden="true">9.4.7.</strong> 空值处理函数</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.4.8.</strong> mysql官方文档</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/mysql/mysql官方文档/mysql程序.html"><strong aria-hidden="true">9.4.8.1.</strong> mysql程序</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql官方文档/客户端.html"><strong aria-hidden="true">9.4.8.2.</strong> 客户端</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql官方文档/mysql程序/index.html"><strong aria-hidden="true">9.4.8.3.</strong> mysql程序</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/mysql/mysql官方文档/mysql程序/使用mysql相关程序.html"><strong aria-hidden="true">9.4.8.3.1.</strong> 使用mysql相关程序</a></li></ol></li></ol></li><li class="chapter-item "><a href="../数据库/mysql/mysql日志/index.html"><strong aria-hidden="true">9.4.9.</strong> mysql日志</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/mysql/mysql日志/mysql日志及分类.html"><strong aria-hidden="true">9.4.9.1.</strong> mysql日志及分类</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql日志/二进制日志.html"><strong aria-hidden="true">9.4.9.2.</strong> 二进制日志</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql日志/慢sql日志.html"><strong aria-hidden="true">9.4.9.3.</strong> 慢sql日志</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql日志/通用日志.html"><strong aria-hidden="true">9.4.9.4.</strong> 通用日志</a></li><li class="chapter-item "><a href="../数据库/mysql/mysql日志/错误日志.html"><strong aria-hidden="true">9.4.9.5.</strong> 错误日志</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.5.</strong> oracle</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/oracle/Oracle小知识点.html"><strong aria-hidden="true">9.5.1.</strong> Oracle小知识点</a></li><li class="chapter-item "><a href="../数据库/oracle/oracledocker快速搭建.html"><strong aria-hidden="true">9.5.2.</strong> oracledocker快速搭建</a></li><li class="chapter-item "><a href="../数据库/oracle/oracle多表更新方法.html"><strong aria-hidden="true">9.5.3.</strong> oracle多表更新方法</a></li></ol></li><li class="chapter-item "><a href="../数据库/redis/index.html"><strong aria-hidden="true">9.6.</strong> redis</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/redis/Redis应用-位图.html"><strong aria-hidden="true">9.6.1.</strong> Redis应用-位图</a></li><li class="chapter-item "><a href="../数据库/redis/Redis应用-分布式锁.html"><strong aria-hidden="true">9.6.2.</strong> Redis应用-分布式锁</a></li><li class="chapter-item "><a href="../数据库/redis/redis-keys与scan.html"><strong aria-hidden="true">9.6.3.</strong> redis-keys与scan</a></li><li class="chapter-item "><a href="../数据库/redis/redis-serverAndRedis-cli.html"><strong aria-hidden="true">9.6.4.</strong> redis-serverAndRedis-cli</a></li><li class="chapter-item "><a href="../数据库/redis/redis主从与哨兵.html"><strong aria-hidden="true">9.6.5.</strong> redis主从与哨兵</a></li><li class="chapter-item "><a href="../数据库/redis/redis发布与订阅.html"><strong aria-hidden="true">9.6.6.</strong> redis发布与订阅</a></li><li class="chapter-item "><a href="../数据库/redis/redis集群.html"><strong aria-hidden="true">9.6.7.</strong> redis集群</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.6.8.</strong> redis数据结构</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据库/redis/redis数据结构/Redis有序集合(sortedSet).html"><strong aria-hidden="true">9.6.8.1.</strong> Redis有序集合(sortedSet)</a></li><li class="chapter-item "><a href="../数据库/redis/redis数据结构/基本数据结构.html"><strong aria-hidden="true">9.6.8.2.</strong> 基本数据结构</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">10.</strong> 日志收集</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../日志收集/filebeat/index.html"><strong aria-hidden="true">10.1.</strong> filebeat</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../日志收集/filebeat/1.HowFilebeatWorks.html"><strong aria-hidden="true">10.1.1.</strong> HowFilebeatWorks</a></li><li class="chapter-item "><a href="../日志收集/filebeat/ConfigureFilebeat/index.html"><strong aria-hidden="true">10.1.2.</strong> ConfigureFilebeat</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../日志收集/filebeat/ConfigureFilebeat/1.Input.html"><strong aria-hidden="true">10.1.2.1.</strong> Input</a></li><li class="chapter-item "><a href="../日志收集/filebeat/ConfigureFilebeat/2.InputFileStream.html"><strong aria-hidden="true">10.1.2.2.</strong> InputFileStream</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">11.</strong> CICD</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/ansible/index.html"><strong aria-hidden="true">11.1.</strong> ansible</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/ansible/1.入门.html"><strong aria-hidden="true">11.1.1.</strong> 入门</a></li><li class="chapter-item "><a href="../CICD/ansible/Ansible.html"><strong aria-hidden="true">11.1.2.</strong> Ansible</a></li><li class="chapter-item "><a href="../CICD/ansible/Loops.html"><strong aria-hidden="true">11.1.3.</strong> Loops</a></li><li class="chapter-item "><a href="../CICD/ansible/ansible中的变量.html"><strong aria-hidden="true">11.1.4.</strong> ansible中的变量</a></li><li class="chapter-item "><a href="../CICD/ansible/ansible示例.html"><strong aria-hidden="true">11.1.5.</strong> ansible示例</a></li><li class="chapter-item "><a href="../CICD/ansible/inventor文件.html"><strong aria-hidden="true">11.1.6.</strong> inventor文件</a></li><li class="chapter-item "><a href="../CICD/ansible/playbooks.html"><strong aria-hidden="true">11.1.7.</strong> playbooks</a></li><li class="chapter-item "><a href="../CICD/ansible/临时命令行模式.html"><strong aria-hidden="true">11.1.8.</strong> 临时命令行模式</a></li><li class="chapter-item "><a href="../CICD/ansible/2.AnsibleConcepts/index.html"><strong aria-hidden="true">11.1.9.</strong> 2.AnsibleConcepts</a></li><li class="chapter-item "><a href="../CICD/ansible/3.内置模块/index.html"><strong aria-hidden="true">11.1.10.</strong> 3.内置模块</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/ansible/3.内置模块/1.Command.html"><strong aria-hidden="true">11.1.10.1.</strong> Command</a></li><li class="chapter-item "><a href="../CICD/ansible/3.内置模块/2.Shell.html"><strong aria-hidden="true">11.1.10.2.</strong> Shell</a></li></ol></li></ol></li><li class="chapter-item "><a href="../CICD/docker/index.html"><strong aria-hidden="true">11.2.</strong> docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/docker/DockerFile简介.html"><strong aria-hidden="true">11.2.1.</strong> DockerFile简介</a></li><li class="chapter-item "><a href="../CICD/docker/dockcer-swarm.html"><strong aria-hidden="true">11.2.2.</strong> dockcer-swarm</a></li><li class="chapter-item "><a href="../CICD/docker/docker-compose.html"><strong aria-hidden="true">11.2.3.</strong> docker-compose</a></li><li class="chapter-item "><a href="../CICD/docker/docker-swarm集群搭建实例.html"><strong aria-hidden="true">11.2.4.</strong> docker-swarm集群搭建实例</a></li><li class="chapter-item "><a href="../CICD/docker/docker-volume管理.html"><strong aria-hidden="true">11.2.5.</strong> docker-volume管理</a></li><li class="chapter-item "><a href="../CICD/docker/docker容器连接.html"><strong aria-hidden="true">11.2.6.</strong> docker容器连接</a></li><li class="chapter-item "><a href="../CICD/docker/docker搭建registry仓库.html"><strong aria-hidden="true">11.2.7.</strong> docker搭建registry仓库</a></li><li class="chapter-item "><a href="../CICD/docker/docker搭建私有镜像库.html"><strong aria-hidden="true">11.2.8.</strong> docker搭建私有镜像库</a></li><li class="chapter-item "><a href="../CICD/docker/docker离线安装.html"><strong aria-hidden="true">11.2.9.</strong> docker离线安装</a></li><li class="chapter-item "><a href="../CICD/docker/docker网络管理.html"><strong aria-hidden="true">11.2.10.</strong> docker网络管理</a></li><li class="chapter-item "><a href="../CICD/docker/docker远程连接配置.html"><strong aria-hidden="true">11.2.11.</strong> docker远程连接配置</a></li><li class="chapter-item "><a href="../CICD/docker/redis主从与哨兵.html"><strong aria-hidden="true">11.2.12.</strong> redis主从与哨兵</a></li><li class="chapter-item "><a href="../CICD/docker/使用实例.html"><strong aria-hidden="true">11.2.13.</strong> 使用实例</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">11.3.</strong> jenkins</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/jenkins/Jenkins.html"><strong aria-hidden="true">11.3.1.</strong> Jenkins</a></li><li class="chapter-item "><a href="../CICD/jenkins/jenkins_pipeline.html"><strong aria-hidden="true">11.3.2.</strong> jenkins_pipeline</a></li></ol></li><li class="chapter-item "><a href="../CICD/k8s/index.html"><strong aria-hidden="true">11.4.</strong> k8s</a></li><li class="chapter-item "><a href="../CICD/maven/index.html"><strong aria-hidden="true">11.5.</strong> maven</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../CICD/maven/AutoConfig插件.html"><strong aria-hidden="true">11.5.1.</strong> AutoConfig插件</a></li><li class="chapter-item "><a href="../CICD/maven/MavenArcheType.html"><strong aria-hidden="true">11.5.2.</strong> MavenArcheType</a></li><li class="chapter-item "><a href="../CICD/maven/maven.html"><strong aria-hidden="true">11.5.3.</strong> maven</a></li><li class="chapter-item "><a href="../CICD/maven/maven-Maven_Resources_Plugin.html"><strong aria-hidden="true">11.5.4.</strong> maven-Maven_Resources_Plugin</a></li><li class="chapter-item "><a href="../CICD/maven/maven-archiver.html"><strong aria-hidden="true">11.5.5.</strong> maven-archiver</a></li><li class="chapter-item "><a href="../CICD/maven/maven-assembly-plugin.html"><strong aria-hidden="true">11.5.6.</strong> maven-assembly-plugin</a></li><li class="chapter-item "><a href="../CICD/maven/maven-bom.html"><strong aria-hidden="true">11.5.7.</strong> maven-bom</a></li><li class="chapter-item "><a href="../CICD/maven/maven-profile.html"><strong aria-hidden="true">11.5.8.</strong> maven-profile</a></li><li class="chapter-item "><a href="../CICD/maven/maven-依赖管理.html"><strong aria-hidden="true">11.5.9.</strong> maven-依赖管理</a></li><li class="chapter-item "><a href="../CICD/maven/maven-编译源码.html"><strong aria-hidden="true">11.5.10.</strong> maven-编译源码</a></li><li class="chapter-item "><a href="../CICD/maven/maven中的生命周期、插件、目标.html"><strong aria-hidden="true">11.5.11.</strong> maven中的生命周期、插件、目标</a></li><li class="chapter-item "><a href="../CICD/maven/maven打包方式.html"><strong aria-hidden="true">11.5.12.</strong> maven打包方式</a></li><li class="chapter-item "><a href="../CICD/maven/maven聚合项目版本管理实践.html"><strong aria-hidden="true">11.5.13.</strong> maven聚合项目版本管理实践</a></li></ol></li></ol></li><li class="chapter-item "><a href="../模板引擎/index.html"><strong aria-hidden="true">12.</strong> 模板引擎</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../模板引擎/mustache/index.html"><strong aria-hidden="true">12.1.</strong> mustache</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">13.</strong> Linux</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../Linux/CFSBandwidthControl.html"><strong aria-hidden="true">13.1.</strong> CFSBandwidthControl</a></li><li class="chapter-item "><a href="../Linux/LinuxFor.html"><strong aria-hidden="true">13.2.</strong> LinuxFor</a></li><li class="chapter-item "><a href="../Linux/LinuxWOL设置.html"><strong aria-hidden="true">13.3.</strong> LinuxWOL设置</a></li><li class="chapter-item "><a href="../Linux/Linux条件测试.html"><strong aria-hidden="true">13.4.</strong> Linux条件测试</a></li><li class="chapter-item "><a href="../Linux/Seed.html"><strong aria-hidden="true">13.5.</strong> Seed</a></li><li class="chapter-item "><a href="../Linux/VIM.html"><strong aria-hidden="true">13.6.</strong> VIM</a></li><li class="chapter-item "><a href="../Linux/caseIn.html"><strong aria-hidden="true">13.7.</strong> caseIn</a></li><li class="chapter-item "><a href="../Linux/cgroup.html"><strong aria-hidden="true">13.8.</strong> cgroup</a></li><li class="chapter-item "><a href="../Linux/curl.html"><strong aria-hidden="true">13.9.</strong> curl</a></li><li class="chapter-item "><a href="../Linux/dd.html"><strong aria-hidden="true">13.10.</strong> dd</a></li><li class="chapter-item "><a href="../Linux/diffPatch.html"><strong aria-hidden="true">13.11.</strong> diffPatch</a></li><li class="chapter-item "><a href="../Linux/find.html"><strong aria-hidden="true">13.12.</strong> find</a></li><li class="chapter-item "><a href="../Linux/iptables.html"><strong aria-hidden="true">13.13.</strong> iptables</a></li><li class="chapter-item "><a href="../Linux/jq.html"><strong aria-hidden="true">13.14.</strong> jq</a></li><li class="chapter-item "><a href="../Linux/lsof.html"><strong aria-hidden="true">13.15.</strong> lsof</a></li><li class="chapter-item "><a href="../Linux/ps.html"><strong aria-hidden="true">13.16.</strong> ps</a></li><li class="chapter-item "><a href="../Linux/read.html"><strong aria-hidden="true">13.17.</strong> read</a></li><li class="chapter-item "><a href="../Linux/scp.html"><strong aria-hidden="true">13.18.</strong> scp</a></li><li class="chapter-item "><a href="../Linux/select.html"><strong aria-hidden="true">13.19.</strong> select</a></li><li class="chapter-item "><a href="../Linux/service脚本.html"><strong aria-hidden="true">13.20.</strong> service脚本</a></li><li class="chapter-item "><a href="../Linux/set.html"><strong aria-hidden="true">13.21.</strong> set</a></li><li class="chapter-item "><a href="../Linux/shell字符串.html"><strong aria-hidden="true">13.22.</strong> shell字符串</a></li><li class="chapter-item "><a href="../Linux/shell脚本参数.html"><strong aria-hidden="true">13.23.</strong> shell脚本参数</a></li><li class="chapter-item "><a href="../Linux/stat.html"><strong aria-hidden="true">13.24.</strong> stat</a></li><li class="chapter-item "><a href="../Linux/tar.html"><strong aria-hidden="true">13.25.</strong> tar</a></li><li class="chapter-item "><a href="../Linux/top命令.html"><strong aria-hidden="true">13.26.</strong> top命令</a></li><li class="chapter-item "><a href="../Linux/uidGidSetUidSetGid.html"><strong aria-hidden="true">13.27.</strong> uidGidSetUidSetGid</a></li><li class="chapter-item "><a href="../Linux/wsl关闭提示音.html"><strong aria-hidden="true">13.28.</strong> wsl关闭提示音</a></li><li class="chapter-item "><a href="../Linux/yum本地包依赖.html"><strong aria-hidden="true">13.29.</strong> yum本地包依赖</a></li><li class="chapter-item "><a href="../Linux/确定Linux发行版本.html"><strong aria-hidden="true">13.30.</strong> 确定Linux发行版本</a></li><li class="chapter-item "><a href="../Linux/零拷贝.html"><strong aria-hidden="true">13.31.</strong> 零拷贝</a></li><li class="chapter-item "><a href="../Linux/默认值语法糖.html"><strong aria-hidden="true">13.32.</strong> 默认值语法糖</a></li></ol></li><li class="chapter-item "><a href="../数据结构与算法/index.html"><strong aria-hidden="true">14.</strong> 数据结构与算法</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据结构与算法/Base64编码.html"><strong aria-hidden="true">14.1.</strong> Base64编码</a></li><li class="chapter-item "><a href="../数据结构与算法/Huffman编码.html"><strong aria-hidden="true">14.2.</strong> Huffman编码</a></li><li class="chapter-item "><a href="../数据结构与算法/base64.html"><strong aria-hidden="true">14.3.</strong> base64</a></li><li class="chapter-item "><a href="../数据结构与算法/fnv-hash算法.html"><strong aria-hidden="true">14.4.</strong> fnv-hash算法</a></li><li class="chapter-item "><a href="../数据结构与算法/位运算.html"><strong aria-hidden="true">14.5.</strong> 位运算</a></li><li class="chapter-item "><a href="../数据结构与算法/动态规划.html"><strong aria-hidden="true">14.6.</strong> 动态规划</a></li><li class="chapter-item "><a href="../数据结构与算法/动态规划-新.html"><strong aria-hidden="true">14.7.</strong> 动态规划-新</a></li><li class="chapter-item "><a href="../数据结构与算法/字符编码.html"><strong aria-hidden="true">14.8.</strong> 字符编码</a></li><li class="chapter-item "><a href="../数据结构与算法/布隆过滤器.html"><strong aria-hidden="true">14.9.</strong> 布隆过滤器</a></li><li class="chapter-item "><a href="../数据结构与算法/浮点数.html"><strong aria-hidden="true">14.10.</strong> 浮点数</a></li><li class="chapter-item "><a href="../数据结构与算法/贪心算法.html"><strong aria-hidden="true">14.11.</strong> 贪心算法</a></li><li class="chapter-item "><a href="../数据结构与算法/逆波兰表达式.html"><strong aria-hidden="true">14.12.</strong> 逆波兰表达式</a></li><li class="chapter-item "><div><strong aria-hidden="true">14.13.</strong> 树</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据结构与算法/树/二叉搜索平衡树.html"><strong aria-hidden="true">14.13.1.</strong> 二叉搜索平衡树</a></li><li class="chapter-item "><a href="../数据结构与算法/树/红黑树.html"><strong aria-hidden="true">14.13.2.</strong> 红黑树</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">15.</strong> 数据格式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../数据格式/XML.html"><strong aria-hidden="true">15.1.</strong> XML</a></li><li class="chapter-item "><a href="../数据格式/yaml.html"><strong aria-hidden="true">15.2.</strong> yaml</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">16.</strong> tmp</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../tmp/大端与小端.html"><strong aria-hidden="true">16.1.</strong> 大端与小端</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">17.</strong> 消息队列</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../消息队列/RocketMQ/index.html"><strong aria-hidden="true">17.1.</strong> RocketMQ</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../消息队列/RocketMQ/MQ消息的投递机制.html"><strong aria-hidden="true">17.1.1.</strong> MQ消息的投递机制</a></li><li class="chapter-item "><a href="../消息队列/RocketMQ/MQ的一致性算法实现原理.html"><strong aria-hidden="true">17.1.2.</strong> MQ的一致性算法实现原理</a></li><li class="chapter-item "><a href="../消息队列/RocketMQ/架构和设计.html"><strong aria-hidden="true">17.1.3.</strong> 架构和设计</a></li><li class="chapter-item "><a href="../消息队列/RocketMQ/案例.html"><strong aria-hidden="true">17.1.4.</strong> 案例</a></li><li class="chapter-item "><a href="../消息队列/RocketMQ/概念和特性.html"><strong aria-hidden="true">17.1.5.</strong> 概念和特性</a></li></ol></li><li class="chapter-item "><a href="../消息队列/kafaKa/index.html"><strong aria-hidden="true">17.2.</strong> kafaKa</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.</strong> 前端</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">18.1.</strong> ECMAScript</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/ECMAScript/ECMAScript6简介.html"><strong aria-hidden="true">18.1.1.</strong> ECMAScript6简介</a></li><li class="chapter-item "><a href="../前端/ECMAScript/Set-Map数据结构.html"><strong aria-hidden="true">18.1.2.</strong> Set-Map数据结构</a></li><li class="chapter-item "><a href="../前端/ECMAScript/async函数.html"><strong aria-hidden="true">18.1.3.</strong> async函数</a></li><li class="chapter-item "><a href="../前端/ECMAScript/generate函数.html"><strong aria-hidden="true">18.1.4.</strong> generate函数</a></li><li class="chapter-item "><a href="../前端/ECMAScript/let与const命令.html"><strong aria-hidden="true">18.1.5.</strong> let与const命令</a></li><li class="chapter-item "><a href="../前端/ECMAScript/proxy.html"><strong aria-hidden="true">18.1.6.</strong> proxy</a></li><li class="chapter-item "><a href="../前端/ECMAScript/symbol.html"><strong aria-hidden="true">18.1.7.</strong> symbol</a></li><li class="chapter-item "><a href="../前端/ECMAScript/函数.html"><strong aria-hidden="true">18.1.8.</strong> 函数</a></li><li class="chapter-item "><a href="../前端/ECMAScript/字符串-正则-数值.html"><strong aria-hidden="true">18.1.9.</strong> 字符串-正则-数值</a></li><li class="chapter-item "><a href="../前端/ECMAScript/对象.html"><strong aria-hidden="true">18.1.10.</strong> 对象</a></li><li class="chapter-item "><a href="../前端/ECMAScript/数组.html"><strong aria-hidden="true">18.1.11.</strong> 数组</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.2.</strong> Element-UI</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/Element-UI/Switch开关.html"><strong aria-hidden="true">18.2.1.</strong> Switch开关</a></li><li class="chapter-item "><a href="../前端/Element-UI/Tree树形控件.html"><strong aria-hidden="true">18.2.2.</strong> Tree树形控件</a></li><li class="chapter-item "><a href="../前端/Element-UI/backtop.html"><strong aria-hidden="true">18.2.3.</strong> backtop</a></li><li class="chapter-item "><a href="../前端/Element-UI/card卡片.html"><strong aria-hidden="true">18.2.4.</strong> card卡片</a></li><li class="chapter-item "><a href="../前端/Element-UI/form表单.html"><strong aria-hidden="true">18.2.5.</strong> form表单</a></li><li class="chapter-item "><a href="../前端/Element-UI/image图片.html"><strong aria-hidden="true">18.2.6.</strong> image图片</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-Breadcrumb面包屑.html"><strong aria-hidden="true">18.2.7.</strong> navigation-Breadcrumb面包屑</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-dropdown.html"><strong aria-hidden="true">18.2.8.</strong> navigation-dropdown</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-navmenu.html"><strong aria-hidden="true">18.2.9.</strong> navigation-navmenu</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-steps.html"><strong aria-hidden="true">18.2.10.</strong> navigation-steps</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-标签页.html"><strong aria-hidden="true">18.2.11.</strong> navigation-标签页</a></li><li class="chapter-item "><a href="../前端/Element-UI/navigation-页头.html"><strong aria-hidden="true">18.2.12.</strong> navigation-页头</a></li><li class="chapter-item "><a href="../前端/Element-UI/notice-Notification.html"><strong aria-hidden="true">18.2.13.</strong> notice-Notification</a></li><li class="chapter-item "><a href="../前端/Element-UI/notice-alert.html"><strong aria-hidden="true">18.2.14.</strong> notice-alert</a></li><li class="chapter-item "><a href="../前端/Element-UI/notice-loading.html"><strong aria-hidden="true">18.2.15.</strong> notice-loading</a></li><li class="chapter-item "><a href="../前端/Element-UI/notice-message-box.html"><strong aria-hidden="true">18.2.16.</strong> notice-message-box</a></li><li class="chapter-item "><a href="../前端/Element-UI/notice-message提示.html"><strong aria-hidden="true">18.2.17.</strong> notice-message提示</a></li><li class="chapter-item "><a href="../前端/Element-UI/popConfirm.html"><strong aria-hidden="true">18.2.18.</strong> popConfirm</a></li><li class="chapter-item "><a href="../前端/Element-UI/popOver弹出框.html"><strong aria-hidden="true">18.2.19.</strong> popOver弹出框</a></li><li class="chapter-item "><a href="../前端/Element-UI/slider滑块.html"><strong aria-hidden="true">18.2.20.</strong> slider滑块</a></li><li class="chapter-item "><a href="../前端/Element-UI/timeline.html"><strong aria-hidden="true">18.2.21.</strong> timeline</a></li><li class="chapter-item "><a href="../前端/Element-UI/tooltip.html"><strong aria-hidden="true">18.2.22.</strong> tooltip</a></li><li class="chapter-item "><a href="../前端/Element-UI/transfer穿梭框.html"><strong aria-hidden="true">18.2.23.</strong> transfer穿梭框</a></li><li class="chapter-item "><a href="../前端/Element-UI/上传.html"><strong aria-hidden="true">18.2.24.</strong> 上传</a></li><li class="chapter-item "><a href="../前端/Element-UI/入门.html"><strong aria-hidden="true">18.2.25.</strong> 入门</a></li><li class="chapter-item "><a href="../前端/Element-UI/分割线.html"><strong aria-hidden="true">18.2.26.</strong> 分割线</a></li><li class="chapter-item "><a href="../前端/Element-UI/分页.html"><strong aria-hidden="true">18.2.27.</strong> 分页</a></li><li class="chapter-item "><a href="../前端/Element-UI/基础组件.html"><strong aria-hidden="true">18.2.28.</strong> 基础组件</a></li><li class="chapter-item "><a href="../前端/Element-UI/头像.html"><strong aria-hidden="true">18.2.29.</strong> 头像</a></li><li class="chapter-item "><a href="../前端/Element-UI/对话框.html"><strong aria-hidden="true">18.2.30.</strong> 对话框</a></li><li class="chapter-item "><a href="../前端/Element-UI/常见input输入.html"><strong aria-hidden="true">18.2.31.</strong> 常见input输入</a></li><li class="chapter-item "><a href="../前端/Element-UI/折叠面板.html"><strong aria-hidden="true">18.2.32.</strong> 折叠面板</a></li><li class="chapter-item "><a href="../前端/Element-UI/抽屉.html"><strong aria-hidden="true">18.2.33.</strong> 抽屉</a></li><li class="chapter-item "><a href="../前端/Element-UI/无限滚动.html"><strong aria-hidden="true">18.2.34.</strong> 无限滚动</a></li><li class="chapter-item "><a href="../前端/Element-UI/日历.html"><strong aria-hidden="true">18.2.35.</strong> 日历</a></li><li class="chapter-item "><a href="../前端/Element-UI/时间日期选择.html"><strong aria-hidden="true">18.2.36.</strong> 时间日期选择</a></li><li class="chapter-item "><a href="../前端/Element-UI/标签.html"><strong aria-hidden="true">18.2.37.</strong> 标签</a></li><li class="chapter-item "><a href="../前端/Element-UI/标记与提示.html"><strong aria-hidden="true">18.2.38.</strong> 标记与提示</a></li><li class="chapter-item "><a href="../前端/Element-UI/级联选择器.html"><strong aria-hidden="true">18.2.39.</strong> 级联选择器</a></li><li class="chapter-item "><a href="../前端/Element-UI/表格.html"><strong aria-hidden="true">18.2.40.</strong> 表格</a></li><li class="chapter-item "><a href="../前端/Element-UI/评分.html"><strong aria-hidden="true">18.2.41.</strong> 评分</a></li><li class="chapter-item "><a href="../前端/Element-UI/走马灯.html"><strong aria-hidden="true">18.2.42.</strong> 走马灯</a></li><li class="chapter-item "><a href="../前端/Element-UI/进度条.html"><strong aria-hidden="true">18.2.43.</strong> 进度条</a></li><li class="chapter-item "><a href="../前端/Element-UI/颜色选择器.html"><strong aria-hidden="true">18.2.44.</strong> 颜色选择器</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.3.</strong> HTTP</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/HTTP/Content-Disposition.html"><strong aria-hidden="true">18.3.1.</strong> Content-Disposition</a></li><li class="chapter-item "><a href="../前端/HTTP/Cookie.html"><strong aria-hidden="true">18.3.2.</strong> Cookie</a></li><li class="chapter-item "><a href="../前端/HTTP/HTTP缓存.html"><strong aria-hidden="true">18.3.3.</strong> HTTP缓存</a></li><li class="chapter-item "><a href="../前端/HTTP/HTTP访问控制.html"><strong aria-hidden="true">18.3.4.</strong> HTTP访问控制</a></li><li class="chapter-item "><a href="../前端/HTTP/Http响应码.html"><strong aria-hidden="true">18.3.5.</strong> Http响应码</a></li><li class="chapter-item "><a href="../前端/HTTP/MIME.html"><strong aria-hidden="true">18.3.6.</strong> MIME</a></li><li class="chapter-item "><a href="../前端/HTTP/http头.html"><strong aria-hidden="true">18.3.7.</strong> http头</a></li></ol></li><li class="chapter-item "><a href="../前端/Html5/index.html"><strong aria-hidden="true">18.4.</strong> Html5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/Html5/CSS3.html"><strong aria-hidden="true">18.4.1.</strong> CSS3</a></li><li class="chapter-item "><a href="../前端/Html5/H5canvas图形绘制.html"><strong aria-hidden="true">18.4.2.</strong> H5canvas图形绘制</a></li><li class="chapter-item "><a href="../前端/Html5/HTML5.html"><strong aria-hidden="true">18.4.3.</strong> HTML5</a></li><li class="chapter-item "><a href="../前端/Html5/HTML5的结构.html"><strong aria-hidden="true">18.4.4.</strong> HTML5的结构</a></li><li class="chapter-item "><a href="../前端/Html5/HTML5表单.html"><strong aria-hidden="true">18.4.5.</strong> HTML5表单</a></li><li class="chapter-item "><a href="../前端/Html5/WebWorkers.html"><strong aria-hidden="true">18.4.6.</strong> WebWorkers</a></li><li class="chapter-item "><a href="../前端/Html5/多媒体播放.html"><strong aria-hidden="true">18.4.7.</strong> 多媒体播放</a></li><li class="chapter-item "><a href="../前端/Html5/本地存储.html"><strong aria-hidden="true">18.4.8.</strong> 本地存储</a></li><li class="chapter-item "><a href="../前端/Html5/离线应用程序.html"><strong aria-hidden="true">18.4.9.</strong> 离线应用程序</a></li><li class="chapter-item "><a href="../前端/Html5/获取地址位置信息.html"><strong aria-hidden="true">18.4.10.</strong> 获取地址位置信息</a></li><li class="chapter-item "><a href="../前端/Html5/通信API.html"><strong aria-hidden="true">18.4.11.</strong> 通信API</a></li></ol></li><li class="chapter-item "><a href="../前端/css/index.html"><strong aria-hidden="true">18.5.</strong> css</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/css/BFC.html"><strong aria-hidden="true">18.5.1.</strong> BFC</a></li><li class="chapter-item "><a href="../前端/css/CSS选择器.html"><strong aria-hidden="true">18.5.2.</strong> CSS选择器</a></li><li class="chapter-item "><a href="../前端/css/内联元素垂直居中的方式.html"><strong aria-hidden="true">18.5.3.</strong> 内联元素垂直居中的方式</a></li><li class="chapter-item "><a href="../前端/css/基本视觉格式化.html"><strong aria-hidden="true">18.5.4.</strong> 基本视觉格式化</a></li><li class="chapter-item "><a href="../前端/css/基本视觉格式化-1.html"><strong aria-hidden="true">18.5.5.</strong> 基本视觉格式化-1</a></li><li class="chapter-item "><a href="../前端/css/弹性布局.html"><strong aria-hidden="true">18.5.6.</strong> 弹性布局</a></li><li class="chapter-item "><a href="../前端/css/结构与层叠.html"><strong aria-hidden="true">18.5.7.</strong> 结构与层叠</a></li><li class="chapter-item "><div><strong aria-hidden="true">18.5.8.</strong> CSS布局方式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/css/CSS布局方式/flex布局.html"><strong aria-hidden="true">18.5.8.1.</strong> flex布局</a></li><li class="chapter-item "><a href="../前端/css/CSS布局方式/两栏布局.html"><strong aria-hidden="true">18.5.8.2.</strong> 两栏布局</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.5.9.</strong> CSS样式详解</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/css/CSS样式详解/Grid布局.html"><strong aria-hidden="true">18.5.9.1.</strong> Grid布局</a></li><li class="chapter-item "><a href="../前端/css/CSS样式详解/flex布局.html"><strong aria-hidden="true">18.5.9.2.</strong> flex布局</a></li><li class="chapter-item "><a href="../前端/css/CSS样式详解/定位.html"><strong aria-hidden="true">18.5.9.3.</strong> 定位</a></li></ol></li></ol></li><li class="chapter-item "><a href="../前端/quasar/index.html"><strong aria-hidden="true">18.6.</strong> quasar</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/quasar/quasarCli.html"><strong aria-hidden="true">18.6.1.</strong> quasarCli</a></li><li class="chapter-item "><a href="../前端/quasar/quasar选项和辅助.html"><strong aria-hidden="true">18.6.2.</strong> quasar选项和辅助</a></li><li class="chapter-item "><a href="../前端/quasar/vue组件.html"><strong aria-hidden="true">18.6.3.</strong> vue组件</a></li><li class="chapter-item "><a href="../前端/quasar/布局.html"><strong aria-hidden="true">18.6.4.</strong> 布局</a></li><li class="chapter-item "><a href="../前端/quasar/网格布局.html"><strong aria-hidden="true">18.6.5.</strong> 网格布局</a></li><li class="chapter-item "><a href="../前端/quasar/风格和特性.html"><strong aria-hidden="true">18.6.6.</strong> 风格和特性</a></li><li class="chapter-item "><div><strong aria-hidden="true">18.6.7.</strong> 组件</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/quasar/组件/q-dialog.html"><strong aria-hidden="true">18.6.7.1.</strong> q-dialog</a></li><li class="chapter-item "><a href="../前端/quasar/组件/q-expansion-item.html"><strong aria-hidden="true">18.6.7.2.</strong> q-expansion-item</a></li><li class="chapter-item "><a href="../前端/quasar/组件/q-page-sticky.html"><strong aria-hidden="true">18.6.7.3.</strong> q-page-sticky</a></li><li class="chapter-item "><a href="../前端/quasar/组件/q-tabs.html"><strong aria-hidden="true">18.6.7.4.</strong> q-tabs</a></li><li class="chapter-item "><a href="../前端/quasar/组件/q-toolbar.html"><strong aria-hidden="true">18.6.7.5.</strong> q-toolbar</a></li></ol></li></ol></li><li class="chapter-item "><a href="../前端/reactor/index.html"><strong aria-hidden="true">18.7.</strong> reactor</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/reactor/1.搭建TS-Reactor环境.html"><strong aria-hidden="true">18.7.1.</strong> 搭建TS-Reactor环境</a></li><li class="chapter-item "><a href="../前端/reactor/2.jsx.html"><strong aria-hidden="true">18.7.2.</strong> jsx</a></li><li class="chapter-item "><a href="../前端/reactor/3.元素渲染.html"><strong aria-hidden="true">18.7.3.</strong> 元素渲染</a></li><li class="chapter-item "><a href="../前端/reactor/4.组件与模块&Props.html"><strong aria-hidden="true">18.7.4.</strong> 组件与模块&Props</a></li><li class="chapter-item "><a href="../前端/reactor/5.State生命周期.html"><strong aria-hidden="true">18.7.5.</strong> State生命周期</a></li><li class="chapter-item "><a href="../前端/reactor/6.事件处理.html"><strong aria-hidden="true">18.7.6.</strong> 事件处理</a></li><li class="chapter-item "><a href="../前端/reactor/7.条件渲染.html"><strong aria-hidden="true">18.7.7.</strong> 条件渲染</a></li><li class="chapter-item "><a href="../前端/reactor/8.列表.html"><strong aria-hidden="true">18.7.8.</strong> 列表</a></li><li class="chapter-item "><a href="../前端/reactor/9.表单.html"><strong aria-hidden="true">18.7.9.</strong> 表单</a></li><li class="chapter-item "><a href="../前端/reactor/10.组合与继承.html"><strong aria-hidden="true">18.7.10.</strong> 组合与继承</a></li><li class="chapter-item "><a href="../前端/reactor/11.React最佳实践.html"><strong aria-hidden="true">18.7.11.</strong> React最佳实践</a></li><li class="chapter-item "><a href="../前端/reactor/高级特性/index.html"><strong aria-hidden="true">18.7.12.</strong> 高级特性</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/reactor/高级特性/Refs转发.html"><strong aria-hidden="true">18.7.12.1.</strong> Refs转发</a></li></ol></li></ol></li><li class="chapter-item "><a href="../前端/vue/index.html"><strong aria-hidden="true">18.8.</strong> vue</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../前端/vue/class与style的绑定.html"><strong aria-hidden="true">18.8.1.</strong> class与style的绑定</a></li><li class="chapter-item "><a href="../前端/vue/事件处理.html"><strong aria-hidden="true">18.8.2.</strong> 事件处理</a></li><li class="chapter-item "><a href="../前端/vue/列表渲染.html"><strong aria-hidden="true">18.8.3.</strong> 列表渲染</a></li><li class="chapter-item "><a href="../前端/vue/条件渲染.html"><strong aria-hidden="true">18.8.4.</strong> 条件渲染</a></li><li class="chapter-item "><a href="../前端/vue/模板语法.html"><strong aria-hidden="true">18.8.5.</strong> 模板语法</a></li><li class="chapter-item "><a href="../前端/vue/组件.html"><strong aria-hidden="true">18.8.6.</strong> 组件</a></li><li class="chapter-item "><a href="../前端/vue/表单输入绑定.html"><strong aria-hidden="true">18.8.7.</strong> 表单输入绑定</a></li><li class="chapter-item "><a href="../前端/vue/计算属性和侦听器.html"><strong aria-hidden="true">18.8.8.</strong> 计算属性和侦听器</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">java</li><li class="chapter-item "><a href="../java_1_java基础/index.html"><strong aria-hidden="true">19.</strong> java基础</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/EasyRules.html"><strong aria-hidden="true">19.1.</strong> EasyRules</a></li><li class="chapter-item "><a href="../java_1_java基础/PO、VO、BO.html"><strong aria-hidden="true">19.2.</strong> PO、VO、BO</a></li><li class="chapter-item "><a href="../java_1_java基础/WeakCache.html"><strong aria-hidden="true">19.3.</strong> WeakCache</a></li><li class="chapter-item "><a href="../java_1_java基础/apacheUtils类.html"><strong aria-hidden="true">19.4.</strong> apacheUtils类</a></li><li class="chapter-item "><a href="../java_1_java基础/javaUnsafe工具类与CAS.html"><strong aria-hidden="true">19.5.</strong> javaUnsafe工具类与CAS</a></li><li class="chapter-item "><a href="../java_1_java基础/java优化指南.html"><strong aria-hidden="true">19.6.</strong> java优化指南</a></li><li class="chapter-item "><a href="../java_1_java基础/java各版本新特性.html"><strong aria-hidden="true">19.7.</strong> java各版本新特性</a></li><li class="chapter-item "><a href="../java_1_java基础/java模块化.html"><strong aria-hidden="true">19.8.</strong> java模块化</a></li><li class="chapter-item "><a href="../java_1_java基础/代码异味.html"><strong aria-hidden="true">19.9.</strong> 代码异味</a></li><li class="chapter-item "><a href="../java_1_java基础/类的关系.html"><strong aria-hidden="true">19.10.</strong> 类的关系</a></li><li class="chapter-item "><a href="../java_1_java基础/JSR/index.html"><strong aria-hidden="true">19.11.</strong> JSR</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/JSR/jar包规范.html"><strong aria-hidden="true">19.11.1.</strong> jar包规范</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.12.</strong> JVM</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/JVM/GC后对象地址变化了HashCode如何保持不变.html"><strong aria-hidden="true">19.12.1.</strong> GC后对象地址变化了HashCode如何保持不变</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/JMM与volatile关键字.html"><strong aria-hidden="true">19.12.2.</strong> JMM与volatile关键字</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/JVMGC.html"><strong aria-hidden="true">19.12.3.</strong> JVMGC</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/JVM内存模型.html"><strong aria-hidden="true">19.12.4.</strong> JVM内存模型</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/JVM参数.html"><strong aria-hidden="true">19.12.5.</strong> JVM参数</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/JVM复制算法.html"><strong aria-hidden="true">19.12.6.</strong> JVM复制算法</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/java内存泄露与OOM.html"><strong aria-hidden="true">19.12.7.</strong> java内存泄露与OOM</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/java对象分析.html"><strong aria-hidden="true">19.12.8.</strong> java对象分析</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/java引用类型.html"><strong aria-hidden="true">19.12.9.</strong> java引用类型</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/类加载/index.html"><strong aria-hidden="true">19.12.10.</strong> 类加载</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/JVM/类加载/类加载器.html"><strong aria-hidden="true">19.12.10.1.</strong> 类加载器</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/类加载/类加载过程.html"><strong aria-hidden="true">19.12.10.2.</strong> 类加载过程</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM/类加载/线程上下文加载器.html"><strong aria-hidden="true">19.12.10.3.</strong> 线程上下文加载器</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.13.</strong> JVM问题诊断与性能分析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/MAT.html"><strong aria-hidden="true">19.13.1.</strong> MAT</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/arthas.html"><strong aria-hidden="true">19.13.2.</strong> arthas</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/javaCPU占用高的问题.html"><strong aria-hidden="true">19.13.3.</strong> javaCPU占用高的问题</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/java远程调试.html"><strong aria-hidden="true">19.13.4.</strong> java远程调试</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/优雅停服.html"><strong aria-hidden="true">19.13.5.</strong> 优雅停服</a></li><li class="chapter-item "><a href="../java_1_java基础/JVM问题诊断与性能分析/排查内存溢出.html"><strong aria-hidden="true">19.13.6.</strong> 排查内存溢出</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.14.</strong> arthas</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/arthas/1.安装.html"><strong aria-hidden="true">19.14.1.</strong> 安装</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/2.快速入门.html"><strong aria-hidden="true">19.14.2.</strong> 快速入门</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/3.命令.html"><strong aria-hidden="true">19.14.3.</strong> 命令</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/4.ArthasTunnel.html"><strong aria-hidden="true">19.14.4.</strong> ArthasTunnel</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/5.Idea插件.html"><strong aria-hidden="true">19.14.5.</strong> Idea插件</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/6.JavaAgent启动.html"><strong aria-hidden="true">19.14.6.</strong> JavaAgent启动</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/7.火焰图.html"><strong aria-hidden="true">19.14.7.</strong> 火焰图</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/8.thread命令.html"><strong aria-hidden="true">19.14.8.</strong> thread命令</a></li><li class="chapter-item "><a href="../java_1_java基础/arthas/9.trace.html"><strong aria-hidden="true">19.14.9.</strong> trace</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.15.</strong> bean校验</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/bean校验/javaValidated.html"><strong aria-hidden="true">19.15.1.</strong> javaValidated</a></li></ol></li><li class="chapter-item "><a href="../java_1_java基础/java.security框架/index.html"><strong aria-hidden="true">19.16.</strong> java.security框架</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.17.</strong> java基础</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/java基础/JavaSPI.html"><strong aria-hidden="true">19.17.1.</strong> JavaSPI</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/Java异常.html"><strong aria-hidden="true">19.17.2.</strong> Java异常</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/Java泛型的协变与逆变.html"><strong aria-hidden="true">19.17.3.</strong> Java泛型的协变与逆变</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/java中常见的语法糖.html"><strong aria-hidden="true">19.17.4.</strong> java中常见的语法糖</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/java序列化接口.html"><strong aria-hidden="true">19.17.5.</strong> java序列化接口</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/jdk1.8新特性.html"><strong aria-hidden="true">19.17.6.</strong> jdk1.8新特性</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/jdk与jre.html"><strong aria-hidden="true">19.17.7.</strong> jdk与jre</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/枚举.html"><strong aria-hidden="true">19.17.8.</strong> 枚举</a></li><li class="chapter-item "><a href="../java_1_java基础/java基础/注解.html"><strong aria-hidden="true">19.17.9.</strong> 注解</a></li></ol></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/index.html"><strong aria-hidden="true">19.18.</strong> java多线程与锁</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/JUC线程同步工具.html"><strong aria-hidden="true">19.18.1.</strong> JUC线程同步工具</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/LockSupport.html"><strong aria-hidden="true">19.18.2.</strong> LockSupport</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/java内存模型.html"><strong aria-hidden="true">19.18.3.</strong> java内存模型</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/java线程状态.html"><strong aria-hidden="true">19.18.4.</strong> java线程状态</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/java锁.html"><strong aria-hidden="true">19.18.5.</strong> java锁</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/jvm线程模型.html"><strong aria-hidden="true">19.18.6.</strong> jvm线程模型</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/关于多线程与并发编码的心得.html"><strong aria-hidden="true">19.18.7.</strong> 关于多线程与并发编码的心得</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/线程操作.html"><strong aria-hidden="true">19.18.8.</strong> 线程操作</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/线程池.html"><strong aria-hidden="true">19.18.9.</strong> 线程池</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.18.10.</strong> 基于AQS的同步工具</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/AQS.html"><strong aria-hidden="true">19.18.10.1.</strong> AQS</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/Condition条件等待.html"><strong aria-hidden="true">19.18.10.2.</strong> Condition条件等待</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/CountDownLatch.html"><strong aria-hidden="true">19.18.10.3.</strong> CountDownLatch</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/CyclicBarrier.html"><strong aria-hidden="true">19.18.10.4.</strong> CyclicBarrier</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/Lock锁接口.html"><strong aria-hidden="true">19.18.10.5.</strong> Lock锁接口</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/ReentrantLock.html"><strong aria-hidden="true">19.18.10.6.</strong> ReentrantLock</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/ReentrantReadWriteLock.html"><strong aria-hidden="true">19.18.10.7.</strong> ReentrantReadWriteLock</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/Semaphore.html"><strong aria-hidden="true">19.18.10.8.</strong> Semaphore</a></li><li class="chapter-item "><a href="../java_1_java基础/java多线程与锁/基于AQS的同步工具/StampedLock.html"><strong aria-hidden="true">19.18.10.9.</strong> StampedLock</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.19.</strong> java源码分析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/java源码分析/1.java面试.html"><strong aria-hidden="true">19.19.1.</strong> java面试</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/JavaLocalDate.html"><strong aria-hidden="true">19.19.2.</strong> JavaLocalDate</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/JavaUnsafe类.html"><strong aria-hidden="true">19.19.3.</strong> JavaUnsafe类</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/foreach语法糖.html"><strong aria-hidden="true">19.19.4.</strong> foreach语法糖</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/formatter.html"><strong aria-hidden="true">19.19.5.</strong> formatter</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/integer的比较问题.html"><strong aria-hidden="true">19.19.6.</strong> integer的比较问题</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/java序列化接口.html"><strong aria-hidden="true">19.19.7.</strong> java序列化接口</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/string常量池.html"><strong aria-hidden="true">19.19.8.</strong> string常量池</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/threadLocal.html"><strong aria-hidden="true">19.19.9.</strong> threadLocal</a></li><li class="chapter-item "><a href="../java_1_java基础/java源码分析/基于jdk1.8的Arrays.sort.html"><strong aria-hidden="true">19.19.10.</strong> 基于jdk1.8的Arrays.sort</a></li></ol></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/index.html"><strong aria-hidden="true">19.20.</strong> java集合框架</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/java集合框架/ArrayBlockingQueue.html"><strong aria-hidden="true">19.20.1.</strong> ArrayBlockingQueue</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/ArrayList.html"><strong aria-hidden="true">19.20.2.</strong> ArrayList</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/ConcurrentHashMap.html"><strong aria-hidden="true">19.20.3.</strong> ConcurrentHashMap</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/LinkedList与双向队列.html"><strong aria-hidden="true">19.20.4.</strong> LinkedList与双向队列</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/List.html"><strong aria-hidden="true">19.20.5.</strong> List</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/Map接口.html"><strong aria-hidden="true">19.20.6.</strong> Map接口</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/Queue与Deque.html"><strong aria-hidden="true">19.20.7.</strong> Queue与Deque</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/Set与LinkedHashMap.html"><strong aria-hidden="true">19.20.8.</strong> Set与LinkedHashMap</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/SynchronousQueue.html"><strong aria-hidden="true">19.20.9.</strong> SynchronousQueue</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/arraylist和linkedlist.html"><strong aria-hidden="true">19.20.10.</strong> arraylist和linkedlist</a></li><li class="chapter-item "><a href="../java_1_java基础/java集合框架/hashMap.html"><strong aria-hidden="true">19.20.11.</strong> hashMap</a></li></ol></li><li class="chapter-item "><a href="../java_1_java基础/redission-java/index.html"><strong aria-hidden="true">19.21.</strong> redission-java</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.22.</strong> shiro</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/shiro/shiro频繁访问redis.html"><strong aria-hidden="true">19.22.1.</strong> shiro频繁访问redis</a></li></ol></li><li class="chapter-item "><a href="../java_1_java基础/代理/index.html"><strong aria-hidden="true">19.23.</strong> 代理</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/代理/CGLIB.html"><strong aria-hidden="true">19.23.1.</strong> CGLIB</a></li><li class="chapter-item "><a href="../java_1_java基础/代理/cglib的几种Callback.html"><strong aria-hidden="true">19.23.2.</strong> cglib的几种Callback</a></li><li class="chapter-item "><a href="../java_1_java基础/代理/jdk动态代理.html"><strong aria-hidden="true">19.23.3.</strong> jdk动态代理</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.24.</strong> 其他</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/其他/Collections工具类.html"><strong aria-hidden="true">19.24.1.</strong> Collections工具类</a></li><li class="chapter-item "><a href="../java_1_java基础/其他/JAVA命令行工具.html"><strong aria-hidden="true">19.24.2.</strong> JAVA命令行工具</a></li><li class="chapter-item "><a href="../java_1_java基础/其他/Objects工具类.html"><strong aria-hidden="true">19.24.3.</strong> Objects工具类</a></li><li class="chapter-item "><a href="../java_1_java基础/其他/javaIdea调试.html"><strong aria-hidden="true">19.24.4.</strong> javaIdea调试</a></li><li class="chapter-item "><a href="../java_1_java基础/其他/javaPererences工具.html"><strong aria-hidden="true">19.24.5.</strong> javaPererences工具</a></li><li class="chapter-item "><a href="../java_1_java基础/其他/java基准测试.html"><strong aria-hidden="true">19.24.6.</strong> java基准测试</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.25.</strong> 函数式编程</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/函数式编程/anyMatchAllMatch.html"><strong aria-hidden="true">19.25.1.</strong> anyMatchAllMatch</a></li><li class="chapter-item "><a href="../java_1_java基础/函数式编程/java函数式编程.html"><strong aria-hidden="true">19.25.2.</strong> java函数式编程</a></li><li class="chapter-item "><a href="../java_1_java基础/函数式编程/lamba表达式原理.html"><strong aria-hidden="true">19.25.3.</strong> lamba表达式原理</a></li><li class="chapter-item "><a href="../java_1_java基础/函数式编程/方法引用.html"><strong aria-hidden="true">19.25.4.</strong> 方法引用</a></li><li class="chapter-item "><a href="../java_1_java基础/函数式编程/流操作.html"><strong aria-hidden="true">19.25.5.</strong> 流操作</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.26.</strong> 对象拷贝</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_1_java基础/对象拷贝/mapstruct.html"><strong aria-hidden="true">19.26.1.</strong> mapstruct</a></li></ol></li></ol></li><li class="chapter-item "><a href="../java_2_响应式编程/index.html"><strong aria-hidden="true">20.</strong> 响应式编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/index.html"><strong aria-hidden="true">20.1.</strong> ProjectReactor</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/创建发布者.html"><strong aria-hidden="true">20.1.1.</strong> 创建发布者</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/创建订阅.html"><strong aria-hidden="true">20.1.2.</strong> 创建订阅</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/响应式流的动作.html"><strong aria-hidden="true">20.1.3.</strong> 响应式流的动作</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/选择合适的操作符.html"><strong aria-hidden="true">20.1.4.</strong> 选择合适的操作符</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/index.html"><strong aria-hidden="true">20.1.5.</strong> core-features</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/FluxAndMono.html"><strong aria-hidden="true">20.1.5.1.</strong> FluxAndMono</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/ProcessorOrSinks.html"><strong aria-hidden="true">20.1.5.2.</strong> ProcessorOrSinks</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/线程和调度.html"><strong aria-hidden="true">20.1.5.3.</strong> 线程和调度</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/编程式创建序列.html"><strong aria-hidden="true">20.1.5.4.</strong> 编程式创建序列</a></li><li class="chapter-item "><a href="../java_2_响应式编程/ProjectReactor/core-features/错误处理.html"><strong aria-hidden="true">20.1.5.5.</strong> 错误处理</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../java_4_日志/index.html"><strong aria-hidden="true">21.</strong> 日志</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_4_日志/JUL.html"><strong aria-hidden="true">21.1.</strong> JUL</a></li><li class="chapter-item "><a href="../java_4_日志/SL4j.html"><strong aria-hidden="true">21.2.</strong> SL4j</a></li><li class="chapter-item "><a href="../java_4_日志/日志处理进化史.html"><strong aria-hidden="true">21.3.</strong> 日志处理进化史</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/index.html"><strong aria-hidden="true">21.4.</strong> log4j2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_4_日志/log4j2/Log4j2API.html"><strong aria-hidden="true">21.4.1.</strong> Log4j2API</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/log4j2-web.html"><strong aria-hidden="true">21.4.2.</strong> log4j2-web</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/lookups.html"><strong aria-hidden="true">21.4.3.</strong> lookups</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/依赖管理.html"><strong aria-hidden="true">21.4.4.</strong> 依赖管理</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/index.html"><strong aria-hidden="true">21.4.5.</strong> appenders</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/AsyncAppender.html"><strong aria-hidden="true">21.4.5.1.</strong> AsyncAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/CassandraAppender.html"><strong aria-hidden="true">21.4.5.2.</strong> CassandraAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/ConsoleAppender.html"><strong aria-hidden="true">21.4.5.3.</strong> ConsoleAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/FailoverAppender.html"><strong aria-hidden="true">21.4.5.4.</strong> FailoverAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/FileAppender.html"><strong aria-hidden="true">21.4.5.5.</strong> FileAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/JDBCAppender.html"><strong aria-hidden="true">21.4.5.6.</strong> JDBCAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/OutputStreamAppender.html"><strong aria-hidden="true">21.4.5.7.</strong> OutputStreamAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/RandomAccessFileAppender.html"><strong aria-hidden="true">21.4.5.8.</strong> RandomAccessFileAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/RewriteAppender.html"><strong aria-hidden="true">21.4.5.9.</strong> RewriteAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/RollingFileAppender.html"><strong aria-hidden="true">21.4.5.10.</strong> RollingFileAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/RollingRandomAccessFileAppender.html"><strong aria-hidden="true">21.4.5.11.</strong> RollingRandomAccessFileAppender</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/appenders/RoutingAppender.html"><strong aria-hidden="true">21.4.5.12.</strong> RoutingAppender</a></li></ol></li><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/index.html"><strong aria-hidden="true">21.4.6.</strong> layouts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/CSVLayouts.html"><strong aria-hidden="true">21.4.6.1.</strong> CSVLayouts</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/HTMLayouts.html"><strong aria-hidden="true">21.4.6.2.</strong> HTMLayouts</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/JSONLayout.html"><strong aria-hidden="true">21.4.6.3.</strong> JSONLayout</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/JSONTemplateLayouts.html"><strong aria-hidden="true">21.4.6.4.</strong> JSONTemplateLayouts</a></li><li class="chapter-item "><a href="../java_4_日志/log4j2/layouts/PatternLayout.html"><strong aria-hidden="true">21.4.6.5.</strong> PatternLayout</a></li></ol></li><li class="chapter-item "><a href="../java_4_日志/log4j2/log4j2配置/index.html"><strong aria-hidden="true">21.4.7.</strong> log4j2配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_4_日志/log4j2/log4j2配置/高级配置.html"><strong aria-hidden="true">21.4.7.1.</strong> 高级配置</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">22.</strong> ORM</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">22.1.</strong> Mybatis</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_5_ORM/Mybatis/mybatis.html"><strong aria-hidden="true">22.1.1.</strong> mybatis</a></li><li class="chapter-item "><a href="../java_5_ORM/Mybatis/mybatis-插件开发.html"><strong aria-hidden="true">22.1.2.</strong> mybatis-插件开发</a></li><li class="chapter-item "><a href="../java_5_ORM/Mybatis/mybatis标签.html"><strong aria-hidden="true">22.1.3.</strong> mybatis标签</a></li><li class="chapter-item "><a href="../java_5_ORM/Mybatis/resultHandler.html"><strong aria-hidden="true">22.1.4.</strong> resultHandler</a></li><li class="chapter-item "><a href="../java_5_ORM/Mybatis/多结果集分页.html"><strong aria-hidden="true">22.1.5.</strong> 多结果集分页</a></li></ol></li><li class="chapter-item "><a href="../java_5_ORM/jpa/index.html"><strong aria-hidden="true">22.2.</strong> jpa</a></li></ol></li><li class="chapter-item "><a href="../java_6_IO/index.html"><strong aria-hidden="true">23.</strong> IO</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_6_IO/Buffer.html"><strong aria-hidden="true">23.1.</strong> Buffer</a></li><li class="chapter-item "><a href="../java_6_IO/Channel.html"><strong aria-hidden="true">23.2.</strong> Channel</a></li><li class="chapter-item "><a href="../java_6_IO/LinuxIO模型演变.html"><strong aria-hidden="true">23.3.</strong> LinuxIO模型演变</a></li><li class="chapter-item "><a href="../java_6_IO/Selector（选择器）.html"><strong aria-hidden="true">23.4.</strong> Selector（选择器）</a></li><li class="chapter-item "><a href="../java_6_IO/主流IO模型.html"><strong aria-hidden="true">23.5.</strong> 主流IO模型</a></li><li class="chapter-item "><a href="../java_6_IO/从IO到NIO个人理解.html"><strong aria-hidden="true">23.6.</strong> 从IO到NIO个人理解</a></li><li class="chapter-item "><a href="../java_6_IO/字符集.html"><strong aria-hidden="true">23.7.</strong> 字符集</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/index.html"><strong aria-hidden="true">23.8.</strong> FileIO(NIO-2.0)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/LinksSymbolicOtherwise.html"><strong aria-hidden="true">23.8.1.</strong> LinksSymbolicOtherwise</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/RandomAccessFiles.html"><strong aria-hidden="true">23.8.2.</strong> RandomAccessFiles</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/传统IO与NIO的API迁移.html"><strong aria-hidden="true">23.8.3.</strong> 传统IO与NIO的API迁移</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/元数据管理.html"><strong aria-hidden="true">23.8.4.</strong> 元数据管理</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/其他有用方法.html"><strong aria-hidden="true">23.8.5.</strong> 其他有用方法</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/开发自定义文件系统.html"><strong aria-hidden="true">23.8.6.</strong> 开发自定义文件系统</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/文件查找.html"><strong aria-hidden="true">23.8.7.</strong> 文件查找</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/文件管理.html"><strong aria-hidden="true">23.8.8.</strong> 文件管理</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/文件读写.html"><strong aria-hidden="true">23.8.9.</strong> 文件读写</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/监控目录变化.html"><strong aria-hidden="true">23.8.10.</strong> 监控目录变化</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/目录管理.html"><strong aria-hidden="true">23.8.11.</strong> 目录管理</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/路径操作.html"><strong aria-hidden="true">23.8.12.</strong> 路径操作</a></li><li class="chapter-item "><a href="../java_6_IO/FileIO(NIO-2.0)/遍历目录树.html"><strong aria-hidden="true">23.8.13.</strong> 遍历目录树</a></li></ol></li></ol></li><li class="chapter-item "><a href="../java_7_servlet规范/index.html"><strong aria-hidden="true">24.</strong> servlet规范</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_7_servlet规范/fitler.html"><strong aria-hidden="true">24.1.</strong> fitler</a></li><li class="chapter-item "><a href="../java_7_servlet规范/httpServlet接口.html"><strong aria-hidden="true">24.2.</strong> httpServlet接口</a></li><li class="chapter-item "><a href="../java_7_servlet规范/request.html"><strong aria-hidden="true">24.3.</strong> request</a></li><li class="chapter-item "><a href="../java_7_servlet规范/response.html"><strong aria-hidden="true">24.4.</strong> response</a></li><li class="chapter-item "><a href="../java_7_servlet规范/servletContext.html"><strong aria-hidden="true">24.5.</strong> servletContext</a></li><li class="chapter-item "><a href="../java_7_servlet规范/servlet初始化.html"><strong aria-hidden="true">24.6.</strong> servlet初始化</a></li><li class="chapter-item "><a href="../java_7_servlet规范/session.html"><strong aria-hidden="true">24.7.</strong> session</a></li><li class="chapter-item "><a href="../java_7_servlet规范/入门.html"><strong aria-hidden="true">24.8.</strong> 入门</a></li><li class="chapter-item "><a href="../java_7_servlet规范/注解与可插拔.html"><strong aria-hidden="true">24.9.</strong> 注解与可插拔</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">25.</strong> 设计模式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_8_设计模式/PipeLine.html"><strong aria-hidden="true">25.1.</strong> PipeLine</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">26.</strong> 单元测试</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_9_单元测试/junit5/index.html"><strong aria-hidden="true">26.1.</strong> junit5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_9_单元测试/junit5/ConsoleLaunch.html"><strong aria-hidden="true">26.1.1.</strong> ConsoleLaunch</a></li><li class="chapter-item "><a href="../java_9_单元测试/junit5/DependencyMetadata.html"><strong aria-hidden="true">26.1.2.</strong> DependencyMetadata</a></li><li class="chapter-item "><div><strong aria-hidden="true">26.1.3.</strong> writtingTest</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../java_9_单元测试/junit5/writtingTest/Annotations.html"><strong aria-hidden="true">26.1.3.1.</strong> Annotations</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">工具</li><li class="chapter-item "><a href="../工具_3_git/index.html"><strong aria-hidden="true">27.</strong> git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../工具_3_git/Git库管理.html"><strong aria-hidden="true">27.1.</strong> Git库管理</a></li><li class="chapter-item "><a href="../工具_3_git/gitDiff原理.html"><strong aria-hidden="true">27.2.</strong> gitDiff原理</a></li><li class="chapter-item "><a href="../工具_3_git/gitLog命令.html"><strong aria-hidden="true">27.3.</strong> gitLog命令</a></li><li class="chapter-item "><a href="../工具_3_git/gitflow.html"><strong aria-hidden="true">27.4.</strong> gitflow</a></li><li class="chapter-item "><a href="../工具_3_git/gitmerge.html"><strong aria-hidden="true">27.5.</strong> gitmerge</a></li><li class="chapter-item "><a href="../工具_3_git/gitrebase.html"><strong aria-hidden="true">27.6.</strong> gitrebase</a></li><li class="chapter-item "><a href="../工具_3_git/git使用案例.html"><strong aria-hidden="true">27.7.</strong> git使用案例</a></li><li class="chapter-item "><a href="../工具_3_git/git分支.html"><strong aria-hidden="true">27.8.</strong> git分支</a></li><li class="chapter-item "><a href="../工具_3_git/git命令杂项.html"><strong aria-hidden="true">27.9.</strong> git命令杂项</a></li><li class="chapter-item "><a href="../工具_3_git/git基础.html"><strong aria-hidden="true">27.10.</strong> git基础</a></li><li class="chapter-item "><a href="../工具_3_git/git错误提交后场景.html"><strong aria-hidden="true">27.11.</strong> git错误提交后场景</a></li><li class="chapter-item "><a href="../工具_3_git/tag管理.html"><strong aria-hidden="true">27.12.</strong> tag管理</a></li><li class="chapter-item "><a href="../工具_3_git/使用远程分支强制覆盖本地工作区暂存区版本库.html"><strong aria-hidden="true">27.13.</strong> 使用远程分支强制覆盖本地工作区暂存区版本库</a></li><li class="chapter-item "><a href="../工具_3_git/克隆.html"><strong aria-hidden="true">27.14.</strong> 克隆</a></li><li class="chapter-item "><a href="../工具_3_git/历史提交.html"><strong aria-hidden="true">27.15.</strong> 历史提交</a></li><li class="chapter-item "><a href="../工具_3_git/回退合并提交.html"><strong aria-hidden="true">27.16.</strong> 回退合并提交</a></li><li class="chapter-item "><a href="../工具_3_git/基本操作.html"><strong aria-hidden="true">27.17.</strong> 基本操作</a></li><li class="chapter-item "><a href="../工具_3_git/杂项.html"><strong aria-hidden="true">27.18.</strong> 杂项</a></li><li class="chapter-item "><div><strong aria-hidden="true">27.19.</strong> GIT协作</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../工具_3_git/GIT协作/Git支持的协议.html"><strong aria-hidden="true">27.19.1.</strong> Git支持的协议</a></li><li class="chapter-item "><a href="../工具_3_git/GIT协作/冲突解决.html"><strong aria-hidden="true">27.19.2.</strong> 冲突解决</a></li><li class="chapter-item "><a href="../工具_3_git/GIT协作/补丁文件交互.html"><strong aria-hidden="true">27.19.3.</strong> 补丁文件交互</a></li><li class="chapter-item "><a href="../工具_3_git/GIT协作/远程版本库.html"><strong aria-hidden="true">27.19.4.</strong> 远程版本库</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">28.</strong> 绘图建模</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../工具_4_绘图建模/UML.html"><strong aria-hidden="true">28.1.</strong> UML</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/flowchart_fun.html"><strong aria-hidden="true">28.2.</strong> flowchart_fun</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid;README.html"><strong aria-hidden="true">28.3.</strong> mermaid;README</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/plantUML语法.html"><strong aria-hidden="true">28.4.</strong> plantUML语法</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid/index.html"><strong aria-hidden="true">28.5.</strong> mermaid</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid/时序图.html"><strong aria-hidden="true">28.5.1.</strong> 时序图</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid/流程图.html"><strong aria-hidden="true">28.5.2.</strong> 流程图</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid/类图.html"><strong aria-hidden="true">28.5.3.</strong> 类图</a></li><li class="chapter-item "><a href="../工具_4_绘图建模/mermaid/语法总览.html"><strong aria-hidden="true">28.5.4.</strong> 语法总览</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">其他</li><li class="chapter-item "><a href="../其他_2_其他/index.html"><strong aria-hidden="true">29.</strong> 其他</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他_2_其他/Multipass.html"><strong aria-hidden="true">29.1.</strong> Multipass</a></li><li class="chapter-item "><a href="../其他_2_其他/Wallabag.html"><strong aria-hidden="true">29.2.</strong> Wallabag</a></li><li class="chapter-item "><a href="../其他_2_其他/v2rayN代理.html"><strong aria-hidden="true">29.3.</strong> v2rayN代理</a></li><li class="chapter-item "><a href="../其他_2_其他/个人清算汇缴.html"><strong aria-hidden="true">29.4.</strong> 个人清算汇缴</a></li><li class="chapter-item "><a href="../其他_2_其他/概率论与数理统计.html"><strong aria-hidden="true">29.5.</strong> 概率论与数理统计</a></li><li class="chapter-item "><a href="../其他_2_其他/虚拟机操作.html"><strong aria-hidden="true">29.6.</strong> 虚拟机操作</a></li><li class="chapter-item "><div><strong aria-hidden="true">29.7.</strong> intellj</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他_2_其他/intellj/Http请求发送.html"><strong aria-hidden="true">29.7.1.</strong> Http请求发送</a></li><li class="chapter-item "><a href="../其他_2_其他/intellj/ideaSettings.html"><strong aria-hidden="true">29.7.2.</strong> ideaSettings</a></li></ol></li><li class="chapter-item "><a href="../其他_2_其他/osascript/index.html"><strong aria-hidden="true">29.8.</strong> osascript</a></li><li class="chapter-item "><a href="../其他_2_其他/taskList/index.html"><strong aria-hidden="true">29.9.</strong> taskList</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">29.9.1.</strong> java</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他_2_其他/taskList/java/AnnotationProcessing.html"><strong aria-hidden="true">29.9.1.1.</strong> AnnotationProcessing</a></li><li class="chapter-item "><a href="../其他_2_其他/taskList/java/ruoyi项目开发.html"><strong aria-hidden="true">29.9.1.2.</strong> ruoyi项目开发</a></li><li class="chapter-item "><a href="../其他_2_其他/taskList/java/可继承的ThreadLocal.html"><strong aria-hidden="true">29.9.1.3.</strong> 可继承的ThreadLocal</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../其他_4_思考/index.html"><strong aria-hidden="true">30.</strong> 思考</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他_4_思考/学习总结.html"><strong aria-hidden="true">30.1.</strong> 学习总结</a></li><li class="chapter-item "><a href="../其他_4_思考/杂项.html"><strong aria-hidden="true">30.2.</strong> 杂项</a></li><li class="chapter-item "><a href="../其他_4_思考/编程技巧.html"><strong aria-hidden="true">30.3.</strong> 编程技巧</a></li></ol></li><li class="chapter-item "><li class="part-title">其他编程语言</li><li class="chapter-item "><div><strong aria-hidden="true">31.</strong> C++</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_1_C++/C++与C的区别.html"><strong aria-hidden="true">31.1.</strong> C++与C的区别</a></li><li class="chapter-item "><a href="../其他编程语言_1_C++/C++面向对象.html"><strong aria-hidden="true">31.2.</strong> C++面向对象</a></li><li class="chapter-item "><a href="../其他编程语言_1_C++/泛型编程.html"><strong aria-hidden="true">31.3.</strong> 泛型编程</a></li><li class="chapter-item "><a href="../其他编程语言_1_C++/cmake/index.html"><strong aria-hidden="true">31.4.</strong> cmake</a></li></ol></li><li class="chapter-item "><a href="../其他编程语言_2_LUA/index.html"><strong aria-hidden="true">32.</strong> LUA</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_2_LUA/基本语法.html"><strong aria-hidden="true">32.1.</strong> 基本语法</a></li><li class="chapter-item "><a href="../其他编程语言_2_LUA/高级语法.html"><strong aria-hidden="true">32.2.</strong> 高级语法</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">33.</strong> rust</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_3_rust/1常见编程概念.html"><strong aria-hidden="true">33.1.</strong> 1常见编程概念</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/2所有权.html"><strong aria-hidden="true">33.2.</strong> 2所有权</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/ConstantsAndVariables.html"><strong aria-hidden="true">33.3.</strong> ConstantsAndVariables</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/Rust中的Sizedness.html"><strong aria-hidden="true">33.4.</strong> Rust中的Sizedness</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/Rust库API设计文档规范.html"><strong aria-hidden="true">33.5.</strong> Rust库API设计文档规范</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/const类型与函数.html"><strong aria-hidden="true">33.6.</strong> const类型与函数</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/newType模式.html"><strong aria-hidden="true">33.7.</strong> newType模式</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/rust执行shell命令.html"><strong aria-hidden="true">33.8.</strong> rust执行shell命令</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/rust指针.html"><strong aria-hidden="true">33.9.</strong> rust指针</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/rust面向对象特性.html"><strong aria-hidden="true">33.10.</strong> rust面向对象特性</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/依赖管理.html"><strong aria-hidden="true">33.11.</strong> 依赖管理</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/函数式编程.html"><strong aria-hidden="true">33.12.</strong> 函数式编程</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/宏.html"><strong aria-hidden="true">33.13.</strong> 宏</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/常见集合.html"><strong aria-hidden="true">33.14.</strong> 常见集合</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/模式匹配.html"><strong aria-hidden="true">33.15.</strong> 模式匹配</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/泛型与trait.html"><strong aria-hidden="true">33.16.</strong> 泛型与trait</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/结构体.html"><strong aria-hidden="true">33.17.</strong> 结构体</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/迭代与闭包.html"><strong aria-hidden="true">33.18.</strong> 迭代与闭包</a></li><li class="chapter-item "><div><strong aria-hidden="true">33.19.</strong> rfcs</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_3_rust/rfcs/0195_associated-items.html"><strong aria-hidden="true">33.19.1.</strong> 0195_associated-items</a></li><li class="chapter-item "><a href="../其他编程语言_3_rust/rfcs/0911-const-fn.html"><strong aria-hidden="true">33.19.2.</strong> 0911-const-fn</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">34.</strong> groovy</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_4_groovy/RuntimeAndCompile-timeMetaprogramming.html"><strong aria-hidden="true">34.1.</strong> RuntimeAndCompile-timeMetaprogramming</a></li><li class="chapter-item "><a href="../其他编程语言_4_groovy/基础语法.html"><strong aria-hidden="true">34.2.</strong> 基础语法</a></li><li class="chapter-item "><a href="../其他编程语言_4_groovy/开发工具类.html"><strong aria-hidden="true">34.3.</strong> 开发工具类</a></li><li class="chapter-item "><a href="../其他编程语言_4_groovy/操作符.html"><strong aria-hidden="true">34.4.</strong> 操作符</a></li><li class="chapter-item "><a href="../其他编程语言_4_groovy/编程结构.html"><strong aria-hidden="true">34.5.</strong> 编程结构</a></li></ol></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/index.html"><strong aria-hidden="true">35.</strong> nodejs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_5_nodejs/fakeJS.html"><strong aria-hidden="true">35.1.</strong> fakeJS</a></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/nodejs事件循环.html"><strong aria-hidden="true">35.2.</strong> nodejs事件循环</a></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/入门.html"><strong aria-hidden="true">35.3.</strong> 入门</a></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/包管理.html"><strong aria-hidden="true">35.4.</strong> 包管理</a></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/定时器.html"><strong aria-hidden="true">35.5.</strong> 定时器</a></li><li class="chapter-item "><a href="../其他编程语言_5_nodejs/异步编程.html"><strong aria-hidden="true">35.6.</strong> 异步编程</a></li><li class="chapter-item "><div><strong aria-hidden="true">35.7.</strong> packageInfo参数解析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_5_nodejs/packageInfo参数解析/1.scripts.html"><strong aria-hidden="true">35.7.1.</strong> scripts</a></li></ol></li></ol></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/index.html"><strong aria-hidden="true">36.</strong> typescript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_6_typescript/1.基础类型.html"><strong aria-hidden="true">36.1.</strong> 基础类型</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/2.变量声明.html"><strong aria-hidden="true">36.2.</strong> 变量声明</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/3.接口.html"><strong aria-hidden="true">36.3.</strong> 接口</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/4.模块.html"><strong aria-hidden="true">36.4.</strong> 模块</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/jtest测试框架/index.html"><strong aria-hidden="true">36.5.</strong> jtest测试框架</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_6_typescript/jtest测试框架/Except.html"><strong aria-hidden="true">36.5.1.</strong> Except</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/jtest测试框架/Globals.html"><strong aria-hidden="true">36.5.2.</strong> Globals</a></li><li class="chapter-item "><a href="../其他编程语言_6_typescript/jtest测试框架/Hook顺序.html"><strong aria-hidden="true">36.5.3.</strong> Hook顺序</a></li></ol></li></ol></li><li class="chapter-item "><a href="../其他编程语言_7_python/index.html"><strong aria-hidden="true">37.</strong> python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_7_python/1.python3基础语法.html"><strong aria-hidden="true">37.1.</strong> python3基础语法</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/2.基本数据类型.html"><strong aria-hidden="true">37.2.</strong> 基本数据类型</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/3.Python3数据类型转换.html"><strong aria-hidden="true">37.3.</strong> Python3数据类型转换</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/4.Python推导式.html"><strong aria-hidden="true">37.4.</strong> Python推导式</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/5.Python3运算符.html"><strong aria-hidden="true">37.5.</strong> Python3运算符</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/6.Python3字符串.html"><strong aria-hidden="true">37.6.</strong> Python3字符串</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/7.python3列表.html"><strong aria-hidden="true">37.7.</strong> python3列表</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/8.元祖.html"><strong aria-hidden="true">37.8.</strong> 元祖</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/9.Python3字典.html"><strong aria-hidden="true">37.9.</strong> Python3字典</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/10.Python3集合.html"><strong aria-hidden="true">37.10.</strong> Python3集合</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/11.Number类型.html"><strong aria-hidden="true">37.11.</strong> Number类型</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/12.python3流程控制.html"><strong aria-hidden="true">37.12.</strong> python3流程控制</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/13.Python3迭代器与生成器.html"><strong aria-hidden="true">37.13.</strong> Python3迭代器与生成器</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/14.函数.html"><strong aria-hidden="true">37.14.</strong> 函数</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/15.Python3JSON数据解析.html"><strong aria-hidden="true">37.15.</strong> Python3JSON数据解析</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/16.Python3面向对象.html"><strong aria-hidden="true">37.16.</strong> Python3面向对象</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/17.模块与包.html"><strong aria-hidden="true">37.17.</strong> 模块与包</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/With关键字.html"><strong aria-hidden="true">37.18.</strong> With关键字</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/杂项.html"><strong aria-hidden="true">37.19.</strong> 杂项</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/fabric/index.html"><strong aria-hidden="true">37.20.</strong> fabric</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_7_python/fabric/Configuration.html"><strong aria-hidden="true">37.20.1.</strong> Configuration</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/fabric/README_1.x.html"><strong aria-hidden="true">37.20.2.</strong> README_1.x</a></li></ol></li><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/index.html"><strong aria-hidden="true">37.21.</strong> invoke</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/1.DefiningAndRunningTask.html"><strong aria-hidden="true">37.21.1.</strong> DefiningAndRunningTask</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/2.InvokeCoreUsage.html"><strong aria-hidden="true">37.21.2.</strong> InvokeCoreUsage</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/3.Configuration.html"><strong aria-hidden="true">37.21.3.</strong> Configuration</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/4.loadingCollections.html"><strong aria-hidden="true">37.21.4.</strong> loadingCollections</a></li><li class="chapter-item "><a href="../其他编程语言_7_python/invoke/5.UsingInvokeAslibrary.html"><strong aria-hidden="true">37.21.5.</strong> UsingInvokeAslibrary</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">note</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="简介"><a class="header" href="#简介">简介</a></h1>
+<p>SpringMVC提供了 基于注解的编程模型  <code>@Controller</code> and <code>@RestController</code>，用来 请求映射，请求解析，异常处理等等</p>
+<h1 id="申明"><a class="header" href="#申明">申明</a></h1>
+<p>You can define controller beans by using a standard Spring bean definition in the. </p>
+<p>可以使用 标准 spring bean定义  方式  在 Servlet’s <code>WebApplicationContext</code>中   定义 Controller bean </p>
+<p><code>@Controller</code> 能自动检测，</p>
+<p>To enable auto-detection of such <code>@Controller</code> beans, </p>
+<p>为了能自动 检测 <em>Controller</em> <em>bean</em> ，通过java配置自动扫描</p>
+<p>Java</p>
+<pre><code class="language-java">@Configuration
+@ComponentScan(&quot;org.example.web&quot;)
+public class WebConfig {
+
+    // ...
+}
+</code></pre>
+<p>等价的 XML配置</p>
+<pre><code class="language-xml">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;beans xmlns=&quot;http://www.springframework.org/schema/beans&quot;
+    xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
+    xmlns:p=&quot;http://www.springframework.org/schema/p&quot;
+    xmlns:context=&quot;http://www.springframework.org/schema/context&quot;
+    xsi:schemaLocation=&quot;
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd&quot;&gt;
+
+    &lt;context:component-scan base-package=&quot;org.example.web&quot;/&gt;
+
+    &lt;!-- ... --&gt;
+
+&lt;/beans&gt;
+</code></pre>
+<h2 id="aop-proxies"><a class="header" href="#aop-proxies">AOP Proxies</a></h2>
+<p>在某些时候，你可能需要 对 <em>Controller</em> 使用 Aop 代理</p>
+<p>例如 <code>@Transactional</code> ，在这种情况，最好使用基于 类的 代理</p>
+<p>For example, with <code>&lt;tx:annotation-driven/&gt;</code> you can change to <code>&lt;tx:annotation-driven proxy-target-class=&quot;true&quot;/&gt;</code>, and with <code>@EnableTransactionManagement</code> you can change to <code>@EnableTransactionManagement(proxyTargetClass = true)</code>.</p>
+<h1 id="request-mapping"><a class="header" href="#request-mapping">Request Mapping</a></h1>
+<p>There are also HTTP method specific shortcut variants of <code>@RequestMapping</code>:</p>
+<ul>
+<li><code>@GetMapping</code></li>
+<li><code>@PostMapping</code></li>
+<li><code>@PutMapping</code></li>
+<li><code>@DeleteMapping</code></li>
+<li><code>@PatchMapping</code></li>
+</ul>
+<p>The shortcuts are <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestmapping-composed">Custom Annotations</a> that are provided because, arguably, most controller methods should be mapped to a specific HTTP method versus using <code>@RequestMapping</code>, which, by default, matches to all HTTP methods. At the same, a <code>@RequestMapping</code> is still needed at the class level to express shared mappings.</p>
+<h2 id="uri-patterns"><a class="header" href="#uri-patterns">URI patterns</a></h2>
+<p><code>@RequestMapping</code> 使用以下两种方式是进行映射</p>
+<ul>
+<li><code>PathPattern</code> — 直接路径匹配</li>
+<li><code>AntPathMatcher</code> — 基于Ant风格</li>
+</ul>
+<p>Some example patterns:</p>
+<ul>
+<li><code>&quot;/resources/ima?e.png&quot;</code> - match one character in a path segment</li>
+<li><code>&quot;/resources/*.png&quot;</code> - match zero or more characters in a path segment</li>
+<li><code>&quot;/resources/**&quot;</code> - match multiple path segments</li>
+<li><code>&quot;/projects/{project}/versions&quot;</code> - match a path segment and capture it as a variable URL捕获</li>
+<li><code>&quot;/projects/{project:[a-z]+}/versions&quot;</code> - match and capture a variable with a regex</li>
+</ul>
+<p>Captured URI variables can be accessed with <code>@PathVariable</code>. </p>
+<pre><code class="language-java">@GetMapping(&quot;/owners/{ownerId}/pets/{petId}&quot;)
+public Pet findPet(@PathVariable Long ownerId, @PathVariable Long petId) {
+    // ...
+}
+</code></pre>
+<pre><code class="language-java">@Controller
+@RequestMapping(&quot;/owners/{ownerId}&quot;)
+public class OwnerController {
+
+    @GetMapping(&quot;/pets/{petId}&quot;)
+    public Pet findPet(@PathVariable Long ownerId, @PathVariable Long petId) {
+        // ...
+    }
+}
+</code></pre>
+<p><strong>基于正则的匹配与捕获</strong></p>
+<pre><code class="language-java">@GetMapping(&quot;/{name:[a-z-]+}-{version:\\d\\.\\d\\.\\d}{ext:\\.[a-z]+}&quot;)
+public void handle(@PathVariable String name, @PathVariable String version, @PathVariable String ext) {
+    // ...
+}
+</code></pre>
+<h2 id="pattern-comparison"><a class="header" href="#pattern-comparison">Pattern Comparison</a></h2>
+<p>多个pattern匹配时，会选择最佳匹配</p>
+<p>This is done with one of the following depending on whether parsed `PathPattern’s are enabled for use or not:</p>
+<ul>
+<li><a href="https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/web/util/pattern/PathPattern.html#SPECIFICITY_COMPARATOR"><code>PathPattern.SPECIFICITY_COMPARATOR</code></a></li>
+<li><a href="https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/util/AntPathMatcher.html#getPatternComparator-java.lang.String-"><code>AntPathMatcher.getPatternComparator(String path)</code></a></li>
+</ul>
+<p><strong>计分规则</strong></p>
+<ul>
+<li>
+<p>URI 变量 计分为1，单 wildcard 计分为1，双wildcard 计分为2</p>
+</li>
+<li>
+<p>分数相等，越长的优先，长度分数一致，更多的 URI变量 优先于 通配符</p>
+</li>
+<li>
+<p>默认映射模式（<code>/ **</code>）被排除在评分之外，并且始终排在最后。</p>
+</li>
+<li>
+<p>另外，前缀模式（例如<code>/ public / **</code> 比 /public/ 更具体 ）被认为比其他没有双通配符的模式更具体。</p>
+</li>
+</ul>
+<h2 id="suffix-match后缀匹配"><a class="header" href="#suffix-match后缀匹配">Suffix Match后缀匹配</a></h2>
+<p>从 Spring5.3，默认Spring MVC 不再支持 后缀 匹配模式， 例如 <code>/person</code>  -&gt; <code>/person.*</code></p>
+<p>浏览器过去发送难以一致解释的<code>Accept</code>标头时，以这种方式使用文件扩展名是必要的。</p>
+<p>随着时间的流逝，文件扩展名的使用已被证明有各种问题</p>
+<p>To completely disable the use of path extensions in versions prior to 5.3, set the following:</p>
+<ul>
+<li><code>useSuffixPatternMatching(false)</code>, see <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config-path-matching">PathMatchConfigurer</a></li>
+<li><code>favorPathExtension(false)</code>, see <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config-content-negotiation">ContentNegotiationConfigurer</a></li>
+</ul>
+<p>If you must use file extensions, consider restricting them to a list of explicitly registered extensions through the <code>mediaTypes</code> property of <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config-content-negotiation">ContentNegotiationConfigurer</a>.</p>
+<h2 id="suffix-match-and-rfd"><a class="header" href="#suffix-match-and-rfd">Suffix Match and RFD</a></h2>
+<p>A reflected file download (RFD) attack is similar to XSS in that it relies on request input (for example, a query parameter and a URI variable) being reflected in the response. However, instead of inserting JavaScript into HTML, an RFD attack relies on the browser switching to perform a download and treating the response as an executable script when double-clicked later.</p>
+<p>In Spring MVC, <code>@ResponseBody</code> and <code>ResponseEntity</code> methods are at risk, because they can render different content types, which clients can request through URL path extensions. Disabling suffix pattern matching and using path extensions for content negotiation lower the risk but are not sufficient to prevent RFD attacks.</p>
+<p>To prevent RFD attacks, prior to rendering the response body, Spring MVC adds a <code>Content-Disposition:inline;filename=f.txt</code> header to suggest a fixed and safe download file. This is done only if the URL path contains a file extension that is neither allowed as safe nor explicitly registered for content negotiation. However, it can potentially have side effects when URLs are typed directly into a browser.</p>
+<p>Many common path extensions are allowed as safe by default. Applications with custom <code>HttpMessageConverter</code> implementations can explicitly register file extensions for content negotiation to avoid having a <code>Content-Disposition</code> header added for those extensions. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config-content-negotiation">Content Types</a>.</p>
+<p>See <a href="https://pivotal.io/security/cve-2015-5211">CVE-2015-5211</a> for additional recommendations related to RFD.</p>
+<h2 id="consumable-media-types"><a class="header" href="#consumable-media-types">Consumable Media Types</a></h2>
+<pre><code class="language-java">@PostMapping(path = &quot;/pets&quot;, consumes = &quot;application/json&quot;) 
+public void addPet(@RequestBody Pet pet) {
+    // ...
+}
+</code></pre>
+<p><strong>可以取反</strong></p>
+<pre><code class="language-java">@PostMapping(path = &quot;/pets&quot;, consumes = &quot;!application/json&quot;) 
+public void addPet(@RequestBody Pet pet) {
+    // ...
+}
+</code></pre>
+<h2 id="producible-media-types"><a class="header" href="#producible-media-types">Producible Media Types</a></h2>
+<pre><code class="language-java">@GetMapping(path = &quot;/pets/{petId}&quot;, produces = &quot;application/json&quot;) 
+@ResponseBody
+public Pet getPet(@PathVariable String petId) {
+    // ...
+}
+</code></pre>
+<h2 id="parameters-headers"><a class="header" href="#parameters-headers">Parameters, headers</a></h2>
+<p>You can narrow request mappings based on request parameter conditions. You can test for the presence of a request parameter (<code>myParam</code>), for the absence of one (<code>!myParam</code>), or for a specific value (<code>myParam=myValue</code>). The following example shows how to test for a specific value:</p>
+<pre><code class="language-java">@GetMapping(path = &quot;/pets/{petId}&quot;, params = &quot;myParam=myValue&quot;) 
+public void findPet(@PathVariable String petId) {
+    // ...
+}
+</code></pre>
+<h2 id="handler-methods"><a class="header" href="#handler-methods">Handler Methods</a></h2>
+<p><strong>方法可以设置的参数</strong></p>
+<table><thead><tr><th style="text-align: left">Controller method argument</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>WebRequest</code>, <code>NativeWebRequest</code></td><td style="text-align: left">Generic access to request parameters and request and session attributes, without direct use of the Servlet API.</td></tr>
+<tr><td style="text-align: left"><code>javax.servlet.ServletRequest</code>, <code>javax.servlet.ServletResponse</code></td><td style="text-align: left">Choose any specific request or response type — for example, <code>ServletRequest</code>, <code>HttpServletRequest</code>, or Spring’s <code>MultipartRequest</code>, <code>MultipartHttpServletRequest</code>.</td></tr>
+<tr><td style="text-align: left"><code>javax.servlet.http.HttpSession</code></td><td style="text-align: left">Enforces the presence of a session. As a consequence, such an argument is never <code>null</code>. Note that session access is not thread-safe. Consider setting the <code>RequestMappingHandlerAdapter</code> instance’s <code>synchronizeOnSession</code> flag to <code>true</code> if multiple requests are allowed to concurrently access a session.</td></tr>
+<tr><td style="text-align: left"><code>javax.servlet.http.PushBuilder</code></td><td style="text-align: left">Servlet 4.0 push builder API for programmatic HTTP/2 resource pushes. Note that, per the Servlet specification, the injected <code>PushBuilder</code> instance can be null if the client does not support that HTTP/2 feature.</td></tr>
+<tr><td style="text-align: left"><code>java.security.Principal</code></td><td style="text-align: left">Currently authenticated user — possibly a specific <code>Principal</code> implementation class if known.</td></tr>
+<tr><td style="text-align: left"><code>HttpMethod</code></td><td style="text-align: left">The HTTP method of the request.</td></tr>
+<tr><td style="text-align: left"><code>java.util.Locale</code></td><td style="text-align: left">The current request locale, determined by the most specific <code>LocaleResolver</code> available (in effect, the configured <code>LocaleResolver</code> or <code>LocaleContextResolver</code>).</td></tr>
+<tr><td style="text-align: left"><code>java.util.TimeZone</code> + <code>java.time.ZoneId</code></td><td style="text-align: left">The time zone associated with the current request, as determined by a <code>LocaleContextResolver</code>.</td></tr>
+<tr><td style="text-align: left"><code>java.io.InputStream</code>, <code>java.io.Reader</code></td><td style="text-align: left">For access to the raw request body as exposed by the Servlet API.</td></tr>
+<tr><td style="text-align: left"><code>java.io.OutputStream</code>, <code>java.io.Writer</code></td><td style="text-align: left">For access to the raw response body as exposed by the Servlet API.</td></tr>
+<tr><td style="text-align: left"><code>@PathVariable</code></td><td style="text-align: left">For access to URI template variables. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestmapping-uri-templates">URI patterns</a>.</td></tr>
+<tr><td style="text-align: left"><code>@MatrixVariable</code></td><td style="text-align: left">For access to name-value pairs in URI path segments. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-matrix-variables">Matrix Variables</a>.</td></tr>
+<tr><td style="text-align: left"><code>@RequestParam</code></td><td style="text-align: left">For access to the Servlet request parameters, including multipart files. Parameter values are converted to the declared method argument type. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestparam"><code>@RequestParam</code></a> as well as <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-multipart-forms">Multipart</a>.Note that use of <code>@RequestParam</code> is optional for simple parameter values. See “Any other argument”, at the end of this table.</td></tr>
+<tr><td style="text-align: left"><code>@RequestHeader</code></td><td style="text-align: left">For access to request headers. Header values are converted to the declared method argument type. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestheader"><code>@RequestHeader</code></a>.</td></tr>
+<tr><td style="text-align: left"><code>@CookieValue</code></td><td style="text-align: left">For access to cookies. Cookies values are converted to the declared method argument type. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-cookievalue"><code>@CookieValue</code></a>.</td></tr>
+<tr><td style="text-align: left"><code>@RequestBody</code></td><td style="text-align: left">For access to the HTTP request body. Body content is converted to the declared method argument type by using <code>HttpMessageConverter</code> implementations. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestbody"><code>@RequestBody</code></a>.</td></tr>
+<tr><td style="text-align: left"><code>HttpEntity&lt;B&gt;</code></td><td style="text-align: left">For access to request headers and body. The body is converted with an <code>HttpMessageConverter</code>. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-httpentity">HttpEntity</a>.</td></tr>
+<tr><td style="text-align: left"><code>@RequestPart</code></td><td style="text-align: left">For access to a part in a <code>multipart/form-data</code> request, converting the part’s body with an <code>HttpMessageConverter</code>. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-multipart-forms">Multipart</a>.</td></tr>
+<tr><td style="text-align: left"><code>java.util.Map</code>, <code>org.springframework.ui.Model</code>, <code>org.springframework.ui.ModelMap</code></td><td style="text-align: left">For access to the model that is used in HTML controllers and exposed to templates as part of view rendering.</td></tr>
+<tr><td style="text-align: left"><code>RedirectAttributes</code></td><td style="text-align: left">Specify attributes to use in case of a redirect (that is, to be appended to the query string) and flash attributes to be stored temporarily until the request after redirect. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-redirecting-passing-data">Redirect Attributes</a> and <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-flash-attributes">Flash Attributes</a>.</td></tr>
+<tr><td style="text-align: left"><code>@ModelAttribute</code></td><td style="text-align: left">For access to an existing attribute in the model (instantiated if not present) with data binding and validation applied. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-modelattrib-method-args"><code>@ModelAttribute</code></a> as well as <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-modelattrib-methods">Model</a> and <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-initbinder"><code>DataBinder</code></a>.Note that use of <code>@ModelAttribute</code> is optional (for example, to set its attributes). See “Any other argument” at the end of this table.</td></tr>
+<tr><td style="text-align: left"><code>Errors</code>, <code>BindingResult</code></td><td style="text-align: left">For access to errors from validation and data binding for a command object (that is, a <code>@ModelAttribute</code> argument) or errors from the validation of a <code>@RequestBody</code> or <code>@RequestPart</code> arguments. You must declare an <code>Errors</code>, or <code>BindingResult</code> argument immediately after the validated method argument.</td></tr>
+<tr><td style="text-align: left"><code>SessionStatus</code> + class-level <code>@SessionAttributes</code></td><td style="text-align: left">For marking form processing complete, which triggers cleanup of session attributes declared through a class-level <code>@SessionAttributes</code> annotation. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-sessionattributes"><code>@SessionAttributes</code></a> for more details.</td></tr>
+<tr><td style="text-align: left"><code>UriComponentsBuilder</code></td><td style="text-align: left">For preparing a URL relative to the current request’s host, port, scheme, context path, and the literal part of the servlet mapping. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-uri-building">URI Links</a>.</td></tr>
+<tr><td style="text-align: left"><code>@SessionAttribute</code></td><td style="text-align: left">For access to any session attribute, in contrast to model attributes stored in the session as a result of a class-level <code>@SessionAttributes</code> declaration. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-sessionattribute"><code>@SessionAttribute</code></a> for more details.</td></tr>
+<tr><td style="text-align: left"><code>@RequestAttribute</code></td><td style="text-align: left">For access to request attributes. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestattrib"><code>@RequestAttribute</code></a> for more details.</td></tr>
+<tr><td style="text-align: left">Any other argument</td><td style="text-align: left">If a method argument is not matched to any of the earlier values in this table and it is a simple type (as determined by <a href="https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-">BeanUtils#isSimpleProperty</a>, it is a resolved as a <code>@RequestParam</code>. Otherwise, it is resolved as a <code>@ModelAttribute</code>.</td></tr>
+</tbody></table>
+<h3 id="返回值"><a class="header" href="#返回值">返回值</a></h3>
+<table><thead><tr><th style="text-align: left">Controller method return value</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>@ResponseBody</code></td><td style="text-align: left">The return value is converted through <code>HttpMessageConverter</code> implementations and written to the response. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-responsebody"><code>@ResponseBody</code></a>.</td></tr>
+<tr><td style="text-align: left"><code>HttpEntity&lt;B&gt;</code>, <code>ResponseEntity&lt;B&gt;</code></td><td style="text-align: left">The return value that specifies the full response (including HTTP headers and body) is to be converted through <code>HttpMessageConverter</code> implementations and written to the response. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-responseentity">ResponseEntity</a>.</td></tr>
+<tr><td style="text-align: left"><code>HttpHeaders</code></td><td style="text-align: left">For returning a response with headers and no body.</td></tr>
+<tr><td style="text-align: left"><code>String</code></td><td style="text-align: left">A view name to be resolved with <code>ViewResolver</code> implementations and used together with the implicit model — determined through command objects and <code>@ModelAttribute</code> methods. The handler method can also programmatically enrich the model by declaring a <code>Model</code> argument (see <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestmapping-registration">Explicit Registrations</a>).</td></tr>
+<tr><td style="text-align: left"><code>View</code></td><td style="text-align: left">A <code>View</code> instance to use for rendering together with the implicit model — determined through command objects and <code>@ModelAttribute</code> methods. The handler method can also programmatically enrich the model by declaring a <code>Model</code> argument (see <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestmapping-registration">Explicit Registrations</a>).</td></tr>
+<tr><td style="text-align: left"><code>java.util.Map</code>, <code>org.springframework.ui.Model</code></td><td style="text-align: left">Attributes to be added to the implicit model, with the view name implicitly determined through a <code>RequestToViewNameTranslator</code>.</td></tr>
+<tr><td style="text-align: left"><code>@ModelAttribute</code></td><td style="text-align: left">An attribute to be added to the model, with the view name implicitly determined through a <code>RequestToViewNameTranslator</code>.Note that <code>@ModelAttribute</code> is optional. See &quot;Any other return value&quot; at the end of this table.</td></tr>
+<tr><td style="text-align: left"><code>ModelAndView</code> object</td><td style="text-align: left">The view and model attributes to use and, optionally, a response status.</td></tr>
+<tr><td style="text-align: left"><code>void</code></td><td style="text-align: left">A method with a <code>void</code> return type (or <code>null</code> return value) is considered to have fully handled the response if it also has a <code>ServletResponse</code>, an <code>OutputStream</code> argument, or an <code>@ResponseStatus</code> annotation. The same is also true if the controller has made a positive <code>ETag</code> or <code>lastModified</code> timestamp check (see <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-caching-etag-lastmodified">Controllers</a> for details).If none of the above is true, a <code>void</code> return type can also indicate “no response body” for REST controllers or a default view name selection for HTML controllers.</td></tr>
+<tr><td style="text-align: left"><code>DeferredResult&lt;V&gt;</code></td><td style="text-align: left">Produce any of the preceding return values asynchronously from any thread — for example, as a result of some event or callback. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async">Asynchronous Requests</a> and <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async-deferredresult"><code>DeferredResult</code></a>.</td></tr>
+<tr><td style="text-align: left"><code>Callable&lt;V&gt;</code></td><td style="text-align: left">Produce any of the above return values asynchronously in a Spring MVC-managed thread. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async">Asynchronous Requests</a> and <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async-callable"><code>Callable</code></a>.</td></tr>
+<tr><td style="text-align: left"><code>ListenableFuture&lt;V&gt;</code>, <code>java.util.concurrent.CompletionStage&lt;V&gt;</code>, <code>java.util.concurrent.CompletableFuture&lt;V&gt;</code></td><td style="text-align: left">Alternative to <code>DeferredResult</code>, as a convenience (for example, when an underlying service returns one of those).</td></tr>
+<tr><td style="text-align: left"><code>ResponseBodyEmitter</code>, <code>SseEmitter</code></td><td style="text-align: left">Emit a stream of objects asynchronously to be written to the response with <code>HttpMessageConverter</code> implementations. Also supported as the body of a <code>ResponseEntity</code>. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async">Asynchronous Requests</a> and <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async-http-streaming">HTTP Streaming</a>.</td></tr>
+<tr><td style="text-align: left"><code>StreamingResponseBody</code></td><td style="text-align: left">Write to the response <code>OutputStream</code> asynchronously. Also supported as the body of a <code>ResponseEntity</code>. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async">Asynchronous Requests</a> and <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async-http-streaming">HTTP Streaming</a>.</td></tr>
+<tr><td style="text-align: left">Reactive types — Reactor, RxJava, or others through <code>ReactiveAdapterRegistry</code></td><td style="text-align: left">Alternative to <code>DeferredResult</code> with multi-value streams (for example, <code>Flux</code>, <code>Observable</code>) collected to a <code>List</code>.For streaming scenarios (for example, <code>text/event-stream</code>, <code>application/json+stream</code>), <code>SseEmitter</code> and <code>ResponseBodyEmitter</code> are used instead, where <code>ServletOutputStream</code> blocking I/O is performed on a Spring MVC-managed thread and back pressure is applied against the completion of each write.See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async">Asynchronous Requests</a> and <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async-reactive-types">Reactive Types</a>.</td></tr>
+<tr><td style="text-align: left">Any other return value</td><td style="text-align: left">Any return value that does not match any of the earlier values in this table and that is a <code>String</code> or <code>void</code> is treated as a view name (default view name selection through <code>RequestToViewNameTranslator</code> applies), provided it is not a simple type, as determined by <a href="https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-">BeanUtils#isSimpleProperty</a>. Values that are simple types remain unresolved.</td></tr>
+</tbody></table>
+<h2 id="type-conversion"><a class="header" href="#type-conversion">Type Conversion</a></h2>
+<ul>
+<li>
+<p>Some annotated controller method arguments that represent <code>String</code>-based request input (such as <code>@RequestParam</code>, <code>@RequestHeader</code>, <code>@PathVariable</code>, <code>@MatrixVariable</code>, and <code>@CookieValue</code>) can require type conversion if the argument is declared as something other than <code>String</code>.</p>
+</li>
+<li>
+<p>For such cases, type conversion is automatically applied based on the configured converters. By default, simple types (<code>int</code>, <code>long</code>, <code>Date</code>, and others) are supported. You can customize type conversion through a <code>WebDataBinder</code> (see <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-initbinder"><code>DataBinder</code></a>) or by registering <code>Formatters</code> with the <code>FormattingConversionService</code>. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#format">Spring Field Formatting</a>.</p>
+</li>
+<li>
+<p>类型转换中的一个实际问题是处理空的String源值。This can be the case for <code>Long</code>, <code>UUID</code>, and other target types.如果要允许注入“ null”，请在参数注释上使用“ required”标志，或将参数声明为“ @Nullable”。</p>
+</li>
+</ul>
+<p><strong>Null值处理</strong></p>
+<ul>
+<li>
+<p>从5.3开始，即使在类型转换之后，也将强制使用非null参数，如果您的处理程序方法也打算接受null值，请在相应的@RequestParam等注释中将您的参数声明为@Nullable或将其标记为required = false。这是最佳实践，也是针对5.3升级中遇到的回归问题的推荐解决方案。</p>
+</li>
+<li>
+<p>the resulting <code>MissingPathVariableException</code> in the case of a required <code>@PathVariable</code>. </p>
+</li>
+<li>
+<p>转换后的空值将被视为空的原始值，因此将抛出相应的“ Missing…Exception”变体。</p>
+</li>
+</ul>
+<h2 id="matrix-variables"><a class="header" href="#matrix-variables">Matrix Variables</a></h2>
+<p><a href="https://tools.ietf.org/html/rfc3986#section-3.3">RFC 3986</a> 讨论了路径段中的 名称/值对. 在Spring MVC中，我们根据Tim Berners-Lee的<a href="https://www.w3.org/DesignIssues/MatrixURIs.html">“旧帖子”</a>将其称为“矩阵变量”，但它们也可以是被称为URI路径参数。</p>
+<p>矩阵变量可以出现在任何路径段中，每个变量用分号分隔，多个值用逗号分隔，也可以通过重复的变量名称指定多个值</p>
+<p><em>/cars;color=red,green;year=2012</em>  <code>color=red;color=green;color=blue</code></p>
+<p>如果期望URL包含矩阵变量，则控制器方法的请求映射  必须使用URI变量来屏蔽该变量内容，并确保可以成功地匹配请求，而与矩阵变量的顺序和状态无关。
+以下示例使用矩阵变量：</p>
+<pre><code class="language-java">// GET /pets/42;q=11;r=22
+
+@GetMapping(&quot;/pets/{petId}&quot;)
+public void findPet(@PathVariable String petId, @MatrixVariable int q) {
+
+    // petId == 42
+    // q == 11
+}
+</code></pre>
+<p>鉴于所有路径段都可能包含矩阵变量，因此有时您可能需要消除矩阵变量应位于哪个路径变量的歧义。下面的示例演示了如何做到这一点：</p>
+<pre><code class="language-java">// GET /owners/42;q=11/pets/21;q=22, 手动指定路径变量
+
+@GetMapping(&quot;/owners/{ownerId}/pets/{petId}&quot;)
+public void findPet(
+        @MatrixVariable(name=&quot;q&quot;, pathVar=&quot;ownerId&quot;) int q1,
+        @MatrixVariable(name=&quot;q&quot;, pathVar=&quot;petId&quot;) int q2) {
+
+    // q1 == 11
+    // q2 == 22
+}
+</code></pre>
+<p>矩阵变量可以 被定义为可选，并且可以指定默认值</p>
+<pre><code class="language-java">// GET /pets/42
+
+@GetMapping(&quot;/pets/{petId}&quot;)
+public void findPet(@MatrixVariable(required=false, defaultValue=&quot;1&quot;) int q) {
+
+    // q == 1
+}
+</code></pre>
+<p><strong>获取所有矩阵变量</strong></p>
+<pre><code class="language-java">// GET /owners/42;q=11;r=12/pets/21;q=22;s=23
+
+@GetMapping(&quot;/owners/{ownerId}/pets/{petId}&quot;)
+public void findPet(
+        @MatrixVariable MultiValueMap&lt;String, String&gt; matrixVars,
+        @MatrixVariable(pathVar=&quot;petId&quot;) MultiValueMap&lt;String, String&gt; petMatrixVars) {
+
+    // matrixVars: [&quot;q&quot; : [11,22], &quot;r&quot; : 12, &quot;s&quot; : 23]
+    // petMatrixVars: [&quot;q&quot; : 22, &quot;s&quot; : 23]
+}
+</code></pre>
+<p>Note that you need to enable the use of matrix variables. </p>
+<p>请注意，您需要启用矩阵变量的使用。在MVCJava配置中，设置 <code>UrlPathHelper</code> ，参数为 <code>removeSemicolonContent=false</code></p>
+<p>XML配置  <code>&lt;mvc:annotation-driven enable-matrix-variables=&quot;true&quot;/&gt;</code>.</p>
+<h2 id="requestparam"><a class="header" href="#requestparam"><code>@RequestParam</code></a></h2>
+<p><strong>绑定请求参数</strong></p>
+<p>您可以使用@RequestParam注解将Servlet请求参数（即查询参数或表单数据）绑定到控制器中的方法参数</p>
+<pre><code class="language-java">@Controller
+@RequestMapping(&quot;/pets&quot;)
+public class EditPetForm {
+
+    // ...
+
+    @GetMapping
+    public String setupForm(@RequestParam(&quot;petId&quot;) int petId, Model model) { 
+        Pet pet = this.clinic.loadPet(petId);
+        model.addAttribute(&quot;pet&quot;, pet);
+        return &quot;petForm&quot;;
+    }
+
+    // ...
+
+}
+</code></pre>
+<p>申明该注解的参数 不能为空，可以设置 <code>required</code> flag为 <em>false</em> 或者 申明为<code>java.util.Optional</code> </p>
+<p>将参数类型声明为数组或列表，可以为同一参数名称解析多个参数值。</p>
+<p>当将@RequestParam注解 声明为 <em>Map</em> 或 <em>MultiValueMap</em> 时，在注解中未指定参数名称时，则将为每个给定参数名称 填充请求参数值</p>
+<p>注意，使用@RequestParam是可选的（例如，设置其属性）。
+默认情况下，任何简单值类型的参数（由<a href="https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-">BeanUtils＃isSimpleProperty</a>） 决定，并且未由其他任何参数解析器解析，则将其视为用@RequestParam注释。</p>
+<h2 id="requestheader"><a class="header" href="#requestheader"><code>@RequestHeader</code></a></h2>
+<p>You can use the <code>@RequestHeader</code> annotation to bind a request header to a method argument in a controller.</p>
+<p>Consider the following request, with headers:</p>
+<pre><code>Host                    localhost:8080
+Accept                  text/html,application/xhtml+xml,application/xml;q=0.9
+Accept-Language         fr,en-gb;q=0.7,en;q=0.3
+Accept-Encoding         gzip,deflate
+Accept-Charset          ISO-8859-1,utf-8;q=0.7,*;q=0.7
+Keep-Alive              300
+</code></pre>
+<p>The following example gets the value of the <code>Accept-Encoding</code> and <code>Keep-Alive</code> headers:</p>
+<pre><code class="language-java">@GetMapping(&quot;/demo&quot;)
+public void handle(
+        @RequestHeader(&quot;Accept-Encoding&quot;) String encoding, 
+        @RequestHeader(&quot;Keep-Alive&quot;) long keepAlive) { 
+    //...
+}
+</code></pre>
+<p>当在Map ，MultiValueMap 或HttpHeaders参数上使用@RequestHeader 注解时，将使用所有标头值填充映射。</p>
+<p>将逗号分隔的字符串转换为数组或字符串集合或类型转换系统已知的其他类型。是内置支持的，例如 @RequestHeader(&quot;Accept&quot;) 可以是 String[],List[]</p>
+<h2 id="cookievalue"><a class="header" href="#cookievalue"><code>@CookieValue</code></a></h2>
+<pre><code class="language-java">@GetMapping(&quot;/demo&quot;)
+public void handle(@CookieValue(&quot;JSESSIONID&quot;) String cookie) { 
+    //...
+}
+</code></pre>
+<h2 id="modelattribute"><a class="header" href="#modelattribute"><code>@ModelAttribute</code></a></h2>
+<p>您可以在方法参数上使用@ModelAttribute注解，以从模型访问属性，或将其实例化（如果不存在）。 
+model属性还覆盖了   名称与字段名称匹配的HTTP Servlet请求参数中的值。 这称为数据绑定，</p>
+<p>它使您不必处理解析和转换单个查询参数和表单字段的工作。
+以下示例显示了如何执行此操作：</p>
+<pre><code class="language-java">@PostMapping(&quot;/owners/{ownerId}/pets/{petId}/edit&quot;)
+public String processSubmit(@ModelAttribute Pet pet) { } 
+</code></pre>
+<p>The <code>Pet</code> instance above is resolved as follows:</p>
+<ul>
+<li>From the model if already added by using <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-modelattrib-methods">Model</a>. 首先尝试从模型中取</li>
+<li>From the HTTP session by using <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-sessionattributes"><code>@SessionAttributes</code></a>. 从Session中取</li>
+<li>From a URI path variable passed through a <code>Converter</code> (see the next example). 从Http 参数中取</li>
+<li>From the invocation of a default constructor.  调用默认构造函数实例化 </li>
+<li>从调用具有与Servlet请求参数匹配的参数的“主要构造函数”开始。
+参数名称是通过JavaBeans @ConstructorProperties或字节码中  运行时保留的参数名称确定的。</li>
+</ul>
+<p>另一种替代方法是将“ Converter ”与URI路径变量约定结合使用。
+在以下示例中，模型属性名称“ account”与URI路径变量“ account”匹配，并且通过将“ String”帐号传递给已注册的“ Converter ”来加载“ Account”。 </p>
+<pre><code class="language-java">@PutMapping(&quot;/accounts/{account}&quot;)
+public String save(@ModelAttribute(&quot;account&quot;) Account account) {
+    // ...
+}
+</code></pre>
+<p>The <code>WebDataBinder</code> class  匹配 请求参数名与 目标对象的字段名。匹配的名称对象在应用 类型转换之后 会被填充，有必要时  see <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#validation">Validation</a>.see <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-initbinder"><code>DataBinder</code></a>.</p>
+<p>数据绑定可能导致错误。默认情况下，引发BindException。但是，要检查控制器方法中的此类错误，可以在@ModelAttribute旁边立即添加BindingResult参数，如以下示例所示：</p>
+<pre><code class="language-java">@PostMapping(&quot;/owners/{ownerId}/pets/{petId}/edit&quot;)
+public String processSubmit(@ModelAttribute(&quot;pet&quot;) Pet pet, BindingResult result) { 
+    if (result.hasErrors()) {
+        return &quot;petForm&quot;;
+    }
+    // ...
+}
+</code></pre>
+<p>在某些情况下，您可能希望访问没有数据绑定的模型属性。对于这种情况，可以将模型注入控制器并直接访问它，或者设置@ModelAttribute（binding = false），如以下示例所示：</p>
+<pre><code class="language-java">@ModelAttribute
+public AccountForm setUpForm() {
+    return new AccountForm();
+}
+
+@ModelAttribute
+public Account findAccount(@PathVariable String accountId) {
+    return accountRepository.findOne(accountId);
+}
+
+@PostMapping(&quot;update&quot;)
+public String update(@Valid AccountForm form, BindingResult result,
+        @ModelAttribute(binding=false) Account account) { 
+    // ...
+}
+</code></pre>
+<p>您可以在数据绑定之后通过添加javax.validation.Valid注解 或Spring的@Validated注解 自动应用校验 (<a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#validation-beanvalidation">Bean Validation</a> and <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/core.html#validation">Spring validation</a>).</p>
+<pre><code class="language-java">@PostMapping(&quot;/owners/{ownerId}/pets/{petId}/edit&quot;)
+public String processSubmit(@Valid @ModelAttribute(&quot;pet&quot;) Pet pet, BindingResult result) { 
+    if (result.hasErrors()) {
+        return &quot;petForm&quot;;
+    }
+    // ...
+}
+</code></pre>
+<p>注意，使用@ModelAttribute是可选的（例如，设置其属性）,</p>
+<p>默认情况下，任何不是简单值类型的参数（由<a href="https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-">BeanUtils＃isSimpleProperty</a>）并且未由其他任何参数解析器解析，就如同使用@ModelAttribute注释一样。</p>
+<h2 id="sessionattributes"><a class="header" href="#sessionattributes"><code>@SessionAttributes</code></a></h2>
+<p>@SessionAttributes用于在请求之间的HTTP Servlet会话中存储模型属性。</p>
+<p>它是类型级别的注释，用于声明特定控制器使用的会话属性。</p>
+<p>这通常列出  应该透明地存储在会话中以供后续访问请求的模型<strong>属性的名称</strong>或模型<strong>属性的类型</strong>。</p>
+<pre><code class="language-java">@Controller
+@SessionAttributes(&quot;pet&quot;) 
+public class EditPetForm {
+    // ...
+}
+</code></pre>
+<p>在第一个请求中，将名称为“ pet”的模型属性添加到模型时，该属性会自动提升为HTTP Servlet会话并保存在该会话中。
+它会一直保留在那里，直到另一个控制器方法使用一个SessionStatus方法参数来清除存储空间为止，如以下示例所示：</p>
+<pre><code class="language-java">@Controller
+@SessionAttributes(&quot;pet&quot;)  //存储 pet在session中
+public class EditPetForm {
+
+    // ...
+
+    @PostMapping(&quot;/pets/{id}&quot;)
+    public String handle(Pet pet, BindingResult errors, SessionStatus status) {
+        if (errors.hasErrors) {
+            // ...
+        }
+            status.setComplete(); // 清除  session中的 pet value
+            // ...
+        }
+    }
+}
+</code></pre>
+<h2 id="sessionattribute"><a class="header" href="#sessionattribute"><code>@SessionAttribute</code></a></h2>
+<p>如果您需要访问    全局管理（例如，在控制器外部（例如，通过过滤器））管理  且可能存在或不存在的预先存在的会话属性，则可以在方法参数上使用@SessionAttribute批注，如以下示例所示：</p>
+<pre><code class="language-java">@RequestMapping(&quot;/&quot;)
+public String handle(@SessionAttribute User user) { 
+    // ...
+}
+</code></pre>
+<p>Using a <code>@SessionAttribute</code> annotation.</p>
+<p>For use cases that require adding or removing session attributes, consider injecting <code>org.springframework.web.context.request.WebRequest</code> or <code>javax.servlet.http.HttpSession</code> into the controller method.</p>
+<p>对于需要添加或删除会话属性的用例，请考虑将org.springframework.web.context.request.WebRequest或javax.servlet.http.HttpSession注入到控制器方法中。</p>
+<p>为了将模型属性作为控制器工作流的一部分临时存储在会话中，请考虑使用 <code>@SessionAttributes</code> as described in <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-sessionattributes"><code>@SessionAttributes</code></a>.</p>
+<h2 id="requestattribute"><a class="header" href="#requestattribute"><code>@RequestAttribute</code></a></h2>
+<p>Similar to <code>@SessionAttribute</code>, you can use the <code>@RequestAttribute</code> annotations to access pre-existing request attributes created earlier (for example, by a Servlet <code>Filter</code> or <code>HandlerInterceptor</code>):</p>
+<p>与<code>@ SessionAttribute</code>类似，您可以使用@RequestAttribute 注解 来访问先前创建的请求属性（例如，由Servlet<code>Filter</code>或<code>HandlerInterceptor</code>创建）：</p>
+<pre><code class="language-java">@GetMapping(&quot;/&quot;)
+public String handle(@RequestAttribute Client client) { 
+    // ...
+}
+</code></pre>
+<h2 id="redirect-attributes"><a class="header" href="#redirect-attributes">Redirect Attributes.</a></h2>
+<p>默认情况下，所有模型属性均被视为在重定向URL中作为URI模板变量公开。在其余属性中，那些属于原始类型或原始类型的集合或数组的属性会自动附加为查询参数。</p>
+<p>如果专门为重定向准备了模型实例，将原始类型属性作为查询参数附加可能是理想的结果。
+但是，在带注解的控制器中，模型可以包含为渲染目的添加的其他属性（例如，下拉字段值）。
+为了避免此类属性出现在URL中，@RequestMapping方法可以声明类型为RedirectAttributes的参数，并使用它来指定确切的属性以供RedirectView使用。
+如果该方法确实重定向，则使用<code>RedirectAttributes</code>的内容。
+否则，将使用模型的内容。</p>
+<p>“RequestMappingHandlerAdapter”提供了一个名为“ ignoreDefaultModelOnRedirect”的标志，您可以使用该标志指示如果控制器方法重定向，则绝不要使用默认“ Model”的内容。相反，控制器方法应声明一个类型为RedirectAttributes的属性，或者如果没有声明，则不应将任何属性传递给RedirectView。 
+MVC命名空间和MVC Java配置都将此标志设置为“ false”，以保持向后兼容性。
+但是，对于新应用程序，我们建议将其设置为“ true”。</p>
+<p>请注意，展开重定向URL时，当前请求中的URI模板变量会自动变为可用，并且您无需通过“模型”或“ RedirectAttributes”显式添加它们。</p>
+<pre><code class="language-java">@PostMapping(&quot;/files/{path}&quot;)
+public String upload(...) {
+    // ...
+    return &quot;redirect:files/{path}&quot;;
+}
+</code></pre>
+<p>将数据传递到重定向目标的另一种方法是使用闪存属性。与其他重定向属性不同，Flash属性保存在HTTP会话中（因此不会出现在URL中）。 See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-flash-attributes">Flash Attributes</a> for more information.</p>
+<h2 id="flash-attributes"><a class="header" href="#flash-attributes">Flash Attributes</a></h2>
+<p>Flash属性为一个请求 提供了 向另一种请求传递属性的 存储方式。重定向时最常需要此操作，例如Post-Redirect-Get模式。 Flash属性在重定向之前（通常在会话中）被临时保存，以便在重定向之后可供请求使用，并立即被删除。</p>
+<p>Spring MVC有两个主要抽象来支持Flash属性。 FlashMap用于保存Flash属性，而FlashMapManager用于存储，检索和管理FlashMap实例。</p>
+<p>Flash属性支持始终处于“打开”状态，无需显式启用。</p>
+<p>在每个请求上，都有一个“输入”“ FlashMap”，其属性是从前一个请求（如果有）传递过来的；“输出”“ FlashMap”，其属性是为后续请求保存的。</p>
+<p>可以通过RequestContextUtils中的静态方法从Spring MVC中的任何位置访问这两个FlashMap实例。</p>
+<p>带注释的控制器通常不需要直接与FlashMap一起使用。
+相反，@ RequestMapping方法可以接受RedirectAttributes类型的参数，并使用它为重定向方案添加Flash属性。
+通过“ RedirectAttributes”添加的Flash属性会自动传播到“输出” FlashMap。
+同样，重定向后，来自“输入”“ FlashMap”的属性会自动添加到提供目标URL的控制器的“模型”中</p>
+<p><strong>Matching requests to flash attributes</strong></p>
+<p>Flash属性的概念存在于许多其他Web框架中，并已证明有时会遇到并发问题。
+这是因为根据定义，闪存属性将存储到下一个请求。
+但是，“下一个”请求可能不是预期的接收者，而是另一个异步请求（例如，轮询或资源请求），在这种情况下，过早删除闪存属性。</p>
+<p>为了减少此类问题的可能性，“ RedirectView”会自动使用目标重定向URL的路径和查询参数对“ FlashMap”实例进行“标记”。
+反过来，默认的FlashMapManager在查找“输入” FlashMap时会将信息与传入请求匹配。</p>
+<p>这不能完全消除并发问题的可能性，但是可以通过重定向URL中已经可用的信息大大减少并发问题。
+因此，我们建议您主要将Flash属性用于重定向方案。</p>
+<h2 id="multipart"><a class="header" href="#multipart">Multipart</a></h2>
+<pre><code class="language-java">@Controller
+public class FileUploadController {
+
+    @PostMapping(&quot;/form&quot;)
+    public String handleFormUpload(@RequestParam(&quot;name&quot;) String name,
+            @RequestParam(&quot;file&quot;) MultipartFile file) {
+
+        if (!file.isEmpty()) {
+            byte[] bytes = file.getBytes();
+            // store the bytes somewhere
+            return &quot;redirect:uploadSuccess&quot;;
+        }
+        return &quot;redirect:uploadFailure&quot;;
+    }
+}
+</code></pre>
+<p>将参数类型声明为List 允许解析相同参数名称的多个文件。
+如果将@RequestParam批注声明为Map 或MultiValueMap ，但未在批注中指定参数名称，则将使用每个给定参数名称的多部分文件填充该映射。</p>
+<blockquote>
+<p>使用Servlet 3.0多部分解析时，您还可以将Javax.servlet.http.Part声明为方法参数或集合值类型，而不是Spring的MultipartFile。</p>
+</blockquote>
+<p>您还可以将多部件内容用作数据绑定到  <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-modelattrib-method-args">command object</a>. 的一部分，例如表单字段，</p>
+<pre><code class="language-java">class MyForm {
+
+    private String name;
+
+    private MultipartFile file;
+
+    // ...
+}
+
+@Controller
+public class FileUploadController {
+
+    @PostMapping(&quot;/form&quot;)
+    public String handleFormUpload(MyForm form, BindingResult errors) {
+        if (!form.getFile().isEmpty()) {
+            byte[] bytes = form.getFile().getBytes();
+            // store the bytes somewhere
+            return &quot;redirect:uploadSuccess&quot;;
+        }
+        return &quot;redirect:uploadFailure&quot;;
+    }
+}
+</code></pre>
+<p>在RESTful服务方案中，也可以从非浏览器客户端提交多部分请求。 以下示例显示了带有JSON的文件：</p>
+<pre><code class="language-java">POST /someUrl
+Content-Type: multipart/mixed
+
+--edt7Tfrdusa7r3lNQc79vXuhIIMlatb7PQg7Vp
+Content-Disposition: form-data; name=&quot;meta-data&quot;
+Content-Type: application/json; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+
+{
+    &quot;name&quot;: &quot;value&quot;
+}
+--edt7Tfrdusa7r3lNQc79vXuhIIMlatb7PQg7Vp
+Content-Disposition: form-data; name=&quot;file-data&quot;; filename=&quot;file.properties&quot;
+Content-Type: text/xml
+Content-Transfer-Encoding: 8bit
+... File Data ...
+</code></pre>
+<p>您可以使用@RequestParam作为字符串访问“元数据”部分，但您可能希望将其从JSON反序列化（类似于“ @RequestBody”）。
+在使用  <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/integration.html#rest-message-conversion">HttpMessageConverter</a> 将其转换后，使用@RequestPart注解来访问多部件</p>
+<pre><code class="language-java">@PostMapping(&quot;/&quot;)
+public String handle(@RequestPart(&quot;meta-data&quot;) MetaData metadata,
+        @RequestPart(&quot;file-data&quot;) MultipartFile file) {
+    // ...
+}
+</code></pre>
+<p>您可以将@RequestPart与javax.validation.Valid结合使用，也可以使用Spring的@Validated注释，这两种注释都会导致应用标准Bean验证。
+默认情况下，验证错误会导致“ MethodArgumentNotValidException”，并将其转换为400（BAD_REQUEST）响应。
+或者，您可以通过<code>Errors</code>或<code>BindingResult</code>参数在控制器内本地处理验证错误，如以下示例所示：</p>
+<pre><code class="language-javascript">@PostMapping(&quot;/&quot;)
+public String handle(@Valid @RequestPart(&quot;meta-data&quot;) MetaData metadata,
+        BindingResult result) {
+    // ...
+}
+</code></pre>
+<h2 id="requestbody"><a class="header" href="#requestbody"><code>@RequestBody</code></a></h2>
+<p>您可以使用@RequestBody 注解 使请求正文通过HttpMessageConverter读取并反序列化为Object。 以下示例使用@RequestBody参数：</p>
+<pre><code class="language-java">@PostMapping(&quot;/accounts&quot;)
+public void handle(@RequestBody Account account) {
+    // ...
+}
+
+</code></pre>
+<p>You can use the <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config-message-converters">Message Converters</a> option of the <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config">MVC Config</a> to configure or customize message conversion.</p>
+<p>您可以结合使用@RequestBody和Javax.validation.Valid或Spring的@Validated注释，这两种注释都会导致应用标准Bean验证。
+默认情况下，验证错误会导致“ MethodArgumentNotValidException”，并将其转换为400（BAD_REQUEST）响应。
+或者，您可以通过<code>Errors</code>或<code>BindingResult</code>参数在控制器内本地处理验证错误，如以下示例所示：</p>
+<pre><code class="language-java">@PostMapping(&quot;/accounts&quot;)
+public void handle(@Valid @RequestBody Account account, BindingResult result) {
+    // ...
+}
+</code></pre>
+<h2 id="httpentity"><a class="header" href="#httpentity">HttpEntity</a></h2>
+<p>HttpEntity或多或少与使用@RequestBody相同，但它基于公开请求标头和正文的容器对象。以下清单显示了一个示例：</p>
+<pre><code class="language-java">@PostMapping(&quot;/accounts&quot;)
+public void handle(HttpEntity&lt;Account&gt; entity) {
+    // ...
+}
+</code></pre>
+<h2 id="responsebody"><a class="header" href="#responsebody"><code>@ResponseBody</code></a></h2>
+<p>您可以在方法上使用@ResponseBody批注，以通过HttpMessageConverter将返回序列化为响应主体。
+以下清单显示了一个示例：</p>
+<pre><code class="language-java">@GetMapping(&quot;/accounts/{id}&quot;)
+@ResponseBody
+public Account handle() {
+    // ...
+}
+</code></pre>
+<p><code>@ResponseBody</code> is also supported at the class level, in which case it is inherited by all controller methods. This is the effect of <code>@RestController</code>, which is nothing more than a meta-annotation marked with <code>@Controller</code> and <code>@ResponseBody</code>.</p>
+<p>在类级别还支持@ResponseBody，在这种情况下，它由所有控制器方法继承。这就是@RestController的效果，它只不过是带有@Controller和@ResponseBody标记的元注释。</p>
+<p>@ResponseBody与 响应式类型一起使用 See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async">Asynchronous Requests</a> and <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async-reactive-types">Reactive Types</a> for more details.</p>
+<p>You can use the <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config-message-converters">Message Converters</a> option of the <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-config">MVC Config</a> to configure or customize message conversion.</p>
+<p>You can combine <code>@ResponseBody</code> methods with JSON serialization views. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-jackson">Jackson JSON</a> for details.</p>
+<h2 id="responseentity"><a class="header" href="#responseentity">ResponseEntity</a></h2>
+<p><code>ResponseEntity</code> is like <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-responsebody"><code>@ResponseBody</code></a> but with status and headers. For example:</p>
+<pre><code class="language-java">@GetMapping(&quot;/something&quot;)
+public ResponseEntity&lt;String&gt; handle() {
+    String body = ... ;
+    String etag = ... ;
+    return ResponseEntity.ok().eTag(etag).build(body);
+}
+</code></pre>
+<p>Spring MVC supports using a single value <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-async-reactive-types">reactive type</a> to produce the <code>ResponseEntity</code> asynchronously, and/or single and multi-value reactive types for the body.</p>
+<h2 id="jackson-json"><a class="header" href="#jackson-json">Jackson JSON</a></h2>
+<p>Spring offers support for the Jackson JSON library.</p>
+<p>Spring MVC为Jackson的序列化视图提供了内置支持，该视图仅可呈现Object中所有字段的一部分。
+要将其与@ResponseBody或ResponseEntity控制器方法一起使用，可以使用Jackson的@JsonView批注来激活序列化视图类，如以下示例所示：</p>
+<pre><code class="language-java">@RestController
+public class UserController {
+
+    @GetMapping(&quot;/user&quot;)
+    @JsonView(User.WithoutPasswordView.class)
+    public User getUser() {
+        return new User(&quot;eric&quot;, &quot;7!jd#h23&quot;);
+    }
+}
+
+public class User {
+
+    public interface WithoutPasswordView {};
+    public interface WithPasswordView extends WithoutPasswordView {};
+
+    private String username;
+    private String password;
+
+    public User() {
+    }
+
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    @JsonView(WithoutPasswordView.class)
+    public String getUsername() {
+        return this.username;
+    }
+
+    @JsonView(WithPasswordView.class)
+    public String getPassword() {
+        return this.password;
+    }
+}
+</code></pre>
+<p>@JsonView允许一组视图类，但是每个控制器方法只能指定一个。
+如果需要激活多个视图，则可以使用组合接口</p>
+<p>如果要以编程方式执行上述操作，而不是声明@JsonView批注，请使用MappingJacksonValue包装返回值，并使用其提供序列化视图：</p>
+<pre><code class="language-java">@RestController
+public class UserController {
+
+    @GetMapping(&quot;/user&quot;)
+    public MappingJacksonValue getUser() {
+        User user = new User(&quot;eric&quot;, &quot;7!jd#h23&quot;);
+        MappingJacksonValue value = new MappingJacksonValue(user);
+        value.setSerializationView(User.WithoutPasswordView.class);
+        return value;
+    }
+}
+</code></pre>
+<p>对于依赖视图解析 的控制器，可以将序列化视图类添加到模型中，如以下示例所示</p>
+<pre><code class="language-java">@Controller
+public class UserController extends AbstractController {
+
+    @GetMapping(&quot;/user&quot;)
+    public String getUser(Model model) {
+        model.addAttribute(&quot;user&quot;, new User(&quot;eric&quot;, &quot;7!jd#h23&quot;));
+        model.addAttribute(JsonView.class.getName(), User.WithoutPasswordView.class);
+        return &quot;userView&quot;;
+    }
+}
+</code></pre>
+<h1 id="model"><a class="header" href="#model">Model</a></h1>
+<p>您可以使用<code>@ ModelAttribute</code>注解：</p>
+<ul>
+<li>注解在@RequestMapping方法中的方法参数中 ，  从模型创建或访问“对象”，然后通过“ WebDataBinder”将其绑定到请求。</li>
+<li>作为@Controller或@ControllerAdvice类中的方法级 注解，可在任何@RequestMapping方法调用之前帮助初始化模型。 </li>
+<li>在@RequestMapping方法上   标记其返回值的是模型属性</li>
+</ul>
+<p>This section discusses <code>@ModelAttribute</code> methods的第二项 控制器可以具有任意数量的@ModelAttribute方法，所有这些方法均在同一控制器中的@RequestMapping方法之前被调用,也可以通过@ControllerAdvice在控制器之间共享@ModelAttribute方法。See the section on <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-controller-advice">Controller Advice</a> for more details.</p>
+<pre><code class="language-java">@ModelAttribute
+public void populateModel(@RequestParam String number, Model model) {
+    model.addAttribute(accountRepository.findAccount(number));
+    // add more ...
+}
+</code></pre>
+<p>The following example adds only one attribute:</p>
+<pre><code class="language-java">@ModelAttribute
+public Account addAccount(@RequestParam String number) {
+    return accountRepository.findAccount(number);
+}
+</code></pre>
+<p>如果未明确指定名称，则根据“对象”类型选择默认名称，如约定的javadoc中所述。 您始终可以使用重载的addAttribute方法或通过@ModelAttribute上的name属性（用于返回值）来分配显式名称。</p>
+<p>您也可以将@ModelAttribute用作@RequestMapping方法上的方法级注释，在这种情况下，@ RequestMapping方法的返回值将解释为模型属性。
+通常不需要这样做，因为它是HTML控制器的默认行为，除非返回值是一个String，否则它将被解释为视图名称。 
+@ModelAttribute还可以自定义模型属性名称，如以下示例所示：</p>
+<pre><code class="language-java">@GetMapping(&quot;/accounts/{id}&quot;)
+@ModelAttribute(&quot;myAccount&quot;)
+public Account handle() {
+    // ...
+    return account;
+}
+</code></pre>
+<h1 id="databinder"><a class="header" href="#databinder"><code>DataBinder</code></a></h1>
+<p>@Controller或@ControllerAdvice类   可以具有用于初始化WebDataBinder实例的@InitBinder方法，而这些方法又可以：</p>
+<ul>
+<li>将请求参数（即表单或查询数据）绑定到模型对象。</li>
+<li>将基于字符串的请求值（例如请求参数，路径变量，标头，Cookie等）转换为控制器方法参数的目标类型。</li>
+<li>呈现HTML表单时，将模型对象的值格式化为String值。</li>
+</ul>
+<p>@InitBinder方法可以注册特定于控制器的java.beans.PropertyEditor或Spring Converter和Formatter组件。
+此外，您可以使用MVC配置在全局共享的FormattingConversionService中注册Converter和Formatter类型。</p>
+<p>@InitBinder方法支持与@RequestMapping方法相同的许多参数，除了@ModelAttribute（命令对象）参数。
+通常，它们使用WebDataBinder参数（用于注册）和 返回 void
+以下清单显示了一个示例：</p>
+<p>另外，当通过共享的FormattingConversionService使用基于Formatter的设置时，可以重新使用相同的方法并注册特定于控制器的Formatter实现，如以下示例所示：</p>
+<pre><code class="language-java">@Controller
+public class FormController {
+
+    @InitBinder 
+    protected void initBinder(WebDataBinder binder) {
+        binder.addCustomFormatter(new DateFormatter(&quot;yyyy-MM-dd&quot;));
+    }
+
+    // ...
+}
+</code></pre>
+<h1 id="exceptions"><a class="header" href="#exceptions">Exceptions</a></h1>
+<p>@Controller和@ControllerAdvice类可以具有@ExceptionHandler方法来处理控制器方法的异常，如以下示例所示：</p>
+<pre><code class="language-java">@Controller
+public class SimpleController {
+
+    // ...
+
+    @ExceptionHandler
+    public ResponseEntity&lt;String&gt; handle(IOException ex) {
+        // ...
+    }
+}
+</code></pre>
+<ul>
+<li>该异常可能与正在传播的顶级异常（例如，直接IOException被抛出）匹配，</li>
+<li>也可能与包装器异常内的嵌套原因（例如，包装在IllegalStateException中的IOException）相匹配。</li>
+<li>从5.3开始，这可以在任意  原因异常 级别上匹配，而以前只考虑了直接原因。</li>
+</ul>
+<p>对于匹配的异常类型，如前面的示例所示，最好将目标异常声明为方法参数。当多个异常方法匹配时，根源异常匹配通常比 原因异常 匹配更可取。
+更具体地说，ExceptionDepthComparator用于根据从引发的异常类型开始的深度对异常进行排序。</p>
+<p>另外，注释声明可以缩小异常类型以使其匹配，如以下示例所示：</p>
+<pre><code class="language-java">@ExceptionHandler({FileSystemException.class, RemoteException.class})
+public ResponseEntity&lt;String&gt; handle(IOException ex) {
+    // ...
+}
+</code></pre>
+<p>您甚至可以使用带有非常<strong>通用的参数签名</strong>的<strong>特定异常类型的列表</strong>，如以下示例所示：</p>
+<pre><code class="language-java">@ExceptionHandler({FileSystemException.class, RemoteException.class})
+public ResponseEntity&lt;String&gt; handle(Exception ex) {
+    // ...
+}
+</code></pre>
+<p><strong>root and cause exception matching</strong></p>
+<p>在前面显示的IOException变体中，通常使用实际的FileSystemException或RemoteException实例作为参数来调用该方法，因为这两个实例均从IOException扩展。但是，如果任何此类匹配异常都在本身是IOException的包装器异常中传播，则传入的异常实例就是该包装器异常。</p>
+<p>仅当将它们作为顶级异常抛出时，传入的异常才是实际的FileSystemException或RemoteException实例。</p>
+<p>我们通常建议您在参数签名中尽可能具体，以减少根类型和原因异常类型之间不匹配的可能性。
+考虑将多重匹配方法分解为单独的@ExceptionHandler方法，每个方法均通过其签名匹配单个特定的异常类型。</p>
+<p>最后但并非最不重要的一点是，@ExceptionHandler方法实现可以选择通过以原始形式重新抛出异常来退出处理给定异常实例。
+在仅对根级别匹配或无法静态确定的特定上下文中的匹配感兴趣的情况下，这很有用。
+重新抛出的异常会在其余的解决方案链中传播，就像给定的@ExceptionHandler方法最初不会匹配一样。</p>
+<p>Spring MVC中对@ExceptionHandler方法的支持建立在DispatcherServlet级别HandlerExceptionResolver机制上。</p>
+<h2 id="method-arguments"><a class="header" href="#method-arguments">Method Arguments</a></h2>
+<p><code>@ExceptionHandler</code> 方法支持 以下参数</p>
+<table><thead><tr><th style="text-align: left">Method argument</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left">Exception type</td><td style="text-align: left">For access to the raised exception.</td></tr>
+<tr><td style="text-align: left"><code>HandlerMethod</code></td><td style="text-align: left">For access to the controller method that raised the exception.</td></tr>
+<tr><td style="text-align: left"><code>WebRequest</code>, <code>NativeWebRequest</code></td><td style="text-align: left">Generic access to request parameters and request and session attributes without direct use of the Servlet API.</td></tr>
+<tr><td style="text-align: left"><code>javax.servlet.ServletRequest</code>, <code>javax.servlet.ServletResponse</code></td><td style="text-align: left">Choose any specific request or response type (for example, <code>ServletRequest</code> or <code>HttpServletRequest</code> or Spring’s <code>MultipartRequest</code> or <code>MultipartHttpServletRequest</code>).</td></tr>
+<tr><td style="text-align: left"><code>javax.servlet.http.HttpSession</code></td><td style="text-align: left">Enforces the presence of a session. As a consequence, such an argument is never <code>null</code>. Note that session access is not thread-safe. Consider setting the <code>RequestMappingHandlerAdapter</code> instance’s <code>synchronizeOnSession</code> flag to <code>true</code> if multiple requests are allowed to access a session concurrently.</td></tr>
+<tr><td style="text-align: left"><code>java.security.Principal</code></td><td style="text-align: left">Currently authenticated user — possibly a specific <code>Principal</code> implementation class if known.</td></tr>
+<tr><td style="text-align: left"><code>HttpMethod</code></td><td style="text-align: left">The HTTP method of the request.</td></tr>
+<tr><td style="text-align: left"><code>java.util.Locale</code></td><td style="text-align: left">The current request locale, determined by the most specific <code>LocaleResolver</code> available — in effect, the configured <code>LocaleResolver</code> or <code>LocaleContextResolver</code>.</td></tr>
+<tr><td style="text-align: left"><code>java.util.TimeZone</code>, <code>java.time.ZoneId</code></td><td style="text-align: left">The time zone associated with the current request, as determined by a <code>LocaleContextResolver</code>.</td></tr>
+<tr><td style="text-align: left"><code>java.io.OutputStream</code>, <code>java.io.Writer</code></td><td style="text-align: left">For access to the raw response body, as exposed by the Servlet API.</td></tr>
+<tr><td style="text-align: left"><code>java.util.Map</code>, <code>org.springframework.ui.Model</code>, <code>org.springframework.ui.ModelMap</code></td><td style="text-align: left">For access to the model for an error response. Always empty.</td></tr>
+<tr><td style="text-align: left"><code>RedirectAttributes</code></td><td style="text-align: left">Specify attributes to use in case of a redirect — (that is to be appended to the query string) and flash attributes to be stored temporarily until the request after the redirect. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-redirecting-passing-data">Redirect Attributes</a> and <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-flash-attributes">Flash Attributes</a>.</td></tr>
+<tr><td style="text-align: left"><code>@SessionAttribute</code></td><td style="text-align: left">For access to any session attribute, in contrast to model attributes stored in the session as a result of a class-level <code>@SessionAttributes</code> declaration. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-sessionattribute"><code>@SessionAttribute</code></a> for more details.</td></tr>
+<tr><td style="text-align: left"><code>@RequestAttribute</code></td><td style="text-align: left">For access to request attributes. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-requestattrib"><code>@RequestAttribute</code></a> for more details.</td></tr>
+</tbody></table>
+<p><strong>返回值</strong></p>
+<table><thead><tr><th style="text-align: left">Return value</th><th style="text-align: left">Description</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>@ResponseBody</code></td><td style="text-align: left">The return value is converted through <code>HttpMessageConverter</code> instances and written to the response. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-responsebody"><code>@ResponseBody</code></a>.</td></tr>
+<tr><td style="text-align: left"><code>HttpEntity&lt;B&gt;</code>, <code>ResponseEntity&lt;B&gt;</code></td><td style="text-align: left">The return value specifies that the full response (including the HTTP headers and the body) be converted through <code>HttpMessageConverter</code> instances and written to the response. See <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-ann-responseentity">ResponseEntity</a>.</td></tr>
+<tr><td style="text-align: left"><code>String</code></td><td style="text-align: left">A view name to be resolved with <code>ViewResolver</code> implementations and used together with the implicit model — determined through command objects and <code>@ModelAttribute</code> methods. The handler method can also programmatically enrich the model by declaring a <code>Model</code> argument (described earlier).</td></tr>
+<tr><td style="text-align: left"><code>View</code></td><td style="text-align: left">A <code>View</code> instance to use for rendering together with the implicit model — determined through command objects and <code>@ModelAttribute</code> methods. The handler method may also programmatically enrich the model by declaring a <code>Model</code> argument (descried earlier).</td></tr>
+<tr><td style="text-align: left"><code>java.util.Map</code>, <code>org.springframework.ui.Model</code></td><td style="text-align: left">Attributes to be added to the implicit model with the view name implicitly determined through a <code>RequestToViewNameTranslator</code>.</td></tr>
+<tr><td style="text-align: left"><code>@ModelAttribute</code></td><td style="text-align: left">An attribute to be added to the model with the view name implicitly determined through a <code>RequestToViewNameTranslator</code>.Note that <code>@ModelAttribute</code> is optional. See “Any other return value” at the end of this table.</td></tr>
+<tr><td style="text-align: left"><code>ModelAndView</code> object</td><td style="text-align: left">The view and model attributes to use and, optionally, a response status.</td></tr>
+<tr><td style="text-align: left"><code>void</code></td><td style="text-align: left">A method with a <code>void</code> return type (or <code>null</code> return value) is considered to have fully handled the response if it also has a <code>ServletResponse</code> an <code>OutputStream</code> argument, or a <code>@ResponseStatus</code> annotation. The same is also true if the controller has made a positive <code>ETag</code> or <code>lastModified</code> timestamp check (see <a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web.html#mvc-caching-etag-lastmodified">Controllers</a> for details).If none of the above is true, a <code>void</code> return type can also indicate “no response body” for REST controllers or default view name selection for HTML controllers.</td></tr>
+<tr><td style="text-align: left">Any other return value</td><td style="text-align: left">If a return value is not matched to any of the above and is not a simple type (as determined by <a href="https://docs.spring.io/spring-framework/docs/5.3.3/javadoc-api/org/springframework/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-">BeanUtils#isSimpleProperty</a>), by default, it is treated as a model attribute to be added to the model. If it is a simple type, it remains unresolved.</td></tr>
+</tbody></table>
+<h2 id="rest-api-exceptions"><a class="header" href="#rest-api-exceptions">REST API exceptions</a></h2>
+<p>REST服务的常见要求是在响应正文中包含错误详细信息。 
+Spring框架不会自动执行此操作，因为响应主体中错误详细信息的表示是特定于应用程序的。
+但是，@ RestController可以将@ExceptionHandler方法与ResponseEntity返回值一起使用，以设置响应的状态和主体。
+也可以在@ControllerAdvice类中声明此类方法，以将其全局应用。</p>
+<p>在响应主体中实现具有错误详细信息的全局异常处理的应用程序应考虑扩展ResponseEntityExceptionHandler，它提供了Spring MVC引发的异常的处理并提供了自定义响应主体的钩子。
+要使用此功能，请创建ResponseEntityExceptionHandler的子类，并使用@ControllerAdvice对其进行注释，重写必需的方法，并将其声明为Spring bean。</p>
+<h1 id="controller-advice"><a class="header" href="#controller-advice">Controller Advice</a></h1>
+<p>通常，@ ExceptionHandler，@ InitBinder和@ModelAttribute方法在声明它们的@Controller类（或类层次结构）中应用。
+如果要使<strong>此类方法更全局地应用</strong>（跨控制器），则可以在带有@ControllerAdvice或@RestControllerAdvice注释的类中声明它们。</p>
+<ul>
+<li>启动时，@RequestMapping和@ExceptionHandler方法的基础结构类将检测使用  @ControllerAdvice注释的Spring bean，然后在运行时应用其方法。
+全局@ExceptionHandler方法（来自@ControllerAdvice）在本地方法（来自@Controller）之后应用。</li>
+<li>相比之下，全局@ModelAttribute和@InitBinder方法在本地方法之前应用。</li>
+</ul>
+<p>默认情况下，@ ControllerAdvice方法适用于每个请求（即所有控制器），但是您可以通过使用批注上的属性将其范围缩小到控制器的子集，如以下示例所示：</p>
+<pre><code class="language-java">// Target all Controllers annotated with @RestController 所有RestController
+@ControllerAdvice(annotations = RestController.class)
+public class ExampleAdvice1 {}
+
+// Target all Controllers within specific packages 特定 controller类
+@ControllerAdvice(&quot;org.example.controllers&quot;)
+public class ExampleAdvice2 {}
+
+// Target all Controllers assignable to specific classes  抽象基类
+@ControllerAdvice(assignableTypes = {ControllerInterface.class, AbstractController.class})
+public class ExampleAdvice3 {}
+</code></pre>
+<p>前面示例中的选择器在运行时进行评估，如果广泛使用，可能会对性能产生负面影响。
+有关更多详细信息，请参见@ControllerAdvice javadoc。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../spring_2_springMVC/内置四种filters.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../spring_3_springboot/index.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../spring_2_springMVC/内置四种filters.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../spring_3_springboot/index.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

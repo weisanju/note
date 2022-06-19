@@ -1,0 +1,1453 @@
+<!DOCTYPE HTML>
+<html lang="zh_CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>quasarCli - note</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="../../highlight.css">
+        <link rel="stylesheet" href="../../tomorrow-night.css">
+        <link rel="stylesheet" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "../../";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="../../index.html">我的笔记库</a></li><li class="chapter-item affix "><li class="part-title">spring</li><li class="chapter-item "><div><strong aria-hidden="true">1.</strong> spring</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/0.spring容器启动总览.html"><strong aria-hidden="true">1.1.</strong> spring容器启动总览</a></li><li class="chapter-item "><a href="../../spring_1_spring/1.spring容器启动-bean实例化流程.html"><strong aria-hidden="true">1.2.</strong> spring容器启动-bean实例化流程</a></li><li class="chapter-item "><a href="../../spring_1_spring/2.SpringBean实例化过程.html"><strong aria-hidden="true">1.3.</strong> SpringBean实例化过程</a></li><li class="chapter-item "><a href="../../spring_1_spring/3.Spring依赖注入与初始化.html"><strong aria-hidden="true">1.4.</strong> Spring依赖注入与初始化</a></li><li class="chapter-item "><a href="../../spring_1_spring/4.SpringBean的生命周期.html"><strong aria-hidden="true">1.5.</strong> SpringBean的生命周期</a></li><li class="chapter-item "><a href="../../spring_1_spring/5.SpringSchedule.html"><strong aria-hidden="true">1.6.</strong> SpringSchedule</a></li><li class="chapter-item "><a href="../../spring_1_spring/ClassPathScanningCandidateComponentProvider.html"><strong aria-hidden="true">1.7.</strong> ClassPathScanningCandidateComponentProvider</a></li><li class="chapter-item "><a href="../../spring_1_spring/PropertySource.html"><strong aria-hidden="true">1.8.</strong> PropertySource</a></li><li class="chapter-item "><a href="../../spring_1_spring/Spring总结.html"><strong aria-hidden="true">1.9.</strong> Spring总结</a></li><li class="chapter-item "><a href="../../spring_1_spring/applicationContext与BeanFactory的区别.html"><strong aria-hidden="true">1.10.</strong> applicationContext与BeanFactory的区别</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring杂项.html"><strong aria-hidden="true">1.11.</strong> spring杂项</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring组合注解.html"><strong aria-hidden="true">1.12.</strong> spring组合注解</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring解决循环依赖问题.html"><strong aria-hidden="true">1.13.</strong> spring解决循环依赖问题</a></li><li class="chapter-item "><a href="../../spring_1_spring/postprocessor/index.html"><strong aria-hidden="true">1.14.</strong> postprocessor</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/index.html"><strong aria-hidden="true">1.15.</strong> spring-aop</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-cglib动态代理.html"><strong aria-hidden="true">1.15.1.</strong> SpringAop-cglib动态代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-jdk动态代理.html"><strong aria-hidden="true">1.15.2.</strong> SpringAop-jdk动态代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-涉及到的类.html"><strong aria-hidden="true">1.15.3.</strong> SpringAop-涉及到的类</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-编程式代理.html"><strong aria-hidden="true">1.15.4.</strong> SpringAop-编程式代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop-自动代理.html"><strong aria-hidden="true">1.15.5.</strong> SpringAop-自动代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/SpringAop总结.html"><strong aria-hidden="true">1.15.6.</strong> SpringAop总结</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/aop包解析.html"><strong aria-hidden="true">1.15.7.</strong> aop包解析</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/taskList.html"><strong aria-hidden="true">1.15.8.</strong> taskList</a></li><li class="chapter-item "><div><strong aria-hidden="true">1.15.9.</strong> AOP应用解析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/AOP应用解析/Async异步.html"><strong aria-hidden="true">1.15.9.1.</strong> Async异步</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/AOP应用解析/依赖懒加载.html"><strong aria-hidden="true">1.15.9.2.</strong> 依赖懒加载</a></li><li class="chapter-item "><a href="../../spring_1_spring/spring-aop/AOP应用解析/缓存.html"><strong aria-hidden="true">1.15.9.3.</strong> 缓存</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_1_spring/spring-bean定义/index.html"><strong aria-hidden="true">1.16.</strong> spring-bean定义</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/spring-bean定义/Bean定义.html"><strong aria-hidden="true">1.16.1.</strong> Bean定义</a></li></ol></li><li class="chapter-item "><a href="../../spring_1_spring/springBeanScope/index.html"><strong aria-hidden="true">1.17.</strong> springBeanScope</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/springBeanScope/spring自定义可刷新的上下文.html"><strong aria-hidden="true">1.17.1.</strong> spring自定义可刷新的上下文</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">1.18.</strong> springframework</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/springframework/MessageSource.html"><strong aria-hidden="true">1.18.1.</strong> MessageSource</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/spring-ioc.html"><strong aria-hidden="true">1.18.2.</strong> spring-ioc</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/springEL.html"><strong aria-hidden="true">1.18.3.</strong> springEL</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/spring代理.html"><strong aria-hidden="true">1.18.4.</strong> spring代理</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/基于Ant的路径匹配.html"><strong aria-hidden="true">1.18.5.</strong> 基于Ant的路径匹配</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/字段格式化.html"><strong aria-hidden="true">1.18.6.</strong> 字段格式化</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/属性源抽象.html"><strong aria-hidden="true">1.18.7.</strong> 属性源抽象</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/类型转换.html"><strong aria-hidden="true">1.18.8.</strong> 类型转换</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/资源抽象.html"><strong aria-hidden="true">1.18.9.</strong> 资源抽象</a></li><li class="chapter-item "><a href="../../spring_1_spring/springframework/配置全局日期格式化.html"><strong aria-hidden="true">1.18.10.</strong> 配置全局日期格式化</a></li></ol></li><li class="chapter-item "><a href="../../spring_1_spring/编程式注入类/index.html"><strong aria-hidden="true">1.19.</strong> 编程式注入类</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_1_spring/编程式注入类/AOP代理相关.html"><strong aria-hidden="true">1.19.1.</strong> AOP代理相关</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_2_springMVC/index.html"><strong aria-hidden="true">2.</strong> springMVC</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_2_springMVC/URI_Links.html"><strong aria-hidden="true">2.1.</strong> URI_Links</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/functional_endpoints.html"><strong aria-hidden="true">2.2.</strong> functional_endpoints</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/mvcannotation-driven注解的作用.html"><strong aria-hidden="true">2.3.</strong> mvcannotation-driven注解的作用</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/spring-mvc.html"><strong aria-hidden="true">2.4.</strong> spring-mvc</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMVC自定义参数解析注解.html"><strong aria-hidden="true">2.5.</strong> springMVC自定义参数解析注解</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMVC路径映射.html"><strong aria-hidden="true">2.6.</strong> springMVC路径映射</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMVC返回后.html"><strong aria-hidden="true">2.7.</strong> springMVC返回后</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/springMvcController配置.html"><strong aria-hidden="true">2.8.</strong> springMvcController配置</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/内置四种filters.html"><strong aria-hidden="true">2.9.</strong> 内置四种filters</a></li><li class="chapter-item "><a href="../../spring_2_springMVC/基于注解的控制器.html"><strong aria-hidden="true">2.10.</strong> 基于注解的控制器</a></li><li class="chapter-item "><div><strong aria-hidden="true">2.11.</strong> spring_1_spring</div></li></ol></li><li class="chapter-item "><a href="../../spring_3_springboot/index.html"><strong aria-hidden="true">3.</strong> springboot</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_3_springboot/springBoot资源处理.html"><strong aria-hidden="true">3.1.</strong> springBoot资源处理</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-HiKariCP连接池动态数据源配置.html"><strong aria-hidden="true">3.2.</strong> springboot-HiKariCP连接池动态数据源配置</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-devtools.html"><strong aria-hidden="true">3.3.</strong> springboot-devtools</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-元数据.html"><strong aria-hidden="true">3.4.</strong> springboot-元数据</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-多模块.html"><strong aria-hidden="true">3.5.</strong> springboot-多模块</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-日志.html"><strong aria-hidden="true">3.6.</strong> springboot-日志</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-自动配置原理.html"><strong aria-hidden="true">3.7.</strong> springboot-自动配置原理</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-过滤器.html"><strong aria-hidden="true">3.8.</strong> springboot-过滤器</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot-配置文件与jar分离.html"><strong aria-hidden="true">3.9.</strong> springboot-配置文件与jar分离</a></li><li class="chapter-item "><a href="../../spring_3_springboot/快速入门.html"><strong aria-hidden="true">3.10.</strong> 快速入门</a></li><li class="chapter-item "><a href="../../spring_3_springboot/自定义springBootStarter.html"><strong aria-hidden="true">3.11.</strong> 自定义springBootStarter</a></li><li class="chapter-item "><div><strong aria-hidden="true">3.12.</strong> springboot配置文件加载</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_3_springboot/springboot配置文件加载/propertySource原理.html"><strong aria-hidden="true">3.12.1.</strong> propertySource原理</a></li><li class="chapter-item "><a href="../../spring_3_springboot/springboot配置文件加载/默认加载原则.html"><strong aria-hidden="true">3.12.2.</strong> 默认加载原则</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">3.13.</strong> 官方文档</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_3_springboot/官方文档/SpringApplication.html"><strong aria-hidden="true">3.13.1.</strong> SpringApplication</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_4_springSecurity/index.html"><strong aria-hidden="true">4.</strong> springSecurity</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_4_springSecurity/spring核心逻辑.html"><strong aria-hidden="true">4.1.</strong> spring核心逻辑</a></li></ol></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/index.html"><strong aria-hidden="true">5.</strong> springWebFlux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_5_springWebFlux/CoreFeatures.html"><strong aria-hidden="true">5.1.</strong> CoreFeatures</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/DispatcherHandler.html"><strong aria-hidden="true">5.2.</strong> DispatcherHandler</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/FunctionEndpoint.html"><strong aria-hidden="true">5.3.</strong> FunctionEndpoint</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/URILinks.html"><strong aria-hidden="true">5.4.</strong> URILinks</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/WebFluxConfig.html"><strong aria-hidden="true">5.5.</strong> WebFluxConfig</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/taskList.html"><strong aria-hidden="true">5.6.</strong> taskList</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/基于注解的控制器/index.html"><strong aria-hidden="true">5.7.</strong> 基于注解的控制器</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_5_springWebFlux/基于注解的控制器/HandlerMethod.html"><strong aria-hidden="true">5.7.1.</strong> HandlerMethod</a></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/基于注解的控制器/RequestMapping.html"><strong aria-hidden="true">5.7.2.</strong> RequestMapping</a></li></ol></li><li class="chapter-item "><a href="../../spring_5_springWebFlux/源码分析/index.html"><strong aria-hidden="true">5.8.</strong> 源码分析</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_5_springWebFlux/源码分析/springBoot创建WebFlux分析.html"><strong aria-hidden="true">5.8.1.</strong> springBoot创建WebFlux分析</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../spring_6_springCloud/index.html"><strong aria-hidden="true">6.</strong> springCloud</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">6.1.</strong> 服务注册与发现</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/服务注册与发现/nacos/index.html"><strong aria-hidden="true">6.1.1.</strong> nacos</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/服务注册与发现/nacos/nacos-with-spring.html"><strong aria-hidden="true">6.1.1.1.</strong> nacos-with-spring</a></li><li class="chapter-item "><a href="../../spring_6_springCloud/服务注册与发现/nacos/nacos-with-spring-clound.html"><strong aria-hidden="true">6.1.1.2.</strong> nacos-with-spring-clound</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.2.</strong> 服务消费</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/服务消费/Ribbon与Feign/index.html"><strong aria-hidden="true">6.2.1.</strong> Ribbon与Feign</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">6.3.</strong> 网关</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/网关/springCloudGateway/index.html"><strong aria-hidden="true">6.3.1.</strong> springCloudGateway</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_6_springCloud/网关/springCloudGateway/springCloud中的构造者模式.html"><strong aria-hidden="true">6.3.1.1.</strong> springCloud中的构造者模式</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">7.</strong> springIntegration</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/index.html"><strong aria-hidden="true">7.1.</strong> springCache</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/1.基于申明式缓存.html"><strong aria-hidden="true">7.1.1.</strong> 基于申明式缓存</a></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/2.JCacheAnnotations.html"><strong aria-hidden="true">7.1.2.</strong> JCacheAnnotations</a></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/3.XML的申明式缓存.html"><strong aria-hidden="true">7.1.3.</strong> XML的申明式缓存</a></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springCache/4.配置缓存库.html"><strong aria-hidden="true">7.1.4.</strong> 配置缓存库</a></li></ol></li><li class="chapter-item "><a href="../../spring_7_springIntegration/springdata-redis/index.html"><strong aria-hidden="true">7.2.</strong> springdata-redis</a></li></ol></li><li class="chapter-item "><li class="part-title"></li><li class="chapter-item "><div><strong aria-hidden="true">8.</strong> 分布式与微服务</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../分布式与微服务/JWT无状态Session.html"><strong aria-hidden="true">8.1.</strong> JWT无状态Session</a></li><li class="chapter-item "><a href="../../分布式与微服务/一致性Hash.html"><strong aria-hidden="true">8.2.</strong> 一致性Hash</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式ID.html"><strong aria-hidden="true">8.3.</strong> 分布式ID</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式Session案.html"><strong aria-hidden="true">8.4.</strong> 分布式Session案</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式事务.html"><strong aria-hidden="true">8.5.</strong> 分布式事务</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式协调器-Zookeeper.html"><strong aria-hidden="true">8.6.</strong> 分布式协调器-Zookeeper</a></li><li class="chapter-item "><a href="../../分布式与微服务/分布式锁.html"><strong aria-hidden="true">8.7.</strong> 分布式锁</a></li><li class="chapter-item "><a href="../../分布式与微服务/接口幂等性.html"><strong aria-hidden="true">8.8.</strong> 接口幂等性</a></li><li class="chapter-item "><a href="../../分布式与微服务/负载均衡.html"><strong aria-hidden="true">8.9.</strong> 负载均衡</a></li></ol></li><li class="chapter-item "><a href="../../数据库/index.html"><strong aria-hidden="true">9.</strong> 数据库</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/sql通用优化.html"><strong aria-hidden="true">9.1.</strong> sql通用优化</a></li><li class="chapter-item "><a href="../../数据库/MongoDB/index.html"><strong aria-hidden="true">9.2.</strong> MongoDB</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/MongoDB/mongodb基本操作.html"><strong aria-hidden="true">9.2.1.</strong> mongodb基本操作</a></li><li class="chapter-item "><a href="../../数据库/MongoDB/mongodb高级语法.html"><strong aria-hidden="true">9.2.2.</strong> mongodb高级语法</a></li><li class="chapter-item "><a href="../../数据库/MongoDB/权限管理.html"><strong aria-hidden="true">9.2.3.</strong> 权限管理</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/index.html"><strong aria-hidden="true">9.3.</strong> elasticSearch</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/BackUpACluster.html"><strong aria-hidden="true">9.3.1.</strong> BackUpACluster</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/KQL.html"><strong aria-hidden="true">9.3.2.</strong> KQL</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/dataStream.html"><strong aria-hidden="true">9.3.3.</strong> dataStream</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/es堆内存如何分配.html"><strong aria-hidden="true">9.3.4.</strong> es堆内存如何分配</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/scroll查询.html"><strong aria-hidden="true">9.3.5.</strong> scroll查询</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/乐观并发控制.html"><strong aria-hidden="true">9.3.6.</strong> 乐观并发控制</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/分布式检索.html"><strong aria-hidden="true">9.3.7.</strong> 分布式检索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/分片内部原理.html"><strong aria-hidden="true">9.3.8.</strong> 分片内部原理</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/分词.html"><strong aria-hidden="true">9.3.9.</strong> 分词</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/前缀搜索与模糊搜索.html"><strong aria-hidden="true">9.3.10.</strong> 前缀搜索与模糊搜索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/数据分片.html"><strong aria-hidden="true">9.3.11.</strong> 数据分片</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/映射.html"><strong aria-hidden="true">9.3.12.</strong> 映射</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/杂项学习.html"><strong aria-hidden="true">9.3.13.</strong> 杂项学习</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引和分片.html"><strong aria-hidden="true">9.3.14.</strong> 索引和分片</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引管理.html"><strong aria-hidden="true">9.3.15.</strong> 索引管理</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/评分标准与相关性.html"><strong aria-hidden="true">9.3.16.</strong> 评分标准与相关性</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/集群内原理.html"><strong aria-hidden="true">9.3.17.</strong> 集群内原理</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/Datamanagement/index.html"><strong aria-hidden="true">9.3.18.</strong> Datamanagement</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/Datamanagement/DataTier.html"><strong aria-hidden="true">9.3.18.1.</strong> DataTier</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/index.html"><strong aria-hidden="true">9.3.19.</strong> ILM</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/1.AutomateRolloverWithILM.html"><strong aria-hidden="true">9.3.19.1.</strong> AutomateRolloverWithILM</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/FrozenIndices.html"><strong aria-hidden="true">9.3.19.2.</strong> FrozenIndices</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILM.html"><strong aria-hidden="true">9.3.19.3.</strong> ILM</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/RolloverAPI.html"><strong aria-hidden="true">9.3.19.4.</strong> RolloverAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ShrinkIndexAPI.html"><strong aria-hidden="true">9.3.19.5.</strong> ShrinkIndexAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILMConcepts/index.html"><strong aria-hidden="true">9.3.19.6.</strong> ILMConcepts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILMConcepts/1.Rollover.html"><strong aria-hidden="true">9.3.19.6.1.</strong> Rollover</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/ILM/ILMConcepts/2.LifeCycleUpdates.html"><strong aria-hidden="true">9.3.19.6.2.</strong> LifeCycleUpdates</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/index.html"><strong aria-hidden="true">9.3.20.</strong> IndexModules</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/1.Analysis.html"><strong aria-hidden="true">9.3.20.1.</strong> Analysis</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/2.IndexShardAllocation.html"><strong aria-hidden="true">9.3.20.2.</strong> IndexShardAllocation</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/3.Indexblocks.html"><strong aria-hidden="true">9.3.20.3.</strong> Indexblocks</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/4.Mapper.html"><strong aria-hidden="true">9.3.20.4.</strong> Mapper</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/5.Merge.html"><strong aria-hidden="true">9.3.20.5.</strong> Merge</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/6.SimilarityModule.html"><strong aria-hidden="true">9.3.20.6.</strong> SimilarityModule</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/7.Slowlog.html"><strong aria-hidden="true">9.3.20.7.</strong> Slowlog</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/8.Store.html"><strong aria-hidden="true">9.3.20.8.</strong> Store</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/9.Translog.html"><strong aria-hidden="true">9.3.20.9.</strong> Translog</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/10.HistoryRetention.html"><strong aria-hidden="true">9.3.20.10.</strong> HistoryRetention</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/11.IndexSorting.html"><strong aria-hidden="true">9.3.20.11.</strong> IndexSorting</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IndexModules/12.IndexPressure.html"><strong aria-hidden="true">9.3.20.12.</strong> IndexPressure</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.21.</strong> IngestPipeline</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/1.IngestPipelines.html"><strong aria-hidden="true">9.3.21.1.</strong> IngestPipelines</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/2.pipeLineExample.html"><strong aria-hidden="true">9.3.21.2.</strong> pipeLineExample</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/3.EnrichYourData.html"><strong aria-hidden="true">9.3.21.3.</strong> EnrichYourData</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/4.ExampleEnrichYourDataBasedOnGeolocation.html"><strong aria-hidden="true">9.3.21.4.</strong> ExampleEnrichYourDataBasedOnGeolocation</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/IngestPipeline/5.IngestProcessorReference.html"><strong aria-hidden="true">9.3.21.5.</strong> IngestProcessorReference</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/index.html"><strong aria-hidden="true">9.3.22.</strong> queryDSL</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/1.QueryAndFilterContext.html"><strong aria-hidden="true">9.3.22.1.</strong> QueryAndFilterContext</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/2.CompoundQueries.html"><strong aria-hidden="true">9.3.22.2.</strong> CompoundQueries</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/SearchAfter.html"><strong aria-hidden="true">9.3.22.3.</strong> SearchAfter</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/FullTextQueries/index.html"><strong aria-hidden="true">9.3.22.4.</strong> FullTextQueries</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/FullTextQueries/1.IntervalsQuery.html"><strong aria-hidden="true">9.3.22.4.1.</strong> IntervalsQuery</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/queryDSL/FullTextQueries/2.MatchQuery.html"><strong aria-hidden="true">9.3.22.4.2.</strong> MatchQuery</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/index.html"><strong aria-hidden="true">9.3.23.</strong> snapshotAndRestore</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CleanUpSnapshotRepo.html"><strong aria-hidden="true">9.3.23.1.</strong> CleanUpSnapshotRepo</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CloneSnapshot.html"><strong aria-hidden="true">9.3.23.2.</strong> CloneSnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CreateOrUpdateSnapshotAPI.html"><strong aria-hidden="true">9.3.23.3.</strong> CreateOrUpdateSnapshotAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/CreateSnapshot.html"><strong aria-hidden="true">9.3.23.4.</strong> CreateSnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/DeleteSnapShot.html"><strong aria-hidden="true">9.3.23.5.</strong> DeleteSnapShot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/DeleteSnapshotRepository.html"><strong aria-hidden="true">9.3.23.6.</strong> DeleteSnapshotRepository</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/GetSnapshotAPI.html"><strong aria-hidden="true">9.3.23.7.</strong> GetSnapshotAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/RegisterASnapshot.html"><strong aria-hidden="true">9.3.23.8.</strong> RegisterASnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/RestoreSnapshot.html"><strong aria-hidden="true">9.3.23.9.</strong> RestoreSnapshot</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/SLM.html"><strong aria-hidden="true">9.3.23.10.</strong> SLM</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/SearchableSnapshots.html"><strong aria-hidden="true">9.3.23.11.</strong> SearchableSnapshots</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/SearchableSnapshotsMountAPI.html"><strong aria-hidden="true">9.3.23.12.</strong> SearchableSnapshotsMountAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/repository-s3.html"><strong aria-hidden="true">9.3.23.13.</strong> repository-s3</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/snapshotAndRestore/使用OSS备份恢复集群实战.html"><strong aria-hidden="true">9.3.23.14.</strong> 使用OSS备份恢复集群实战</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/安装/index.html"><strong aria-hidden="true">9.3.24.</strong> 安装</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/安装/1.InstallingFromRpm.html"><strong aria-hidden="true">9.3.24.1.</strong> InstallingFromRpm</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/安装/2.InstallFromDeb.html"><strong aria-hidden="true">9.3.24.2.</strong> InstallFromDeb</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.25.</strong> 深入搜索</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/深入搜索/全文搜索.html"><strong aria-hidden="true">9.3.25.1.</strong> 全文搜索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/深入搜索/多字段搜索.html"><strong aria-hidden="true">9.3.25.2.</strong> 多字段搜索</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/深入搜索/结构化搜索.html"><strong aria-hidden="true">9.3.25.3.</strong> 结构化搜索</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/index.html"><strong aria-hidden="true">9.3.26.</strong> 索引分片分配</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/1.索引级别的分片分配控制.html"><strong aria-hidden="true">9.3.26.1.</strong> 索引级别的分片分配控制</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/2.节点离开延迟分配.html"><strong aria-hidden="true">9.3.26.2.</strong> 节点离开延迟分配</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/3.索引恢复优先级.html"><strong aria-hidden="true">9.3.26.3.</strong> 索引恢复优先级</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/4.每个节点的总分片.html"><strong aria-hidden="true">9.3.26.4.</strong> 每个节点的总分片</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/5.索引级别数据层分配过滤.html"><strong aria-hidden="true">9.3.26.5.</strong> 索引级别数据层分配过滤</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/6.手动分配分片clusterRerouteAPI.html"><strong aria-hidden="true">9.3.26.6.</strong> 手动分配分片clusterRerouteAPI</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/索引分片分配/7.cluster-allocation-explain.html"><strong aria-hidden="true">9.3.26.7.</strong> cluster-allocation-explain</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/考纲解读/index.html"><strong aria-hidden="true">9.3.27.</strong> 考纲解读</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/考纲解读/1.ClusterManagement.html"><strong aria-hidden="true">9.3.27.1.</strong> ClusterManagement</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/考纲解读/2.DataManagement.html"><strong aria-hidden="true">9.3.27.2.</strong> DataManagement</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.28.</strong> 聚合</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/聚合/RareTermsAggregation.html"><strong aria-hidden="true">9.3.28.1.</strong> RareTermsAggregation</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/聚合/Term.html"><strong aria-hidden="true">9.3.28.2.</strong> Term</a></li></ol></li><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/index.html"><strong aria-hidden="true">9.3.29.</strong> 配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/1.重要配置.html"><strong aria-hidden="true">9.3.29.1.</strong> 重要配置</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/2.elasticsearch.yml核心配置.html"><strong aria-hidden="true">9.3.29.2.</strong> elasticsearch.yml核心配置</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/配置/3.es系统参数修改.html"><strong aria-hidden="true">9.3.29.3.</strong> es系统参数修改</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.30.</strong> 集群</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/集群/Health.html"><strong aria-hidden="true">9.3.30.1.</strong> Health</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.3.31.</strong> 高可用专题</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/elasticSearch/高可用专题/弹性设计.html"><strong aria-hidden="true">9.3.31.1.</strong> 弹性设计</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/高可用专题/跨集群复制.html"><strong aria-hidden="true">9.3.31.2.</strong> 跨集群复制</a></li><li class="chapter-item "><a href="../../数据库/elasticSearch/高可用专题/集群备份.html"><strong aria-hidden="true">9.3.31.3.</strong> 集群备份</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.4.</strong> mysql</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysqlfunction.html"><strong aria-hidden="true">9.4.1.</strong> mysqlfunction</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysqlpdump.html"><strong aria-hidden="true">9.4.2.</strong> mysqlpdump</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysqlzip安装.html"><strong aria-hidden="true">9.4.3.</strong> mysqlzip安装</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql公用表达式.html"><strong aria-hidden="true">9.4.4.</strong> mysql公用表达式</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql学习.html"><strong aria-hidden="true">9.4.5.</strong> mysql学习</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql执行计划.html"><strong aria-hidden="true">9.4.6.</strong> mysql执行计划</a></li><li class="chapter-item "><a href="../../数据库/mysql/空值处理函数.html"><strong aria-hidden="true">9.4.7.</strong> 空值处理函数</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.4.8.</strong> mysql官方文档</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/mysql程序.html"><strong aria-hidden="true">9.4.8.1.</strong> mysql程序</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/客户端.html"><strong aria-hidden="true">9.4.8.2.</strong> 客户端</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/mysql程序/index.html"><strong aria-hidden="true">9.4.8.3.</strong> mysql程序</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysql官方文档/mysql程序/使用mysql相关程序.html"><strong aria-hidden="true">9.4.8.3.1.</strong> 使用mysql相关程序</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/index.html"><strong aria-hidden="true">9.4.9.</strong> mysql日志</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/mysql日志及分类.html"><strong aria-hidden="true">9.4.9.1.</strong> mysql日志及分类</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/二进制日志.html"><strong aria-hidden="true">9.4.9.2.</strong> 二进制日志</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/慢sql日志.html"><strong aria-hidden="true">9.4.9.3.</strong> 慢sql日志</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/通用日志.html"><strong aria-hidden="true">9.4.9.4.</strong> 通用日志</a></li><li class="chapter-item "><a href="../../数据库/mysql/mysql日志/错误日志.html"><strong aria-hidden="true">9.4.9.5.</strong> 错误日志</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">9.5.</strong> oracle</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/oracle/Oracle小知识点.html"><strong aria-hidden="true">9.5.1.</strong> Oracle小知识点</a></li><li class="chapter-item "><a href="../../数据库/oracle/oracledocker快速搭建.html"><strong aria-hidden="true">9.5.2.</strong> oracledocker快速搭建</a></li><li class="chapter-item "><a href="../../数据库/oracle/oracle多表更新方法.html"><strong aria-hidden="true">9.5.3.</strong> oracle多表更新方法</a></li></ol></li><li class="chapter-item "><a href="../../数据库/redis/index.html"><strong aria-hidden="true">9.6.</strong> redis</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/redis/Redis应用-位图.html"><strong aria-hidden="true">9.6.1.</strong> Redis应用-位图</a></li><li class="chapter-item "><a href="../../数据库/redis/Redis应用-分布式锁.html"><strong aria-hidden="true">9.6.2.</strong> Redis应用-分布式锁</a></li><li class="chapter-item "><a href="../../数据库/redis/redis-keys与scan.html"><strong aria-hidden="true">9.6.3.</strong> redis-keys与scan</a></li><li class="chapter-item "><a href="../../数据库/redis/redis-serverAndRedis-cli.html"><strong aria-hidden="true">9.6.4.</strong> redis-serverAndRedis-cli</a></li><li class="chapter-item "><a href="../../数据库/redis/redis主从与哨兵.html"><strong aria-hidden="true">9.6.5.</strong> redis主从与哨兵</a></li><li class="chapter-item "><a href="../../数据库/redis/redis发布与订阅.html"><strong aria-hidden="true">9.6.6.</strong> redis发布与订阅</a></li><li class="chapter-item "><a href="../../数据库/redis/redis集群.html"><strong aria-hidden="true">9.6.7.</strong> redis集群</a></li><li class="chapter-item "><div><strong aria-hidden="true">9.6.8.</strong> redis数据结构</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据库/redis/redis数据结构/Redis有序集合(sortedSet).html"><strong aria-hidden="true">9.6.8.1.</strong> Redis有序集合(sortedSet)</a></li><li class="chapter-item "><a href="../../数据库/redis/redis数据结构/基本数据结构.html"><strong aria-hidden="true">9.6.8.2.</strong> 基本数据结构</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">10.</strong> 日志收集</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../日志收集/filebeat/index.html"><strong aria-hidden="true">10.1.</strong> filebeat</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../日志收集/filebeat/1.HowFilebeatWorks.html"><strong aria-hidden="true">10.1.1.</strong> HowFilebeatWorks</a></li><li class="chapter-item "><a href="../../日志收集/filebeat/ConfigureFilebeat/index.html"><strong aria-hidden="true">10.1.2.</strong> ConfigureFilebeat</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../日志收集/filebeat/ConfigureFilebeat/1.Input.html"><strong aria-hidden="true">10.1.2.1.</strong> Input</a></li><li class="chapter-item "><a href="../../日志收集/filebeat/ConfigureFilebeat/2.InputFileStream.html"><strong aria-hidden="true">10.1.2.2.</strong> InputFileStream</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">11.</strong> CICD</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/ansible/index.html"><strong aria-hidden="true">11.1.</strong> ansible</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/ansible/1.入门.html"><strong aria-hidden="true">11.1.1.</strong> 入门</a></li><li class="chapter-item "><a href="../../CICD/ansible/Ansible.html"><strong aria-hidden="true">11.1.2.</strong> Ansible</a></li><li class="chapter-item "><a href="../../CICD/ansible/Loops.html"><strong aria-hidden="true">11.1.3.</strong> Loops</a></li><li class="chapter-item "><a href="../../CICD/ansible/ansible中的变量.html"><strong aria-hidden="true">11.1.4.</strong> ansible中的变量</a></li><li class="chapter-item "><a href="../../CICD/ansible/ansible示例.html"><strong aria-hidden="true">11.1.5.</strong> ansible示例</a></li><li class="chapter-item "><a href="../../CICD/ansible/inventor文件.html"><strong aria-hidden="true">11.1.6.</strong> inventor文件</a></li><li class="chapter-item "><a href="../../CICD/ansible/playbooks.html"><strong aria-hidden="true">11.1.7.</strong> playbooks</a></li><li class="chapter-item "><a href="../../CICD/ansible/临时命令行模式.html"><strong aria-hidden="true">11.1.8.</strong> 临时命令行模式</a></li><li class="chapter-item "><a href="../../CICD/ansible/2.AnsibleConcepts/index.html"><strong aria-hidden="true">11.1.9.</strong> 2.AnsibleConcepts</a></li><li class="chapter-item "><a href="../../CICD/ansible/3.内置模块/index.html"><strong aria-hidden="true">11.1.10.</strong> 3.内置模块</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/ansible/3.内置模块/1.Command.html"><strong aria-hidden="true">11.1.10.1.</strong> Command</a></li><li class="chapter-item "><a href="../../CICD/ansible/3.内置模块/2.Shell.html"><strong aria-hidden="true">11.1.10.2.</strong> Shell</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../CICD/docker/index.html"><strong aria-hidden="true">11.2.</strong> docker</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/docker/DockerFile简介.html"><strong aria-hidden="true">11.2.1.</strong> DockerFile简介</a></li><li class="chapter-item "><a href="../../CICD/docker/dockcer-swarm.html"><strong aria-hidden="true">11.2.2.</strong> dockcer-swarm</a></li><li class="chapter-item "><a href="../../CICD/docker/docker-compose.html"><strong aria-hidden="true">11.2.3.</strong> docker-compose</a></li><li class="chapter-item "><a href="../../CICD/docker/docker-swarm集群搭建实例.html"><strong aria-hidden="true">11.2.4.</strong> docker-swarm集群搭建实例</a></li><li class="chapter-item "><a href="../../CICD/docker/docker-volume管理.html"><strong aria-hidden="true">11.2.5.</strong> docker-volume管理</a></li><li class="chapter-item "><a href="../../CICD/docker/docker容器连接.html"><strong aria-hidden="true">11.2.6.</strong> docker容器连接</a></li><li class="chapter-item "><a href="../../CICD/docker/docker搭建registry仓库.html"><strong aria-hidden="true">11.2.7.</strong> docker搭建registry仓库</a></li><li class="chapter-item "><a href="../../CICD/docker/docker搭建私有镜像库.html"><strong aria-hidden="true">11.2.8.</strong> docker搭建私有镜像库</a></li><li class="chapter-item "><a href="../../CICD/docker/docker离线安装.html"><strong aria-hidden="true">11.2.9.</strong> docker离线安装</a></li><li class="chapter-item "><a href="../../CICD/docker/docker网络管理.html"><strong aria-hidden="true">11.2.10.</strong> docker网络管理</a></li><li class="chapter-item "><a href="../../CICD/docker/docker远程连接配置.html"><strong aria-hidden="true">11.2.11.</strong> docker远程连接配置</a></li><li class="chapter-item "><a href="../../CICD/docker/redis主从与哨兵.html"><strong aria-hidden="true">11.2.12.</strong> redis主从与哨兵</a></li><li class="chapter-item "><a href="../../CICD/docker/使用实例.html"><strong aria-hidden="true">11.2.13.</strong> 使用实例</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">11.3.</strong> jenkins</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/jenkins/Jenkins.html"><strong aria-hidden="true">11.3.1.</strong> Jenkins</a></li><li class="chapter-item "><a href="../../CICD/jenkins/jenkins_pipeline.html"><strong aria-hidden="true">11.3.2.</strong> jenkins_pipeline</a></li></ol></li><li class="chapter-item "><a href="../../CICD/k8s/index.html"><strong aria-hidden="true">11.4.</strong> k8s</a></li><li class="chapter-item "><a href="../../CICD/maven/index.html"><strong aria-hidden="true">11.5.</strong> maven</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../CICD/maven/AutoConfig插件.html"><strong aria-hidden="true">11.5.1.</strong> AutoConfig插件</a></li><li class="chapter-item "><a href="../../CICD/maven/MavenArcheType.html"><strong aria-hidden="true">11.5.2.</strong> MavenArcheType</a></li><li class="chapter-item "><a href="../../CICD/maven/maven.html"><strong aria-hidden="true">11.5.3.</strong> maven</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-Maven_Resources_Plugin.html"><strong aria-hidden="true">11.5.4.</strong> maven-Maven_Resources_Plugin</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-archiver.html"><strong aria-hidden="true">11.5.5.</strong> maven-archiver</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-assembly-plugin.html"><strong aria-hidden="true">11.5.6.</strong> maven-assembly-plugin</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-bom.html"><strong aria-hidden="true">11.5.7.</strong> maven-bom</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-profile.html"><strong aria-hidden="true">11.5.8.</strong> maven-profile</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-依赖管理.html"><strong aria-hidden="true">11.5.9.</strong> maven-依赖管理</a></li><li class="chapter-item "><a href="../../CICD/maven/maven-编译源码.html"><strong aria-hidden="true">11.5.10.</strong> maven-编译源码</a></li><li class="chapter-item "><a href="../../CICD/maven/maven中的生命周期、插件、目标.html"><strong aria-hidden="true">11.5.11.</strong> maven中的生命周期、插件、目标</a></li><li class="chapter-item "><a href="../../CICD/maven/maven打包方式.html"><strong aria-hidden="true">11.5.12.</strong> maven打包方式</a></li><li class="chapter-item "><a href="../../CICD/maven/maven聚合项目版本管理实践.html"><strong aria-hidden="true">11.5.13.</strong> maven聚合项目版本管理实践</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../模板引擎/index.html"><strong aria-hidden="true">12.</strong> 模板引擎</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../模板引擎/mustache/index.html"><strong aria-hidden="true">12.1.</strong> mustache</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">13.</strong> Linux</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../Linux/CFSBandwidthControl.html"><strong aria-hidden="true">13.1.</strong> CFSBandwidthControl</a></li><li class="chapter-item "><a href="../../Linux/LinuxFor.html"><strong aria-hidden="true">13.2.</strong> LinuxFor</a></li><li class="chapter-item "><a href="../../Linux/LinuxWOL设置.html"><strong aria-hidden="true">13.3.</strong> LinuxWOL设置</a></li><li class="chapter-item "><a href="../../Linux/Linux条件测试.html"><strong aria-hidden="true">13.4.</strong> Linux条件测试</a></li><li class="chapter-item "><a href="../../Linux/Seed.html"><strong aria-hidden="true">13.5.</strong> Seed</a></li><li class="chapter-item "><a href="../../Linux/VIM.html"><strong aria-hidden="true">13.6.</strong> VIM</a></li><li class="chapter-item "><a href="../../Linux/caseIn.html"><strong aria-hidden="true">13.7.</strong> caseIn</a></li><li class="chapter-item "><a href="../../Linux/cgroup.html"><strong aria-hidden="true">13.8.</strong> cgroup</a></li><li class="chapter-item "><a href="../../Linux/curl.html"><strong aria-hidden="true">13.9.</strong> curl</a></li><li class="chapter-item "><a href="../../Linux/dd.html"><strong aria-hidden="true">13.10.</strong> dd</a></li><li class="chapter-item "><a href="../../Linux/diffPatch.html"><strong aria-hidden="true">13.11.</strong> diffPatch</a></li><li class="chapter-item "><a href="../../Linux/find.html"><strong aria-hidden="true">13.12.</strong> find</a></li><li class="chapter-item "><a href="../../Linux/iptables.html"><strong aria-hidden="true">13.13.</strong> iptables</a></li><li class="chapter-item "><a href="../../Linux/jq.html"><strong aria-hidden="true">13.14.</strong> jq</a></li><li class="chapter-item "><a href="../../Linux/lsof.html"><strong aria-hidden="true">13.15.</strong> lsof</a></li><li class="chapter-item "><a href="../../Linux/ps.html"><strong aria-hidden="true">13.16.</strong> ps</a></li><li class="chapter-item "><a href="../../Linux/read.html"><strong aria-hidden="true">13.17.</strong> read</a></li><li class="chapter-item "><a href="../../Linux/scp.html"><strong aria-hidden="true">13.18.</strong> scp</a></li><li class="chapter-item "><a href="../../Linux/select.html"><strong aria-hidden="true">13.19.</strong> select</a></li><li class="chapter-item "><a href="../../Linux/service脚本.html"><strong aria-hidden="true">13.20.</strong> service脚本</a></li><li class="chapter-item "><a href="../../Linux/set.html"><strong aria-hidden="true">13.21.</strong> set</a></li><li class="chapter-item "><a href="../../Linux/shell字符串.html"><strong aria-hidden="true">13.22.</strong> shell字符串</a></li><li class="chapter-item "><a href="../../Linux/shell脚本参数.html"><strong aria-hidden="true">13.23.</strong> shell脚本参数</a></li><li class="chapter-item "><a href="../../Linux/stat.html"><strong aria-hidden="true">13.24.</strong> stat</a></li><li class="chapter-item "><a href="../../Linux/tar.html"><strong aria-hidden="true">13.25.</strong> tar</a></li><li class="chapter-item "><a href="../../Linux/top命令.html"><strong aria-hidden="true">13.26.</strong> top命令</a></li><li class="chapter-item "><a href="../../Linux/uidGidSetUidSetGid.html"><strong aria-hidden="true">13.27.</strong> uidGidSetUidSetGid</a></li><li class="chapter-item "><a href="../../Linux/wsl关闭提示音.html"><strong aria-hidden="true">13.28.</strong> wsl关闭提示音</a></li><li class="chapter-item "><a href="../../Linux/yum本地包依赖.html"><strong aria-hidden="true">13.29.</strong> yum本地包依赖</a></li><li class="chapter-item "><a href="../../Linux/确定Linux发行版本.html"><strong aria-hidden="true">13.30.</strong> 确定Linux发行版本</a></li><li class="chapter-item "><a href="../../Linux/零拷贝.html"><strong aria-hidden="true">13.31.</strong> 零拷贝</a></li><li class="chapter-item "><a href="../../Linux/默认值语法糖.html"><strong aria-hidden="true">13.32.</strong> 默认值语法糖</a></li></ol></li><li class="chapter-item "><a href="../../数据结构与算法/index.html"><strong aria-hidden="true">14.</strong> 数据结构与算法</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据结构与算法/Base64编码.html"><strong aria-hidden="true">14.1.</strong> Base64编码</a></li><li class="chapter-item "><a href="../../数据结构与算法/Huffman编码.html"><strong aria-hidden="true">14.2.</strong> Huffman编码</a></li><li class="chapter-item "><a href="../../数据结构与算法/base64.html"><strong aria-hidden="true">14.3.</strong> base64</a></li><li class="chapter-item "><a href="../../数据结构与算法/fnv-hash算法.html"><strong aria-hidden="true">14.4.</strong> fnv-hash算法</a></li><li class="chapter-item "><a href="../../数据结构与算法/位运算.html"><strong aria-hidden="true">14.5.</strong> 位运算</a></li><li class="chapter-item "><a href="../../数据结构与算法/动态规划.html"><strong aria-hidden="true">14.6.</strong> 动态规划</a></li><li class="chapter-item "><a href="../../数据结构与算法/动态规划-新.html"><strong aria-hidden="true">14.7.</strong> 动态规划-新</a></li><li class="chapter-item "><a href="../../数据结构与算法/字符编码.html"><strong aria-hidden="true">14.8.</strong> 字符编码</a></li><li class="chapter-item "><a href="../../数据结构与算法/布隆过滤器.html"><strong aria-hidden="true">14.9.</strong> 布隆过滤器</a></li><li class="chapter-item "><a href="../../数据结构与算法/浮点数.html"><strong aria-hidden="true">14.10.</strong> 浮点数</a></li><li class="chapter-item "><a href="../../数据结构与算法/贪心算法.html"><strong aria-hidden="true">14.11.</strong> 贪心算法</a></li><li class="chapter-item "><a href="../../数据结构与算法/逆波兰表达式.html"><strong aria-hidden="true">14.12.</strong> 逆波兰表达式</a></li><li class="chapter-item "><div><strong aria-hidden="true">14.13.</strong> 树</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据结构与算法/树/二叉搜索平衡树.html"><strong aria-hidden="true">14.13.1.</strong> 二叉搜索平衡树</a></li><li class="chapter-item "><a href="../../数据结构与算法/树/红黑树.html"><strong aria-hidden="true">14.13.2.</strong> 红黑树</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">15.</strong> 数据格式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../数据格式/XML.html"><strong aria-hidden="true">15.1.</strong> XML</a></li><li class="chapter-item "><a href="../../数据格式/yaml.html"><strong aria-hidden="true">15.2.</strong> yaml</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">16.</strong> tmp</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../tmp/大端与小端.html"><strong aria-hidden="true">16.1.</strong> 大端与小端</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">17.</strong> 消息队列</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../消息队列/RocketMQ/index.html"><strong aria-hidden="true">17.1.</strong> RocketMQ</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../消息队列/RocketMQ/MQ消息的投递机制.html"><strong aria-hidden="true">17.1.1.</strong> MQ消息的投递机制</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/MQ的一致性算法实现原理.html"><strong aria-hidden="true">17.1.2.</strong> MQ的一致性算法实现原理</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/架构和设计.html"><strong aria-hidden="true">17.1.3.</strong> 架构和设计</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/案例.html"><strong aria-hidden="true">17.1.4.</strong> 案例</a></li><li class="chapter-item "><a href="../../消息队列/RocketMQ/概念和特性.html"><strong aria-hidden="true">17.1.5.</strong> 概念和特性</a></li></ol></li><li class="chapter-item "><a href="../../消息队列/kafaKa/index.html"><strong aria-hidden="true">17.2.</strong> kafaKa</a></li></ol></li><li class="chapter-item expanded "><div><strong aria-hidden="true">18.</strong> 前端</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">18.1.</strong> ECMAScript</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/ECMAScript/ECMAScript6简介.html"><strong aria-hidden="true">18.1.1.</strong> ECMAScript6简介</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/Set-Map数据结构.html"><strong aria-hidden="true">18.1.2.</strong> Set-Map数据结构</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/async函数.html"><strong aria-hidden="true">18.1.3.</strong> async函数</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/generate函数.html"><strong aria-hidden="true">18.1.4.</strong> generate函数</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/let与const命令.html"><strong aria-hidden="true">18.1.5.</strong> let与const命令</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/proxy.html"><strong aria-hidden="true">18.1.6.</strong> proxy</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/symbol.html"><strong aria-hidden="true">18.1.7.</strong> symbol</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/函数.html"><strong aria-hidden="true">18.1.8.</strong> 函数</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/字符串-正则-数值.html"><strong aria-hidden="true">18.1.9.</strong> 字符串-正则-数值</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/对象.html"><strong aria-hidden="true">18.1.10.</strong> 对象</a></li><li class="chapter-item "><a href="../../前端/ECMAScript/数组.html"><strong aria-hidden="true">18.1.11.</strong> 数组</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.2.</strong> Element-UI</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/Element-UI/Switch开关.html"><strong aria-hidden="true">18.2.1.</strong> Switch开关</a></li><li class="chapter-item "><a href="../../前端/Element-UI/Tree树形控件.html"><strong aria-hidden="true">18.2.2.</strong> Tree树形控件</a></li><li class="chapter-item "><a href="../../前端/Element-UI/backtop.html"><strong aria-hidden="true">18.2.3.</strong> backtop</a></li><li class="chapter-item "><a href="../../前端/Element-UI/card卡片.html"><strong aria-hidden="true">18.2.4.</strong> card卡片</a></li><li class="chapter-item "><a href="../../前端/Element-UI/form表单.html"><strong aria-hidden="true">18.2.5.</strong> form表单</a></li><li class="chapter-item "><a href="../../前端/Element-UI/image图片.html"><strong aria-hidden="true">18.2.6.</strong> image图片</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-Breadcrumb面包屑.html"><strong aria-hidden="true">18.2.7.</strong> navigation-Breadcrumb面包屑</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-dropdown.html"><strong aria-hidden="true">18.2.8.</strong> navigation-dropdown</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-navmenu.html"><strong aria-hidden="true">18.2.9.</strong> navigation-navmenu</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-steps.html"><strong aria-hidden="true">18.2.10.</strong> navigation-steps</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-标签页.html"><strong aria-hidden="true">18.2.11.</strong> navigation-标签页</a></li><li class="chapter-item "><a href="../../前端/Element-UI/navigation-页头.html"><strong aria-hidden="true">18.2.12.</strong> navigation-页头</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-Notification.html"><strong aria-hidden="true">18.2.13.</strong> notice-Notification</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-alert.html"><strong aria-hidden="true">18.2.14.</strong> notice-alert</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-loading.html"><strong aria-hidden="true">18.2.15.</strong> notice-loading</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-message-box.html"><strong aria-hidden="true">18.2.16.</strong> notice-message-box</a></li><li class="chapter-item "><a href="../../前端/Element-UI/notice-message提示.html"><strong aria-hidden="true">18.2.17.</strong> notice-message提示</a></li><li class="chapter-item "><a href="../../前端/Element-UI/popConfirm.html"><strong aria-hidden="true">18.2.18.</strong> popConfirm</a></li><li class="chapter-item "><a href="../../前端/Element-UI/popOver弹出框.html"><strong aria-hidden="true">18.2.19.</strong> popOver弹出框</a></li><li class="chapter-item "><a href="../../前端/Element-UI/slider滑块.html"><strong aria-hidden="true">18.2.20.</strong> slider滑块</a></li><li class="chapter-item "><a href="../../前端/Element-UI/timeline.html"><strong aria-hidden="true">18.2.21.</strong> timeline</a></li><li class="chapter-item "><a href="../../前端/Element-UI/tooltip.html"><strong aria-hidden="true">18.2.22.</strong> tooltip</a></li><li class="chapter-item "><a href="../../前端/Element-UI/transfer穿梭框.html"><strong aria-hidden="true">18.2.23.</strong> transfer穿梭框</a></li><li class="chapter-item "><a href="../../前端/Element-UI/上传.html"><strong aria-hidden="true">18.2.24.</strong> 上传</a></li><li class="chapter-item "><a href="../../前端/Element-UI/入门.html"><strong aria-hidden="true">18.2.25.</strong> 入门</a></li><li class="chapter-item "><a href="../../前端/Element-UI/分割线.html"><strong aria-hidden="true">18.2.26.</strong> 分割线</a></li><li class="chapter-item "><a href="../../前端/Element-UI/分页.html"><strong aria-hidden="true">18.2.27.</strong> 分页</a></li><li class="chapter-item "><a href="../../前端/Element-UI/基础组件.html"><strong aria-hidden="true">18.2.28.</strong> 基础组件</a></li><li class="chapter-item "><a href="../../前端/Element-UI/头像.html"><strong aria-hidden="true">18.2.29.</strong> 头像</a></li><li class="chapter-item "><a href="../../前端/Element-UI/对话框.html"><strong aria-hidden="true">18.2.30.</strong> 对话框</a></li><li class="chapter-item "><a href="../../前端/Element-UI/常见input输入.html"><strong aria-hidden="true">18.2.31.</strong> 常见input输入</a></li><li class="chapter-item "><a href="../../前端/Element-UI/折叠面板.html"><strong aria-hidden="true">18.2.32.</strong> 折叠面板</a></li><li class="chapter-item "><a href="../../前端/Element-UI/抽屉.html"><strong aria-hidden="true">18.2.33.</strong> 抽屉</a></li><li class="chapter-item "><a href="../../前端/Element-UI/无限滚动.html"><strong aria-hidden="true">18.2.34.</strong> 无限滚动</a></li><li class="chapter-item "><a href="../../前端/Element-UI/日历.html"><strong aria-hidden="true">18.2.35.</strong> 日历</a></li><li class="chapter-item "><a href="../../前端/Element-UI/时间日期选择.html"><strong aria-hidden="true">18.2.36.</strong> 时间日期选择</a></li><li class="chapter-item "><a href="../../前端/Element-UI/标签.html"><strong aria-hidden="true">18.2.37.</strong> 标签</a></li><li class="chapter-item "><a href="../../前端/Element-UI/标记与提示.html"><strong aria-hidden="true">18.2.38.</strong> 标记与提示</a></li><li class="chapter-item "><a href="../../前端/Element-UI/级联选择器.html"><strong aria-hidden="true">18.2.39.</strong> 级联选择器</a></li><li class="chapter-item "><a href="../../前端/Element-UI/表格.html"><strong aria-hidden="true">18.2.40.</strong> 表格</a></li><li class="chapter-item "><a href="../../前端/Element-UI/评分.html"><strong aria-hidden="true">18.2.41.</strong> 评分</a></li><li class="chapter-item "><a href="../../前端/Element-UI/走马灯.html"><strong aria-hidden="true">18.2.42.</strong> 走马灯</a></li><li class="chapter-item "><a href="../../前端/Element-UI/进度条.html"><strong aria-hidden="true">18.2.43.</strong> 进度条</a></li><li class="chapter-item "><a href="../../前端/Element-UI/颜色选择器.html"><strong aria-hidden="true">18.2.44.</strong> 颜色选择器</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.3.</strong> HTTP</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/HTTP/Content-Disposition.html"><strong aria-hidden="true">18.3.1.</strong> Content-Disposition</a></li><li class="chapter-item "><a href="../../前端/HTTP/Cookie.html"><strong aria-hidden="true">18.3.2.</strong> Cookie</a></li><li class="chapter-item "><a href="../../前端/HTTP/HTTP缓存.html"><strong aria-hidden="true">18.3.3.</strong> HTTP缓存</a></li><li class="chapter-item "><a href="../../前端/HTTP/HTTP访问控制.html"><strong aria-hidden="true">18.3.4.</strong> HTTP访问控制</a></li><li class="chapter-item "><a href="../../前端/HTTP/Http响应码.html"><strong aria-hidden="true">18.3.5.</strong> Http响应码</a></li><li class="chapter-item "><a href="../../前端/HTTP/MIME.html"><strong aria-hidden="true">18.3.6.</strong> MIME</a></li><li class="chapter-item "><a href="../../前端/HTTP/http头.html"><strong aria-hidden="true">18.3.7.</strong> http头</a></li></ol></li><li class="chapter-item "><a href="../../前端/Html5/index.html"><strong aria-hidden="true">18.4.</strong> Html5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/Html5/CSS3.html"><strong aria-hidden="true">18.4.1.</strong> CSS3</a></li><li class="chapter-item "><a href="../../前端/Html5/H5canvas图形绘制.html"><strong aria-hidden="true">18.4.2.</strong> H5canvas图形绘制</a></li><li class="chapter-item "><a href="../../前端/Html5/HTML5.html"><strong aria-hidden="true">18.4.3.</strong> HTML5</a></li><li class="chapter-item "><a href="../../前端/Html5/HTML5的结构.html"><strong aria-hidden="true">18.4.4.</strong> HTML5的结构</a></li><li class="chapter-item "><a href="../../前端/Html5/HTML5表单.html"><strong aria-hidden="true">18.4.5.</strong> HTML5表单</a></li><li class="chapter-item "><a href="../../前端/Html5/WebWorkers.html"><strong aria-hidden="true">18.4.6.</strong> WebWorkers</a></li><li class="chapter-item "><a href="../../前端/Html5/多媒体播放.html"><strong aria-hidden="true">18.4.7.</strong> 多媒体播放</a></li><li class="chapter-item "><a href="../../前端/Html5/本地存储.html"><strong aria-hidden="true">18.4.8.</strong> 本地存储</a></li><li class="chapter-item "><a href="../../前端/Html5/离线应用程序.html"><strong aria-hidden="true">18.4.9.</strong> 离线应用程序</a></li><li class="chapter-item "><a href="../../前端/Html5/获取地址位置信息.html"><strong aria-hidden="true">18.4.10.</strong> 获取地址位置信息</a></li><li class="chapter-item "><a href="../../前端/Html5/通信API.html"><strong aria-hidden="true">18.4.11.</strong> 通信API</a></li></ol></li><li class="chapter-item "><a href="../../前端/css/index.html"><strong aria-hidden="true">18.5.</strong> css</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/css/BFC.html"><strong aria-hidden="true">18.5.1.</strong> BFC</a></li><li class="chapter-item "><a href="../../前端/css/CSS选择器.html"><strong aria-hidden="true">18.5.2.</strong> CSS选择器</a></li><li class="chapter-item "><a href="../../前端/css/内联元素垂直居中的方式.html"><strong aria-hidden="true">18.5.3.</strong> 内联元素垂直居中的方式</a></li><li class="chapter-item "><a href="../../前端/css/基本视觉格式化.html"><strong aria-hidden="true">18.5.4.</strong> 基本视觉格式化</a></li><li class="chapter-item "><a href="../../前端/css/基本视觉格式化-1.html"><strong aria-hidden="true">18.5.5.</strong> 基本视觉格式化-1</a></li><li class="chapter-item "><a href="../../前端/css/弹性布局.html"><strong aria-hidden="true">18.5.6.</strong> 弹性布局</a></li><li class="chapter-item "><a href="../../前端/css/结构与层叠.html"><strong aria-hidden="true">18.5.7.</strong> 结构与层叠</a></li><li class="chapter-item "><div><strong aria-hidden="true">18.5.8.</strong> CSS布局方式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/css/CSS布局方式/flex布局.html"><strong aria-hidden="true">18.5.8.1.</strong> flex布局</a></li><li class="chapter-item "><a href="../../前端/css/CSS布局方式/两栏布局.html"><strong aria-hidden="true">18.5.8.2.</strong> 两栏布局</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">18.5.9.</strong> CSS样式详解</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/css/CSS样式详解/Grid布局.html"><strong aria-hidden="true">18.5.9.1.</strong> Grid布局</a></li><li class="chapter-item "><a href="../../前端/css/CSS样式详解/flex布局.html"><strong aria-hidden="true">18.5.9.2.</strong> flex布局</a></li><li class="chapter-item "><a href="../../前端/css/CSS样式详解/定位.html"><strong aria-hidden="true">18.5.9.3.</strong> 定位</a></li></ol></li></ol></li><li class="chapter-item expanded "><a href="../../前端/quasar/index.html"><strong aria-hidden="true">18.6.</strong> quasar</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../../前端/quasar/quasarCli.html" class="active"><strong aria-hidden="true">18.6.1.</strong> quasarCli</a></li><li class="chapter-item "><a href="../../前端/quasar/quasar选项和辅助.html"><strong aria-hidden="true">18.6.2.</strong> quasar选项和辅助</a></li><li class="chapter-item "><a href="../../前端/quasar/vue组件.html"><strong aria-hidden="true">18.6.3.</strong> vue组件</a></li><li class="chapter-item "><a href="../../前端/quasar/布局.html"><strong aria-hidden="true">18.6.4.</strong> 布局</a></li><li class="chapter-item "><a href="../../前端/quasar/网格布局.html"><strong aria-hidden="true">18.6.5.</strong> 网格布局</a></li><li class="chapter-item "><a href="../../前端/quasar/风格和特性.html"><strong aria-hidden="true">18.6.6.</strong> 风格和特性</a></li><li class="chapter-item "><div><strong aria-hidden="true">18.6.7.</strong> 组件</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/quasar/组件/q-dialog.html"><strong aria-hidden="true">18.6.7.1.</strong> q-dialog</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-expansion-item.html"><strong aria-hidden="true">18.6.7.2.</strong> q-expansion-item</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-page-sticky.html"><strong aria-hidden="true">18.6.7.3.</strong> q-page-sticky</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-tabs.html"><strong aria-hidden="true">18.6.7.4.</strong> q-tabs</a></li><li class="chapter-item "><a href="../../前端/quasar/组件/q-toolbar.html"><strong aria-hidden="true">18.6.7.5.</strong> q-toolbar</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../前端/reactor/index.html"><strong aria-hidden="true">18.7.</strong> reactor</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/reactor/1.搭建TS-Reactor环境.html"><strong aria-hidden="true">18.7.1.</strong> 搭建TS-Reactor环境</a></li><li class="chapter-item "><a href="../../前端/reactor/2.jsx.html"><strong aria-hidden="true">18.7.2.</strong> jsx</a></li><li class="chapter-item "><a href="../../前端/reactor/3.元素渲染.html"><strong aria-hidden="true">18.7.3.</strong> 元素渲染</a></li><li class="chapter-item "><a href="../../前端/reactor/4.组件与模块&Props.html"><strong aria-hidden="true">18.7.4.</strong> 组件与模块&Props</a></li><li class="chapter-item "><a href="../../前端/reactor/5.State生命周期.html"><strong aria-hidden="true">18.7.5.</strong> State生命周期</a></li><li class="chapter-item "><a href="../../前端/reactor/6.事件处理.html"><strong aria-hidden="true">18.7.6.</strong> 事件处理</a></li><li class="chapter-item "><a href="../../前端/reactor/7.条件渲染.html"><strong aria-hidden="true">18.7.7.</strong> 条件渲染</a></li><li class="chapter-item "><a href="../../前端/reactor/8.列表.html"><strong aria-hidden="true">18.7.8.</strong> 列表</a></li><li class="chapter-item "><a href="../../前端/reactor/9.表单.html"><strong aria-hidden="true">18.7.9.</strong> 表单</a></li><li class="chapter-item "><a href="../../前端/reactor/10.组合与继承.html"><strong aria-hidden="true">18.7.10.</strong> 组合与继承</a></li><li class="chapter-item "><a href="../../前端/reactor/11.React最佳实践.html"><strong aria-hidden="true">18.7.11.</strong> React最佳实践</a></li><li class="chapter-item "><a href="../../前端/reactor/高级特性/index.html"><strong aria-hidden="true">18.7.12.</strong> 高级特性</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/reactor/高级特性/Refs转发.html"><strong aria-hidden="true">18.7.12.1.</strong> Refs转发</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../前端/vue/index.html"><strong aria-hidden="true">18.8.</strong> vue</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../前端/vue/class与style的绑定.html"><strong aria-hidden="true">18.8.1.</strong> class与style的绑定</a></li><li class="chapter-item "><a href="../../前端/vue/事件处理.html"><strong aria-hidden="true">18.8.2.</strong> 事件处理</a></li><li class="chapter-item "><a href="../../前端/vue/列表渲染.html"><strong aria-hidden="true">18.8.3.</strong> 列表渲染</a></li><li class="chapter-item "><a href="../../前端/vue/条件渲染.html"><strong aria-hidden="true">18.8.4.</strong> 条件渲染</a></li><li class="chapter-item "><a href="../../前端/vue/模板语法.html"><strong aria-hidden="true">18.8.5.</strong> 模板语法</a></li><li class="chapter-item "><a href="../../前端/vue/组件.html"><strong aria-hidden="true">18.8.6.</strong> 组件</a></li><li class="chapter-item "><a href="../../前端/vue/表单输入绑定.html"><strong aria-hidden="true">18.8.7.</strong> 表单输入绑定</a></li><li class="chapter-item "><a href="../../前端/vue/计算属性和侦听器.html"><strong aria-hidden="true">18.8.8.</strong> 计算属性和侦听器</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">java</li><li class="chapter-item "><a href="../../java_1_java基础/index.html"><strong aria-hidden="true">19.</strong> java基础</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/EasyRules.html"><strong aria-hidden="true">19.1.</strong> EasyRules</a></li><li class="chapter-item "><a href="../../java_1_java基础/PO、VO、BO.html"><strong aria-hidden="true">19.2.</strong> PO、VO、BO</a></li><li class="chapter-item "><a href="../../java_1_java基础/WeakCache.html"><strong aria-hidden="true">19.3.</strong> WeakCache</a></li><li class="chapter-item "><a href="../../java_1_java基础/apacheUtils类.html"><strong aria-hidden="true">19.4.</strong> apacheUtils类</a></li><li class="chapter-item "><a href="../../java_1_java基础/javaUnsafe工具类与CAS.html"><strong aria-hidden="true">19.5.</strong> javaUnsafe工具类与CAS</a></li><li class="chapter-item "><a href="../../java_1_java基础/java优化指南.html"><strong aria-hidden="true">19.6.</strong> java优化指南</a></li><li class="chapter-item "><a href="../../java_1_java基础/java各版本新特性.html"><strong aria-hidden="true">19.7.</strong> java各版本新特性</a></li><li class="chapter-item "><a href="../../java_1_java基础/java模块化.html"><strong aria-hidden="true">19.8.</strong> java模块化</a></li><li class="chapter-item "><a href="../../java_1_java基础/代码异味.html"><strong aria-hidden="true">19.9.</strong> 代码异味</a></li><li class="chapter-item "><a href="../../java_1_java基础/类的关系.html"><strong aria-hidden="true">19.10.</strong> 类的关系</a></li><li class="chapter-item "><a href="../../java_1_java基础/JSR/index.html"><strong aria-hidden="true">19.11.</strong> JSR</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JSR/jar包规范.html"><strong aria-hidden="true">19.11.1.</strong> jar包规范</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.12.</strong> JVM</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JVM/GC后对象地址变化了HashCode如何保持不变.html"><strong aria-hidden="true">19.12.1.</strong> GC后对象地址变化了HashCode如何保持不变</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JMM与volatile关键字.html"><strong aria-hidden="true">19.12.2.</strong> JMM与volatile关键字</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVMGC.html"><strong aria-hidden="true">19.12.3.</strong> JVMGC</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVM内存模型.html"><strong aria-hidden="true">19.12.4.</strong> JVM内存模型</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVM参数.html"><strong aria-hidden="true">19.12.5.</strong> JVM参数</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/JVM复制算法.html"><strong aria-hidden="true">19.12.6.</strong> JVM复制算法</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/java内存泄露与OOM.html"><strong aria-hidden="true">19.12.7.</strong> java内存泄露与OOM</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/java对象分析.html"><strong aria-hidden="true">19.12.8.</strong> java对象分析</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/java引用类型.html"><strong aria-hidden="true">19.12.9.</strong> java引用类型</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/index.html"><strong aria-hidden="true">19.12.10.</strong> 类加载</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/类加载器.html"><strong aria-hidden="true">19.12.10.1.</strong> 类加载器</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/类加载过程.html"><strong aria-hidden="true">19.12.10.2.</strong> 类加载过程</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM/类加载/线程上下文加载器.html"><strong aria-hidden="true">19.12.10.3.</strong> 线程上下文加载器</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.13.</strong> JVM问题诊断与性能分析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/MAT.html"><strong aria-hidden="true">19.13.1.</strong> MAT</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/arthas.html"><strong aria-hidden="true">19.13.2.</strong> arthas</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/javaCPU占用高的问题.html"><strong aria-hidden="true">19.13.3.</strong> javaCPU占用高的问题</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/java远程调试.html"><strong aria-hidden="true">19.13.4.</strong> java远程调试</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/优雅停服.html"><strong aria-hidden="true">19.13.5.</strong> 优雅停服</a></li><li class="chapter-item "><a href="../../java_1_java基础/JVM问题诊断与性能分析/排查内存溢出.html"><strong aria-hidden="true">19.13.6.</strong> 排查内存溢出</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.14.</strong> arthas</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/arthas/1.安装.html"><strong aria-hidden="true">19.14.1.</strong> 安装</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/2.快速入门.html"><strong aria-hidden="true">19.14.2.</strong> 快速入门</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/3.命令.html"><strong aria-hidden="true">19.14.3.</strong> 命令</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/4.ArthasTunnel.html"><strong aria-hidden="true">19.14.4.</strong> ArthasTunnel</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/5.Idea插件.html"><strong aria-hidden="true">19.14.5.</strong> Idea插件</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/6.JavaAgent启动.html"><strong aria-hidden="true">19.14.6.</strong> JavaAgent启动</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/7.火焰图.html"><strong aria-hidden="true">19.14.7.</strong> 火焰图</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/8.thread命令.html"><strong aria-hidden="true">19.14.8.</strong> thread命令</a></li><li class="chapter-item "><a href="../../java_1_java基础/arthas/9.trace.html"><strong aria-hidden="true">19.14.9.</strong> trace</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.15.</strong> bean校验</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/bean校验/javaValidated.html"><strong aria-hidden="true">19.15.1.</strong> javaValidated</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/java.security框架/index.html"><strong aria-hidden="true">19.16.</strong> java.security框架</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.17.</strong> java基础</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java基础/JavaSPI.html"><strong aria-hidden="true">19.17.1.</strong> JavaSPI</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/Java异常.html"><strong aria-hidden="true">19.17.2.</strong> Java异常</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/Java泛型的协变与逆变.html"><strong aria-hidden="true">19.17.3.</strong> Java泛型的协变与逆变</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/java中常见的语法糖.html"><strong aria-hidden="true">19.17.4.</strong> java中常见的语法糖</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/java序列化接口.html"><strong aria-hidden="true">19.17.5.</strong> java序列化接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/jdk1.8新特性.html"><strong aria-hidden="true">19.17.6.</strong> jdk1.8新特性</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/jdk与jre.html"><strong aria-hidden="true">19.17.7.</strong> jdk与jre</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/枚举.html"><strong aria-hidden="true">19.17.8.</strong> 枚举</a></li><li class="chapter-item "><a href="../../java_1_java基础/java基础/注解.html"><strong aria-hidden="true">19.17.9.</strong> 注解</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/index.html"><strong aria-hidden="true">19.18.</strong> java多线程与锁</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/JUC线程同步工具.html"><strong aria-hidden="true">19.18.1.</strong> JUC线程同步工具</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/LockSupport.html"><strong aria-hidden="true">19.18.2.</strong> LockSupport</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/java内存模型.html"><strong aria-hidden="true">19.18.3.</strong> java内存模型</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/java线程状态.html"><strong aria-hidden="true">19.18.4.</strong> java线程状态</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/java锁.html"><strong aria-hidden="true">19.18.5.</strong> java锁</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/jvm线程模型.html"><strong aria-hidden="true">19.18.6.</strong> jvm线程模型</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/关于多线程与并发编码的心得.html"><strong aria-hidden="true">19.18.7.</strong> 关于多线程与并发编码的心得</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/线程操作.html"><strong aria-hidden="true">19.18.8.</strong> 线程操作</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/线程池.html"><strong aria-hidden="true">19.18.9.</strong> 线程池</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.18.10.</strong> 基于AQS的同步工具</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/AQS.html"><strong aria-hidden="true">19.18.10.1.</strong> AQS</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/Condition条件等待.html"><strong aria-hidden="true">19.18.10.2.</strong> Condition条件等待</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/CountDownLatch.html"><strong aria-hidden="true">19.18.10.3.</strong> CountDownLatch</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/CyclicBarrier.html"><strong aria-hidden="true">19.18.10.4.</strong> CyclicBarrier</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/Lock锁接口.html"><strong aria-hidden="true">19.18.10.5.</strong> Lock锁接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/ReentrantLock.html"><strong aria-hidden="true">19.18.10.6.</strong> ReentrantLock</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/ReentrantReadWriteLock.html"><strong aria-hidden="true">19.18.10.7.</strong> ReentrantReadWriteLock</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/Semaphore.html"><strong aria-hidden="true">19.18.10.8.</strong> Semaphore</a></li><li class="chapter-item "><a href="../../java_1_java基础/java多线程与锁/基于AQS的同步工具/StampedLock.html"><strong aria-hidden="true">19.18.10.9.</strong> StampedLock</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.19.</strong> java源码分析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/1.java面试.html"><strong aria-hidden="true">19.19.1.</strong> java面试</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/JavaLocalDate.html"><strong aria-hidden="true">19.19.2.</strong> JavaLocalDate</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/JavaUnsafe类.html"><strong aria-hidden="true">19.19.3.</strong> JavaUnsafe类</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/foreach语法糖.html"><strong aria-hidden="true">19.19.4.</strong> foreach语法糖</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/formatter.html"><strong aria-hidden="true">19.19.5.</strong> formatter</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/integer的比较问题.html"><strong aria-hidden="true">19.19.6.</strong> integer的比较问题</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/java序列化接口.html"><strong aria-hidden="true">19.19.7.</strong> java序列化接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/string常量池.html"><strong aria-hidden="true">19.19.8.</strong> string常量池</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/threadLocal.html"><strong aria-hidden="true">19.19.9.</strong> threadLocal</a></li><li class="chapter-item "><a href="../../java_1_java基础/java源码分析/基于jdk1.8的Arrays.sort.html"><strong aria-hidden="true">19.19.10.</strong> 基于jdk1.8的Arrays.sort</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/index.html"><strong aria-hidden="true">19.20.</strong> java集合框架</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/ArrayBlockingQueue.html"><strong aria-hidden="true">19.20.1.</strong> ArrayBlockingQueue</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/ArrayList.html"><strong aria-hidden="true">19.20.2.</strong> ArrayList</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/ConcurrentHashMap.html"><strong aria-hidden="true">19.20.3.</strong> ConcurrentHashMap</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/LinkedList与双向队列.html"><strong aria-hidden="true">19.20.4.</strong> LinkedList与双向队列</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/List.html"><strong aria-hidden="true">19.20.5.</strong> List</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/Map接口.html"><strong aria-hidden="true">19.20.6.</strong> Map接口</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/Queue与Deque.html"><strong aria-hidden="true">19.20.7.</strong> Queue与Deque</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/Set与LinkedHashMap.html"><strong aria-hidden="true">19.20.8.</strong> Set与LinkedHashMap</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/SynchronousQueue.html"><strong aria-hidden="true">19.20.9.</strong> SynchronousQueue</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/arraylist和linkedlist.html"><strong aria-hidden="true">19.20.10.</strong> arraylist和linkedlist</a></li><li class="chapter-item "><a href="../../java_1_java基础/java集合框架/hashMap.html"><strong aria-hidden="true">19.20.11.</strong> hashMap</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/redission-java/index.html"><strong aria-hidden="true">19.21.</strong> redission-java</a></li><li class="chapter-item "><div><strong aria-hidden="true">19.22.</strong> shiro</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/shiro/shiro频繁访问redis.html"><strong aria-hidden="true">19.22.1.</strong> shiro频繁访问redis</a></li></ol></li><li class="chapter-item "><a href="../../java_1_java基础/代理/index.html"><strong aria-hidden="true">19.23.</strong> 代理</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/代理/CGLIB.html"><strong aria-hidden="true">19.23.1.</strong> CGLIB</a></li><li class="chapter-item "><a href="../../java_1_java基础/代理/cglib的几种Callback.html"><strong aria-hidden="true">19.23.2.</strong> cglib的几种Callback</a></li><li class="chapter-item "><a href="../../java_1_java基础/代理/jdk动态代理.html"><strong aria-hidden="true">19.23.3.</strong> jdk动态代理</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.24.</strong> 其他</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/其他/Collections工具类.html"><strong aria-hidden="true">19.24.1.</strong> Collections工具类</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/JAVA命令行工具.html"><strong aria-hidden="true">19.24.2.</strong> JAVA命令行工具</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/Objects工具类.html"><strong aria-hidden="true">19.24.3.</strong> Objects工具类</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/javaIdea调试.html"><strong aria-hidden="true">19.24.4.</strong> javaIdea调试</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/javaPererences工具.html"><strong aria-hidden="true">19.24.5.</strong> javaPererences工具</a></li><li class="chapter-item "><a href="../../java_1_java基础/其他/java基准测试.html"><strong aria-hidden="true">19.24.6.</strong> java基准测试</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.25.</strong> 函数式编程</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/anyMatchAllMatch.html"><strong aria-hidden="true">19.25.1.</strong> anyMatchAllMatch</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/java函数式编程.html"><strong aria-hidden="true">19.25.2.</strong> java函数式编程</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/lamba表达式原理.html"><strong aria-hidden="true">19.25.3.</strong> lamba表达式原理</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/方法引用.html"><strong aria-hidden="true">19.25.4.</strong> 方法引用</a></li><li class="chapter-item "><a href="../../java_1_java基础/函数式编程/流操作.html"><strong aria-hidden="true">19.25.5.</strong> 流操作</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">19.26.</strong> 对象拷贝</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_1_java基础/对象拷贝/mapstruct.html"><strong aria-hidden="true">19.26.1.</strong> mapstruct</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../java_2_响应式编程/index.html"><strong aria-hidden="true">20.</strong> 响应式编程</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/index.html"><strong aria-hidden="true">20.1.</strong> ProjectReactor</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/创建发布者.html"><strong aria-hidden="true">20.1.1.</strong> 创建发布者</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/创建订阅.html"><strong aria-hidden="true">20.1.2.</strong> 创建订阅</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/响应式流的动作.html"><strong aria-hidden="true">20.1.3.</strong> 响应式流的动作</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/选择合适的操作符.html"><strong aria-hidden="true">20.1.4.</strong> 选择合适的操作符</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/index.html"><strong aria-hidden="true">20.1.5.</strong> core-features</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/FluxAndMono.html"><strong aria-hidden="true">20.1.5.1.</strong> FluxAndMono</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/ProcessorOrSinks.html"><strong aria-hidden="true">20.1.5.2.</strong> ProcessorOrSinks</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/线程和调度.html"><strong aria-hidden="true">20.1.5.3.</strong> 线程和调度</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/编程式创建序列.html"><strong aria-hidden="true">20.1.5.4.</strong> 编程式创建序列</a></li><li class="chapter-item "><a href="../../java_2_响应式编程/ProjectReactor/core-features/错误处理.html"><strong aria-hidden="true">20.1.5.5.</strong> 错误处理</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../../java_4_日志/index.html"><strong aria-hidden="true">21.</strong> 日志</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/JUL.html"><strong aria-hidden="true">21.1.</strong> JUL</a></li><li class="chapter-item "><a href="../../java_4_日志/SL4j.html"><strong aria-hidden="true">21.2.</strong> SL4j</a></li><li class="chapter-item "><a href="../../java_4_日志/日志处理进化史.html"><strong aria-hidden="true">21.3.</strong> 日志处理进化史</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/index.html"><strong aria-hidden="true">21.4.</strong> log4j2</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/Log4j2API.html"><strong aria-hidden="true">21.4.1.</strong> Log4j2API</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/log4j2-web.html"><strong aria-hidden="true">21.4.2.</strong> log4j2-web</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/lookups.html"><strong aria-hidden="true">21.4.3.</strong> lookups</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/依赖管理.html"><strong aria-hidden="true">21.4.4.</strong> 依赖管理</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/index.html"><strong aria-hidden="true">21.4.5.</strong> appenders</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/AsyncAppender.html"><strong aria-hidden="true">21.4.5.1.</strong> AsyncAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/CassandraAppender.html"><strong aria-hidden="true">21.4.5.2.</strong> CassandraAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/ConsoleAppender.html"><strong aria-hidden="true">21.4.5.3.</strong> ConsoleAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/FailoverAppender.html"><strong aria-hidden="true">21.4.5.4.</strong> FailoverAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/FileAppender.html"><strong aria-hidden="true">21.4.5.5.</strong> FileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/JDBCAppender.html"><strong aria-hidden="true">21.4.5.6.</strong> JDBCAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/OutputStreamAppender.html"><strong aria-hidden="true">21.4.5.7.</strong> OutputStreamAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RandomAccessFileAppender.html"><strong aria-hidden="true">21.4.5.8.</strong> RandomAccessFileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RewriteAppender.html"><strong aria-hidden="true">21.4.5.9.</strong> RewriteAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RollingFileAppender.html"><strong aria-hidden="true">21.4.5.10.</strong> RollingFileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RollingRandomAccessFileAppender.html"><strong aria-hidden="true">21.4.5.11.</strong> RollingRandomAccessFileAppender</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/appenders/RoutingAppender.html"><strong aria-hidden="true">21.4.5.12.</strong> RoutingAppender</a></li></ol></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/index.html"><strong aria-hidden="true">21.4.6.</strong> layouts</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/CSVLayouts.html"><strong aria-hidden="true">21.4.6.1.</strong> CSVLayouts</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/HTMLayouts.html"><strong aria-hidden="true">21.4.6.2.</strong> HTMLayouts</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/JSONLayout.html"><strong aria-hidden="true">21.4.6.3.</strong> JSONLayout</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/JSONTemplateLayouts.html"><strong aria-hidden="true">21.4.6.4.</strong> JSONTemplateLayouts</a></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/layouts/PatternLayout.html"><strong aria-hidden="true">21.4.6.5.</strong> PatternLayout</a></li></ol></li><li class="chapter-item "><a href="../../java_4_日志/log4j2/log4j2配置/index.html"><strong aria-hidden="true">21.4.7.</strong> log4j2配置</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_4_日志/log4j2/log4j2配置/高级配置.html"><strong aria-hidden="true">21.4.7.1.</strong> 高级配置</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">22.</strong> ORM</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">22.1.</strong> Mybatis</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/mybatis.html"><strong aria-hidden="true">22.1.1.</strong> mybatis</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/mybatis-插件开发.html"><strong aria-hidden="true">22.1.2.</strong> mybatis-插件开发</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/mybatis标签.html"><strong aria-hidden="true">22.1.3.</strong> mybatis标签</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/resultHandler.html"><strong aria-hidden="true">22.1.4.</strong> resultHandler</a></li><li class="chapter-item "><a href="../../java_5_ORM/Mybatis/多结果集分页.html"><strong aria-hidden="true">22.1.5.</strong> 多结果集分页</a></li></ol></li><li class="chapter-item "><a href="../../java_5_ORM/jpa/index.html"><strong aria-hidden="true">22.2.</strong> jpa</a></li></ol></li><li class="chapter-item "><a href="../../java_6_IO/index.html"><strong aria-hidden="true">23.</strong> IO</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_6_IO/Buffer.html"><strong aria-hidden="true">23.1.</strong> Buffer</a></li><li class="chapter-item "><a href="../../java_6_IO/Channel.html"><strong aria-hidden="true">23.2.</strong> Channel</a></li><li class="chapter-item "><a href="../../java_6_IO/LinuxIO模型演变.html"><strong aria-hidden="true">23.3.</strong> LinuxIO模型演变</a></li><li class="chapter-item "><a href="../../java_6_IO/Selector（选择器）.html"><strong aria-hidden="true">23.4.</strong> Selector（选择器）</a></li><li class="chapter-item "><a href="../../java_6_IO/主流IO模型.html"><strong aria-hidden="true">23.5.</strong> 主流IO模型</a></li><li class="chapter-item "><a href="../../java_6_IO/从IO到NIO个人理解.html"><strong aria-hidden="true">23.6.</strong> 从IO到NIO个人理解</a></li><li class="chapter-item "><a href="../../java_6_IO/字符集.html"><strong aria-hidden="true">23.7.</strong> 字符集</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/index.html"><strong aria-hidden="true">23.8.</strong> FileIO(NIO-2.0)</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/LinksSymbolicOtherwise.html"><strong aria-hidden="true">23.8.1.</strong> LinksSymbolicOtherwise</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/RandomAccessFiles.html"><strong aria-hidden="true">23.8.2.</strong> RandomAccessFiles</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/传统IO与NIO的API迁移.html"><strong aria-hidden="true">23.8.3.</strong> 传统IO与NIO的API迁移</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/元数据管理.html"><strong aria-hidden="true">23.8.4.</strong> 元数据管理</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/其他有用方法.html"><strong aria-hidden="true">23.8.5.</strong> 其他有用方法</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/开发自定义文件系统.html"><strong aria-hidden="true">23.8.6.</strong> 开发自定义文件系统</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/文件查找.html"><strong aria-hidden="true">23.8.7.</strong> 文件查找</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/文件管理.html"><strong aria-hidden="true">23.8.8.</strong> 文件管理</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/文件读写.html"><strong aria-hidden="true">23.8.9.</strong> 文件读写</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/监控目录变化.html"><strong aria-hidden="true">23.8.10.</strong> 监控目录变化</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/目录管理.html"><strong aria-hidden="true">23.8.11.</strong> 目录管理</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/路径操作.html"><strong aria-hidden="true">23.8.12.</strong> 路径操作</a></li><li class="chapter-item "><a href="../../java_6_IO/FileIO(NIO-2.0)/遍历目录树.html"><strong aria-hidden="true">23.8.13.</strong> 遍历目录树</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../java_7_servlet规范/index.html"><strong aria-hidden="true">24.</strong> servlet规范</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_7_servlet规范/fitler.html"><strong aria-hidden="true">24.1.</strong> fitler</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/httpServlet接口.html"><strong aria-hidden="true">24.2.</strong> httpServlet接口</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/request.html"><strong aria-hidden="true">24.3.</strong> request</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/response.html"><strong aria-hidden="true">24.4.</strong> response</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/servletContext.html"><strong aria-hidden="true">24.5.</strong> servletContext</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/servlet初始化.html"><strong aria-hidden="true">24.6.</strong> servlet初始化</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/session.html"><strong aria-hidden="true">24.7.</strong> session</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/入门.html"><strong aria-hidden="true">24.8.</strong> 入门</a></li><li class="chapter-item "><a href="../../java_7_servlet规范/注解与可插拔.html"><strong aria-hidden="true">24.9.</strong> 注解与可插拔</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">25.</strong> 设计模式</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_8_设计模式/PipeLine.html"><strong aria-hidden="true">25.1.</strong> PipeLine</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">26.</strong> 单元测试</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_9_单元测试/junit5/index.html"><strong aria-hidden="true">26.1.</strong> junit5</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_9_单元测试/junit5/ConsoleLaunch.html"><strong aria-hidden="true">26.1.1.</strong> ConsoleLaunch</a></li><li class="chapter-item "><a href="../../java_9_单元测试/junit5/DependencyMetadata.html"><strong aria-hidden="true">26.1.2.</strong> DependencyMetadata</a></li><li class="chapter-item "><div><strong aria-hidden="true">26.1.3.</strong> writtingTest</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../java_9_单元测试/junit5/writtingTest/Annotations.html"><strong aria-hidden="true">26.1.3.1.</strong> Annotations</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">工具</li><li class="chapter-item "><a href="../../工具_3_git/index.html"><strong aria-hidden="true">27.</strong> git</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_3_git/Git库管理.html"><strong aria-hidden="true">27.1.</strong> Git库管理</a></li><li class="chapter-item "><a href="../../工具_3_git/gitDiff原理.html"><strong aria-hidden="true">27.2.</strong> gitDiff原理</a></li><li class="chapter-item "><a href="../../工具_3_git/gitLog命令.html"><strong aria-hidden="true">27.3.</strong> gitLog命令</a></li><li class="chapter-item "><a href="../../工具_3_git/gitflow.html"><strong aria-hidden="true">27.4.</strong> gitflow</a></li><li class="chapter-item "><a href="../../工具_3_git/gitmerge.html"><strong aria-hidden="true">27.5.</strong> gitmerge</a></li><li class="chapter-item "><a href="../../工具_3_git/gitrebase.html"><strong aria-hidden="true">27.6.</strong> gitrebase</a></li><li class="chapter-item "><a href="../../工具_3_git/git使用案例.html"><strong aria-hidden="true">27.7.</strong> git使用案例</a></li><li class="chapter-item "><a href="../../工具_3_git/git分支.html"><strong aria-hidden="true">27.8.</strong> git分支</a></li><li class="chapter-item "><a href="../../工具_3_git/git命令杂项.html"><strong aria-hidden="true">27.9.</strong> git命令杂项</a></li><li class="chapter-item "><a href="../../工具_3_git/git基础.html"><strong aria-hidden="true">27.10.</strong> git基础</a></li><li class="chapter-item "><a href="../../工具_3_git/git错误提交后场景.html"><strong aria-hidden="true">27.11.</strong> git错误提交后场景</a></li><li class="chapter-item "><a href="../../工具_3_git/tag管理.html"><strong aria-hidden="true">27.12.</strong> tag管理</a></li><li class="chapter-item "><a href="../../工具_3_git/使用远程分支强制覆盖本地工作区暂存区版本库.html"><strong aria-hidden="true">27.13.</strong> 使用远程分支强制覆盖本地工作区暂存区版本库</a></li><li class="chapter-item "><a href="../../工具_3_git/克隆.html"><strong aria-hidden="true">27.14.</strong> 克隆</a></li><li class="chapter-item "><a href="../../工具_3_git/历史提交.html"><strong aria-hidden="true">27.15.</strong> 历史提交</a></li><li class="chapter-item "><a href="../../工具_3_git/回退合并提交.html"><strong aria-hidden="true">27.16.</strong> 回退合并提交</a></li><li class="chapter-item "><a href="../../工具_3_git/基本操作.html"><strong aria-hidden="true">27.17.</strong> 基本操作</a></li><li class="chapter-item "><a href="../../工具_3_git/杂项.html"><strong aria-hidden="true">27.18.</strong> 杂项</a></li><li class="chapter-item "><div><strong aria-hidden="true">27.19.</strong> GIT协作</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_3_git/GIT协作/Git支持的协议.html"><strong aria-hidden="true">27.19.1.</strong> Git支持的协议</a></li><li class="chapter-item "><a href="../../工具_3_git/GIT协作/冲突解决.html"><strong aria-hidden="true">27.19.2.</strong> 冲突解决</a></li><li class="chapter-item "><a href="../../工具_3_git/GIT协作/补丁文件交互.html"><strong aria-hidden="true">27.19.3.</strong> 补丁文件交互</a></li><li class="chapter-item "><a href="../../工具_3_git/GIT协作/远程版本库.html"><strong aria-hidden="true">27.19.4.</strong> 远程版本库</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">28.</strong> 绘图建模</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_4_绘图建模/UML.html"><strong aria-hidden="true">28.1.</strong> UML</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/flowchart_fun.html"><strong aria-hidden="true">28.2.</strong> flowchart_fun</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid;README.html"><strong aria-hidden="true">28.3.</strong> mermaid;README</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/plantUML语法.html"><strong aria-hidden="true">28.4.</strong> plantUML语法</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/index.html"><strong aria-hidden="true">28.5.</strong> mermaid</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/时序图.html"><strong aria-hidden="true">28.5.1.</strong> 时序图</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/流程图.html"><strong aria-hidden="true">28.5.2.</strong> 流程图</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/类图.html"><strong aria-hidden="true">28.5.3.</strong> 类图</a></li><li class="chapter-item "><a href="../../工具_4_绘图建模/mermaid/语法总览.html"><strong aria-hidden="true">28.5.4.</strong> 语法总览</a></li></ol></li></ol></li><li class="chapter-item "><li class="part-title">其他</li><li class="chapter-item "><a href="../../其他_2_其他/index.html"><strong aria-hidden="true">29.</strong> 其他</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_2_其他/Multipass.html"><strong aria-hidden="true">29.1.</strong> Multipass</a></li><li class="chapter-item "><a href="../../其他_2_其他/Wallabag.html"><strong aria-hidden="true">29.2.</strong> Wallabag</a></li><li class="chapter-item "><a href="../../其他_2_其他/v2rayN代理.html"><strong aria-hidden="true">29.3.</strong> v2rayN代理</a></li><li class="chapter-item "><a href="../../其他_2_其他/个人清算汇缴.html"><strong aria-hidden="true">29.4.</strong> 个人清算汇缴</a></li><li class="chapter-item "><a href="../../其他_2_其他/概率论与数理统计.html"><strong aria-hidden="true">29.5.</strong> 概率论与数理统计</a></li><li class="chapter-item "><a href="../../其他_2_其他/虚拟机操作.html"><strong aria-hidden="true">29.6.</strong> 虚拟机操作</a></li><li class="chapter-item "><div><strong aria-hidden="true">29.7.</strong> intellj</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_2_其他/intellj/Http请求发送.html"><strong aria-hidden="true">29.7.1.</strong> Http请求发送</a></li><li class="chapter-item "><a href="../../其他_2_其他/intellj/ideaSettings.html"><strong aria-hidden="true">29.7.2.</strong> ideaSettings</a></li></ol></li><li class="chapter-item "><a href="../../其他_2_其他/osascript/index.html"><strong aria-hidden="true">29.8.</strong> osascript</a></li><li class="chapter-item "><a href="../../其他_2_其他/taskList/index.html"><strong aria-hidden="true">29.9.</strong> taskList</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><div><strong aria-hidden="true">29.9.1.</strong> java</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_2_其他/taskList/java/AnnotationProcessing.html"><strong aria-hidden="true">29.9.1.1.</strong> AnnotationProcessing</a></li><li class="chapter-item "><a href="../../其他_2_其他/taskList/java/ruoyi项目开发.html"><strong aria-hidden="true">29.9.1.2.</strong> ruoyi项目开发</a></li><li class="chapter-item "><a href="../../其他_2_其他/taskList/java/可继承的ThreadLocal.html"><strong aria-hidden="true">29.9.1.3.</strong> 可继承的ThreadLocal</a></li></ol></li></ol></li></ol></li><li class="chapter-item "><a href="../../其他_4_思考/index.html"><strong aria-hidden="true">30.</strong> 思考</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他_4_思考/学习总结.html"><strong aria-hidden="true">30.1.</strong> 学习总结</a></li><li class="chapter-item "><a href="../../其他_4_思考/杂项.html"><strong aria-hidden="true">30.2.</strong> 杂项</a></li><li class="chapter-item "><a href="../../其他_4_思考/编程技巧.html"><strong aria-hidden="true">30.3.</strong> 编程技巧</a></li></ol></li><li class="chapter-item "><li class="part-title">其他编程语言</li><li class="chapter-item "><div><strong aria-hidden="true">31.</strong> C++</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_1_C++/C++与C的区别.html"><strong aria-hidden="true">31.1.</strong> C++与C的区别</a></li><li class="chapter-item "><a href="../../其他编程语言_1_C++/C++面向对象.html"><strong aria-hidden="true">31.2.</strong> C++面向对象</a></li><li class="chapter-item "><a href="../../其他编程语言_1_C++/泛型编程.html"><strong aria-hidden="true">31.3.</strong> 泛型编程</a></li><li class="chapter-item "><a href="../../其他编程语言_1_C++/cmake/index.html"><strong aria-hidden="true">31.4.</strong> cmake</a></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_2_LUA/index.html"><strong aria-hidden="true">32.</strong> LUA</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_2_LUA/基本语法.html"><strong aria-hidden="true">32.1.</strong> 基本语法</a></li><li class="chapter-item "><a href="../../其他编程语言_2_LUA/高级语法.html"><strong aria-hidden="true">32.2.</strong> 高级语法</a></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">33.</strong> rust</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_3_rust/1常见编程概念.html"><strong aria-hidden="true">33.1.</strong> 1常见编程概念</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/2所有权.html"><strong aria-hidden="true">33.2.</strong> 2所有权</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/ConstantsAndVariables.html"><strong aria-hidden="true">33.3.</strong> ConstantsAndVariables</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/Rust中的Sizedness.html"><strong aria-hidden="true">33.4.</strong> Rust中的Sizedness</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/Rust库API设计文档规范.html"><strong aria-hidden="true">33.5.</strong> Rust库API设计文档规范</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/const类型与函数.html"><strong aria-hidden="true">33.6.</strong> const类型与函数</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/newType模式.html"><strong aria-hidden="true">33.7.</strong> newType模式</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rust执行shell命令.html"><strong aria-hidden="true">33.8.</strong> rust执行shell命令</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rust指针.html"><strong aria-hidden="true">33.9.</strong> rust指针</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rust面向对象特性.html"><strong aria-hidden="true">33.10.</strong> rust面向对象特性</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/依赖管理.html"><strong aria-hidden="true">33.11.</strong> 依赖管理</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/函数式编程.html"><strong aria-hidden="true">33.12.</strong> 函数式编程</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/宏.html"><strong aria-hidden="true">33.13.</strong> 宏</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/常见集合.html"><strong aria-hidden="true">33.14.</strong> 常见集合</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/模式匹配.html"><strong aria-hidden="true">33.15.</strong> 模式匹配</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/泛型与trait.html"><strong aria-hidden="true">33.16.</strong> 泛型与trait</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/结构体.html"><strong aria-hidden="true">33.17.</strong> 结构体</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/迭代与闭包.html"><strong aria-hidden="true">33.18.</strong> 迭代与闭包</a></li><li class="chapter-item "><div><strong aria-hidden="true">33.19.</strong> rfcs</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_3_rust/rfcs/0195_associated-items.html"><strong aria-hidden="true">33.19.1.</strong> 0195_associated-items</a></li><li class="chapter-item "><a href="../../其他编程语言_3_rust/rfcs/0911-const-fn.html"><strong aria-hidden="true">33.19.2.</strong> 0911-const-fn</a></li></ol></li></ol></li><li class="chapter-item "><div><strong aria-hidden="true">34.</strong> groovy</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_4_groovy/RuntimeAndCompile-timeMetaprogramming.html"><strong aria-hidden="true">34.1.</strong> RuntimeAndCompile-timeMetaprogramming</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/基础语法.html"><strong aria-hidden="true">34.2.</strong> 基础语法</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/开发工具类.html"><strong aria-hidden="true">34.3.</strong> 开发工具类</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/操作符.html"><strong aria-hidden="true">34.4.</strong> 操作符</a></li><li class="chapter-item "><a href="../../其他编程语言_4_groovy/编程结构.html"><strong aria-hidden="true">34.5.</strong> 编程结构</a></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/index.html"><strong aria-hidden="true">35.</strong> nodejs</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/fakeJS.html"><strong aria-hidden="true">35.1.</strong> fakeJS</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/nodejs事件循环.html"><strong aria-hidden="true">35.2.</strong> nodejs事件循环</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/入门.html"><strong aria-hidden="true">35.3.</strong> 入门</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/包管理.html"><strong aria-hidden="true">35.4.</strong> 包管理</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/定时器.html"><strong aria-hidden="true">35.5.</strong> 定时器</a></li><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/异步编程.html"><strong aria-hidden="true">35.6.</strong> 异步编程</a></li><li class="chapter-item "><div><strong aria-hidden="true">35.7.</strong> packageInfo参数解析</div><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_5_nodejs/packageInfo参数解析/1.scripts.html"><strong aria-hidden="true">35.7.1.</strong> scripts</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/index.html"><strong aria-hidden="true">36.</strong> typescript</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_6_typescript/1.基础类型.html"><strong aria-hidden="true">36.1.</strong> 基础类型</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/2.变量声明.html"><strong aria-hidden="true">36.2.</strong> 变量声明</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/3.接口.html"><strong aria-hidden="true">36.3.</strong> 接口</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/4.模块.html"><strong aria-hidden="true">36.4.</strong> 模块</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/index.html"><strong aria-hidden="true">36.5.</strong> jtest测试框架</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/Except.html"><strong aria-hidden="true">36.5.1.</strong> Except</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/Globals.html"><strong aria-hidden="true">36.5.2.</strong> Globals</a></li><li class="chapter-item "><a href="../../其他编程语言_6_typescript/jtest测试框架/Hook顺序.html"><strong aria-hidden="true">36.5.3.</strong> Hook顺序</a></li></ol></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_7_python/index.html"><strong aria-hidden="true">37.</strong> python</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_7_python/1.python3基础语法.html"><strong aria-hidden="true">37.1.</strong> python3基础语法</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/2.基本数据类型.html"><strong aria-hidden="true">37.2.</strong> 基本数据类型</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/3.Python3数据类型转换.html"><strong aria-hidden="true">37.3.</strong> Python3数据类型转换</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/4.Python推导式.html"><strong aria-hidden="true">37.4.</strong> Python推导式</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/5.Python3运算符.html"><strong aria-hidden="true">37.5.</strong> Python3运算符</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/6.Python3字符串.html"><strong aria-hidden="true">37.6.</strong> Python3字符串</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/7.python3列表.html"><strong aria-hidden="true">37.7.</strong> python3列表</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/8.元祖.html"><strong aria-hidden="true">37.8.</strong> 元祖</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/9.Python3字典.html"><strong aria-hidden="true">37.9.</strong> Python3字典</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/10.Python3集合.html"><strong aria-hidden="true">37.10.</strong> Python3集合</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/11.Number类型.html"><strong aria-hidden="true">37.11.</strong> Number类型</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/12.python3流程控制.html"><strong aria-hidden="true">37.12.</strong> python3流程控制</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/13.Python3迭代器与生成器.html"><strong aria-hidden="true">37.13.</strong> Python3迭代器与生成器</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/14.函数.html"><strong aria-hidden="true">37.14.</strong> 函数</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/15.Python3JSON数据解析.html"><strong aria-hidden="true">37.15.</strong> Python3JSON数据解析</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/16.Python3面向对象.html"><strong aria-hidden="true">37.16.</strong> Python3面向对象</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/17.模块与包.html"><strong aria-hidden="true">37.17.</strong> 模块与包</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/With关键字.html"><strong aria-hidden="true">37.18.</strong> With关键字</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/杂项.html"><strong aria-hidden="true">37.19.</strong> 杂项</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/fabric/index.html"><strong aria-hidden="true">37.20.</strong> fabric</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_7_python/fabric/Configuration.html"><strong aria-hidden="true">37.20.1.</strong> Configuration</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/fabric/README_1.x.html"><strong aria-hidden="true">37.20.2.</strong> README_1.x</a></li></ol></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/index.html"><strong aria-hidden="true">37.21.</strong> invoke</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/1.DefiningAndRunningTask.html"><strong aria-hidden="true">37.21.1.</strong> DefiningAndRunningTask</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/2.InvokeCoreUsage.html"><strong aria-hidden="true">37.21.2.</strong> InvokeCoreUsage</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/3.Configuration.html"><strong aria-hidden="true">37.21.3.</strong> Configuration</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/4.loadingCollections.html"><strong aria-hidden="true">37.21.4.</strong> loadingCollections</a></li><li class="chapter-item "><a href="../../其他编程语言_7_python/invoke/5.UsingInvokeAslibrary.html"><strong aria-hidden="true">37.21.5.</strong> UsingInvokeAslibrary</a></li></ol></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">note</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="quasarcli"><a class="header" href="#quasarcli">QuasarCli</a></h1>
+<h2 id="安装"><a class="header" href="#安装">安装</a></h2>
+<pre><code class="language-bash">npm install -g @quasar/cli
+quasar create &lt;folder_name&gt;
+ npx quasar dev
+</code></pre>
+<p>在你的<code>package.json</code>中添加几个npm脚本的例子：</p>
+<pre><code class="language-js">// package.json
+&quot;scripts&quot;: {
+  &quot;dev&quot;: &quot;quasar dev&quot;,
+  &quot;build&quot;: &quot;quasar build&quot;,
+  &quot;build:pwa&quot;: &quot;quasar build -m pwa&quot;
+}
+</code></pre>
+<h1 id="配置quasarconfjs"><a class="header" href="#配置quasarconfjs">配置quasar.conf.js</a></h1>
+<p>那么你可以通过<code>/quasar.conf.js</code>来配置什么？</p>
+<ul>
+<li>您将在您的网站/应用程序中使用的Quasar组件、指令和插件</li>
+<li>默认的<a href="http://www.quasarchs.com/options/quasar-language-packs">Quasar语言包</a></li>
+<li>你想使用的<a href="http://www.quasarchs.com/options/installing-icon-libraries">图标库</a></li>
+<li>Quasar组件的默认的<a href="http://www.quasarchs.com/options/quasar-icon-sets">Quasar图标集</a></li>
+<li>开发服务器端口、HTTPS模式、主机名等</li>
+<li>你想使用的<a href="http://www.quasarchs.com/options/animations">CSS动画</a></li>
+<li><a href="http://www.quasarchs.com/quasar-cli/cli-documentation/boot-files">启动文件</a> 列表（也决定了执行顺序) - 这是<code>/src/boot</code>中的文件，告诉你在安装根Vue组件之前如何初始化应用程序</li>
+<li>bundle中包含的全局CSS/Stylus/…文件</li>
+<li>PWA <a href="http://www.quasarchs.com/quasar-cli/developing-pwa/configuring-pwa#%E9%85%8D%E7%BD%AEManifest%E6%96%87%E4%BB%B6">manifest</a> 和 <a href="http://www.quasarchs.com/quasar-cli/developing-pwa/configuring-pwa#Quasar.conf.js">Workbox选项</a></li>
+<li><a href="http://www.quasarchs.com/quasar-cli/developing-electron-apps/configuring-electron#Quasar.conf.js">Electron打包器</a> 和/或 <a href="http://www.quasarchs.com/quasar-cli/developing-electron-apps/configuring-electron#Quasar.conf.js">Electron构建器</a></li>
+<li>IE11 +支持</li>
+<li>扩展的Webpack配置</li>
+</ul>
+<blockquote>
+<p>您会注意到，更改任何这些设置不需要您手动重新加载开发服务器。 Quasar检测是否可以通过<a href="https://webpack.js.org/concepts/hot-module-replacement/">热模块更换</a> 注入更改，如果不能，则会自动重新加载开发服务器。 您不会丢失开发流程，因为您只需坐等Quasar CLI快速重新加载更改的代码，甚至保持当前状态。 这节省了大量的时间！</p>
+</blockquote>
+<p>WARNING</p>
+<p><code>/quasar.conf.js</code>由Quasar CLI构建系统运行，因此这些配置代码直接在Node下运行，而不是在应用程序的上下文中运行。这意味着你可以导入像’fs’，‘path’，'webpack’等模块。确保您在此文件编写的ES6功能受安装的Node版本（应该&gt;=8.9.0)支持。</p>
+<h2 id="结构"><a class="header" href="#结构">结构</a></h2>
+<p>您会注意到<code>/quasar.conf.js</code>会导出一个函数，该函数接受<code>ctx</code>(context)参数并返回一个对象。这使您可以根据此上下文动态更改您的网站/应用配置：</p>
+<pre><code class="language-js">module.exports = function (ctx) {
+  console.log(ctx)
+
+  // 输出到控制台的例子:
+  {
+    dev: true,
+    prod: false,
+    mode: { spa: true },
+    modeName: 'spa',
+    target: {},
+    targetName: undefined,
+    arch: {},
+    archName: undefined,
+    debug: undefined
+  }
+
+  // 根据这些参数上下文将会被创建
+  // 当你运行&quot;quasar dev&quot;或&quot;quasar build&quot;时
+}
+</code></pre>
+<p>这意味着，作为一个例子，您可以在构建特定模式（如PWA）时加载字体，并为其他模式选择另一个：</p>
+<pre><code class="language-js">module.exports = function (ctx) {
+  extras: [
+    ctx.mode.pwa // we're adding only if working on a PWA
+      ? 'roboto-font'
+      : null
+  ]
+}
+</code></pre>
+<p>或者，您可以使用一个全局CSS文件用于SPA模式，使用另一个用于Cordova模式，同时避免为其他模式加载任何此类文件。</p>
+<pre><code class="language-js">module.exports = function (ctx) {
+  css: [
+    ctx.mode.spa ? 'app-spa.styl' : null, // looks for /src/css/app-spa.styl
+    ctx.mode.cordova ? 'app-cordova.styl' : null  // looks for /src/css/app-cordova.styl
+  ]
+}
+</code></pre>
+<p>或者，您可以将开发服务器配置为在端口8000上运行SPA模式，在端口9000上运行PWA模式或在端口9090上运行其他模式：</p>
+<pre><code class="language-js">module.exports = function (ctx) {
+  devServer: {
+    port: ctx.mode.spa
+      ? 8000
+      : (ctx.mode.pwa ? 9000 : 9090)
+  }
+}
+</code></pre>
+<h2 id="配置选项"><a class="header" href="#配置选项">配置选项</a></h2>
+<p>让我们逐个采取每个选项：</p>
+<table><thead><tr><th style="text-align: left">属性</th><th style="text-align: left">类型</th><th style="text-align: left">描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">css</td><td style="text-align: left">Array</td><td style="text-align: left">来自/src/css/的全局CSS/Stylus/…文件，默认包含的主题文件除外。</td></tr>
+<tr><td style="text-align: left">preFetch</td><td style="text-align: left">Boolean</td><td style="text-align: left">启用<a href="http://www.quasarchs.com/quasar-cli/cli-documentation/prefetch-feature">PreFetch功能</a>.</td></tr>
+<tr><td style="text-align: left">extras</td><td style="text-align: left">Array</td><td style="text-align: left">从<a href="https://github.com/quasarframework/quasar/tree/dev/extras">@quasar/extras</a>包中导入什么内容。 例： <em>[‘material-icons’, ‘roboto-font’, ‘ionicons-v4’]</em></td></tr>
+<tr><td style="text-align: left">vendor</td><td style="text-align: left">Object</td><td style="text-align: left">向vendor块添加/删除文件/第三方库： { add: […], remove: […] }.</td></tr>
+<tr><td style="text-align: left">supportIE</td><td style="text-align: left">Boolean</td><td style="text-align: left">增加IE11+支持.</td></tr>
+<tr><td style="text-align: left">htmlVariables</td><td style="text-align: left">Object</td><td style="text-align: left">添加可在index.template.html中使用的变量。</td></tr>
+<tr><td style="text-align: left">framework</td><td style="text-align: left">Object/String</td><td style="text-align: left">导入哪个Quasar组件/指令/插件，选择哪个Quasar语言包,使用Quasar组件的哪个Quasar图标集。</td></tr>
+<tr><td style="text-align: left">animations</td><td style="text-align: left">Object/String</td><td style="text-align: left">导入哪个<a href="http://www.quasarchs.com/options/animations">CSS动画</a>。 例： <em>[‘bounceInLeft’, ‘bounceOutRight’]</em></td></tr>
+<tr><td style="text-align: left">devServer</td><td style="text-align: left">Object</td><td style="text-align: left">Webpack开发服务器<a href="https://webpack.js.org/configuration/dev-server/">选项</a>。 根据您使用的Quasar模式覆盖某些属性，以确保正确的配置。注意：如果您要代理开发服务器（即使用云IDE），请将“public”设置为你的公共应用程序URL。</td></tr>
+<tr><td style="text-align: left">build</td><td style="text-align: left">Object</td><td style="text-align: left">构建配置。</td></tr>
+<tr><td style="text-align: left">sourceFiles</td><td style="text-align: left">Object</td><td style="text-align: left">更改应用部分的默认名称.</td></tr>
+<tr><td style="text-align: left">cordova</td><td style="text-align: left">Object</td><td style="text-align: left">Cordova特定<a href="http://www.quasarchs.com/quasar-cli/developing-cordova-apps/configuring-cordova">配置</a>。</td></tr>
+<tr><td style="text-align: left">capacitor</td><td style="text-align: left">Object</td><td style="text-align: left">Quasar CLI Capacitor特定<a href="http://www.quasarchs.com/quasar-cli/developing-capacitor-apps/configuring-capacitor">配置</a>。</td></tr>
+<tr><td style="text-align: left">pwa</td><td style="text-align: left">Object</td><td style="text-align: left">PWA特定<a href="http://www.quasarchs.com/quasar-cli/developing-pwa/configuring-pwa">配置</a>。</td></tr>
+<tr><td style="text-align: left">ssr</td><td style="text-align: left">Object</td><td style="text-align: left">SSR特定<a href="http://www.quasarchs.com/quasar-cli/developing-ssr/configuring-ssr">配置</a>.</td></tr>
+<tr><td style="text-align: left">electron</td><td style="text-align: left">Object</td><td style="text-align: left">Electron特定<a href="http://www.quasarchs.com/quasar-cli/developing-electron-apps/configuring-electron">配置</a>。</td></tr>
+</tbody></table>
+<h2 id="example"><a class="header" href="#example">example</a></h2>
+<h3 id="属性css"><a class="header" href="#属性css">属性：css</a></h3>
+<p>来自<code>/src/css/</code>的全局CSS/Stylus/…文件，默认包含的主题文件除外。</p>
+<pre><code class="language-js">// quasar.conf.js
+return {
+  css: [
+    'app.styl', // referring to /src/css/app.styl
+    '~some-library/style.css' // referring to node_modules/some-library/style.css
+  ]
+}
+</code></pre>
+<h3 id="属性vendor"><a class="header" href="#属性vendor">属性：vendor</a></h3>
+<p>默认情况下，出于性能和缓存原因，来自<code>node_modules</code>的所有内容都将注入到vendor块中。 但是，如果您希望在此特殊块中添加或删除某些内容，您可以这样做：</p>
+<pre><code class="language-js">// quasar.conf.js
+return {
+  vendor: {
+    /* 可选的; @quasar/app v1.4.2+; 
+       禁用vendor块: */ disable: true,
+
+    add: ['src/plugins/my-special-plugin'],
+    remove: ['axios', 'vue$']
+  }
+}
+</code></pre>
+<h3 id="属性framework"><a class="header" href="#属性framework">属性：framework</a></h3>
+<p>告诉CLI要导入的Quasar组件/指令/插件，要使用的Quasar I18n语言包，用于Quasar组件的图标集等等。</p>
+<pre><code class="language-js">// quasar.conf.js
+return {
+  // a list with all options (all are optional)
+  framework: {
+    components: ['QBtn', 'QIcon' /* ... */],
+    directives: ['TouchSwipe' /* ... */],
+    plugins: ['Notify' /* ... */],
+
+    // Quasar config
+    // You'll see this mentioned for components/directives/plugins which use it
+    config: { /* ... */ },
+
+    iconSet: 'fontawesome', // requires icon library to be specified in &quot;extras&quot; section too,
+    lang: 'de', // Tell Quasar which language pack to use for its own components
+
+    cssAddon: true // Adds the flex responsive++ CSS classes (noticeable bump in footprint)
+  }
+}
+</code></pre>
+<p>更多关于cssAddon参考<a href="http://www.quasarchs.com/layout/grid/introduction-to-flexbox#Flex-Addons">这里</a>.</p>
+<h3 id="自动导入功能"><a class="header" href="#自动导入功能">自动导入功能</a></h3>
+<p>@quasar/app v1.1.1+</p>
+<p>quasar v1.1.2+</p>
+<p>您还可以通过<code>framework：{all}</code>属性将Quasar CLI配置为自动导入正在使用的Quasar组件和指令：</p>
+<pre><code class="language-js">// quasar.conf.js
+framework: {
+  // Possible values for &quot;all&quot;:
+  // * 'auto' - Auto-import needed Quasar components &amp; directives
+  //            (slightly higher compile time; next to minimum bundle size; most convenient)
+  // * false  - Manually specify what to import
+  //            (fastest compile time; minimum bundle size; most tedious)
+  // * true   - Import everything from Quasar
+  //            (not treeshaking Quasar; biggest bundle size; convenient)
+  all: 'auto',
+</code></pre>
+<p>如果您设置<code>all: 'auto'</code>， <strong>那么Quasar将自动为您导入组件和指令</strong>。 编译时间将略有增加，但是您无需在quasar.conf.js中指定组件和指令。 <strong>请注意，仍需要指定Quasar插件。</strong></p>
+<p>从<code>@quasar/app</code> v1.1.2（以及<code>quasar</code> v1.1.3 +）开始，使用自动导入功能时，您还可以配置编写组件的方式：</p>
+<pre><code class="language-js">// quasar.conf.js
+framework: {
+  all: 'auto',
+  autoImportComponentCase: 'pascal' // or 'kebab' (default) or 'combined'
+</code></pre>
+<h3 id="属性devserver"><a class="header" href="#属性devserver">属性：devServer</a></h3>
+<p><strong>Webpack devServer 选项</strong>. 看看<a href="https://webpack.js.org/configuration/dev-server/">完整列表</a>的选项。 有些被Quasar CLI根据“Quasar dev”参数和Quasar模式覆盖，以确保正确的设置。 注意：如果您要代理开发服务器（即使用云IDE），请将“public”设置为公共应用程序URL。</p>
+<p>大多数使用的属性是：</p>
+<table><thead><tr><th style="text-align: left">属性</th><th style="text-align: left">类型</th><th style="text-align: left">描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">port</td><td style="text-align: left">Number</td><td style="text-align: left">dev server端口</td></tr>
+<tr><td style="text-align: left">host</td><td style="text-align: left">String</td><td style="text-align: left">dev server使用的本地IP/主机名</td></tr>
+<tr><td style="text-align: left">open</td><td style="text-align: left">Boolean/String</td><td style="text-align: left">除非将其设置为“false”，否则Quasar将打开一个自动指向开发服务器地址的浏览器。 适用于SPA，PWA和SSR模式。 如果指定String，请参阅下面的说明。</td></tr>
+<tr><td style="text-align: left">public</td><td style="text-align: left">String</td><td style="text-align: left">应用程序的公共地址（用于反向代理）</td></tr>
+</tbody></table>
+<p>使用<code>open</code>属性打开特定浏览器，而不是使用操作系统的默认浏览器（基于主机操作系统检查<a href="https://github.com/sindresorhus/open/blob/master/test.js">支持的值</a>）：</p>
+<pre><code class="language-js">// quasar.conf.js
+
+devServer: {
+  open: 'firefox'
+}
+</code></pre>
+<p>在quasar.conf.js文件中设置<code>devServer &gt; https: true</code>时，Quasar会自动为您生成SSL证书。 但是，如果您想自己为本地主机创建一个，请查看<a href="https://blog.filippo.io/mkcert-valid-https-certificates-for-localhost/">Filippo</a>的博客文章。 然后你的<code>quasar.conf.js &gt; devServer &gt; https</code>应该看起来像这样：</p>
+<pre><code class="language-js">// quasar.conf.js
+
+const fs = require('fs')
+// ...
+
+devServer: {
+  https: {
+    key: fs.readFileSync('/path/to/server.key'),
+    cert: fs.readFileSync('/path/to/server.crt'),
+    ca: fs.readFileSync('/path/to/ca.pem'),
+  }
+}
+</code></pre>
+<p>从 <strong>@quasar/app v1.3.2</strong> 开始，您还可以配置自动打开远程Vue Devtools：</p>
+<pre><code class="language-js">// quasar.conf.js
+
+devServer: {
+  vueDevtools: true
+}
+</code></pre>
+<h3 id="属性build"><a class="header" href="#属性build">属性：build</a></h3>
+<table><thead><tr><th style="text-align: left">属性</th><th style="text-align: left">类型</th><th style="text-align: left">描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">transpileDependencies</td><td style="text-align: left">Array of Regex</td><td style="text-align: left">添加使用Babel进行转换的依赖项（来自node_modules，默认情况下不会被转换）。 例： <code>[ /my-dependency/, ...]</code></td></tr>
+<tr><td style="text-align: left">transformAssetUrls</td><td style="text-align: left">Object</td><td style="text-align: left">(<strong>@quasar/app 1.3.4+</strong>) 添加对自定义标记属性的引用资源的支持。例如： <code>{ 'my-img-comp': 'src', 'my-avatar': [ 'src', 'placeholder-src' ]}</code></td></tr>
+<tr><td style="text-align: left">showProgress</td><td style="text-align: left">Boolean</td><td style="text-align: left">编译时显示进度条。</td></tr>
+<tr><td style="text-align: left">extendWebpack(cfg)</td><td style="text-align: left">Function</td><td style="text-align: left">Quasar CLI生成的扩展Webpack配置。 等同于chainWebpack()，但您可以直接访问Webpack配置对象。</td></tr>
+<tr><td style="text-align: left">chainWebpack(chain)</td><td style="text-align: left">Function</td><td style="text-align: left">Quasar CLI生成的扩展Webpack配置。 等同于extendWebpack()，但改为使用webpack-chain。</td></tr>
+<tr><td style="text-align: left">beforeDev({ quasarConf })</td><td style="text-align: left">Function</td><td style="text-align: left">在运行<code>$ quasar dev</code>命令之前准备外部服务，比如启动一些后端或应用所依赖的任何其他服务。 可以使用async/await或直接返回Promise。</td></tr>
+<tr><td style="text-align: left">afterDev({ quasarConf })</td><td style="text-align: left">Function</td><td style="text-align: left">quasar开发服务器启动后（<code>$ quasar dev</code>）运行钩子。 此时，开发服务器已启动，如果您希望对其执行某些操作则可用这个方法。 可以使用async/await或直接返回Promise。</td></tr>
+<tr><td style="text-align: left">beforeBuild({ quasarConf })</td><td style="text-align: left">Function</td><td style="text-align: left">在Quasar构建用于生产环境的应用（<code>$ quasar build</code>）之前运行钩子。 此时，尚未创建redistributables文件夹。 可以使用async/await或直接返回Promise。</td></tr>
+<tr><td style="text-align: left">afterBuild({ quasarConf })</td><td style="text-align: left">Function</td><td style="text-align: left">在Quasar构建用于生产环境的应用（<code>$ quasar build</code>）之后运行钩子。 此时，distributables文件夹已创建，如果您希望对其执行某些操作，则可用。 可以使用async/await或直接返回Promise。</td></tr>
+<tr><td style="text-align: left">onPublish(opts)</td><td style="text-align: left">Function</td><td style="text-align: left">在Quasar构建用于生产环境的应用并执行afterBuild挂钩（如果指定）之后，如果请求发布（<code>$ quasar build -P</code>），则运行挂钩。 可以使用async/await或直接返回Promise。 <code>opts</code>是<code>{arg, distDir}</code>形式的对象，其中“arg”是提供给-P的参数（如果有的话）。</td></tr>
+<tr><td style="text-align: left">publicPath</td><td style="text-align: left">String</td><td style="text-align: left">部署时的公共路径。</td></tr>
+<tr><td style="text-align: left">forceDevPublicPath</td><td style="text-align: left">Boolean</td><td style="text-align: left">(<strong>@quasar/app 1.0.6+</strong>) 也在开发版本中强制使用自定义publicPath（仅适用于SPA和PWA模式）。 请确保这确实是您要查找的内容，并且您知道自己在做什么，否则不建议这样做。</td></tr>
+<tr><td style="text-align: left">appBase</td><td style="text-align: left">String</td><td style="text-align: left">(<strong>@quasar/app 1.4.2+</strong>) 使用您的自定义值强制应用基本标签；仅在您<strong>确实</strong>知道自己在做什么的情况下进行配置，否则您可以轻松破坏应用程序。 强烈建议您保留由quasar/app计算的结果。</td></tr>
+<tr><td style="text-align: left">vueRouterBase</td><td style="text-align: left">String</td><td style="text-align: left">(<strong>@quasar/app 1.4.2+</strong>) 用您的自定义值强制应用vue router base；仅在您<strong>确实</strong>知道自己在做什么的情况下进行配置，否则您可以轻松破坏应用程序。 强烈建议您保留由quasar / app计算的结果。</td></tr>
+<tr><td style="text-align: left">vueRouterMode</td><td style="text-align: left">String</td><td style="text-align: left">设置<a href="https://router.vuejs.org/en/essentials/history-mode.html">Vue路由器模式</a>：‘hash’或’history’。 请明智选择。 历史记录模式也需要在部署Web服务器上进行配置。</td></tr>
+<tr><td style="text-align: left">htmlFilename</td><td style="text-align: left">String</td><td style="text-align: left">默认是’index.html’.</td></tr>
+<tr><td style="text-align: left">productName</td><td style="text-align: left">String</td><td style="text-align: left">默认值取自package.json&gt; productName字段。</td></tr>
+<tr><td style="text-align: left">distDir</td><td style="text-align: left">String</td><td style="text-align: left">Quasar CLI生成可分发包的目录，对应项目根目录的相对路径。 默认是’dist/{ctx.modeName}’。 适用于除Cordova (强制生成到src-cordova/www目录)以外的所有模式。</td></tr>
+<tr><td style="text-align: left">devtool</td><td style="text-align: left">String</td><td style="text-align: left">Source map<a href="https://webpack.js.org/configuration/devtool/">策略</a>使用。</td></tr>
+<tr><td style="text-align: left">env</td><td style="text-align: left">Object</td><td style="text-align: left">将属性添加到<code>process.env</code>，您可以在您的网站/应用程序JS代码中使用它。 每个属性都需要JSON编码。 例如：{SOMETHING：JSON.stringify(‘someValue’)}。</td></tr>
+<tr><td style="text-align: left">gzip</td><td style="text-align: left">Boolean</td><td style="text-align: left">使用Gzip压缩可分发包。 当您提供内容的网络服务器没有gzip功能时很有用。</td></tr>
+<tr><td style="text-align: left">scopeHoisting</td><td style="text-align: left">Boolean</td><td style="text-align: left">默认值：“true”。 使用 Webpack范围提升功能 来获得稍微更好的运行时性能。</td></tr>
+<tr><td style="text-align: left">analyze</td><td style="text-align: left">Boolean/Object</td><td style="text-align: left">使用webpack-bundle-analyzer显示构建包的分析。 如果用作对象，则表示webpack-bundle-analyzer配置对象。</td></tr>
+<tr><td style="text-align: left">vueCompiler</td><td style="text-align: left">Boolean</td><td style="text-align: left">包括vue runtime + compiler版本，而不是默认的Vue运行时版本</td></tr>
+<tr><td style="text-align: left">uglifyOptions</td><td style="text-align: left">Object</td><td style="text-align: left">缩小选项。 <a href="https://github.com/webpack-contrib/terser-webpack-plugin/#minify">完整清单</a>.</td></tr>
+<tr><td style="text-align: left">preloadChunks</td><td style="text-align: left">Boolean</td><td style="text-align: left">默认为“true”。 浏览器空闲时预加载块以改善用户以后导航到其他页面的体验。</td></tr>
+<tr><td style="text-align: left">scssLoaderOptions</td><td style="text-align: left">Object</td><td style="text-align: left">为<code>.scss</code>文件提供<code>sass-loader</code>的选项。</td></tr>
+<tr><td style="text-align: left">sassLoaderOptions</td><td style="text-align: left">Object</td><td style="text-align: left">为<code>.sass</code>文件提供<code>sass-loader</code>的选项。</td></tr>
+<tr><td style="text-align: left">stylusLoaderOptions</td><td style="text-align: left">Object</td><td style="text-align: left">提供给’stylus-loader`的选项.</td></tr>
+<tr><td style="text-align: left">lessLoaderOptions</td><td style="text-align: left">Object</td><td style="text-align: left">提供给’less-loader`的选项。</td></tr>
+</tbody></table>
+<p>Quasar CLI根据dev/build命令和Quasar模式自动配置<code>build</code>的以下属性。 但是如果你想重写一些（确保你知道你在做什么)，你可以这样做：</p>
+<table><thead><tr><th style="text-align: left">属性</th><th style="text-align: left">类型</th><th style="text-align: left">描述</th></tr></thead><tbody>
+<tr><td style="text-align: left">extractCSS</td><td style="text-align: left">Boolean</td><td style="text-align: left">从Vue文件中提取CSS</td></tr>
+<tr><td style="text-align: left">sourceMap</td><td style="text-align: left">Boolean</td><td style="text-align: left">使用 source maps</td></tr>
+<tr><td style="text-align: left">minify</td><td style="text-align: left">Boolean</td><td style="text-align: left">压缩代码（html，js，css）</td></tr>
+<tr><td style="text-align: left">webpackManifest</td><td style="text-align: left">Boolean</td><td style="text-align: left">改进缓存策略。 使用一个webpack清单文件来避免在每个版本的vendor块上更改散列导致缓存崩溃。</td></tr>
+</tbody></table>
+<p>例如，如果运行“quasar build --debug”，则无论您配置了什么，sourceMap和extractCSS都将设置为“true”。</p>
+<h3 id="属性htmlvariables"><a class="header" href="#属性htmlvariables">属性：htmlVariables</a></h3>
+<p>您可以在<code>src/index.template.html</code>中定义然后引用变量，如下所示：</p>
+<pre><code class="language-js">// quasar.conf.js
+module.exports = function (ctx) {
+  return {
+    htmlVariables: { title: 'test name' }
+</code></pre>
+<p>然后（只是一个示例，向您展示如何引用上面定义的变量，在本例中为<code>title</code>）：</p>
+<pre><code class="language-html">&lt;!-- src/index.template.html --&gt;
+&lt;%= htmlWebpackPlugin.options.title %&gt;
+</code></pre>
+<h3 id="属性sourcefiles"><a class="header" href="#属性sourcefiles">属性：sourceFiles</a></h3>
+<p>如果必须，请使用此属性更改网站/应用程序的某些文件的默认名称。 所有路径必须相对于项目的根文件夹。</p>
+<pre><code class="language-js">// default values:
+sourceFiles: {
+  rootComponent: 'src/App.vue',
+  router: 'src/router',
+  store: 'src/store',
+  indexHtmlTemplate: 'src/index.template.html',
+  registerServiceWorker: 'src-pwa/register-service-worker.js',
+  serviceWorker: 'src-pwa/custom-service-worker.js',
+  electronMainDev: 'src-electron/main-process/electron-main.dev.js',
+  electronMainProd: 'src-electron/main-process/electron-main.js'
+}
+</code></pre>
+<h3 id="为devbuild设置env的示例"><a class="header" href="#为devbuild设置env的示例">为dev/build设置env的示例</a></h3>
+<pre><code class="language-js">build: {
+  env: ctx.dev
+    ? { // 在开发状态下我们拥有以下属性
+      API: JSON.stringify('https://dev.api.com')
+    }
+    : { // 在构建状态（生产版本）下
+      API: JSON.stringify('https://prod.api.com')
+    }
+}
+</code></pre>
+<p>然后，在您的网站/应用程序中，您可以访问<code>process.env.API</code>，它将根据开发或生产构建类型指向上述两个链接中的一个。</p>
+<p>你甚至可以更进一步。 提供来自<code>quasar dev/build</code> env变量的值：</p>
+<pre><code class="language-js"># 我们在终端设置一个env变量
+$ MY_API=api.com quasar build
+
+# 然后我们在/quasar.conf.js获取它
+build: {
+  env: ctx.dev
+    ? { // 在开发状态下我们拥有以下属性
+      API: JSON.stringify('https://dev.'+ process.env.MY_API)
+    }
+    : { // 在构建状态（生产版本）下
+      API: JSON.stringify('https://prod.'+ process.env.MY_API)
+    }
+}
+</code></pre>
+<blockquote>
+<p>或者你可以使用我们的<a href="https://github.com/quasarframework/app-extension-dotenv">@quasar/dotenv</a>或<a href="https://github.com/quasarframework/app-extension-qenv">@quasar/qenv</a>应用扩展。</p>
+</blockquote>
+<p>TIP</p>
+<p>另请参阅<a href="http://www.quasarchs.com/quasar-cli/cli-documentation/handling-process-env">处理process.env</a>页面。</p>
+<h3 id="处理webpack配置"><a class="header" href="#处理webpack配置">处理Webpack配置</a></h3>
+<p>深入分析<a href="http://www.quasarchs.com/quasar-cli/cli-documentation/handling-webpack">处理Webpack</a>文档页面。</p>
+<h1 id="应用图标"><a class="header" href="#应用图标"><a href="http://www.quasarchs.com/quasar-cli/app-icons#Introduction">应用图标</a></a></h1>
+<p>如果您的目标是Quasar当前支持的所有平台，则需要制作大约80种不同的包含4种不同媒体类型（png，ico，icns和svg）的文件。 如果您只使用像Gimp，Photoshop或Affinity Designer这样的工具，您会发现这些文件相当大，制作它们并命名它们的过程容易出现操作错误。 您可能希望至少压缩PNG文件，并从SVG中删除不必要的应用元数据。</p>
+<p>此页面记录了每个构建目标所需的所有图标</p>
+<h1 id="测试与审核"><a class="header" href="#测试与审核"><a href="http://www.quasarchs.com/quasar-cli/testing-and-auditing#Introduction">测试与审核</a></a></h1>
+<p>您的Quasar项目能够添加单元和e2e测试工具，以及不断增长的产品质量审计工具套件。这篇介绍不会详细介绍如何编写和使用测试，为此请参考<a href="https://github.com/quasarframework/quasar-testing">GitHub上的测试报告</a>中特别准备和维护的文档。如果您是初学者，请考虑阅读“进一步阅读”章节中的其中一本书。</p>
+<h1 id="cli文档"><a class="header" href="#cli文档"><a href="http://www.quasarchs.com/quasar-cli/cli-documentation/directory-structure#Introduction">cli文档</a></a></h1>
+<h2 id="目录结构"><a class="header" href="#目录结构">目录结构</a></h2>
+<p>TIP</p>
+<p>如果你是初学者，你需要关心的是 <code>/quasar.conf.js</code> (Quasar应用配置文件)、<code>/src/router</code>、 <code>/src/layouts</code>、 <code>/src/pages</code> 以及可选的 <code>/src/assets</code>。</p>
+<pre><code class="language-bash">.
+├── src/
+│   ├── assets/              # 动态资源（由webpack处理）
+│   ├── statics/             # 纯静态资源（直接复制）
+│   ├── components/          # 用于页面和布局的.vue组件
+│   ├── css/                 # CSS/Stylus/Sass/...文件
+|   |   ├── app.styl
+|   │   └── quasar.variables.styl # 供您调整的Quasar Stylus变量
+│   ├── layouts/             # 布局 .vue 文件
+│   ├── pages/               # 页面 .vue 文件
+│   ├── boot/                # 启动文件 (app initialization code) 
+│   ├── router/              # Vue路由
+|   |   ├── index.js         # Vue路由定义
+|   │   └── routes.js        # App路由定义
+│   ├── store/               # Vuex Store
+|   |   ├── index.js         # Vuex Store 定义
+|   │   ├── &lt;folder&gt;         # Vuex Store 模块...
+|   │   └── &lt;folder&gt;         # Vuex Store 模块...
+│   ├── App.vue              # APP的根Vue组件
+│   └── index.template.html  # index.html模板
+├── src-ssr/                 # SSR特定代码(就像生产环境的Node网页服务器)
+├── src-pwa/                 # PWA特定代码（如Service Worker）
+├── src-cordova/             # Cordova生成的文件夹用于创建移动APP
+├── src-electron/            # Electron特定代码（如&quot;main&quot;线程)
+├── dist/                    # 生产版本代码，用于部署
+│   ├── spa/                 # 构建SPA的例子
+│   ├── ssr/                 # 构建SSR的例子
+│   ├── electron/            # 构建Electron的例子
+│   └── ....
+├── quasar.conf.js           # Quasar App配置文件
+├── babel.config.js          # Babeljs配置
+├── .editorconfig            # editor配置
+├── .eslintignore            # ESlint忽略路径
+├── .eslintrc.js             # ESlint配置
+├── .postcssrc.js            # PostCSS配置
+├── .stylintrc               # Stylus lint配置
+├── .gitignore               # GIT忽略路径
+├── package.json             # npm脚本和依赖项
+└── README.md                # 您的网站/应用程序的自述文件
+</code></pre>
+<h2 id="构建命令"><a class="header" href="#构建命令"><a href="http://www.quasarchs.com/quasar-cli/cli-documentation/build-commands#Introduction">构建命令</a></a></h2>
+<h2 id="css预处理"><a class="header" href="#css预处理">CSS预处理</a></h2>
+<p>如果想使用<strong>Sass</strong>或<strong>SCSS</strong>（推荐这两种中的任何一种）和<strong>Stylus</strong>，它们是通过Quasar CLI开箱即用的css预处理器。</p>
+<p>您无需安装任何其他软件包或扩展Webpack配置。</p>
+<p>WARNING</p>
+<p>为了获得完整的Sass/SCSS支持，您将需要@quasar/app v1.1.0+</p>
+<h3 id="怎么用"><a class="header" href="#怎么用">怎么用</a></h3>
+<p>您的Vue文件可以通过<code>&lt;style&gt;</code>标签包含Sass/SCSS/Stylus代码。</p>
+<pre><code class="language-html">&lt;!-- 注意lang=&quot;sass&quot; --&gt;
+&lt;style lang=&quot;sass&quot;&gt;
+div
+  color: #444
+  background-color: #dadada
+&lt;/style&gt;
+&lt;!-- 注意lang=&quot;scss&quot; --&gt;
+&lt;style lang=&quot;scss&quot;&gt;
+div {
+  color: #444;
+  background-color: #dadada;
+}
+&lt;/style&gt;
+&lt;!-- 注意lang=&quot;stylus&quot; --&gt;
+&lt;style lang=&quot;stylus&quot;&gt;
+div
+  color #444
+  background-color #dadada
+&lt;/style&gt;
+</code></pre>
+<p>而且，当然，还支持标准CSS：</p>
+<pre><code class="language-html">&lt;style&gt;
+div {
+  color: #444;
+  background-color: #dadada;
+}
+&lt;/style&gt;
+</code></pre>
+<h3 id="变量"><a class="header" href="#变量">变量</a></h3>
+<p>Quasar还提供变量（<code>$primary</code>, <code>$grey-3</code>等），您可以直接使用它们。 阅读有关<a href="http://www.quasarchs.com/style/sass-scss-variables">Sass/SCSS变量</a>和<a href="http://www.quasarchs.com/style/stylus-variables">Stylus变量</a>的更多信息。</p>
+<h2 id="应用路由"><a class="header" href="#应用路由"><a href="http://www.quasarchs.com/quasar-cli/cli-documentation/routing#Introduction">应用路由</a></a></h2>
+<h2 id="延迟加载"><a class="header" href="#延迟加载">延迟加载</a></h2>
+<p>当您的网站/应用程序很小时，您可以将所有布局/页面/组件加载到初始包中，并在启动时提供所有内容。 但是，当您的代码变得复杂时，有大量的布局/页面/组件，这样做并不是最理想的，因为它会影响加载时间。 幸运的是，有一种方法可以解决这个问题。</p>
+<p>我们将介绍如何延迟加载/编码拆分应用程序的部分，以便仅在需要时自动请求它们。 这是通过动态导入完成的。 让我们从一个例子开始，然后转换它，以便我们使用延迟加载 - 我们将聚焦这个加载一个页面的例子，但同样的原则可以应用于加载任何东西（资源、JSONs、…）：</p>
+<h3 id="延迟加载路由页面"><a class="header" href="#延迟加载路由页面">延迟加载路由页面</a></h3>
+<p>使用Vue-Router调用静态组件是正常的。</p>
+<pre><code class="language-js">import SomePage from 'pages/SomePage'
+
+const routes = [
+  {
+    path: '/some-page',
+    component: SomePage
+  }
+]
+</code></pre>
+<p>现在让我们改变这种方式，并使用动态导入使页面按需加载：</p>
+<pre><code class="language-js">const routes = [
+  {
+    path: '/some-page',
+    component: () =&gt; import('pages/SomePage')
+  }
+]
+</code></pre>
+<p>很简单，对吧？ 它所做的是为<code>/src/pages/SomePage.vue</code>创建一个单独的块，只有在需要时才加载。 在这个例子中，指当用户访问’/same-page’的路由的时候。</p>
+<h3 id="延迟加载组件"><a class="header" href="#延迟加载组件">延迟加载组件</a></h3>
+<p>通常，您将导入一个组件，然后将其注册到页面、布局或组件。</p>
+<pre><code class="language-html">&lt;script&gt;
+import SomeComponent from 'components/SomeComponent'
+
+export default {
+  components: {
+    SomeComponent,
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<p>现在让我们改变这种方式，使用动态导入使组件按需加载：</p>
+<pre><code class="language-html">&lt;script&gt;
+export default {
+  components: {
+    SomeComponent: () =&gt; import('components/SomeComponent'),
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h3 id="延迟加载即时生效"><a class="header" href="#延迟加载即时生效">延迟加载即时生效</a></h3>
+<p>正如你在上面注意到的那样，我们使用动态导入（<code>import('.. resource ..')</code>）而不是常规导入（<code>import resource from './path/to/resource'</code>）。 动态导入基本上返回一个您可以使用的Promise：</p>
+<pre><code class="language-js">import('./categories.json')
+  .then(categories =&gt; {
+    // 嘿, 我们已经延迟加载了这个文件
+    // 并且我们有了&quot;categories&quot;中的内容
+  })
+  .catch(() =&gt; {
+    // 哦, 哪里出错了...
+    // 不能加载资源
+  })
+</code></pre>
+<p>使用动态导入而不是常规导入的一个优点是导入路径可以在运行时确定：</p>
+<pre><code class="language-js">import('pages/' + pageName + '/' + 'id')
+</code></pre>
+<h3 id="注意动态导入"><a class="header" href="#注意动态导入">注意动态导入</a></h3>
+<p>在前面的例子中使用可变部分的动态导入时有一点需要注意。 当网站/应用程序被打包，在编译时我们无法知道运行时确切的导入路径。 因此，将为每个可以匹配变量路径的文件创建块。 您可能会在构建日志中看到不必要的文件。</p>
+<p>那么我们如何限制在这种情况下创建的块的数量呢？ 方法是尽可能地限制可变部分，因此匹配的路径尽可能少。 1.添加文件扩展名，即使它没有扩展名也能用。 这将仅为该文件类型创建块。 当该文件夹包含许多文件类型时很有用。</p>
+<pre><code class="language-js">// 糟糕
+import('./folder/' + pageName)
+
+// 这样更好
+import('./folder/' + pageName + '.vue')
+</code></pre>
+<p>2.尝试创建一个文件夹结构，以限制可变路径中的文件。 尽可能具体说明：</p>
+<pre><code class="language-js">// 糟糕 -- 为在./folder中的所有JSON创建块 (递归查询)
+const asset = 'my/jsons/categories.json'
+import('./folder/' + asset)
+
+// 很好 --仅为在./folder/my/jsons中的JSON创建块
+const asset = 'categories.json'
+import('./folder/my/jsons/' + asset)
+</code></pre>
+<p>3.尝试从仅包含文件的文件夹导入。 以前面的例子为例，假设./folder/my/jsons还包含子文件夹。 我们通过指定更具体的路径来使动态导入更好，但在这种情况下它仍然不是最优的。 最好是使用仅包含文件的终端文件夹，因此我们限制匹配路径的数量。</p>
+<ol>
+<li>使用<a href="https://webpack.js.org/api/module-methods/#magic-comments">Webpack魔术注释</a>的<code>webpackInclude</code>和<code>webpackExclude</code>通过正则表达式约束捆绑的块，例如：</li>
+</ol>
+<pre><code class="language-js">await import(
+  /* webpackInclude: /(ar|en-us|ro)\.js$/ */
+  `quasar/lang/${langIso}`
+)
+  .then(lang =&gt; {
+    Quasar.lang.set(lang.default)
+  })
+</code></pre>
+<p>将导致仅捆绑您网站/应用程序所需的语言包，而不是捆绑所有语言包（超过40种！），这可能会妨碍<code>quasar dev</code>和<code>quasar build</code>.命令的性能。</p>
+<p>请记住，匹配路径的数量等于正在生成的组块的数量。</p>
+<h2 id="资源处理"><a class="header" href="#资源处理"><a href="http://www.quasarchs.com/quasar-cli/cli-documentation/handling-assets#Introduction">资源处理</a></a></h2>
+<h2 id="启动文件"><a class="header" href="#启动文件">启动文件</a></h2>
+<p><strong>在实例化根Vue应用程序实例之前运行代码</strong></p>
+<h3 id="解剖一个启动文件"><a class="header" href="#解剖一个启动文件">解剖一个启动文件</a></h3>
+<p>启动文件是一个简单的可以选择导出函数的JavaScript文件。 当启动应用程序时，Quasar将调用导出的函数，并将具有以下属性的<strong>一个对象</strong>传递给该函数：</p>
+<table><thead><tr><th style="text-align: left">属性名称</th><th style="text-align: left">说明</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>app</code></td><td style="text-align: left">根组件通过Vue实例化的对象</td></tr>
+<tr><td style="text-align: left"><code>router</code></td><td style="text-align: left">来自’src/router/index.js’的Vue路由器实例</td></tr>
+<tr><td style="text-align: left"><code>store</code></td><td style="text-align: left">应用Vuex存储的实例 - <strong>只有当您的项目使用Vuex（您有src/store）时才会传递store</strong></td></tr>
+<tr><td style="text-align: left"><code>Vue</code></td><td style="text-align: left">和<code>import Vue from 'vue'</code>一样，它在那里是为了方便</td></tr>
+<tr><td style="text-align: left"><code>ssrContext</code></td><td style="text-align: left">如果为SSR构建，则仅在服务器端可用</td></tr>
+<tr><td style="text-align: left"><code>urlPath</code></td><td style="text-align: left">(<strong>@quasar/app 1.0.7+</strong>) URL的路径名（路径+搜索）部分；在客户端（仅在客户端），它也包含哈希值。</td></tr>
+<tr><td style="text-align: left"><code>redirect</code></td><td style="text-align: left">(<strong>@quasar/app 1.0.7+</strong>) 重定向到另一个URL的调用函数。</td></tr>
+</tbody></table>
+<pre><code class="language-js">export default ({ app, router, store, Vue }) =&gt; {
+  // something to do
+}
+export default async ({ app, router, store, Vue }) =&gt; {
+  // something to do
+  await something()
+}
+
+注意我们正在使用ES6解构赋值。只分配你实际需要/使用的东西。
+</code></pre>
+<h3 id="何时使用启动文件"><a class="header" href="#何时使用启动文件">何时使用启动文件</a></h3>
+<p>WARNING</p>
+<p>请确保您了解应用插件解决什么问题，以及何时适合使用它们，以避免在不需要它们的情况下应用它们。</p>
+<ul>
+<li>你的Vue插件有安装说明，就像需要调用<code>Vue.use()</code>一样。</li>
+<li>你的Vue插件需要实例化添加到根实例的数据 - 一个例子是<a href="https://github.com/kazupon/vue-i18n/">vue-i18n</a>。</li>
+<li>您想使用<code>Vue.mixin()</code>添加全局mixin。</li>
+<li>您想添加一些东西到Vue原型以方便访问 - 一个例子是在Vue文件中方便地使用<code>this.$axios</code>而不是在每个这样的文件中导入Axios。</li>
+<li>你想干涉路由器 - 一个例子是使用<code>router.beforeEach</code>进行认证</li>
+<li>你想干涉Vuex存储实例 - 一个例子是使用<code>vuex-router-sync</code>软件包</li>
+<li>配置库的方面 - 一个例子是创建一个带有基本URL的Axios实例;你可以将它注入到Vue原型中和/或导出它（这样你就可以从应用程序中的任何其他地方导入实例）</li>
+</ul>
+<h3 id="不需要使用启动文件的示例"><a class="header" href="#不需要使用启动文件的示例">不需要使用启动文件的示例</a></h3>
+<ul>
+<li>对于像Lodash这样的普通JavaScript库，在使用之前不需要任何初始化。例如，Lodash可能只有在你想注入Vue原型时(例如可以在你的Vue文件中使用<code>this.$_</code>)用作启动文件才有意义。</li>
+</ul>
+<h3 id="使用启动文件"><a class="header" href="#使用启动文件">使用启动文件</a></h3>
+<p>第一步总是使用Quasar CLI生成一个新的启动文件：</p>
+<pre><code class="language-bash">$ quasar new boot &lt;name&gt;
+</code></pre>
+<p>其中<code>&lt;name&gt;</code>应该替换为您的启动文件的合适名称。</p>
+<p>这个命令创建一个新文件：<code>/src/boot/&lt;name&gt;.js</code>包含以下内容：</p>
+<pre><code class="language-js">// import something here
+
+// &quot;async&quot; is optional
+// remove it if you don't need it
+export default async ({ /* app, router, store, Vue */ }) =&gt; {
+  // something to do
+}
+</code></pre>
+<p>You can also return a Promise:</p>
+<pre><code class="language-js">// import something here
+
+export default ({ /* app, router, store, Vue */ }) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    // do something
+  })
+}
+</code></pre>
+<p>最后一步是告诉Quasar使用你的新启动文件。 为了做到这一点，你需要在<code>/quasar.conf.js</code>中添加启动文件</p>
+<pre><code class="language-js">boot: [
+  // references /src/boot/&lt;name&gt;.js
+  '&lt;name&gt;'
+]
+</code></pre>
+<p>构建SSR应用程序时，您可能希望某些启动文件仅在服务器上运行或仅在客户端上运行，在这种情况下，您可以执行以下操作：</p>
+<pre><code class="language-js">boot: [
+  {
+    server: false, // run on client-side only!
+    path: '&lt;name&gt;' // references /src/boot/&lt;name&gt;.js
+  },
+  {
+    client: false, // run on server-side only!
+    path: '&lt;name&gt;' // references /src/boot/&lt;name&gt;.js
+  }
+]
+</code></pre>
+<p>如果要从node_modules指定启动文件，可以通过在路径前加上<code>~</code>（波浪号）字符来实现：</p>
+<pre><code class="language-js">boot: [
+  // boot file from an npm package
+  '~my-npm-package/some/file'
+]
+</code></pre>
+<p>如果您希望仅针对特定的构建类型将启动文件注入您的应用程序：</p>
+<pre><code class="language-js">boot: [
+  ctx.mode.electron ? 'some-file' : ''
+]
+</code></pre>
+<h3 id="重定向到另一个页面"><a class="header" href="#重定向到另一个页面">重定向到另一个页面</a></h3>
+<p>@quasar/app 1.0.7+</p>
+<pre><code class="language-js">export default ({ urlPath, redirect }) =&gt; {
+  // ...
+  const isAuthorized = // ...
+  if (!isAuthorized &amp;&amp; !urlPath.startsWith('/login')) {
+    redirect('/login')
+    return
+  }
+  // ...
+}
+</code></pre>
+<p>如前几节所述，引导文件的默认导出可以返回Promise。 如果此Promise被包含“url”属性的对象拒绝，则Quasar CLI会将用户重定向到该URL：</p>
+<pre><code class="language-js">export default ({ urlPath }) =&gt; {
+  return new Promise((resolve, reject) =&gt; {
+    // ...
+    const isAuthorized = // ...
+    if (!isAuthorized &amp;&amp; !urlPath.startsWith('/login')) {
+      reject({ url: '/login' })
+      return
+    }
+    // ...
+  })
+}
+</code></pre>
+<p>或更简单的等效代码：</p>
+<pre><code class="language-js">export default () =&gt; {
+  // ...
+  const isAuthorized = // ...
+    if (!isAuthorized &amp;&amp; !urlPath.startsWith('/login')) {
+    return Promise.reject({ url: '/login' })
+  }
+  // ...
+}
+</code></pre>
+<h3 id="quasar应用程序流程"><a class="header" href="#quasar应用程序流程">Quasar应用程序流程</a></h3>
+<p>为了更好地理解启动文件的功能和用途，您需要了解您的网站/应用程序是如何启动的：</p>
+<ol>
+<li>Quasar已初始化（组件、指令、插件、Quasar i18n、Quasar图标集）</li>
+<li>Quasar Extras被导入（Roboto字体 - 如果使用，图标，动画…）</li>
+<li>Quasar CSS和您的应用程序的全局CSS已导入</li>
+<li>App.vue被加载（尚未被使用）</li>
+<li>Store被导入（如果在src/store中使用Vuex存储）</li>
+<li>启动文件已导入</li>
+<li>启动文件会执行其默认导出功能 7.（如果在Electron模式下）Electron 被导入并注入Vue原型 8.（如果在Cordova模式下）收听“deviceready”事件，然后继续执行以下步骤</li>
+<li>使用根组件实例化Vue并附加到DOM</li>
+</ol>
+<h3 id="启动文件的例子"><a class="header" href="#启动文件的例子">启动文件的例子</a></h3>
+<h4 id="axios"><a class="header" href="#axios">Axios</a></h4>
+<pre><code class="language-js">import Vue from 'vue'
+import axios from 'axios'
+
+// we add it to Vue prototype
+// so we can reference it in Vue files
+// without the need to import axios
+Vue.prototype.$axios = axios
+
+// Example: this.$axios will reference Axios now so you don't need stuff like vue-axios
+</code></pre>
+<h4 id="vue-i18n"><a class="header" href="#vue-i18n">vue-i18n</a></h4>
+<pre><code class="language-js">import Vue from 'vue'
+// 导入外部包
+import VueI18n from 'vue-i18n'
+
+// 包含语言包的/src/i18n中一个文件
+import messages from 'src/i18n'
+
+
+// 告诉Vue使用我们的Vue包:
+Vue.use(VueI18n)
+export default ({ app, Vue }) =&gt; {
+  // 在应用中设置i18n实例;
+  // 我们通过这样做将它注入到根组件;
+  // new Vue({..., i18n: ... }).$mount(...)
+
+  app.i18n = new VueI18n({
+    locale: 'en',
+    fallbackLocale: 'en',
+    messages
+  })
+}
+</code></pre>
+<h4 id="路由验证"><a class="header" href="#路由验证">路由验证</a></h4>
+<p>一些插件可能需要干涉Vue路由器配置：</p>
+<pre><code class="language-js">export default ({ router, store, Vue }) =&gt; {
+  router.beforeEach((to, from, next) =&gt; {
+    //现在您需要在这里添加验证逻辑，比如调用一个API
+  })
+}
+</code></pre>
+<h3 id="从启动文件访问数据"><a class="header" href="#从启动文件访问数据">从启动文件访问数据</a></h3>
+<p>有时，您想访问您在启动文件中配置的数据，这些数据在您无权访问根Vue实例的文件中。</p>
+<p>幸运的是，因为启动文件只是普通的JavaScript文件，所以您可以根据需要将任意数量的导出添加到您的启动文件。</p>
+<p>以Axios为例。 有时候你想要在你的JavaScript文件中访问你的Axios实例，但是你不能访问根Vue实例。 为了解决这个问题，你可以在你的启动文件中导出Axios实例并将其导入到别处。</p>
+<p>考虑下面的axios启动文件：</p>
+<pre><code class="language-js">// axios启动文件(src/boot/axios.js)
+
+import Vue from 'vue'
+import axios from 'axios'
+
+// 我们创建我们自己的axios实例并设置一个自定义的基本URL。
+// 请注意，如果我们不在这里设置任何配置，我们不需要
+// 一个命名的导出，因为我们可以`import axios from 'axios'`
+const axiosInstance = axios.create({
+  baseURL: 'https://api.example.com'
+})
+
+// 在Vue文件中通过this.$axios来使用
+Vue.prototype.$axios = axiosInstance
+
+// 这里我们定义一个命名的导出，
+// 然后我们后面可以使用这个内部的.js文件:
+export { axiosInstance }
+</code></pre>
+<p>在任何JavaScript文件中，您都可以像这样导入axios实例:</p>
+<pre><code class="language-js">// 我们从src/boot/axios.js中导入一个命名的导出
+import { axiosInstance } from 'boot/axios'
+</code></pre>
+<h2 id="预取prefetch功能"><a class="header" href="#预取prefetch功能">预取（PreFetch）功能</a></h2>
+<p>预取是一项功能（<strong>仅在使用Quasar CLI</strong>时可用），它允许Vue路由(在<code>/src/router/routes.js</code>定义)获取的组件去：</p>
+<ul>
+<li>预取数据</li>
+<li>验证路由</li>
+<li>当某些条件不满足时（如用户未登录），重定向到另一条路由</li>
+<li>可以帮助初始化存储状态</li>
+</ul>
+<p>以上所有内容都将在实际路由组件呈现之前运行。</p>
+<p><strong>它适用于所有Quasar模式</strong>（SPA、PWA、SSR、Cordova、Electron），但它对SSR构建特别有用。</p>
+<h3 id="安装-1"><a class="header" href="#安装-1">安装</a></h3>
+<pre><code class="language-js">// quasar.conf.js
+return {
+  preFetch: true
+}
+</code></pre>
+<blockquote>
+<p>WARNING</p>
+<p>当您使用它来预取数据时，您需要使用Vuex存储，因此在创建项目时请确保您的项目文件夹具有<code>/src/store</code>文件夹，否则生成新项目并复制store文件夹内容到当前项目。</p>
+</blockquote>
+<h3 id="预取功能激活场景"><a class="header" href="#预取功能激活场景">预取功能激活场景</a></h3>
+<p><code>preFetch</code>钩子（在下一节中描述）由访问的路由决定 - 它也决定了渲染的组件。实际上，给定路由所需的数据也是在该路由上渲染的组件所需的数据。 <strong>因此将钩子逻辑仅置于路由组件内是很自然的（也是必需的）</strong>。 这包括<code>/src/App.vue</code>，在这种情况下，它只会在app启动时运行一次。</p>
+<p>让我们举一个例子来了解何时调用钩子。假设我们有这些路由，并且我们为所有这些组件编写了<code>preFetch</code>钩子：</p>
+<pre><code class="language-js">// routes
+[
+  {
+    path: '/',
+    component: LandingPage
+  },
+  {
+    path: '/shop',
+    component: ShopLayout,
+    children: [
+      {
+        path: 'all',
+        component: ShopAll
+      },
+      {
+        path: 'new',
+        component: ShopNew
+      },
+      {
+        path: 'product/:name',
+        component: ShopProduct,
+        children: [{
+          path: 'overview',
+          component: ShopProductOverview
+        }]
+      }
+    ]
+  }
+]
+</code></pre>
+<p>现在，让我们看看当用户一个接一个地按照下面指定的顺序访问这些路由时如何调用钩子。</p>
+<table><thead><tr><th style="text-align: left">正在访问的路由</th><th style="text-align: left">调用的钩子</th><th style="text-align: left">观察</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>/</code></td><td style="text-align: left">App.vue然后登陆页面</td><td style="text-align: left">自我们的应用程序启动以来，就调用了App.vue挂钩。</td></tr>
+<tr><td style="text-align: left"><code>/shop/all</code></td><td style="text-align: left">ShopLayout然后ShopAll</td><td style="text-align: left">-</td></tr>
+<tr><td style="text-align: left"><code>/shop/new</code></td><td style="text-align: left">ShopNew</td><td style="text-align: left">ShopNew是ShopLayout的子项，ShopLayout已经渲染，因此不再调用ShopLayout。</td></tr>
+<tr><td style="text-align: left"><code>/shop/product/pyjamas</code></td><td style="text-align: left">ShopProduct</td><td style="text-align: left">-</td></tr>
+<tr><td style="text-align: left"><code>/shop/product/shoes</code></td><td style="text-align: left">ShopProduct</td><td style="text-align: left">Quasar注意到已经渲染了相同的组件，但是路由已经更新并且它有路由参数，所以它再次调用了钩子。</td></tr>
+<tr><td style="text-align: left"><code>/shop/product/shoes/overview</code></td><td style="text-align: left">ShopProduct然后ShopProductOverview</td><td style="text-align: left">ShopProduct具有路由参数，因此即使已经渲染它也会被调用。</td></tr>
+<tr><td style="text-align: left"><code>/</code></td><td style="text-align: left">登陆页面</td><td style="text-align: left"></td></tr>
+</tbody></table>
+<h3 id="用法"><a class="header" href="#用法">用法</a></h3>
+<p>钩子被定义为我们的路由组件上名为<code>preFetch</code>的自定义静态函数。请注意，因为在实例化组件之前将调用此函数，所以它无法访问<code>this</code>。</p>
+<pre><code class="language-html">&lt;!-- some .vue component used as route --&gt;
+&lt;template&gt;
+  &lt;div&gt;{{ item.title }}&lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  // our hook here
+  preFetch ({ store, currentRoute, previousRoute, redirect, ssrContext }) {
+    // fetch data, validate route and optionally redirect to some other route...
+
+    // ssrContext is available only server-side in SSR mode
+
+    // No access to &quot;this&quot; here as preFetch() is called before
+    // the component gets instantiated.
+
+    // Return a Promise if you are running an async job
+    // Example:
+    return store.dispatch('fetchItem', currentRoute.params.id)
+  },
+
+  computed: {
+    // display the item from store state.
+    item () {
+      return this.$store.state.items[this.$route.params.id]
+    }
+  }
+}
+&lt;/script&gt;
+// related action for Promise example
+// ...
+
+actions: {
+  fetchItem ({ commit }, id) {
+    return axiosInstance.get(url, id).then(({ data }) =&gt; {
+      commit('mutation', data)
+    })
+  }
+}
+
+// ...
+</code></pre>
+<h3 id="重定向示例"><a class="header" href="#重定向示例">重定向示例</a></h3>
+<p>下面是在某些情况下重定向用户的示例，例如当他们尝试访问只有经过身份验证的用户应该看到的页面时。</p>
+<pre><code class="language-js">// We assume here we already wrote the authentication logic
+// in the Vuex Store, so take as a high-level example only.
+preFetch ({ store, redirect }) {
+  if (!store.state.authenticated) {
+    // IMPORTANT! Always use the String form of a
+    // route if also building for SSR. The Object form
+    // won't work on SSR builds.
+    redirect('/login')
+  }
+}
+</code></pre>
+<h3 id="使用预取功能初始化存储"><a class="header" href="#使用预取功能初始化存储">使用预取功能初始化存储</a></h3>
+<p>当应用程序启动时，<code>preFetch</code>挂钩只运行一次，因此您可以利用此机会在此处初始化Vuex存储。</p>
+<pre><code class="language-js">// App.vue
+export default {
+  // ...
+  preFetch ({ store }) {
+    // initialize something in store here
+  }
+}
+</code></pre>
+<h3 id="加载中"><a class="header" href="#加载中">加载中</a></h3>
+<p>还可以使用<a href="http://www.quasarchs.com/quasar-plugins/loading">加载中</a> 插件。 这是一个例子：</p>
+<pre><code class="language-js">
+// a route .vue component
+import { Loading } from 'quasar'
+
+export default {
+  // ...
+  preFetch ({ /* ... */ }) {
+    Loading.show()
+
+    return new Promise(resolve =&gt; {
+      // do something async here
+      // then call &quot;resolve()&quot;
+    }).then(() =&gt; {
+      Loading.hide()
+    })
+  }
+}
+</code></pre>
+<h2 id="api代理"><a class="header" href="#api代理">API代理</a></h2>
+<p>将项目文件夹（由Quasar CLI创建）与现有后端集成时，通常需要在使用开发服务器时访问后端API。 为此，我们可以并行（或远程）运行开发服务器和API后端，并让开发服务器将所有API请求代理到实际的后端。</p>
+<p>如果您在API请求中访问相对路径，这很有用。 显然，这些相对路径可能在您开发时无法正常工作。 为了创建与您部署的网站/应用使用的环境类似的环境，您可以代理您的API请求。</p>
+<p>要配置代理规则，编辑<code>/quasar.conf.js</code>中的<code>devServer.proxy</code>。 有关详细用法，请参阅<a href="https://webpack.js.org/configuration/dev-server/#devserver-proxy">Webpack Dev Server Proxy</a>文档。 但是这里有一个简单的例子：</p>
+<pre><code class="language-js">// quasar.conf.js
+
+devServer: {
+  proxy: {
+    // 将所有以/api开头的请求代理到jsonplaceholder
+    '/api': {
+      target: 'http://some.api.target.com:7070',
+      changeOrigin: true,
+      pathRewrite: {
+        '^/api': ''
+      }
+    }
+  }
+}
+</code></pre>
+<p>上面的例子将代理请求 <code>/api/posts/1</code> 到 <code>http://some.api.target.com:7070/posts/1</code>.</p>
+<h2 id="webpack处理"><a class="header" href="#webpack处理">Webpack处理</a></h2>
+<p>构建系统使用Webpack创建您的网站/应用程序。 如果您不熟悉Webpack，请不要担心。 因为它开箱即用。您无需对其进行配置，因为它已经设置了一切。</p>
+<h3 id="与quasarconfjs一起使用"><a class="header" href="#与quasarconfjs一起使用">与quasar.conf.js一起使用</a></h3>
+<p>对于需要调整默认Webpack配置的情况，可以通过编辑<code>/quasar.conf.js</code>和配置<code>build&gt; extendWebpack(cfg)</code> 方法或 <code>build &gt; chainWebpack (chain)</code>来实现。</p>
+<p>向Webpack添加ESLint加载器的例子（假设你已经安装了它）：</p>
+<p>对于需要调整默认Webpack配置的情况，可以通过编辑<code>/quasar.conf.js</code>和配置<code>build&gt; extendWebpack(cfg)</code> 方法或 <code>build &gt; chainWebpack (chain)</code>来实现。</p>
+<p>向Webpack添加ESLint加载器的例子（假设你已经安装了它）：</p>
+<pre><code class="language-js">// quasar.conf.js
+build: {
+  extendWebpack (cfg, { isServer, isClient }) {
+    cfg.module.rules.push({
+      enforce: 'pre',
+      test: /\.(js|vue)$/,
+      loader: 'eslint-loader',
+      exclude: /(node_modules|quasar)/,
+      options: {
+        formatter: require('eslint').CLIEngine.getFormatter('stylish')
+      }
+    })
+  }
+}
+</code></pre>
+<p>注意你不需要返回任何东西。 extendWebpack（cfg）的参数是由Quasar为您生成的Webpack配置对象。 假设你真的知道你在做什么，你可以添加/删除/替换任何东西。</p>
+<p>chainWebpack()的等价quasar.conf：</p>
+<pre><code class="language-js">// quasar.conf.js
+build: {
+  chainWebpack (chain, { isServer, isClient }) {
+    chain.module.rule('eslint')
+      .test(/\.(js|vue)$/)
+      .enforce('pre')
+      .exclude
+        .add((/[\\/]node_modules[\\/]/))
+        .end()
+      .use('eslint-loader')
+        .loader('eslint-loader')
+  }
+}
+</code></pre>
+<h3 id="检查webpack配置"><a class="header" href="#检查webpack配置">检查Webpack配置</a></h3>
+<p>Quasar CLI为此提供了一个有用的命令：</p>
+<pre><code class="language-bash">$ quasar inspect -h
+
+  Description
+    Inspect Quasar generated Webpack config
+
+  Usage
+    $ quasar inspect
+    $ quasar inspect -c build
+    $ quasar inspect -m electron -p 'module.rules'
+
+  Options
+    --cmd, -c        Quasar command [dev|build] (default: dev)
+    --mode, -m       App mode [spa|ssr|pwa|cordova|electron] (default: spa)
+    --depth, -d      Number of levels deep (default: 5)
+    --path, -p       Path of config in dot notation
+                        Examples:
+                          -p module.rules
+                          -p plugins
+    --help, -h       Displays this message
+</code></pre>
+<h3 id="webpack别名"><a class="header" href="#webpack别名">Webpack别名</a></h3>
+<p>Quasar带有一些预先配置好的Webpack别名。 您可以在项目中的任何位置使用它们，webpack将解析为正确的路径。</p>
+<table><thead><tr><th style="text-align: left">别名</th><th style="text-align: left">解析为</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>src</code></td><td style="text-align: left">/src</td></tr>
+<tr><td style="text-align: left"><code>app</code></td><td style="text-align: left">/</td></tr>
+<tr><td style="text-align: left"><code>components</code></td><td style="text-align: left">/src/components</td></tr>
+<tr><td style="text-align: left"><code>layouts</code></td><td style="text-align: left">/src/layouts</td></tr>
+<tr><td style="text-align: left"><code>pages</code></td><td style="text-align: left">/src/pages</td></tr>
+<tr><td style="text-align: left"><code>assets</code></td><td style="text-align: left">/src/assets</td></tr>
+<tr><td style="text-align: left"><code>boot</code></td><td style="text-align: left">/src/boot</td></tr>
+</tbody></table>
+<p>另外，如果您配置为使用Vue编译器版本（quasar.conf &gt; build &gt; vueCompiler: true）进行构建，那么<code>vue$</code>会解析为<code>vue/dist/vue.esm.js</code>。</p>
+<h3 id="添加webpack别名"><a class="header" href="#添加webpack别名">添加Webpack别名</a></h3>
+<p>要添加自己的别名，可以扩展webpack配置并将其与现有别名合并。 使用<code>path.resolve</code>辅助程序来解析目标别名的路径。</p>
+<pre><code class="language-js">// quasar.conf.js
+const path = require('path')
+
+module.exports = function (ctx) {
+  return {
+    build: {
+      extendWebpack (cfg, { isServer, isClient }) {
+        cfg.resolve.alias = {
+          ...cfg.resolve.alias, // This adds the existing alias
+
+          // Add your own alias like this
+          myalias: path.resolve(__dirname, './src/somefolder'),
+        }
+      }
+    }
+  }
+}
+</code></pre>
+<p>与chainWebpack()等效：</p>
+<pre><code class="language-js">
+// quasar.conf.js
+const path = require('path')
+
+module.exports = function (ctx) {
+  return {
+    build: {
+      chainWebpack (chain, { isServer, isClient }) {
+        chain.resolve.alias
+          .set('myalias', path.resolve(__dirname, './src/somefolder'))
+      }
+    }
+  }
+}
+</code></pre>
+<h3 id="webpack装载器"><a class="header" href="#webpack装载器">Webpack装载器</a></h3>
+<p>构建系统使用Webpack，所以它依靠使用webpack加载器来处理不同类型的文件（js，css，styl，scss，json等）。 默认情况下，最常用的加载程序是默认提供的。</p>
+<h3 id="安装装载器"><a class="header" href="#安装装载器">安装装载器</a></h3>
+<p>我们举个例子吧。 你想能够导入<code>.json</code>文件。 <strong>Quasar提供开箱即用的json支持，所以您实际上不需要执行这些步骤，但为了演示如何添加加载程序，我们将假装Quasar不提供它。</strong></p>
+<p>所以，你需要一个装载机。 你搜索谷歌，看看你需要什么样的webpack loader。 在这种情况下，它是“json-loader”。 我们先安装它：</p>
+<pre><code class="language-bash">$ yarn add --dev json-loader
+</code></pre>
+<p>在安装新的加载器之后，我们想告诉Webpack使用它。 因此，我们编辑<code>/quasar.conf.js</code>并更改<code>build.extendWebpack()</code>为这个新的加载器添加条目到<code>module/rules</code>：</p>
+<pre><code class="language-js">// quasar.conf
+build: {
+  extendWebpack (cfg) {
+    cfg.module.rules.push({
+      test: /\.json$/,
+      loader: 'json-loader'
+    })
+  }
+}
+</code></pre>
+<p>与chainWebpack()等效:</p>
+<pre><code class="language-js">// quasar.conf
+build: {
+  chainWebpack (chain) {
+    chain.module.rule('json')
+      .test(/\.json$/)
+      .use('json-loader')
+        .loader('json-loader')
+  }
+}
+</code></pre>
+<p>你完成了。</p>
+<h3 id="sassscss"><a class="header" href="#sassscss">SASS/SCSS</a></h3>
+<p>所以你希望能够编写SASS/SCSS形式的CSS代码。 你需要一个装载机。 我们首先安装它。 请注意，对于这种特殊情况，您还需要安装node-sass，因为sass-loader依赖于它（作为对等依赖）。</p>
+<pre><code class="language-bash">$ yarn add --dev sass-loader node-sass
+</code></pre>
+<p>你完成了。 对于SCSS/SASS来说，这一切都是需要的。 你不需要进一步配置<code>/quasar.conf.js</code>。</p>
+<p>安装完成后，您可以在<code>*.vue</code>组件中使用此预处理器(通过在<code>&lt;style&gt;</code>标签中使用lang属性)：</p>
+<pre><code class="language-html">&lt;style lang=&quot;scss&quot;&gt;
+/* We can write SASS now! */
+&lt;/style&gt;
+</code></pre>
+<p>关于SASS语法的说明：</p>
+<ul>
+<li>lang=&quot;scss&quot;对应于CSS超集语法（带花括号和分号）。</li>
+<li>lang=&quot;sass&quot;对应于基于缩进的语法。</li>
+</ul>
+<h3 id="postcss"><a class="header" href="#postcss">PostCSS</a></h3>
+<p><code>*.vue</code>文件（以及所有其他样式文件）中的样式默认通过PostCSS传送，因此您不需要使用特定的装载器。</p>
+<p>默认情况下，PostCSS配置为使用Autoprefixer。看看`/.postcssrc.js’，你可以在那里调整它，如果你需要的话</p>
+<h3 id="pug"><a class="header" href="#pug">Pug</a></h3>
+<p>首先，您需要安装一些依赖项：</p>
+<pre><code class="language-bash">$ yarn add --dev pug pug-plain-loader
+</code></pre>
+<p>然后，您需要通过quasar.conf.js扩展webpack配置：</p>
+<pre><code class="language-js">// quasar.conf.js
+build: {
+  extendWebpack (cfg) {
+    cfg.module.rules.push({
+      test: /\.pug$/,
+      loader: 'pug-plain-loader'
+    })
+  }
+}
+</code></pre>
+<p>与chainWebpack()等效:</p>
+<pre><code class="language-js">// quasar.conf.js
+build: {
+  chainWebpack (chain) {
+    chain.module.rule('pug')
+      .test(/\.pug$/)
+      .use('pug-plain-loader')
+        .loader('pug-plain-loader')
+  }
+}
+</code></pre>
+<h3 id="coffeescript"><a class="header" href="#coffeescript">Coffeescript</a></h3>
+<p>如果您使用Coffeescript，则需要禁用ESLint或告诉ESLint哪些Vue组件正在使用Coffeescript。</p>
+<p>请注意<code>vue-loader</code>使用<code>lang='coffee'</code>来标识使用Coffeescript的组件，但是<code>lang='coffee'</code>不能识别ESLint。幸运的是，ESLint（遵循传统的HTML）使用<code>type=“xxx”</code>来标识脚本的类型。只要<code>&lt;script&gt;</code>标签有<code>javascript</code>之外的<code>type</code>，ESLint就会将该脚本标记为非javascript，并跳过它。 Coffeescript的约定是使用<code>type=“text/coffeescript”</code>来标识自己。因此，在使用Coffeescript的Vue组件中，同时使用<code>lang</code>和<code>type</code>来避免ESLint警告：</p>
+<pre><code class="language-html">&lt;template&gt;
+  ...
+&lt;/template&gt;
+&lt;script lang=&quot;coffee&quot; type=&quot;text/coffeescript&quot;&gt;
+  ...
+&lt;/script&gt;
+</code></pre>
+<h2 id="processenv处理"><a class="header" href="#processenv处理">process.env处理</a></h2>
+<p>访问<code>process.env</code>可以在很多方面为您提供帮助：</p>
+<ul>
+<li>根据Quasar模式 (SPA/PWA/Cordova/Electron)区分运行时程序</li>
+<li>根据运行开发或生产构建，区分运行时程序</li>
+<li>在构建时根据终端环境变量向其添加标志</li>
+</ul>
+<h3 id="quasar-cli提供的值"><a class="header" href="#quasar-cli提供的值">Quasar CLI提供的值</a></h3>
+<table><thead><tr><th style="text-align: left">名称</th><th style="text-align: left">输入</th><th style="text-align: left">意义</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>process.env.DEV</code></td><td style="text-align: left">布尔</td><td style="text-align: left">在开发模式下运行的代码</td></tr>
+<tr><td style="text-align: left"><code>process.env.PROD</code></td><td style="text-align: left">布尔</td><td style="text-align: left">在生产模式下运行的代码</td></tr>
+<tr><td style="text-align: left"><code>process.env.CLIENT</code></td><td style="text-align: left">布尔</td><td style="text-align: left">在客户端上（不在服务器上）运行的代码</td></tr>
+<tr><td style="text-align: left"><code>process.env.SERVER</code></td><td style="text-align: left">布尔</td><td style="text-align: left">在服务器上（不在客户端上）运行的代码</td></tr>
+<tr><td style="text-align: left"><code>process.env.MODE</code></td><td style="text-align: left">字符串</td><td style="text-align: left">Quasar CLI 模式 (<code>spa</code>、 <code>pwa</code>、 …)</td></tr>
+<tr><td style="text-align: left"><code>process.env.NODE_ENV</code></td><td style="text-align: left">字符串</td><td style="text-align: left">有两个可能的值：<code>production</code>或<code>development</code></td></tr>
+</tbody></table>
+<h3 id="例子"><a class="header" href="#例子">例子</a></h3>
+<pre><code class="language-js">if (process.env.DEV) {
+  console.log(`I'm on a development build`)
+}
+
+// process.env.MODE is the &lt;mode&gt; in
+// &quot;quasar dev/build -m &lt;mode&gt;&quot;
+// (defaults to 'spa' if -m parameter is not specified)
+if (process.env.MODE === 'electron') {
+  const { remote } = require('electron')
+  const win = remote.BrowserWindow.getFocusedWindow()
+
+  if (win.isMaximized()) {
+    win.unmaximize()
+  }
+  else {
+    win.maximize()
+  }
+}
+</code></pre>
+<h3 id="剥离代码"><a class="header" href="#剥离代码">剥离代码</a></h3>
+<p>在编译您的网站/应用程序时，会根据process.env评估<code>if()</code>分支，如果表达式为“false”，则会将其从文件中删除。 例：</p>
+<pre><code class="language-js">if (process.env.DEV) {
+  console.log('dev')
+}
+else {
+  console.log('build')
+}
+
+// running with &quot;quasar dev&quot; will result in:
+console.log('dev')
+// while running with &quot;quasar build&quot; will result in:
+console.log('build')
+</code></pre>
+<p>请注意上面的<code>if</code>在编译时被评估并完全剥离，导致更小的包。</p>
+<h3 id="基于processenv导入"><a class="header" href="#基于processenv导入">基于process.env导入</a></h3>
+<p>您可以将上面学到的内容与动态导入结合起来：</p>
+<pre><code class="language-js">if (process.env.MODE === 'electron') {
+  import('my-fancy-npm-package').then(package =&gt; {
+    // notice &quot;default&quot; below, which is the prop with which
+    // you can access what your npm imported package exports
+    package.default.doSomething()
+  })
+}
+</code></pre>
+<h3 id="添加到processenv"><a class="header" href="#添加到processenv">添加到process.env</a></h3>
+<p>您可以通过<code>/ quasar.conf.js</code>文件将自己的定义添加到<code>process.env</code>：</p>
+<pre><code class="language-js">// quasar.conf.js
+
+build: {
+  env: ctx.dev
+    ? { // so on dev we'll have
+      API: JSON.stringify('https://dev.api.com')
+    }
+    : { // and on build (production):
+      API: JSON.stringify('https://prod.api.com')
+    }
+}
+</code></pre>
+<p>然后在您的网站/应用程序中，您可以访问<code>process.env.API</code>，它将指向上面的两个链接之一，基于开发或生产构建类型。</p>
+<p>你甚至可以更进一步。 提供来自<code>quasar dev/build</code>环境变量的值：</p>
+<pre><code class="language-js"># we set an env variable in terminal
+$ MY_API=api.com quasar build
+
+# then we pick it up in /quasar.conf.js
+build: {
+  env: ctx.dev
+    ? { // so on dev we'll have
+      API: JSON.stringify('https://dev.'+ process.env.MY_API)
+    }
+    : { // and on build (production):
+      API: JSON.stringify('https://prod.'+ process.env.MY_API)
+    }
+}
+</code></pre>
+<p>或者你可以使用我们的<a href="https://github.com/quasarframework/app-extension-dotenv">@quasar/dotenv</a> 或 <a href="https://github.com/quasarframework/app-extension-qenv">@quasar/qenv</a>应用扩展。</p>
+<h2 id="应用vuex存储vuex-store"><a class="header" href="#应用vuex存储vuex-store">应用Vuex存储(Vuex Store)</a></h2>
+<p>我们不会详细介绍如何配置或使用Vuex，因为它有很棒的文档。 相反，我们只是告诉你在Quasar项目中使用它时文件夹结构的样子。</p>
+<pre><code class="language-bash">.
+└── src/
+    └── store/               # Vuex Store
+        ├── index.js         # Vuex Store 定义
+        ├── &lt;folder&gt;         # Vuex Store 模块...
+        └── &lt;folder&gt;         # Vuex Store 模块...
+</code></pre>
+<p>默认情况下，如果您在使用Quasar CLI创建项目文件夹时选择使用Vuex，它将设置使用Vuex模块。 <code>/src/store</code>的每个子文件夹代表一个Vuex模块。</p>
+<p>TIP</p>
+<p>如果在您的网站应用程序中Vuex模块太多，您可以更改<code>/src/store/index.js</code>并避免导入任何模块。</p>
+<h3 id="添加一个vuex模块"><a class="header" href="#添加一个vuex模块">添加一个Vuex模块</a></h3>
+<p>Quasar CLI通过<code>$ quasar new</code>命令轻松添加Vuex模块。</p>
+<pre><code class="language-bash">$ quasar new store &lt;store_name&gt;
+</code></pre>
+<p>它会在上面的命令中创建一个名为“store_name”的<code>/src/store</code>文件夹。 它将包含您需要的所有样板。</p>
+<p>假设您要创建一个“showcase”Vuex模块。 你运行<code>$ quasar new store showcase</code>。 然后您会注意到新创建的<code>/src/store/showcase</code>文件夹，其中包含以下文件：</p>
+<pre><code class="language-bash">.
+└── src/
+    └── store/
+        ├── index.js         # Vuex Store定义
+        └── showcase         # &quot;showcase&quot;模块
+            ├── index.js     # 将模块粘合在一起
+            ├── actions.js   # actions模块
+            ├── getters.js   # getters模块
+            ├── mutations.js # mutations模块
+            └── state.js     # state模块
+</code></pre>
+<p>我们已经创建了新的Vuex模块，但我们还没有通知Vuex使用它。 所以我们编辑<code>/src/store/index.js</code>并添加一个引用：</p>
+<pre><code class="language-js">import Vue from 'vue'
+import Vuex from 'vuex'
+
+// 首先导入模块
+import showcase from './showcase'
+
+Vue.use(Vuex)
+
+export default function (/* { ssrContext } */) {
+  const Store = new Vuex.Store({
+    modules: {
+      // 然后我们引用它
+      showcase
+    },
+
+    // 启用严格模式（增加开销！）
+    // 仅适用于开发模式
+    strict: process.env.DEV
+  })
+
+  /*
+    如果我们需要一些HMR魔术，我们会处理
+    下面的热点更新。 注意我们实现这个
+    用“process.env.DEV”代码 - 所以这不会
+    进入我们的生产版本（也不应该）。
+  */
+
+  if (process.env.DEV &amp;&amp; module.hot) {
+    module.hot.accept(['./showcase'], () =&gt; {
+      const newShowcase = require('./showcase').default
+      Store.hotUpdate({ modules: { showcase: newShowcase } })
+    })
+  }
+
+  return Store
+}
+</code></pre>
+<p>现在我们可以在我们的Vue文件中使用这个Vuex模块。 这是一个简单的例子。假设我们配置了state的 <code>drawerState</code>属性并增加了 <code>updateDrawerState</code>变动(mutation)。</p>
+<pre><code class="language-js">// src/store/showcase/mutations.js
+export const updateDrawerState = (state, opened) =&gt; {
+  state.drawerState = opened
+}
+
+// src/store/showcase/state.js
+// 如果使用SSR，请务必使用函数返回状态
+export default function () {
+  return {
+    drawerState: true
+  }
+}
+</code></pre>
+<p>在Vue文件中</p>
+<pre><code class="language-html">&lt;template&gt;
+  &lt;div&gt;
+    &lt;q-toggle v-model=&quot;drawerState&quot; /&gt;
+  &lt;/div&gt;
+&lt;/template&gt;
+
+&lt;script&gt;
+export default {
+  computed: {
+    drawerState: {
+      get () {
+        return this.$store.state.showcase.drawerState
+      },
+      set (val) {
+        this.$store.commit('showcase/updateDrawerState', val)
+      }
+    }
+  }
+}
+&lt;/script&gt;
+</code></pre>
+<h3 id="存储代码拆分"><a class="header" href="#存储代码拆分">存储代码拆分</a></h3>
+<p>您可以利用<a href="http://www.quasarchs.com/quasar-cli/cli-documentation/prefetch-feature#Store-Code-Splitting">预取功能</a>来对Vuex模块进行代码拆分。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../前端/quasar/index.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="../../前端/quasar/quasar选项和辅助.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../前端/quasar/index.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="../../前端/quasar/quasar选项和辅助.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="../../clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="../../book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
