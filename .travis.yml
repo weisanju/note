@@ -21,7 +21,7 @@ deploy:
   strategy: git
   github-token: $GITHUB_TOKEN
   edge: true
-  local-dir: $effectedBranch/book # In case of custom book path: path/to/mybook/book
+  local-dir: src/$effectedBranch/book # In case of custom book path: path/to/mybook/book
   keep-history: false
   verbose: true
   on:
