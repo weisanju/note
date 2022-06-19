@@ -43,5 +43,5 @@ deploy:
     deployment_file: true
     on:
       branch: main
-      condition: $java != ''
+      condition: $python != ''
     target_branch: main
