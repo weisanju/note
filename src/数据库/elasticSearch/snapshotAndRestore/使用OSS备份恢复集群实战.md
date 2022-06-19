@@ -25,6 +25,14 @@ add   -- -f s3.client.default.secret_key
 
 
 
+### 重载安全秘钥
+
+```
+POST _nodes/reload_secure_settings
+```
+
+
+
 ### 配置Client
 
 ```

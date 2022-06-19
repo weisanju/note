@@ -185,8 +185,6 @@ In versions `7.0`, `7.1`, `7.2` and `7.3` all bucket operations used the [now-de
 
 ### S3-compatible services
 
-
-
 1. 有许多存储系统提供了S3-compatible的API
 2.  `repository-s3` plugin 可以使 这些系统 与 AWS S3 开箱即用
 3. 需要提供 `s3.client.CLIENT_NAME.endpoint`   
@@ -207,12 +205,6 @@ Note that some storage systems claim to be S3-compatible without correctly suppo
 **使用仓库分析来检查兼容性**
 
 You can perform some basic checks of the suitability of your storage system using the [repository analysis API](https://www.elastic.co/guide/en/elasticsearch/reference/7.13/repo-analysis-api.html). If this API does not complete successfully, or indicates poor performance, then your storage system is not fully compatible with AWS S3 and therefore unsuitable for use as a snapshot repository. You will need to work with the supplier of your storage system to address any incompatibilities you encounter.
-
-
-
-
-
-
 
 ### Repository Settings
 
