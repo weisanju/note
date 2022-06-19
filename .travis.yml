@@ -26,4 +26,5 @@ deploy:
   verbose: true
   on:
     branch: main
+    condition: git diff head  --name-only |grep src/java/SUMMARY.md
   target_branch: note-pages
