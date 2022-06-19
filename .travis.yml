@@ -32,7 +32,7 @@ deploy:
       branch: main
       condition: $java != ''
     target_branch: main
-    
+
 #python:
   - provider: pages
     strategy: git
@@ -84,7 +84,7 @@ deploy:
     local-dir: src/mw/book # In case of custom book path: path/to/mybook/book
     keep-history: false
     verbose: true
-    repo: weisanju/mw
+    repo: weisanju/note-mw
     deployment_file: true
     on:
       branch: main
