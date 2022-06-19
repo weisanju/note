@@ -2,8 +2,8 @@ language: rust
 os: linux
 dist: xenial
 
-# cache:
-#   - cargo
+cache:
+  - cargo
 
 rust:
   - stable
