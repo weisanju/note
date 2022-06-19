@@ -7,3 +7,4 @@ with open("setEnv.sh", mode='w', encoding='utf-8') as file_obj:
     if len(update_module)>1:
         for key in update_module[0].split(","):
             file_obj.write("{}=1\n".format(key))
+            os.system("mdbook build src/{}".format(key))
