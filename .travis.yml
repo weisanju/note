@@ -74,6 +74,7 @@ deploy:
       condition: $frontend != ''
     target_branch: main
 
+# mw:xxxx
   - provider: pages
     strategy: git
     github-token: $GITHUB_TOKEN
