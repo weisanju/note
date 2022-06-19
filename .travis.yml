@@ -59,3 +59,17 @@ deploy:
       branch: main
       condition: $db != ''
     target_branch: main
+
+  - provider: pages
+    strategy: git
+    github-token: $GITHUB_TOKEN
+    edge: true
+    local-dir: src/frontend/book # In case of custom book path: path/to/mybook/book
+    keep-history: false
+    verbose: true
+    repo: weisanju/note-front
+    deployment_file: true
+    on:
+      branch: main
+      condition: $front != ''
+    target_branch: main
